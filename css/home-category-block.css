@@ -1,0 +1,3723 @@
+﻿/* start of all category border color*/
+
+.home-11-0-block-category-border-div /* Menz */
+{
+    border: 1px solid #5a867e;
+}
+
+.home-6-0-block-category-border-div /* Menz */
+{
+    border: 1px solid #35a3d3;
+}
+.home-7-0-block-category-border-div /* Womenz */
+{
+    border: 1px solid #c77eb5;
+}
+.home-7-111-block-category-border-div /* Salowar kameez */
+{
+    border: 1px solid #bc7cb5;
+}
+.home-3-0-block-category-border-div /* accessories */
+{
+    border: 1px solid #808285;
+}
+
+.home-22-0-block-category-border-div /* watches */
+{
+    border: 1px solid #3F8E9B;
+}
+.home-15-0-block-category-border-div /* jewelry */
+{
+    border: 1px solid #a58384;
+}
+.home-1-0-block-category-border-div /* cosmetics */
+{
+    border: 1px solid #5bb08f;
+}
+
+.home-5-0-block-category-border-div /* gift items */
+{
+    border: 1px solid #a2b85a;
+}
+.home-17-0-block-category-border-div /* shoes */
+{
+    border: 1px solid #707da3;
+}
+
+.home-42-0-block-category-border-div  /* mobile */
+{
+    border: 1px solid #ae2125;
+}
+
+.home-6-140-block-category-border-div /* punjabi */
+{
+    border: 1px solid #054f9c;
+}
+
+.home-7-113-block-category-border-div /* sharee */
+{
+    border: 1px solid #7b2a90;
+}
+
+.home-25-0-block-category-border-div /* bag purse */
+{
+    border: 1px solid #de8a7d;
+}
+.home-6-144-block-category-border-div /* T-shrt */
+{
+    border: 1px solid #929d8d;
+}
+
+.home-30-0-block-category-border-div /* Sunglasses */
+{
+    border: 1px solid #c56871;
+}
+
+
+.home-12-0-block-category-border-div /* Biking & Riding */
+{
+    border: 1px solid #f4791f;
+}
+.home-9-0-block-category-border-div /* Belt & Wallet */
+{
+    border: 1px solid #a34e6e;
+}
+.home-50-0-block-category-border-div /* Home Decoration */
+{
+    border: 1px solid #03b5b4;
+}
+.home-11-135-block-category-border-div /* kitchen-appliances */
+{
+    border: 1px solid #c3964e;
+}
+
+.home-54-0-block-category-border-div /* Gadgets */
+{
+    border: 1px solid #85acb7;
+}
+.home-18-0-block-category-border-div /* Electronics Items */
+{
+    border: 1px solid #006074;
+}
+
+.home-6-110-block-category-border-div /* Pant */
+{
+    border: 1px solid #2c3d6c;
+}
+
+.home-23-0-block-category-border-div /* puja */
+{
+    border: 1px solid #ec1c23;
+}
+
+.home-13-0-block-category-border-div /* winter-collection */
+{
+    border: 1px solid #27c934;
+}
+
+.home-58-0-block-category-border-div /* musical-instrument */
+{
+    border: 1px solid #9f8dad;
+}
+.home-10-0-block-category-border-div /* sports-items */
+{
+    border: 1px solid #c77eb5;
+}
+.home-56-0-block-category-border-div /* perfume-body-spray */
+{
+    border: 1px solid #e85985;
+}
+
+.home-60-0-block-category-border-div /* sweet-meat */
+{
+    border: 1px solid #f16e82;
+}
+/* end of all category border color*/
+
+.home-60-0-block-category-border-div /* sweet-meat */
+{
+    border: 1px solid #f16e82;
+}
+
+.home-13-221-block-category-border-div /* kids-winter */
+{
+    border: 1px solid #faac17;
+}
+
+.home-13-439-block-category-border-div /* kids-winter */
+{
+    border: 1px solid #00adee;
+}
+
+.home-62-0-block-category-border-div /* Bijoy Dibos*/
+{
+    border: 1px solid #006a4e;
+}
+
+
+
+/* end of all category border color*/
+
+
+/* Menz Shopping*/
+.home-6-0-block-image-container img
+{
+    max-width:100%;
+    height:326px;
+}
+
+.home-6-0-block-category-menu-header
+{
+    width:100%;
+    background-color:#35a3d3;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+ 
+}
+.home-6-0-block-category-menu-header h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+ 
+}
+.home-6-0-block-category-menu-header h1 a 
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    outline-style:none;
+}
+
+.home-6-0-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration: none;
+    color:#fff;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-6-0-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-6-0-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+   
+}
+
+
+
+.home-6-0-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-6-0-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+
+
+
+.home-6-0-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color:#222;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+    outline-style:none;
+}
+.home-6-0-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#35a3d3;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+/* start of Womez Fashion category block*/
+
+.home-7-0-block-category-menu-header
+{
+    width:100%;
+    background-color:#c77eb5;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+
+.home-7-0-block-category-menu-header h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+    
+} 
+.home-7-0-block-category-menu-header h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-7-0-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-7-0-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-7-0-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+     background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+
+
+.home-7-0-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-7-0-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+
+}
+.home-7-0-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color:#222;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+    
+}
+.home-7-0-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#c77eb5;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+/* start of Accessories category block*/
+
+.home-3-0-block-category-menu-header
+{
+    width:100%;
+    background-color:#808285;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+   
+     
+     
+    
+}
+.home-3-0-block-category-menu-header h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+}
+
+.home-3-0-block-category-menu-header h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-3-0-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-3-0-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-3-0-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+
+
+.home-3-0-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-3-0-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+
+.home-3-0-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color:#222;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-3-0-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#808285;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+/* start of Watch category block*/
+
+.home-22-0-block-category-menu-header
+{
+    width:100%;
+    background-color:#3F8E9B;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+
+
+
+
+
+.home-22-0-block-category-menu-header h1
+{  
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+}
+
+
+.home-22-0-block-category-menu-header h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-22-0-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-22-0-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-22-0-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+
+
+.home-22-0-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-22-0-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+
+}
+
+.home-22-0-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color:#222;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-22-0-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#3F8E9B;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+/* start of Jewelry category block*/
+
+.home-15-0-block-category-menu-header
+{
+    width:100%;
+    background-color:#a58384;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+.home-15-0-block-category-menu-header h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+
+}
+.home-15-0-block-category-menu-header h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-15-0-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-15-0-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-15-0-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+
+
+.home-15-0-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-15-0-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+
+}
+.home-15-0-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color:#222;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-15-0-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#a58384;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+/* start of Cosmetics category block*/
+
+.home-1-0-block-category-menu-header
+{
+    width:100%;
+    background-color:#5bb08f;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+
+.home-1-0-block-category-menu-header h1
+{   width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+}
+
+
+.home-1-0-block-category-menu-header h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-1-0-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-1-0-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-1-0-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+
+
+.home-1-0-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-1-0-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+.home-1-0-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color:#222;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-1-0-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#5bb08f;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+/* start of Gift Items category block*/
+
+.home-5-0-block-category-menu-header
+{
+    width:100%;
+    background-color:#a2b85a;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+.home-5-0-block-category-menu-header h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+}
+
+
+.home-5-0-block-category-menu-header h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-5-0-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-5-0-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-5-0-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+
+
+.home-5-0-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-5-0-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+.home-5-0-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color:#222;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-5-0-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#a2b85a;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+/* start of Shoes category block*/
+
+.home-17-0-block-category-menu-header
+{
+    width:100%;
+    background-color:#707da3;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+.home-17-0-block-category-menu-header h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+
+}
+.home-17-0-block-category-menu-header h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-17-0-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-17-0-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-17-0-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+
+
+.home-17-0-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-17-0-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+
+.home-17-0-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color:#222;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-17-0-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#707da3;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+
+
+/* start of Mobile category block*/
+
+.home-42-0-block-category-menu-header
+{
+    width:100%;
+    background-color:#ae2125;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+.home-42-0-block-category-menu-header h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+}
+
+.home-42-0-block-category-menu-header h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-42-0-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-42-0-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-42-0-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.home-42-0-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+
+.home-42-0-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-42-0-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+.home-42-0-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color:#222;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-42-0-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#ae2125;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+/* start of Sharee category block*/
+
+.home-7-113-block-category-menu-header
+{
+    width:100%;
+    background-color:#7b2a90;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+.home-7-113-block-category-menu-header h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+}
+
+.home-7-113-block-category-menu-header h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-7-113-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-7-113-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-7-113-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.home-7-113-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+
+.home-7-113-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-7-113-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+.home-7-113-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color:#222;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-7-113-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#7b2a90;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+/* start of Punjabi category block*/
+
+.home-6-140-block-category-menu-header
+{
+    width:100%;
+    background-color:#054f9c;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+.home-6-140-block-category-menu-header h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+}
+
+.home-6-140-block-category-menu-header h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-6-140-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-6-140-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-6-140-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.home-6-140-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+
+.home-6-140-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-6-140-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+.home-6-140-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color:#222;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-6-140-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#054f9c;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+/* start of Bag Purse category block*/
+
+.home-25-0-block-category-menu-header
+{
+    width:100%;
+    background-color:#de8a7d;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+.home-25-0-block-category-menu-header h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+}
+
+.home-25-0-block-category-menu-header h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-25-0-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-25-0-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-25-0-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.home-25-0-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+
+.home-25-0-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-25-0-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+.home-25-0-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color:#222;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-25-0-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#de8a7d;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+/* T-Shirt */
+
+.home-6-0-block-image-container img
+{
+    max-width:100%;
+    height:326px;
+}
+
+.home-6-144-block-category-menu-header
+{
+    width:100%;
+    background-color:#929d8d;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+ 
+}
+.home-6-144-block-category-menu-header h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+ 
+}
+.home-6-144-block-category-menu-header h1 a 
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    outline-style:none;
+}
+
+.home-6-144-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration: none;
+    color:#fff;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-6-144-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-6-144-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+   
+}
+
+
+
+.home-6-144-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-6-144-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+
+
+
+.home-6-144-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color:#222;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+    outline-style:none;
+}
+.home-6-144-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#929d8d;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+/* Sunglasses */
+
+.home-30-0-block-image-container img
+{
+    max-width:100%;
+    height:326px;
+}
+
+.home-30-0-block-category-menu-header
+{
+    width:100%;
+    background-color:#c56871;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+ 
+}
+.home-30-0-block-category-menu-header h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+ 
+}
+.home-30-0-block-category-menu-header h1 a 
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    outline-style:none;
+}
+
+.home-30-0-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration:none!important;
+    color:#fff;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-30-0-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-30-0-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+   
+}
+
+
+
+.home-30-0-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-30-0-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+
+
+
+.home-30-0-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color:#222;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+    outline-style:none;
+}
+.home-30-0-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#c56871;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+/*  Home Appliances: ;*/
+
+.home-11-0-block-image-container img
+{
+    max-width:100%;
+    height:326px;
+}
+
+.home-11-0-block-category-menu-header
+{
+    width:100%;
+    background-color:#5a867e;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+ 
+}
+.home-11-0-block-category-menu-header h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+ 
+}
+.home-11-0-block-category-menu-header h1 a 
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    outline-style:none;
+}
+
+.home-11-0-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration:none !important;
+    color:#fff;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-11-0-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-11-0-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+   
+}
+
+
+
+.home-11-0-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-11-0-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+
+
+
+.home-11-0-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color:#222;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+    outline-style:none;
+}
+.home-11-0-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#5a867e;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+/*  Home Decoration ;*/
+
+.home-50-0-block-image-container img
+{
+    max-width:100%;
+    height:326px;
+}
+
+.home-50-0-block-category-menu-header
+{
+    width:100%;
+    background-color:#03b5b4;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+ 
+}
+.home-50-0-block-category-menu-header h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+ 
+}
+.home-50-0-block-category-menu-header h1 a 
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    outline-style:none;
+}
+
+.home-50-0-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration:none !important;
+    color:#fff;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-50-0-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-50-0-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+   
+}
+
+
+
+.home-50-0-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-50-0-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+
+
+
+.home-50-0-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color:#222;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+    outline-style:none;
+}
+.home-50-0-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#03b5b4;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+/*  Biking and Riding ;*/
+
+.home-12-0-block-image-container img
+{
+    max-width:100%;
+    height:326px;
+}
+
+.home-12-0-block-category-menu-header
+{
+    width:100%;
+    background-color:#f4791f;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+ 
+}
+.home-12-0-block-category-menu-header h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+ 
+}
+.home-12-0-block-category-menu-header h1 a 
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    outline-style:none;
+}
+
+.home-12-0-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration:none !important;
+    color:#fff;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-12-0-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-12-0-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+   
+}
+
+
+
+.home-12-0-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-12-0-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+
+
+
+.home-12-0-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color:#222;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+    outline-style:none;
+}
+.home-12-0-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#f4791f;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+
+/*  Belt & Wallet ;*/
+
+.home-9-0-block-image-container img
+{
+    max-width:100%;
+    height:326px;
+}
+
+.home-9-0-block-category-menu-header
+{
+    width:100%;
+    background-color:#a34e6e;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+ 
+}
+.home-9-0-block-category-menu-header h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+ 
+}
+.home-9-0-block-category-menu-header h1 a 
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    outline-style:none;
+}
+
+.home-9-0-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration:none !important;
+    color:#fff;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-9-0-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-9-0-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+   
+}
+
+
+
+.home-9-0-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-9-0-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+
+
+
+.home-9-0-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color:#222;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+    outline-style:none;
+}
+.home-9-0-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#a34e6e;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+
+/* kitchen-appliances */
+
+.home-11-135-block-image-container img
+{
+    max-width:100%;
+    height:326px;
+}
+
+.home-11-135-block-category-menu-header
+{
+    width:100%;
+    background-color:#c3964e;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+ 
+}
+.home-11-135-block-category-menu-header h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+ 
+}
+.home-11-135-block-category-menu-header h1 a 
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    outline-style:none;
+}
+
+.home-11-135-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration:none !important;
+    color:#fff;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-11-135-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-11-135-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+   
+}
+
+
+
+.home-11-135-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-11-135-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+
+
+
+.home-11-135-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color:#222;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+    outline-style:none;
+}
+.home-11-135-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#c3964e;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+/* start of Electronics items category block*/
+
+.home-18-0-block-category-menu-header
+{
+    width:100%;
+    background-color:#006074;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+.home-18-0-block-category-menu-header h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+}
+
+.home-18-0-block-category-menu-header h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-18-0-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-18-0-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-18-0-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+
+
+.home-18-0-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-18-0-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+.home-18-0-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color:#222;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-18-0-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#006074;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+/* start of Gadget category block*/
+
+.home-54-0-block-category-menu-header
+{
+    width:100%;
+    background-color:#85acb7;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+.home-54-0-block-category-menu-header h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+}
+
+.home-54-0-block-category-menu-header h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-54-0-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-54-0-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-54-0-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+
+
+.home-54-0-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-54-0-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+.home-54-0-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color:#222;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-54-0-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#85acb7;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+/* start of Pant category block*/
+
+.home-6-110-block-category-menu-header
+{
+    width:100%;
+    background-color:#2c3d6c;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+.home-6-110-block-category-menu-header h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+}
+
+.home-6-110-block-category-menu-header h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-6-110-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-6-110-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-6-110-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+
+
+.home-6-110-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-6-110-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+.home-6-110-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color:#222;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-6-110-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#2c3d6c;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+
+/* start of Puja category block*/
+
+.home-23-0-block-category-menu-header
+{
+    width:100%;
+    background-color:#ec1c23;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+.home-23-0-block-category-menu-header h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+}
+
+.home-23-0-block-category-menu-header h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-23-0-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-23-0-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-23-0-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+
+
+.home-23-0-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-23-0-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+.home-23-0-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color:#222;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-23-0-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#ec1c23;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+
+/*strat of musical instrument 58-0*/
+
+.home-58-0-block-category-menu-header
+{
+    width:100%;
+    background-color:#9f8dad;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+.home-58-0-block-category-menu-header h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+}
+
+.home-58-0-block-category-menu-header h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-58-0-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-58-0-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-58-0-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+
+
+.home-58-0-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-58-0-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+.home-58-0-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color:#222;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-58-0-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#9f8dad;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+/*start of sports-items 10-0*/
+
+.home-10-0-block-category-menu-header
+{
+    width:100%;
+    background-color:#7ea693;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+.home-10-0-block-category-menu-header h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+}
+
+.home-10-0-block-category-menu-header h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-10-0-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-10-0-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-10-0-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+
+
+.home-10-0-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-10-0-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+.home-10-0-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color:#222;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-10-0-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#7ea693;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+/*strat of perfume-body-spray */
+.home-56-0-block-category-menu-header
+{
+    width:100%;
+    background-color:#f49ac1;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+.home-56-0-block-category-menu-header h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+}
+
+.home-56-0-block-category-menu-header h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-56-0-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-56-0-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-56-0-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+
+
+.home-56-0-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-56-0-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+.home-56-0-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color:#222;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-56-0-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#f49ac1;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+/*strat of sweet-meat */
+.home-60-0-block-category-menu-header
+{
+    width:100%;
+    background-color:#f16e82 ;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+.home-60-0-block-category-menu-header h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+}
+
+.home-60-0-block-category-menu-header h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-60-0-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-60-0-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-60-0-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+
+
+.home-60-0-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-60-0-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+.home-60-0-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color:#222;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-60-0-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#f16e82;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+/*strat ofSalowar Kameez */
+.home-7-111-block-category-menu-header
+{
+    width:100%;
+    background-color:#bc7cb5 ;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+.home-7-111-block-category-menu-header h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+}
+
+.home-7-111-block-category-menu-header h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-7-111-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-7-111-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-7-111-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+
+
+.home-7-111-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-7-111-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+.home-7-111-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color:#222;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-7-111-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#bc7cb5;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+/*strat of kind Winter*/
+.home-13-221-block-category-menu-header
+{
+    width:100%;
+    background-color:#faac17 ;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+.home-13-221-block-category-menu-header h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+}
+
+.home-13-221-block-category-menu-header h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-13-221-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-13-221-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-13-221-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+
+
+.home-13-221-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-13-221-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+.home-13-221-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color:#222;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-13-221-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#faac17;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+
+/*strat of  Winter Gadget*/
+.home-13-439-block-category-menu-header
+{
+    width:100%;
+    background-color:#00adee;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+.home-13-439-block-category-menu-header h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+}
+
+.home-13-439-block-category-menu-header h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-13-439-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-13-439-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-13-439-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+
+
+.home-13-439-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-13-439-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+.home-13-439-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color:#222;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-13-439-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#00adee;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+
+/*strat of  Bijoy Dibos*/
+.home-62-0-block-category-menu-header
+{
+    width:100%;
+    background-color:#006a4e;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+.home-62-0-block-category-menu-header h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+}
+
+.home-62-0-block-category-menu-header h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-62-0-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-62-0-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-62-0-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+
+
+.home-62-0-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-62-0-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+.home-62-0-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color:#222;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-62-0-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#006a4e;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}

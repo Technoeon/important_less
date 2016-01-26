@@ -1,0 +1,238 @@
+/*
+ * jQuery FlexSlider v2.2.0
+
+ */
+
+
+/* Browser Resets
+*********************************/
+
+/* ================== */
+/* Flexslider styling */
+/* ================== */
+.flex_slider {
+	margin: 15px 0 20px;
+}
+.flex_slider img {
+	width: 100%;
+}
+.flex-container a:active, .flexslider a:active, .flex-container a:focus, .flexslider a:focus {
+	outline: none;
+}
+.slides, .flex-control-nav, .flex-direction-nav {
+	margin: 0 0 -5px;
+	padding: 0;
+	list-style: none;
+}
+#flexslider-product.flexslider .slides > li img {
+	min-height: 340px;
+	max-height: 340px;
+	min-width: 380px;
+}
+section.single #flexcarousel-product .slides > li img {
+	min-height: 111px;
+	max-height: 125px;
+}
+section.single#product-content .wrap {
+	padding: 0px;
+}
+/* FlexSlider Necessary Styles
+*********************************/ 
+.flexslider {
+	margin: 0 auto;
+	padding: 0;
+}
+section.single #flexcarousel-product li {
+	text-align: left;
+	min-width: 124px;
+}
+.flexslider .slides > li {
+	display: none;
+	-webkit-backface-visibility: hidden;
+	position: relative;
+	text-align: center
+}
+.flex-pauseplay span {
+	text-transform: capitalize;
+}
+/* Clearfix for the .slides element */
+.slides:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+/* FlexSlider Default Theme
+*********************************/
+.carousel-option {
+}
+.flexslider {
+	position: relative;
+	max-width: 100%;
+	zoom: 1;
+}
+.flex-viewport {
+	transition: all 1s ease;
+}
+.loading .flex-viewport {
+}
+.flexslider .slides {
+	zoom: 1;
+}
+.carousel li {
+	margin-right: 5px
+}
+.carousel-mini #flexcarousel img {
+	cursor: pointer;
+	width: 200px;
+	border-top: 3px solid #0a3151;
+}
+.carousel-mini #flexcarousel img:hover {
+	border-top: 3px solid #D56452;
+	-webkit-transition: all .3s ease;
+}
+.carousel-option.home {
+}
+/* Direction Nav */
+.flex-direction-nav a {
+	width: 30px;
+	height: 30px;
+	margin: -10px 0 0;
+	display: block;
+	background: url(../../images/bg_direction_s.png) no-repeat 0 0;
+	position: absolute;
+	top: 50%;
+	cursor: pointer;
+	text-indent: -9999px;
+	opacity: 0;
+	-webkit-transition: all .3s ease;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	-khtml-opacity: 0;
+}
+.flex-direction-nav .flex-next {
+	background-position: 95% 0;
+	right: -36px;
+}
+.flex-direction-nav .flex-prev {
+	left: -36px;
+	background-position: 7% 0;
+}
+.flexslider:hover .flex-next {
+	opacity: 0.8;
+	right: 5px;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+	filter: alpha(opacity=70);
+	-khtml-opacity: 0.5;
+}
+.flexslider:hover .flex-prev {
+	opacity: 0.8;
+	left: 5px;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+	filter: alpha(opacity=70);
+	-khtml-opacity: 0.5;
+}
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover {
+	opacity: 1;
+}
+.flex-direction-nav .disabled {
+	opacity: .3!important;
+	filter: alpha(opacity=30);
+	cursor: default;
+}
+.flex-caption {
+	width: 300px;
+	padding: 2%;
+	position: absolute;
+	left: 5%;
+	top: 54%;
+	background: rgba(0, 0, 0, 0.6);
+	color: white;
+	text-align: left;
+	text-shadow: rgba(0, 0, 0, 0.298039) 0px -1px 0px;
+	font-size: 14px;
+	line-height: 18px;
+}
+.btn-small {
+	color: #fff;
+}
+.btn-small:hover {
+	color: #fff;
+}
+/* Control Nav */
+.flex-control-nav {
+	width: 100%;
+	position: absolute;
+	bottom: 10px;
+	text-align: center;
+}
+.flex-control-nav li {
+	margin: 9px 4px 0;
+	zoom: 1;
+	display: inline-block;
+}
+.flex-control-paging li a {
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	transition: all .3s ease;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+	border: 4px solid #fff;
+	width: 8px;
+	height: 8px;
+	display: block;
+	background: #666;
+	background: rgba(255, 71, 0, 0.6);
+	cursor: pointer;
+	text-indent: -9999px;
+	box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+}
+.flex-control-paging li a:hover {
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	transition: all .3s ease;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+	background: #333;
+	background: rgba(0,0,0,0.7);
+	box-shadow: 0 1px 1px rgba(255,255,255,0.4), inset 0 1px 1px rgba(0,0,0,0.1), 0 0 0 5px rgba(255,255,255,0.5);
+}
+.flex-control-paging li a.flex-active {
+	cursor: default;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	transition: all .3s ease;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+	background: #333;
+	background: rgba(0,0,0,0.7);
+	box-shadow: 0 1px 1px rgba(255,255,255,0.4), inset 0 1px 1px rgba(0,0,0,0.1), 0 0 0 5px rgba(255,255,255,0.5);
+}
+.flex-control-thumbs {
+	margin: 5px 0 0;
+	position: static;
+	overflow: hidden;
+}
+.flex-control-thumbs li {
+	width: 25%;
+	float: left;
+	margin: 0;
+}
+.flex-control-thumbs img {
+	width: 100%;
+	display: block;
+	opacity: .7;
+	cursor: pointer;
+}
+.flex-control-thumbs img:hover {
+	opacity: 1;
+}
+.flex-control-thumbs .active {
+	opacity: 1;
+	cursor: default;
+}

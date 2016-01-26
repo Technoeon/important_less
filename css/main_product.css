@@ -1,0 +1,964 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/*start winter head */
+﻿.first-border-div
+{
+    border: 1px solid #35a3d3;
+}
+
+.banner-event-container
+{
+   
+    min-width:578px;
+    width:calc(100% - 190px);
+    width: -webkit-calc(100% - 190px);
+    width: -moz-calc(100% - 190px); 
+    
+    float:left;
+}
+.banner-wrapper
+{
+     height:239px!important;
+     max-width:100%;
+     text-align:center;
+     vertical-align:middle;
+     overflow:hidden;
+}
+
+
+.home-first-category-block
+{
+    margin-top:30px;
+}
+.first-block-category-menu-container
+{
+    width:190px;
+    height:326px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+.first-block-image-container
+{
+    background-color:#CCC;
+    width:263px;
+    height:326px;
+    float:left;
+}
+
+.home-second-category-block
+{
+    margin-top:30px;
+}
+.second-block-category-menu-container
+{
+    width:190px;
+    height:326px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+.second-block-image-container
+{
+    background-color:#CCC;
+    width:263px;
+    height:326px;
+    float:left;
+}
+/* start show more product */
+
+.first-block-product-container
+{
+    width:52.4%;
+    width:calc(100% - 453px); 
+    width: -webkit-calc(100% - 453px);
+    width: -moz-calc(100% - 453px);
+    float:left;
+    height:326px;
+    overflow:hidden;
+}
+
+.home-first-category-block
+{
+    margin-top:30px;
+}
+
+.first-block-category-menu-container
+{
+    width:200px;
+    height:326px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+/* Start of Winter Category Block*/
+
+
+
+.home-13-0-block-category-menu-header
+{
+    width:100%;
+    background-color:#27c934;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+.home-13-0-block-category-menu-header h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+}
+
+.home-13-0-block-category-menu-header h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-13-0-block-category-menu-header h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-13-0-block-category-menu-wrapper
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-13-0-block-category-menu-bottom
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.home-13-0-block-subcategory-name
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-13-0-block-subcategory-name h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+.home-13-0-block-subcategory-name a
+{
+     float:left;
+    text-decoration:none;
+    color: #707da3;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-13-0-block-subcategory-name a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#27c934;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+.first-block-image-container
+{
+    background-color:#CCC;
+    width:252px;
+    height:326px;
+    float:left;
+}
+.home-category-product-wrapper
+{
+    float:left;
+    width:100%;
+    border-bottom:.5px solid #F5F5F5;
+    /*border-right:0.5px solid #F5F5F5;*/
+    height:163px;
+}
+.home-category-product-image
+{
+    float:left;
+    width:100%;
+    height:119px;
+    text-align:center;
+    
+}
+.home-category-product-image img
+{
+    height: 100px;
+    margin-top: 18px;
+    max-width: 100%;
+}
+.home-category-product-title
+{
+    float:left;
+    
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 15px;
+    font-weight:normal;
+    height: 30px;
+    margin: 0px 2px 0px 2px;
+    text-align:center;
+    overflow: hidden;
+    line-height: 30px;
+   
+    padding: 0 2%;
+   letter-spacing: 1px;
+    width: 96%;
+    
+}
+.home-category-product-title a
+{
+    
+   
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 15px;
+    
+    height: 30px;
+    line-height: 30px;
+    text-decoration:none;
+    color:#333;
+    font-weight:normal;
+}
+.home-category-product-title a:hover
+{
+    text-decoration:none;
+    color:#337ab7;
+}
+.home-category-product-title a:visited
+{
+    text-decoration:none;
+    color:#333;
+}
+.home-category-product-price
+{
+    float:left;
+    width:100%;
+    height: 15px;
+    line-height: 15px;
+    margin-bottom: 10px;
+    text-align:center;
+    overflow:hidden;
+    font-size:16px;
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    color:#f16e52;
+}
+
+
+.home-category-product-title a h2{
+    float: left;
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 13px;
+    font-weight: normal;
+    height: 30px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    margin: 0 2px;
+    overflow: hidden;
+    padding: 0 2%;
+    text-align: center;
+    width: 100%;
+    color:#333;
+    text-transform: capitalize;
+}
+.home-category-product-title a h2:hover
+{
+    text-decoration:none;
+    color:#27c934;
+    text-transform: capitalize;
+}
+/* Start more winter product */
+
+.home-show-more
+{
+	text-align:right;
+	margin-top:20px;
+	
+}
+.home-show-more a
+{
+	text-decoration:none;
+	font-size:16px;
+	color:#929d8d;
+			 	
+}
+.home-show-more a:hover
+{
+	text-decoration:none;
+	font-size:16px;
+	color:#27c934;
+}
+
+/* End more winter product */
+
+/* Start women fasion */
+.home-first-category-block-women-fasion
+{
+    margin-top:30px;
+}
+.first-block-category-menu-container-women-fasion
+{
+    width:190px;
+    height:326px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+.first-block-image-container-women-fasion
+{
+    background-color:#CCC;
+    width:263px;
+    height:326px;
+    float:left;
+}
+
+.home-second-category-block-women-fasion
+{
+    margin-top:30px;
+}
+.second-block-category-menu-container-women-fasion
+{
+    width:190px;
+    height:326px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+.second-block-image-container-women-fasion
+{
+    background-color:#CCC;
+    width:263px;
+    height:326px;
+    float:left;
+}
+/* start show more product */
+
+.first-block-product-container-women-fasion
+{
+    width:52.4%;
+    width:calc(100% - 453px); 
+    width: -webkit-calc(100% - 453px);
+    width: -moz-calc(100% - 453px);
+    float:left;
+    height:326px;
+    overflow:hidden;
+}
+
+.home-first-category-block-women-fasion
+{
+    margin-top:30px;
+}
+
+.first-block-category-menu-container-women-fasion
+{
+    width:200px;
+    height:326px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+/* Start of Winter Category Block*/
+
+
+
+.home-13-0-block-category-menu-header-women-fasion
+{
+    width:100%;
+    background-color:#c77eb5;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+.home-13-0-block-category-menu-header-women-fasion h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+}
+
+.home-13-0-block-category-menu-header-women-fasion h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-13-0-block-category-menu-header-women-fasion h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-13-0-block-category-menu-wrapper-women-fasion
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-13-0-block-category-menu-bottom-women-fasion
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+
+
+.home-13-0-block-subcategory-name-women-fasion
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-13-0-block-subcategory-name-women-fasion h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+.home-13-0-block-subcategory-name-women-fasion a
+{
+     float:left;
+    text-decoration:none;
+    color: #707da3;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-13-0-block-subcategory-name-women-fasion a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#c77eb5;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+.first-block-image-container-women-fasion
+{
+    background-color:#CCC;
+    width:252px;
+    height:326px;
+    float:left;
+}
+.home-category-product-wrapper-women-fasion
+{
+    float:left;
+    width:100%;
+    border-bottom:.5px solid #F5F5F5;
+    /*border-right:0.5px solid #F5F5F5;*/
+    height:163px;
+}
+.home-category-product-image-women-fasion
+{
+    float:left;
+    width:100%;
+    height:119px;
+    text-align:center;
+    
+}
+.home-category-product-image-women-fasion img
+{
+    height: 100px;
+    margin-top: 18px;
+    max-width: 100%;
+}
+.home-category-product-title-women-fasion
+{
+    float:left;
+    
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 15px;
+    font-weight:normal;
+    height: 30px;
+    margin: 0px 2px 0px 2px;
+    text-align:center;
+    overflow: hidden;
+    line-height: 30px;
+   
+    padding: 0 2%;
+   letter-spacing: 1px;
+    width: 96%;
+    
+}
+.home-category-product-title-women-fasion a
+{
+    
+   
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 15px;
+    
+    height: 30px;
+    line-height: 30px;
+    text-decoration:none;
+    color:#333;
+    font-weight:normal;
+}
+.home-category-product-title-women-fasion a:hover
+{
+    text-decoration:none;
+    color:#337ab7;
+}
+.home-category-product-title-women-fasion a:visited
+{
+    text-decoration:none;
+    color:#333;
+}
+.home-category-product-price-women-fasion
+{
+    float:left;
+    width:100%;
+    height: 15px;
+    line-height: 15px;
+    margin-bottom: 10px;
+    text-align:center;
+    overflow:hidden;
+    font-size:16px;
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    color:#f16e52;
+}
+
+
+.home-category-product-title-women-fasion a h2{
+    float: left;
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 13px;
+    font-weight: normal;
+    height: 30px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    margin: 0 2px;
+    overflow: hidden;
+    padding: 0 2%;
+    text-align: center;
+    width: 100%;
+    color:#333;
+    text-transform: capitalize;
+}
+.home-category-product-title-women-fasion a h2:hover
+{
+    text-decoration:none;
+    color:#c77eb5;
+    text-transform: capitalize;
+}
+/* Start more winter product */
+
+.home-show-more-women-fasion
+{
+	text-align:right;
+	margin-top:20px;
+	
+}
+.home-show-more-women-fasion a
+{
+	text-decoration:none;
+	font-size:16px;
+	color:#929d8d;
+			 	
+}
+.home-show-more-women-fasion a:hover
+{
+	text-decoration:none;
+	font-size:16px;
+	color:#c77eb5;
+}
+
+/* End women fasion */
+
+/* Start men fasion */
+.home-first-category-block-men-fasion
+{
+    margin-top:30px;
+}
+.first-block-category-menu-container-men-fasion
+{
+    width:190px;
+    height:326px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+.first-block-image-container-men-fasion
+{
+    background-color:#CCC;
+    width:263px;
+    height:326px;
+    float:left;
+}
+
+.home-second-category-block-men-fasion
+{
+    margin-top:30px;
+}
+.second-block-category-menu-container-men-fasion
+{
+    width:190px;
+    height:326px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+.second-block-image-container-men-fasion
+{
+    background-color:#CCC;
+    width:263px;
+    height:326px;
+    float:left;
+}
+/* start show more product */
+
+.first-block-product-container-men-fasion
+{
+    width:52.4%;
+    width:calc(100% - 453px); 
+    width: -webkit-calc(100% - 453px);
+    width: -moz-calc(100% - 453px);
+    float:left;
+    height:326px;
+    overflow:hidden;
+}
+
+.home-first-category-block-men-fasion
+{
+    margin-top:30px;
+}
+
+.first-block-category-menu-container-men-fasion
+{
+    width:200px;
+    height:326px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+/* Start of men Category Block*/
+
+
+
+.home-13-0-block-category-menu-header-men-fasion
+{
+    width:100%;
+    background-color:#e85985;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+.home-13-0-block-category-menu-header-men-fasion h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+}
+
+.home-13-0-block-category-menu-header-men-fasion h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-13-0-block-category-menu-header-men-fasion h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-13-0-block-category-menu-wrapper-men-fasion
+{
+    float:left;
+    width: 100%;
+    height:250px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-13-0-block-category-menu-bottom-men-fasion
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+
+
+.home-13-0-block-subcategory-name-men-fasion
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    
+}
+.home-13-0-block-subcategory-name-men-fasion h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+.home-13-0-block-subcategory-name-men-fasion a
+{
+     float:left;
+    text-decoration:none;
+    color: #707da3;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-13-0-block-subcategory-name-men-fasion a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#e85985;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+.first-block-image-container-men-fasion
+{
+    background-color:#CCC;
+    width:252px;
+    height:326px;
+    float:left;
+}
+.home-category-product-wrapper-men-fasion
+{
+    float:left;
+    width:100%;
+    border-bottom:.5px solid #F5F5F5;
+    /*border-right:0.5px solid #F5F5F5;*/
+    height:163px;
+}
+.home-category-product-image-men-fasion
+{
+    float:left;
+    width:100%;
+    height:119px;
+    text-align:center;
+    
+}
+.home-category-product-image-men-fasion img
+{
+    height: 100px;
+    margin-top: 18px;
+    max-width: 100%;
+}
+.home-category-product-title-men-fasion
+{
+    float:left;
+    
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 15px;
+    font-weight:normal;
+    height: 30px;
+    margin: 0px 2px 0px 2px;
+    text-align:center;
+    overflow: hidden;
+    line-height: 30px;
+   
+    padding: 0 2%;
+   letter-spacing: 1px;
+    width: 96%;
+    
+}
+.home-category-product-title-men-fasion a
+{
+    
+   
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 15px;
+    
+    height: 30px;
+    line-height: 30px;
+    text-decoration:none;
+    color:#333;
+    font-weight:normal;
+}
+.home-category-product-title-men-fasion a:hover
+{
+    text-decoration:none;
+    color:#e85985;
+}
+.home-category-product-title-men-fasion a:visited
+{
+    text-decoration:none;
+    color:#333;
+}
+.home-category-product-price-men-fasion
+{
+    float:left;
+    width:100%;
+    height: 15px;
+    line-height: 15px;
+    margin-bottom: 10px;
+    text-align:center;
+    overflow:hidden;
+    font-size:16px;
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    color:#f16e52;
+}
+
+
+.home-category-product-title-men-fasion a h2{
+    float: left;
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 13px;
+    font-weight: normal;
+    height: 30px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    margin: 0 2px;
+    overflow: hidden;
+    padding: 0 2%;
+    text-align: center;
+    width: 100%;
+    color:#333;
+    text-transform: capitalize;
+}
+.home-category-product-title-men-fasion a h2:hover
+{
+    text-decoration:none;
+    color:#e85985;
+    text-transform: capitalize;
+}
+/* Start more winter product */
+
+.home-show-more-men-fasion
+{
+	text-align:right;
+	margin-top:20px;
+	
+}
+.home-show-more-men-fasion a
+{
+	text-decoration:none;
+	font-size:16px;
+	color:#929d8d;
+			 	
+}
+.home-show-more-men-fasion a:hover
+{
+	text-decoration:none;
+	font-size:16px;
+        color: #b482d7;
+        
+}
+
+/* End women fasion color:#e85985;*/
