@@ -642,19 +642,19 @@
                                         <div class="hr hr-dotted hr-8"></div>
                                         <label>
                                             <input type="checkbox" class="tc" id="fixed-navbar" />
-                                            <span id="#fixed-navbar" class="labels"> Fixed NavBar</span>
+                                            <span id="fixed-navbar" class="labels"> Fixed NavBar</span>
                                         </label>
                                         <label>
                                             <input type="checkbox" class="tc" id="fixed-sidebar" />
-                                            <span id="#fixed-sidebar" class="labels"> Fixed NavBar+SideBar</span>
+                                            <span id="fixed-sidebar" class="labels"> Fixed NavBar+SideBar</span>
                                         </label>
                                         <label>
                                             <input type="checkbox" class="tc" id="sidebar-toggle" />
-                                            <span id="#sidebar-toggle" class="labels"> Sidebar Toggle</span>
+                                            <span id="sidebar-toggle" class="labels"> Sidebar Toggle</span>
                                         </label>
                                         <label>
                                             <input type="checkbox" class="tc" id="in-container" />
-                                            <span id="#in-container" class="labels"> Inside<strong>.container</strong></span>
+                                            <span id="in-container" class="labels"> Inside<strong>.container</strong></span>
                                         </label>
 
                                         <div class="space-4"></div>
@@ -666,7 +666,7 @@
 
                                     <label>
                                         <input type="checkbox" class="tc" id="side-bar-color" />
-                                        <span id="#side-bar-color" class="labels"> SideBar (Light)</span>
+                                        <span id="side-bar-color" class="labels"> SideBar (Light)</span>
                                     </label>
 
                                     <ul>									
@@ -1208,7 +1208,7 @@
                                                     <div class="tcb">
                                                         <label>
                                                             <input type="checkbox" class="tc" id="checkbox" />
-                                                            <span id="#checkbox" class="labels">
+                                                            <span id="checkbox" class="labels">
                                                                 Updating server software <i class="fa fa-warning text-danger"></i>
                                                             </span>
                                                         </label>
@@ -1218,7 +1218,7 @@
                                                     <div class="tcb">
                                                         <label>
                                                             <input type="checkbox" class="tc" id="checkbox1" />
-                                                            <span id="#checkbox1" class="labels">
+                                                            <span id="checkbox1" class="labels">
                                                                 Fixing bugs
                                                             </span>
                                                         </label>
@@ -1228,7 +1228,7 @@
                                                     <div class="tcb">
                                                         <label>
                                                             <input type="checkbox" class="tc" id="checkbox2" />
-                                                            <span id="#checkbox2" class="labels">
+                                                            <span id="checkbox2" class="labels">
                                                                 Upgrading scripts in template
                                                             </span>
                                                         </label>
@@ -1238,7 +1238,7 @@
                                                     <div class="tcb">
                                                         <label>
                                                             <input type="checkbox" class="tc" id="checkbox3" />
-                                                            <span id="#checkbox3" class="labels">
+                                                            <span id="checkbox3" class="labels">
                                                                 Reporting to manager
                                                             </span>
                                                         </label>
@@ -1248,7 +1248,7 @@
                                                     <div class="tcb">
                                                         <label>
                                                             <input type="checkbox" class="tc" id="checkbox4" />
-                                                            <span id="#checkbox4" class="labels">
+                                                            <span id="checkbox4" class="labels">
                                                                 Pending Orders <span class="badge badge-success">3</span>
                                                             </span>
                                                         </label>
@@ -1258,7 +1258,7 @@
                                                     <div class="tcb">
                                                         <label>
                                                             <input type="checkbox" class="tc" id="checkbox5" />
-                                                            <span id="#checkbox5" class="labels">
+                                                            <span id="checkbox5" class="labels">
                                                                 Call to John Smith
                                                             </span>
                                                         </label>

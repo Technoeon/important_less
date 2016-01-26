@@ -11,6 +11,9 @@
  *
  * @author Rubel
  */
-class onlineshop {
+class onlineshop extends CI_Controller{
     //put your code here
+    public function index(){
+        echo 'Welcome to Somoyer Deal!';
+    }
 }

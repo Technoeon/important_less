@@ -23,6 +23,7 @@
 |
 */
 $config['base_url'] = 'http://localhost/important_less/';
+//$config['base_url'] = 'http://192.168.0.100:8090/important_less/';
 
 /*
 |--------------------------------------------------------------------------
