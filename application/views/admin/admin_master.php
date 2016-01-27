@@ -64,7 +64,7 @@
                                             <i class="fa fa-user"></i> My Profile
                                         </a>
                                     </li>
-      											
+
                                     <li>
                                         <a href="login.html">
                                             <i class="fa fa-power-off"></i> Logout
@@ -90,10 +90,6 @@
                             <!--Search Box-->
                         </ul>
                         <!-- END RIGHT SIDE DROPDOWN BUTTONS -->
-
-                        <!-- BEGIN TOP MENU -->
-        
-                        <!-- END TOP MENU -->
 
                     </div><!-- /.nav-top -->
                 </nav><!-- /.navbar-top -->
@@ -134,251 +130,157 @@
                                     <i class="fa fa-dashboard"></i> Dashboard
                                 </a>
                             </li>
-                            <!-- BEGIN COMPONENTS DROPDOWN -->
+                            <!-- Main Menu Manager End-->
                             <li class="panel">
                                 <a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#components">
-                                    <i class="fa fa-cogs"></i> Components <span class="fa arrow"></span>
+                                    <i class="fa fa-bars"></i>Menu Manager<span class="fa arrow"></span>
                                 </a>
                                 <ul class="collapse nav" id="components">
                                     <li>
-                                        <a href="portlet.html">
-                                            <i class="fa fa-angle-double-right"></i> Portlets
+                                        <a href="#">
+                                            <i class="fa fa-angle-double-right"></i>Add Main Menu
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="elements-ui.html">
-                                            <i class="fa fa-angle-double-right"></i> Elements <span class="label label-sm label-primary">New</span>
+                                        <a href="#">
+                                            <i class="fa fa-angle-double-right"></i>Add Sub Menu
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="tabs_accordions-ui.html">
-                                            <i class="fa fa-angle-double-right"></i> Tabs & Accordions
+                                        <a href="#">
+                                            <i class="fa fa-angle-double-right"></i> Add Menu
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="button-ui.html">
-                                            <i class="fa fa-angle-double-right"></i> Buttons & Icons
+                                        <a href="#">
+                                            <i class="fa fa-angle-double-right"></i>Manage Main Menu
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="jquery-ui.html">
-                                            <i class="fa fa-angle-double-right"></i> JQuery UI
+                                        <a href="#">
+                                            <i class="fa fa-angle-double-right"></i>Manage Sub Menu
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="nestable-list.html">
-                                            <i class="fa fa-angle-double-right"></i> Nestable Lists
+                                        <a href="#">
+                                            <i class="fa fa-angle-double-right"></i>Manage Menu
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="calendar.html">
-                                            <i class="fa fa-angle-double-right"></i> Calendar
-                                        </a>
-                                    </li>
-                                    <!-- BEGIN THREE LEVEL MENU -->
-                                    <li>
-                                        <a href="javascript:;" class="accordion-toggle" data-toggle="collapse"  data-target="#sub-menu">
-                                            <i class="fa fa-angle-double-right"></i> Three Level Menu <span class="fa arrow"></span>
-                                        </a>
-                                        <ul class="collapse nav" id="sub-menu">
-                                            <li>
-                                                <a href="#" title="Title"><i class="fa fa-angle-double-right"></i> item <span class="badge badge-primary">3</span></a>
-                                            </li>
-                                            <!-- BEGIN 4th LEVEL MENU -->
-                                            <li>
-                                                <a href="javascript:;" class="accordion-toggle" data-toggle="collapse"  data-target="#sub-menu2">
-                                                    <i class="fa fa-angle-double-right"></i> 4rth Level <span class="fa arrow"></span>
-                                                </a>
-                                                <ul class="collapse nav" id="sub-menu2">
-                                                    <li>
-                                                        <a href="#" title="Title"><i class="fa fa-angle-double-right"></i> item1 </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" title="Title"><i class="fa fa-angle-double-right"></i> item2</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <!-- END 4th LEVEL MENU -->
-                                        </ul>
-                                    </li>
-                                    <!-- ENDTHREE LEVEL MENU -->
-                                </ul>
-                            </li>
-                            <!-- END COMPONENTS DROPDOWN -->							
-                            <li>
-                                <a href="tables.html">
-                                    <i class="fa fa-list"></i> Tables<span class="badge badge-primary">New</span> 
-                                </a>
-                            </li>
-                            <li>
-                                <a href="typography.html">
-                                    <i class="fa fa-text-width"></i> Typography 
-                                </a>
-                            </li>
-                            <!-- BEGIN FORMS DROPDOWN -->
-                            <li class="panel">
-                                <a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#forms">
-                                    <i class="fa fa-edit"></i> Forms <span class="fa arrow"></span>
-                                </a>
-                                <ul class="collapse nav" id="forms">
-                                    <li>
-                                        <a href="forms.html">
-                                            <i class="fa fa-angle-double-right"></i> Form Elements 
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="form-tools.html">
-                                            <i class="fa fa-angle-double-right"></i> Form Tools 
-                                        </a>
-                                    </li>										
-                                    <li>
-                                        <a href="form-wizard.html">
-                                            <i class="fa fa-angle-double-right"></i> Wizard & Validation
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <!-- END FORMS DROPDOWN -->
 
-                            <!-- BEGIN CHARTS DROPDOWN -->
+                                </ul>
+                            </li>
+                            <!-- Main Menu Manager End-->
+
+                            <!-- Product Manager start -->
                             <li class="panel">
                                 <a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#charts">
-                                    <i class="fa fa-bar-chart-o"></i> Charts <span class="fa arrow"></span>
+                                    <i class="fa fa-barcode"></i>Product Manager<span class="fa arrow"></span>
                                 </a>
                                 <ul class="collapse nav" id="charts">
                                     <li>
-                                        <a href="flot.html">
-                                            <i class="fa fa-angle-double-right"></i> Flot Charts 
+                                        <a href="#">
+                                            <i class="fa fa-angle-double-right"></i>Add Manufacturer
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="morris.html">
-                                            <i class="fa fa-angle-double-right"></i> Morris Charts 
+                                        <a href="#">
+                                            <i class="fa fa-angle-double-right"></i>Manage manufacturer
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-angle-double-right"></i>Add Product 
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-angle-double-right"></i>Manage Product 
                                         </a>
                                     </li>
                                 </ul>
                             </li>
-                            <!-- END CHARTS DROPDOWN -->
+                            <!-- Product Manager End -->
+                            <!-- END COMPONENTS DROPDOWN -->							
 
-                            <!-- Navigation category -->
-                            <li>
-                                <h4>Support</h4> 								
+                            <!-- BEGIN FORMS Order Manager -->
+                            <li class="panel">
+                                <a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#forms">
+                                    <i class="fa fa-inbox"></i>Order Manager<span class="fa arrow"></span>
+                                </a>
+                                <ul class="collapse nav" id="forms">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-angle-double-right"></i>Pending Order 
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-angle-double-right"></i> Accepted Order
+                                        </a>
+                                    </li>										
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-angle-double-right"></i>Rejected Order 
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-angle-double-right"></i>All Order 
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
-                            <!-- END Navigation category -->
+                            <!-- End FORMS Order Manager -->
 
                             <!-- BEGIN MORE PAGES DROPDOWN -->
                             <li class="panel">
                                 <a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#e-pages">
-                                    <i class="fa fa-shopping-cart"></i> eCommerce <span class="fa arrow"></span>
+                                    <i class="fa fa-users"></i>Employee Manage<span class="fa arrow"></span>
                                 </a>
                                 <ul class="collapse nav" id="e-pages">
                                     <li>
-                                        <a href="products.html">
-                                            <i class="fa fa-angle-double-right"></i> Products Listing
+                                        <a href="#">
+                                            <i class="fa fa-angle-double-right"></i>Add Employee 
+
                                         </a>
                                     </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-angle-double-right"></i>Manage Employee
+                                        </a>
+                                    </li>
+
                                 </ul>
                             </li>
                             <!-- END MORE PAGES DROPDOWN -->
 
-                            <!-- BEGIN PAGES DROPDOWN -->
+                            <!-- BEGIN CUSTOMER INFO  START-->
                             <li class="panel">
                                 <a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#pages">
-                                    <i class="fa fa-list"></i> Additional Pages <span class="fa arrow"></span>
+                                    <i class="fa fa-users"></i>Customer Info<span class="fa arrow"></span>
                                 </a>
                                 <ul class="collapse nav" id="pages">
                                     <li>
-                                        <a href="profile.html">
-                                            <i class="fa fa-angle-double-right"></i> User Profile 
+                                        <a href="#">
+                                            <i class="fa fa-angle-double-right"></i>Customer Review
                                         </a>
                                     </li>
+
                                     <li>
-                                        <a href="inbox.html">
-                                            <i class="fa fa-angle-double-right"></i> Inbox 
+                                        <a href="">
+                                            <i class="fa fa-angle-double-right"></i>Customer Details
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="pricing.html">
-                                            <i class="fa fa-angle-double-right"></i> Pricing Tables
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="invoice.html">
-                                            <i class="fa fa-angle-double-right"></i> Invoice
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="timeline.html">
-                                            <i class="fa fa-angle-double-right"></i> Timeline
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="login.html">
-                                            <i class="fa fa-angle-double-right"></i> Login & Register 
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="faqs.html">
-                                            <i class="fa fa-angle-double-right"></i> FAQs
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="blank.html">
-                                            <i class="fa fa-angle-double-right"></i> Blank Page
-                                        </a>
-                                    </li>
+
                                 </ul>
                             </li>
-                            <!-- END PAGES DROPDOWN -->
-                            <!-- BEGIN MORE PAGES DROPDOWN -->
-                            <li class="panel">
-                                <a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#m-pages">
-                                    <i class="fa fa-tag"></i> More Pages <span class="fa arrow"></span>
-                                </a>
-                                <ul class="collapse nav" id="m-pages">
-                                    <li>
-                                        <a href="gallery.html">
-                                            <i class="fa fa-angle-double-right"></i> Gallery
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="error-404.html">
-                                            <i class="fa fa-angle-double-right"></i> Error 404
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="error-500.html">
-                                            <i class="fa fa-angle-double-right"></i> Error 505
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <!-- END MORE PAGES DROPDOWN -->
+                            <!-- BEGIN CUSTOMER INFO END -->
+
                         </ul><!-- /.side-nav -->
-
-                        <div class="sidebar-labels">
-                            <h4>Labels</h4>							
-                            <ul>
-                                <li><a href="#"><i class="fa fa-circle-o text-primary"></i> My Recent <span class="badge badge-primary">3</span></a></li>
-                                <li><a href="#"><i class="fa fa-circle-o text-success"></i> Background</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="sidebar-alerts">							
-                            <div class="alert fade in">
-                                <span>Sales Report</span>
-                                <div class="progress progress-mini progress-striped active no-margin-bottom">
-                                    <div class="progress-bar progress-bar-primary" style="width: 36%"></div>
-                                </div>
-                                <small>Calculating daily bias... 36%</small>
-                            </div>
-                        </div>
 
                     </div><!-- /.navbar-collapse -->
                 </nav><!-- /.navbar-side -->
                 <!-- END SIDE NAVIGATION -->
-
-
                 <!-- BEGIN MAIN PAGE CONTENT -->
                 <div id="page-wrapper">
                     <!-- BEGIN PAGE HEADING ROW -->
@@ -392,8 +294,6 @@
                                     </li>
                                     <li class="active">Dashboard</li>
                                 </ul>
-
-               
                             </div>
                             <!-- END BREADCRUMB -->	
 
@@ -404,7 +304,7 @@
 
                             <!-- /#ek-layout-button -->	
                             <div class="qs-layout-menu">
-                               
+
                                 <div class="qs-setting-box" id="qs-setting-box">
 
                                     <div class="hidden-xs hidden-sm">
@@ -458,7 +358,7 @@
                     <div class="row">
                         <div class="col-lg-12">
 
-			
+
                             <!-- END YOUR CONTENT HERE -->
 
                         </div>
@@ -483,10 +383,7 @@
                 <!-- END MAIN PAGE CONTENT -->
             </div>  
         </div>
-
-     
-
-        <!-- core JavaScript -->
+ <!-- core JavaScript -->
         <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
         <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
         <script src="<?php echo base_url(); ?>assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
@@ -538,5 +435,5 @@
         </script>
     </body>
 
-   
+
 </html>
