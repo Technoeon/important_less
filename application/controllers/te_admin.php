@@ -19,12 +19,12 @@ class Te_Admin extends CI_Controller {
     }
     public function index()
     {
-        $data=array();
+        
         $this->load->view('admin/login');
     }
     public function check_login()
     {
-        $data=array();
+        
         $this->load->view('admin/admin_master');
     }
     
