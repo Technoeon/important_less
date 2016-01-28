@@ -1524,7 +1524,7 @@ a.btn-button-st:hover {
 	border-bottom: 3px solid #E5E5E5;
 }
 .new_title.center {
-	height: 39px;
+	height: 45px;
 }
 .new_title h2 {
 	border-bottom: 3px solid #0A3151;
@@ -2628,12 +2628,12 @@ ul.topnav em:hover {
 .slider-items-products .owl-buttons .owl-prev {
 	position: absolute;
 	right: 45px;
-	top: -49px;
+	top: -32px;
 }
 .slider-items-products .owl-buttons .owl-next {
 	position: absolute;
 	right: 13px;
-	top: -49px;
+	top: -32px;
 }
 .slider-items-products .owl-buttons .owl-prev a {
 	background-position: 0 100%;
@@ -2680,7 +2680,7 @@ ul.topnav em:hover {
 	color: #000;
 }
 .product-flexslider {
-	margin: 20px -10px;
+	margin: 5px -10px;
 }
 .slider-items-products .owl-buttons a:hover {
 	text-decoration: none;
