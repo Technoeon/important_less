@@ -2347,24 +2347,17 @@
                         <h4>Contact us</h4>
                         <div class="contacts-info">
                             <address>
-                                <i class="add-icon">&nbsp;</i>123 Main Street, Anytown, <br>
-                                &nbsp;CA 12345  USA
+                                <i class="add-icon">&nbsp;</i>Mirpur-10,Dhaka-1216 <br>
+                                &nbsp;Bangladesh
                             </address>
-                            <div class="phone-footer"><i class="phone-icon">&nbsp;</i> +1 800 123 1234</div>
-                            <div class="email-footer"><i class="email-icon">&nbsp;</i> <a href="#">support@magikcommerce.com</a> </div>
+                            <div class="phone-footer"><i class="phone-icon">&nbsp;</i> +88 01711 267842</div>
+                            <div class="email-footer"><i class="email-icon">&nbsp;</i> <a href="#">support@somoyerdeal.com</a> </div>
                         </div>
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    <div class="col-sm-5 col-xs-12 coppyright">&copy; 2015 Magikcommerce. All Rights Reserved.</div>
-                    <div class="col-sm-7 col-xs-12 company-links">
-                        <ul class="links">
-                            <li><a href="#" title="Magento Themes">Magento Themes</a></li>
-                            <li><a href="#" title="Premium Themes">Premium Themes</a></li>
-                            <li><a href="#" title="Responsive Themes">Responsive Themes</a></li>
-                            <li class="last"><a href="#" title="Magento Extensions">Magento Extensions</a></li>
-                        </ul>
-                    </div>
+                    <div class="col-sm-5 col-xs-12 coppyright">&copy; 2016 Somoyer Deal, Developed by Techno Eon.</div>
+                    
                 </div>
             </footer>
             <!-- End Footer --> 
