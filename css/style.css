@@ -123,6 +123,7 @@ legend {
 	box-shadow: none;
 	border: none;
 	color: #bed6e2;
+        font-size: 18px;
 }
 a.block-language:hover {
 	color: #bed6e2;
@@ -223,7 +224,7 @@ a.block-currency:focus {
 	display: inline-block;
 	padding: 0px;
 	color: #bed6e2;
-	font-size: 12px;
+	font-size: 18px;
 	padding-left: 25px;
 }
 .toplinks div.links div a:hover {
@@ -279,7 +280,7 @@ a.block-currency:focus {
 	width: 25px;
 }
 .search-btn-bg {
-	background-color: #fdd922;
+	background-color: #25BD0A;
 	border: 1px solid #e0bc27;
 	border-radius: 0 2px 2px 0;
 	color: #565656;
@@ -910,7 +911,7 @@ li.level0 > a:hover > span > .pin-bottom:before, #nav li.level0:hover > a > span
 	color: #fff;
 	display: block;
 	float: left;
-	font-size: 13px;
+	font-size: 16px;
 	line-height: 18px;
 	padding: 13px 16px;
 	text-decoration: none;

@@ -874,7 +874,7 @@ website:   	http://www.magikcommerce.com/
 	line-height: 1.4;
 }
 #magik-verticalmenu .nav-title {
-	color: #565656;
+	color: #FF0000;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 	margin: 0;
@@ -883,7 +883,7 @@ website:   	http://www.magikcommerce.com/
 	font-weight: normal;
 	text-transform: uppercase;
 	padding: 11px 15px;
-	background: #fdd922;
+	background: #014693;
 	letter-spacing: 1px;
 }
 #magik-verticalmenu .nav-title:before {
@@ -896,11 +896,11 @@ website:   	http://www.magikcommerce.com/
 	clear: both;
 }
 #magik-verticalmenu .nav-title span {
-	font-size: 14px;
+	font-size: 17px;
 	font-weight: normal;
 	letter-spacing: 1px;
 	text-transform: uppercase;
-	color: #565656;
+	color: #CCCCCC;
 	font-family: 'Open Sans', sans-serif;
 }
 #magik-verticalmenu .verticalmenu.navbar-nav .dropdown-menu div.menu-title, #magik-verticalmenu .verticalmenu.navbar-nav .dropdown-menu .title {
@@ -935,7 +935,7 @@ website:   	http://www.magikcommerce.com/
 	color: #333;
 	border-bottom: 1px solid #ddd;
 	border-top: 1px solid #fff;
-	font-size: 12px;
+	font-size: 19px;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: normal;
 	text-transform: uppercase;
