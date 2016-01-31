@@ -280,7 +280,7 @@ a.block-currency:focus {
 	width: 25px;
 }
 .search-btn-bg {
-	background-color: #25BD0A;
+	background-color: #FDD922;
 	border: 1px solid #e0bc27;
 	border-radius: 0 2px 2px 0;
 	color: #565656;
@@ -7545,9 +7545,9 @@ button.subscribe:before {
 	padding-bottom: 5px;
 	padding-top: 5px;
 }
-.payment-accept img {
-	margin: 0px 10px 8px 0px;
-	width: 50px;
+.payment-accept a img {
+	margin: 0px 20px 12px 0px;
+	width: 210px;
 }
 .footer-middle h4 {
 	color: #fff;
