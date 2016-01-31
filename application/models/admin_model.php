@@ -11,6 +11,9 @@ class Admin_Model extends CI_Model{
         $result = $this->db->get();
         return $result->row();
     }
+    public function save_main_category($data) {
+        $this->db->insert('tbl_main_category', $data);
+    }
 }
 
 
