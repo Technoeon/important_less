@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -35,7 +35,7 @@ class Te_Product_Manager extends CI_Controller {
         $sdata = array();
         $sdata['exception'] = 'You Are Successfully Logout ! ';
         $this->session->set_userdata($sdata);
-        redirect('UserLogin/index');       
+        redirect('te_somoyerdeal/index');       
     }
 
 }

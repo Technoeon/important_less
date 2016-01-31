@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 class Te_Admin extends CI_Controller {
 
     public function __construct() {
@@ -21,6 +21,6 @@ class Te_Admin extends CI_Controller {
         $sdata = array();
         $sdata['exception'] = 'You Are Successfully Logout ! ';
         $this->session->set_userdata($sdata);
-        redirect('UserLogin/index');
+        redirect('te_somoyerdeal/index');
     }
 }

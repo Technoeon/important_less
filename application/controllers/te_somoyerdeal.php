@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -17,7 +17,7 @@ class Te_Somoyerdeal extends CI_Controller {
         parent::__construct();
         $management_id = $this->session->userdata('management_id');
         $management_role = $this->session->userdata('management_role');
-        if ($management_id != NULL) {
+        if ($management_id != NULL && $management_role != NULL) {
             if ($management_role == 'admin') {
                 redirect('te_admin', 'refresh');
             } elseif ($management_role == 'product_manager') {
