@@ -34,7 +34,7 @@
 
                   <div class="hr hr-8 hr-double dotted"></div>
 
-                  <form method="post" action="<?php echo base_url() ?>te_admin/check_login">
+                  <form method="post" action="<?php echo base_url() ?>te_somoyerdeal/check_login_authentication">
                       <div class="form-group">
                           <div class="input-icon right">
                               <span class="fa fa-key text-gray"></span>
