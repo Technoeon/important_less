@@ -1,5 +1,8 @@
 <?php
+
+
 session_start();
+
 class Te_Admin extends CI_Controller {
 
     public function __construct() {
@@ -12,8 +15,30 @@ class Te_Admin extends CI_Controller {
     }
 
     public function index() {
-        $this->load->view('admin/admin_master');       
+
+        $this->load->view('admin/admin_master');
+        /* echo'<pre>';
+          print_r($management_id.'---------'.$management_role);
+          exit(); */
     }
+
+    public function add_main_menu() {
+        $data = array();
+        $data['main_content'] = $this->load->view('admin/add_main_menu', '', true);
+        $this->load->view('admin/admin_master', $data);
+    }
+
+    public function add_sub_menu() {
+        $data = array();
+        $data['main_content'] = $this->load->view('admin/add_sub_menu', '', TRUE);
+        $this->load->view('admin/admin_master', $data);
+    }
+     public function add_menu() {
+        $data = array();
+        $data['main_content'] = $this->load->view('admin/add_menu', '', TRUE);
+        $this->load->view('admin/admin_master', $data);
+    }
+
     public function logout() {
         $this->session->unset_userdata('management_id');
         $this->session->unset_userdata('name');
@@ -23,4 +48,5 @@ class Te_Admin extends CI_Controller {
         $this->session->set_userdata($sdata);
         redirect('te_somoyerdeal/index');
     }
+
 }

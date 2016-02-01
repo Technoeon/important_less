@@ -29,7 +29,25 @@
               <!-- BEGIN LOGIN BOX -->
               <div id="login-box" class="login-box visible">					
                   <p class="bigger-110">
-                      <i class="fa fa-key"></i> Please Enter Your Information
+      
+                      <i class="fa fa-key">
+  
+                      </i> 
+                      
+                       <?php
+                       
+                         $exception = $this->session->userdata('exception');
+                            if (empty($exception)) {
+                                
+                                echo'Please Enter Yours Valid Information';
+                                
+                            } 
+                               else { 
+                                echo $exception;
+                                $this->session->unset_userdata('exception');
+                               }
+                     
+                            ?>
                   </p>
 
                   <div class="hr hr-8 hr-double dotted"></div>

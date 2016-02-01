@@ -56,7 +56,7 @@
                             </li>
                             <li class="dropdown user-box">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <img class="img-circle" src="<?php echo base_url(); ?>assets/images/user.jpg" alt=""> <span class="user-info">John Smith</span> <b class="caret"></b>
+                                    <i class="fa fa-user"></i> <span class="user-info"><?php echo $user_name = $this->session->userdata('name') ?></span> <b class="caret"></b>
                                 </a>
                                 <ul class="dropdown-menu dropdown-user">
                                     <li>
@@ -66,7 +66,7 @@
                                     </li>
 
                                     <li>
-                                        <a href="login.html">
+                                        <a href="<?php echo base_url(); ?>te_admin/logout">
                                             <i class="fa fa-power-off"></i> Logout
                                         </a>
                                     </li>
@@ -137,17 +137,18 @@
                                 </a>
                                 <ul class="collapse nav" id="components">
                                     <li>
-                                        <a href="#">
+
+                                        <a href="<?php echo base_url(); ?>te_admin/add_main_menu">
                                             <i class="fa fa-angle-double-right"></i>Add Main Menu
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="<?php echo base_url(); ?>te_admin/add_sub_menu">
                                             <i class="fa fa-angle-double-right"></i>Add Sub Menu
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="<?php echo base_url() ?>te_admin/add_menu">
                                             <i class="fa fa-angle-double-right"></i> Add Menu
                                         </a>
                                     </li>
@@ -290,7 +291,7 @@
                             <div class="breadcrumbs">
                                 <ul class="breadcrumb">
                                     <li>
-                                        <a href="#">Home</a>
+                                        <a href="<?php echo base_url() ?>te_admin">Home</a>
                                     </li>
                                     <li class="active">Dashboard</li>
                                 </ul>
@@ -358,6 +359,7 @@
                     <div class="row">
                         <div class="col-lg-12">
 
+                            <?php if (isset($main_content)) echo $main_content; ?>
 
                             <!-- END YOUR CONTENT HERE -->
 
@@ -383,7 +385,7 @@
                 <!-- END MAIN PAGE CONTENT -->
             </div>  
         </div>
- <!-- core JavaScript -->
+        <!-- core JavaScript -->
         <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
         <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
         <script src="<?php echo base_url(); ?>assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
@@ -415,6 +417,7 @@
         <script src="<?php echo base_url(); ?>assets/js/home-page.init.js"></script>
         <script src="<?php echo base_url(); ?>assets/js/plugins/jquery-sparkline/jquery.sparkline.init.js"></script>
         <script src="<?php echo base_url(); ?>assets/js/plugins/easypiechart/jquery.easypiechart.init.js"></script>
+
         <script type="text/javascript">
                                             //Live Chat
                                             jQuery(function ($) {
@@ -432,6 +435,7 @@
                                             })
 
                                             $('#minicalendar').datepicker();
+
         </script>
     </body>
 

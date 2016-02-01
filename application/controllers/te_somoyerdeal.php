@@ -57,9 +57,12 @@ class Te_Somoyerdeal extends CI_Controller {
             $this->session->set_userdata($sdata);
             redirect('te_order_manager/index');
         }else {
-            $sdata['exception'] = 'User Name And Password is Invalide !';
+            $sdata['exception'] = 'User Email And Password is Invalide !';
             $this->session->set_userdata($sdata);
             redirect('te_somoyerdeal/index');
         }        
     }
+    
+   
+        
 }
