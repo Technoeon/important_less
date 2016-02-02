@@ -62,6 +62,7 @@ class Te_Admin extends CI_Controller {
     //add menu//
     public function add_menu() {
         $data = array();
+        $data['main_category'] = $this->admin_model->get_main_category_id_and_name();
         $data['manu_category'] = $this->admin_model->get_sub_category_id_and_name();
         $data['main_content'] = $this->load->view('admin/add_menu', $data, TRUE);
         $this->load->view('admin/admin_master', $data);
@@ -81,6 +82,14 @@ class Te_Admin extends CI_Controller {
     }
 
     //End all type of saving menu//
+    //Manage Menu Grid Start//
+    
+    public function manage_menu_grid(){
+        $data = array();
+        $data['main_content'] = $this->load->view('admin/manage_menu_grid','', TRUE);
+        $this->load->view('admin/admin_master', $data);
+       
+    }
     public function logout() {
         $this->session->unset_userdata('management_id');
         $this->session->unset_userdata('name');

@@ -153,21 +153,10 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
-                                            <i class="fa fa-angle-double-right"></i>Manage Main Menu
+                                        <a href="<?php echo base_url()?>te_admin/manage_menu_grid">
+                                            <i class="fa fa-angle-double-right"></i>Manage All Menu
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-angle-double-right"></i>Manage Sub Menu
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-angle-double-right"></i>Manage Menu
-                                        </a>
-                                    </li>
-
                                 </ul>
                             </li>
                             <!-- Main Menu Manager End-->
@@ -435,6 +424,7 @@
                                             })
 
                                             $('#minicalendar').datepicker();
+                                            
 
         </script>
     </body>

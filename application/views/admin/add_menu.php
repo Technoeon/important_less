@@ -27,10 +27,26 @@
                             <div class="form-group">
                                 <div class="col-sm-12">
                                     <div class="space-4"></div>
-                                    <div class="space-4"></div>
+                                    
+                                   
                                     <div class="form-group">
+                                       <div class="space-4"></div>
+                                       <div class="col-sm-12">
+                                            <level><strong>Select main menu &nbsp;</strong></level>
+                                            <select name ="main_category_id">
+                                                <option>Select your main menu........</option>
+                                                <?php
+                                                foreach ($main_category as $v_category) {
+                                                    ?>
+                                                    <option value="<?php echo $v_category->main_category_id; ?>"><?php echo $v_category->main_category_name; ?></option>
+                                                <?php } ?>
+                                            </select>													
+                                        </div>
+                                       
                                         <div class="col-sm-12">
-                                            <level><strong>Select Sub menu</strong></level>
+                                            <div class="space-4"></div>
+                                            <div class="space-6"></div>
+                                            <level><strong>Select Sub menu &nbsp;&nbsp;&nbsp;</strong></level>
                                             <select name ="sub_category_id">
                                                 <option>Select your sub menu.........</option>
                                                 <?php
