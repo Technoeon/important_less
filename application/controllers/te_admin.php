@@ -61,9 +61,11 @@ class Te_Admin extends CI_Controller {
 
     //add menu//
     public function add_menu() {
+        $main_category = $this->admin_model->get_main_category_id();
+        $manu_category = $this->admin_model->get_sub_category_id_and_name();
         $data = array();
-        $data['main_category'] = $this->admin_model->get_main_category_id_and_name();
-        $data['manu_category'] = $this->admin_model->get_sub_category_id_and_name();
+        $data['main_category'] = json_encode($main_category);
+        $data['manu_category'] = json_encode($manu_category);
         $data['main_content'] = $this->load->view('admin/add_menu', $data, TRUE);
         $this->load->view('admin/admin_master', $data);
     }
@@ -71,25 +73,32 @@ class Te_Admin extends CI_Controller {
     //save sub menu//
     public function save_menu() {
         $data = array();
-        $data['category_name'] = $this->input->post('category_name', true);
-        $data['sub_category_id'] = $this->input->post('sub_category_id', true);
-        $data['category_status'] = $this->input->post('category_status', true);
-        $this->admin_model->save_category_info($data);
         $sdata = array();
-        $sdata['message'] = 'Save Menu info Successfully !';
-        $this->session->set_userdata($sdata);
-        redirect('te_admin/add_menu');
+        $data['category_name'] = $this->input->post('category_name', true);
+        $sub_category_id = $this->input->post('sub_category_id', true);
+        $data['category_status'] = $this->input->post('category_status', true);
+        if ($sub_category_id == 'Select your Sub menu') {
+            $sdata['required_msg'] = '* select a sub menu.';
+            $this->session->set_userdata($sdata);
+            redirect('te_admin/add_menu');
+        } else {
+            $data['sub_category_id'] = $sub_category_id;
+            $this->admin_model->save_category_info($data);
+            $sdata['message'] = 'Save Menu info Successfully !';
+            $this->session->set_userdata($sdata);
+            redirect('te_admin/add_menu');
+        }
     }
 
     //End all type of saving menu//
     //Manage Menu Grid Start//
-    
-    public function manage_menu_grid(){
+
+    public function manage_menu_grid() {
         $data = array();
-        $data['main_content'] = $this->load->view('admin/manage_menu_grid','', TRUE);
+        $data['main_content'] = $this->load->view('admin/manage_menu_grid', '', TRUE);
         $this->load->view('admin/admin_master', $data);
-       
     }
+
     public function logout() {
         $this->session->unset_userdata('management_id');
         $this->session->unset_userdata('name');

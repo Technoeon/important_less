@@ -1,4 +1,4 @@
-<div class="col-lg-12">
+<div class="col-lg-12" ng-controller="menu">
     <div class="row">
         <div class="col-lg-2"></div>
         <div class="col-lg-6">
@@ -27,38 +27,38 @@
                             <div class="form-group">
                                 <div class="col-sm-12">
                                     <div class="space-4"></div>
-                                    
-                                   
+
+
                                     <div class="form-group">
-                                       <div class="space-4"></div>
-                                       <div class="col-sm-12">
+                                        <div class="space-4"></div>
+                                        <div class="col-sm-12">
                                             <level><strong>Select main menu &nbsp;</strong></level>
-                                            <select name ="main_category_id">
+                                            <select name ="main_category_id" ng-options="menu.name for menu in main_menu" ng-model="main_category" ng-change="get_menu_id()">
                                                 <option>Select your main menu........</option>
-                                                <?php
-                                                foreach ($main_category as $v_category) {
-                                                    ?>
-                                                    <option value="<?php echo $v_category->main_category_id; ?>"><?php echo $v_category->main_category_name; ?></option>
-                                                <?php } ?>
-                                            </select>													
+                                            </select>
                                         </div>
-                                       
+
                                         <div class="col-sm-12">
                                             <div class="space-4"></div>
                                             <div class="space-6"></div>
                                             <level><strong>Select Sub menu &nbsp;&nbsp;&nbsp;</strong></level>
-                                            <select name ="sub_category_id">
-                                                <option>Select your sub menu.........</option>
-                                                <?php
-                                                foreach ($manu_category as $v_category) {
-                                                    ?>
-                                                    <option value="<?php echo $v_category->sub_category_id; ?>"><?php echo $v_category->sub_category_name; ?></option>
-                                                <?php } ?>
+                                            <select name ="sub_category_id" required="1">
+                                                <option>Select your Sub menu</option>
+                                                <option ng-repeat="i in sub_menu | filter:{main_category_id:mci}:true | orderBy: 'sub_category_name'" value="{{i.sub_category_id}}">{{i.sub_category_name}}</option>
                                             </select>
+                                            <level class="text-danger">
+                                                <?php
+                                                $required_msg = $this->session->userdata('required_msg');
+                                                if ($required_msg) {
+                                                    echo $required_msg;
+                                                    $this->session->unset_userdata('required_msg');
+                                                }
+                                                ?>
+                                            </level>
                                         </div>
                                     </div>
                                     <div class="space-4"></div>
-                                    <input type="text" name="category_name" class="form-control" placeholder="Enter menu name........">
+                                    <input type="text" name="category_name" class="form-control" placeholder="Enter menu name........" required="1">
                                     <div class="space-4"></div>
                                     <div class="tcb">
                                         <label class="tcb-inline">
@@ -82,3 +82,12 @@
         <div class="col-lg-4"></div>
     </div>
 </div>
+<script>
+    angular.module('te', []).controller('menu', function($scope) {
+        $scope.main_menu = <?php echo $main_category; ?>;
+        $scope.sub_menu = <?php echo $manu_category; ?>;
+        $scope.get_menu_id = function() {
+            $scope.mci = $scope.main_category.id;
+        };
+    });
+</script>

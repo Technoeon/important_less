@@ -26,10 +26,11 @@
 
         <!-- Add custom CSS here -->
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/only-for-demos.css">
-
+        <!-- Add Angular JS CDN Link--->
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     </head>
 
-    <body>
+    <body ng-app="te">
         <div id="wrapper">
             <div id="main-container">		
                 <!-- BEGIN TOP NAVIGATION -->
