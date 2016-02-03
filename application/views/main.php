@@ -46,10 +46,7 @@
                         <div class="row"> 
                             <!-- Header Language -->
                             <div class="col-xs-6">
-                                <div class="block-language" style="margin-top: 3px;"> <a class="block-language" href="#">Payment Method </a>
-                                    
-                                </div>
-
+                                
                                 <!-- End Header Language --> 
 
                                 <!-- Header Currency -->
@@ -64,6 +61,7 @@
                                 <!-- Header Top Links -->
                                 <div class="toplinks">
                                     <div class="links">
+                                        <div class="myaccount"><a title="My Account" href="<?php echo base_url();?>onlineshop/user_account"><span class="hidden-xs">Contact Us</span></a></div>
                                         <div class="myaccount"><a title="My Account" href="<?php echo base_url();?>onlineshop/user_account"><span class="hidden-xs">My Account</span></a></div>
                                         <div class="wishlist"><a title="My Wishlist"  href="<?php echo base_url();?>onlineshop/user_wishlist"><span class="hidden-xs">Wishlist</span></a></div>
                                         <div class="check"><a title="Checkout" href="<?php echo base_url();?>onlineshop/user_checkout"><span class="hidden-xs">Checkout</span></a></div>
@@ -738,6 +736,8 @@
                                     </div>
                                 </div>
                             </li>
+                             <li id="nav-home" class="level0 parent drop-menu"><a href="<?php echo base_url();?>onlineshop"><span>Discount</span> </a></li>
+                             <li id="nav-home" class="level0 parent drop-menu"><a href="<?php echo base_url();?>onlineshop"><span>About Us</span> </a></li>
                             
                         </ul>
                     </div>
