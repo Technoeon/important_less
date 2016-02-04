@@ -53,6 +53,17 @@ class Admin_Model extends CI_Model {
     public function save_category_info($data) {
         $this->db->insert('tbl_category', $data);
     }
-
     //---------End save category----------//
+    //--------- Manage Menu Start--------//
+    //--------- Manage Main Menu--------//
+    public function get_main_category(){
+        $this->db->select('main_category_id');
+        $this->db->select('main_category_name');
+        $this->db->select('main_category_status');
+        $this->db->select('main_category_position');
+        $this->db->from('tbl_main_category');
+        $query = $this->db->get();
+        return $query->result();
+    }
+    
 }

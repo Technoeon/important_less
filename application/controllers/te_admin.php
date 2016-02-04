@@ -15,15 +15,15 @@ class Te_Admin extends CI_Controller {
 
     public function index() {
         $data = array();
-        $data['title']='Home';
+        $data['title'] = 'Home';
         $this->load->view('admin/admin_master', $data);
-        
     }
+
     //add_main_menu//
     public function add_main_menu() {
         $data = array();
-        $data['title']='Add main menu';
-        $data['main_content'] = $this->load->view('admin/add_main_menu','', true);
+        $data['title'] = 'Add main menu';
+        $data['main_content'] = $this->load->view('admin/add_main_menu', '', true);
         $this->load->view('admin/admin_master', $data);
     }
 
@@ -39,22 +39,21 @@ class Te_Admin extends CI_Controller {
         $this->session->set_userdata($sdata);
         redirect('te_admin/add_main_menu');
     }
-      //Start manage_main_menu_gird//
-    public function manage_main_menu(){
-        $data=array();
-        $data['title']='Manage Main Menu Grid';
-        $data['all_main_menu']=$this->admin_model->select_all_main_menu();
-        $data['main_content']=$this->load->view('admin/manage_main_menu_grid',$data,TRUE);
+
+    //Start manage_main_menu_gird//
+    public function manage_main_menu() {
+        $data = array();
+        $data['title'] = 'Manage Main Menu Grid';
+        $data['all_main_menu'] = $this->admin_model->select_all_main_menu();
+        $data['main_content'] = $this->load->view('admin/manage_main_menu_grid', $data, TRUE);
         $this->load->view('admin/admin_master', $data);
     }
-    //End manage_main_menu_grid//
-    
-    
 
+    //End manage_main_menu_grid//
     //add_sub_menu//
     public function add_sub_menu() {
         $data = array();
-        $data['title']='Add Sub Menu';
+        $data['title'] = 'Add Sub Menu';
         $data['main_category'] = $this->admin_model->get_main_category_id_and_name();
         $data['main_content'] = $this->load->view('admin/add_sub_menu', $data, TRUE);
         $this->load->view('admin/admin_master', $data);
@@ -64,30 +63,27 @@ class Te_Admin extends CI_Controller {
     public function save_sub_category() {
         $data = array();
         $data['sub_category_name'] = $this->input->post('sub_category_name', true);
-        $main_category_id= $this->input->post('main_category_id', true);
+        $main_category_id = $this->input->post('main_category_id', true);
         $data['sub_category_status'] = $this->input->post('sub_category_status', true);
-        if($main_category_id=='Select your main menu')
-        {
-          $sdata['required_msg'] = '* select a main menu.';
-          $this->session->set_userdata($sdata);
-          redirect('te_admin/add_sub_menu');   
+        if ($main_category_id == 'Select your main menu') {
+            $sdata['required_msg'] = '* select a main menu.';
+            $this->session->set_userdata($sdata);
+            redirect('te_admin/add_sub_menu');
+        } else {
+            $data['main_category_id'] = $main_category_id;
+            $this->admin_model->save_sub_category_info($data);
+            $sdata = array();
+            $sdata['message'] = 'Save Sub Menu info Successfully !';
+            $this->session->set_userdata($sdata);
+            redirect('te_admin/add_sub_menu');
         }
-        else{
-        $data['main_category_id']=$main_category_id;
-        $this->admin_model->save_sub_category_info($data);
-        $sdata = array();
-        $sdata['message'] = 'Save Sub Menu info Successfully !';
-        $this->session->set_userdata($sdata);
-        redirect('te_admin/add_sub_menu');
-        }
-        
-        
     }
+
     //Start mange_sub_menu_grid//
-    public function manage_sub_menu(){
-        $data=array();
-        $data['title']='Manage Sub Menu Grid';
-        $data['main_content']=$this->load->view('admin/manage_sub_menu_grid','',TRUE);
+    public function manage_sub_menu() {
+        $data = array();
+        $data['title'] = 'Manage Sub Menu Grid';
+        $data['main_content'] = $this->load->view('admin/manage_sub_menu_grid', '', TRUE);
         $this->load->view('admin/admin_master', $data);
     }
 
@@ -96,7 +92,7 @@ class Te_Admin extends CI_Controller {
         $main_category = $this->admin_model->get_main_category_id();
         $manu_category = $this->admin_model->get_sub_category_id_and_name();
         $data = array();
-        $data['title']='Add Menu';
+        $data['title'] = 'Add Menu';
         $data['main_category'] = json_encode($main_category);
         $data['manu_category'] = json_encode($manu_category);
         $data['main_content'] = $this->load->view('admin/add_menu', $data, TRUE);
@@ -110,9 +106,9 @@ class Te_Admin extends CI_Controller {
         $data['category_name'] = $this->input->post('category_name', true);
         $sub_category_id = $this->input->post('sub_category_id', true);
         $data['category_status'] = $this->input->post('category_status', true);
-        
+
         if ($sub_category_id == 'Select your Sub menu') {
-            $sdata['category_name']=$data['category_name'];
+            $sdata['category_name'] = $data['category_name'];
             $sdata['required_msg'] = '* select a sub menu.';
             $this->session->set_userdata($sdata);
             redirect('te_admin/add_menu');
@@ -124,16 +120,20 @@ class Te_Admin extends CI_Controller {
             redirect('te_admin/add_menu');
         }
     }
+
     //End all type of saving menu//
-   
-   
     //Start Manage Menu Grid//
     public function manage_menu_grid() {
         $data = array();
-        $data['title']='Manage Menu';
+        $data['main_menu']=$this->admin_model->get_main_category();
+        echo '<pre>';
+        print_r($data);
+        exit();
+        $data['title'] = 'Manage Menu';       
         $data['main_content'] = $this->load->view('admin/manage_menu_grid', '', TRUE);
         $this->load->view('admin/admin_master', $data);
     }
+
     //End  Manage Menu Gride //
     public function logout() {
         $this->session->unset_userdata('management_id');

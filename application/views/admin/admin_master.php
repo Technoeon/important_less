@@ -129,7 +129,7 @@
                                     </li>
                                      <li>
 
-                                        <a href="<?php echo base_url(); ?>te_admin/manage_main_menu">
+                                        <a href="<?php echo base_url(); ?>te_admin/manage_menu_grid">
                                             <i class="fa fa-angle-double-right"></i>Manage Main Menu
                                         </a>
                                     </li>
