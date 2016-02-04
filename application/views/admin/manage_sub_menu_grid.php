@@ -9,7 +9,7 @@
                 <div class="portlet-heading inverse">
                     <div class="portlet-title">
 
-                        <h4><i class="fa fa-edit"></i> Manage Menu</h4>	
+                        <h4><i class="fa fa-edit"></i> Manage Sub Menu</h4>	
                     </div>
                     <div class="clearfix"></div>
                 </div>

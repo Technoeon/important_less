@@ -17,11 +17,9 @@
     <!-- Tc core CSS -->
     <link id="qstyle" rel="stylesheet" href="<?php echo base_url(); ?>assets/css/themes/style.css">	
   </head>
-
   <body class="login">
       <div id="wrapper">
           <!-- BEGIN MAIN PAGE CONTENT -->
-
           <div class="login-container">
               <h2>
                   <a href="#"><img src="<?php echo base_url(); ?>images/logo.png" alt="logo" class="img-responsive"></a><!-- can use your logo-->
@@ -29,29 +27,20 @@
               <!-- BEGIN LOGIN BOX -->
               <div id="login-box" class="login-box visible">					
                   <p class="bigger-110">
-      
-                      <i class="fa fa-key">
-  
-                      </i> 
-                      
-                       <?php
-                       
+                      <i class="fa fa-key"></i>
+                 
+                        <?php
                          $exception = $this->session->userdata('exception');
-                            if (empty($exception)) {
-                                
-                                echo'Please Enter Yours Valid Information';
-                                
+                           if (empty($exception)) { 
+                               echo'Please Enter Yours Valid Information'; 
                             } 
                                else { 
                                 echo $exception;
                                 $this->session->unset_userdata('exception');
                                }
-                     
                             ?>
                   </p>
-
-                  <div class="hr hr-8 hr-double dotted"></div>
-
+                     <div class="hr hr-8 hr-double dotted"></div>
                   <form method="post" action="<?php echo base_url() ?>te_somoyerdeal/check_login_authentication">
                       <div class="form-group">
                           <div class="input-icon right">

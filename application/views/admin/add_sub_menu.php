@@ -31,17 +31,26 @@
                                         <div class="col-sm-12">
                                             <level><strong>Select main menu</strong></level>
                                             <select name ="main_category_id">
-                                                <option>Select your main menu.........</option>
+                                                <option>Select your main menu</option>
                                                 <?php
                                                 foreach ($main_category as $v_category) {
                                                     ?>
                                                     <option value="<?php echo $v_category->main_category_id; ?>"><?php echo $v_category->main_category_name; ?></option>
                                                 <?php } ?>
-                                            </select>													
+                                            </select>
+                                            <level class="text-danger">
+                                                <?php
+                                                $required_msg = $this->session->userdata('required_msg');
+                                                if ($required_msg) {
+                                                    echo $required_msg;
+                                                    $this->session->unset_userdata('required_msg');
+                                                }
+                                                ?>
+                                            </level>
                                         </div>
                                     </div>
                                     <div class="space-4"></div>
-                                    <input type="text" name="sub_category_name" class="form-control" placeholder="Enter sub menu name........">
+                                    <input type="text" name="sub_category_name" class="form-control" placeholder="Enter sub menu name........"required="1">
                                     <div class="space-4"></div>
                                     <div class="tcb">
                                         <label class="tcb-inline">

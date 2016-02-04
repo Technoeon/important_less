@@ -73,22 +73,6 @@
                                     </li>
                                 </ul>
                             </li>
-                            <!--Search Box-->
-                            <li class="dropdown nav-search-icon">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <span class="glyphicon glyphicon-search"></span>
-                                </a>
-                                <ul class="dropdown-menu dropdown-search">
-                                    <li>
-                                        <div class="search-box">
-                                            <form class="" role="search">
-                                                <input type="text" class="form-control" placeholder="Search" />
-                                            </form>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                            <!--Search Box-->
                         </ul>
                         <!-- END RIGHT SIDE DROPDOWN BUTTONS -->
 
@@ -127,7 +111,7 @@
                             <!-- END Navigation category -->
 
                             <li>
-                                <a class="active" href="index-2.html">
+                                <a class="active" href="#">
                                     <i class="fa fa-dashboard"></i> Dashboard
                                 </a>
                             </li>
@@ -143,9 +127,20 @@
                                             <i class="fa fa-angle-double-right"></i>Add Main Menu
                                         </a>
                                     </li>
+                                     <li>
+
+                                        <a href="<?php echo base_url(); ?>te_admin/manage_main_menu">
+                                            <i class="fa fa-angle-double-right"></i>Manage Main Menu
+                                        </a>
+                                    </li>
                                     <li>
                                         <a href="<?php echo base_url(); ?>te_admin/add_sub_menu">
                                             <i class="fa fa-angle-double-right"></i>Add Sub Menu
+                                        </a>
+                                    </li>
+                                     <li>
+                                        <a href="<?php echo base_url(); ?>te_admin/manage_sub_menu">
+                                            <i class="fa fa-angle-double-right"></i>Manage Sub Menu
                                         </a>
                                     </li>
                                     <li>
@@ -154,8 +149,8 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="<?php echo base_url()?>te_admin/manage_menu_grid">
-                                            <i class="fa fa-angle-double-right"></i>Manage All Menu
+                                        <a href="<?php echo base_url()?>te_admin/manage_menu">
+                                            <i class="fa fa-angle-double-right"></i>Manage Main Menu
                                         </a>
                                     </li>
                                 </ul>
@@ -281,7 +276,7 @@
                             <div class="breadcrumbs">
                                 <ul class="breadcrumb">
                                     <li>
-                                        <a href="<?php echo base_url() ?>te_admin">Home</a>
+                                        <a href="<?php echo base_url();?>te_admin">Home</a>
                                     </li>
                                     <li class="active">Dashboard</li>
                                 </ul>
@@ -290,7 +285,7 @@
 
                             <div class="page-header title">
                                 <!-- PAGE TITLE ROW -->
-                                <h1>Dashboard <span class="sub-title">Content Overview</span></h1>									
+                                <h3>Dashboard <span class="sub-title">//<?php echo $title;?></span></h3>									
                             </div>
 
                             <!-- /#ek-layout-button -->	
@@ -332,11 +327,11 @@
                                     </label>
 
                                     <ul>									
-                                        <li><button class="btn" style="background-color:#d15050;" onclick="swapStyle('assets/css/themes/style.css')"></button></li>
-                                        <li><button class="btn" style="background-color:#86618f;" onclick="swapStyle('assets/css/themes/style-1.css')"></button></li> 
-                                        <li><button class="btn" style="background-color:#ba5d32;" onclick="swapStyle('assets/css/themes/style-2.css')"></button></li>
-                                        <li><button class="btn" style="background-color:#488075;" onclick="swapStyle('assets/css/themes/style-3.css')"></button></li>
-                                        <li><button class="btn" style="background-color:#4e72c2;" onclick="swapStyle('assets/css/themes/style-4.css')"></button></li>
+                                        <li><button class="btn" style="background-color:#d15050;" onclick="swapStyle('<?php echo base_url();?>assets/css/themes/style.css')"></button></li>
+                                        <li><button class="btn" style="background-color:#86618f;" onclick="swapStyle('<?php echo base_url();?>assets/css/themes/style-1.css')"></button></li> 
+                                        <li><button class="btn" style="background-color:#ba5d32;" onclick="swapStyle('<?php echo base_url();?>assets/css/themes/style-2.css')"></button></li>
+                                        <li><button class="btn" style="background-color:#488075;" onclick="swapStyle('<?php echo base_url();?>assets/css/themes/style-3.css')"></button></li>
+                                        <li><button class="btn" style="background-color:#4e72c2;" onclick="swapStyle('<?php echo base_url();?>assets/css/themes/style-4.css')"></button></li>
                                     </ul>
 
                                 </div>
@@ -408,26 +403,7 @@
         <script src="<?php echo base_url(); ?>assets/js/plugins/jquery-sparkline/jquery.sparkline.init.js"></script>
         <script src="<?php echo base_url(); ?>assets/js/plugins/easypiechart/jquery.easypiechart.init.js"></script>
 
-        <script type="text/javascript">
-                                            //Live Chat
-                                            jQuery(function ($) {
-                                                $('#live-chat-ui header').on('click', function () {
-                                                    $('.chat').slideToggle(300, 'swing');
-                                                    $('.chat-message-counter').fadeToggle(300, 'swing');
-
-                                                });
-
-                                                $('.chat-close').on('click', function (e) {
-                                                    e.preventDefault();
-                                                    $('#live-chat-ui').fadeOut(300);
-                                                });
-
-                                            })
-
-                                            $('#minicalendar').datepicker();
-                                            
-
-        </script>
+       
     </body>
 
 

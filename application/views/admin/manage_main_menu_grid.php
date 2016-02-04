@@ -9,7 +9,7 @@
                 <div class="portlet-heading inverse">
                     <div class="portlet-title">
 
-                        <h4><i class="fa fa-edit"></i> Manage Menu</h4>	
+                        <h4><i class="fa fa-edit"></i> Manage Main Menu</h4>	
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -26,9 +26,26 @@
                         </thead>
                         <tbody>
                             <tr>
+                            <?php
+                                   foreach ($all_main_menu as $v_main_menu)
+                                   {
 
-                                <td>1</td>
-                                <td>Brown Boot</td>
+                                   ?>
+                                    <tr>
+                                      <td><?php echo $v_main_menu->main_category_id;?></td>
+                                      <td><?php echo $v_main_menu->main_category_name;?></td>
+                                                                    <td>
+                                           <?php 
+                                             if($v_main_menu->main_category_status==1)
+                                             {
+                                                 echo 'Published';
+                                             }
+                                             else{
+                                                 echo 'Unpublished';
+                                             }
+                                             ?>
+                                       </td>
+                                                                <?php } ?>
                                 <td><span class="label label-active ">Active</span></td>
                                 <td>
                                     <div class="btn-group btn-group-xs ">

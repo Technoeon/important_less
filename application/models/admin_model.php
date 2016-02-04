@@ -19,6 +19,7 @@ class Admin_Model extends CI_Model {
         $this->db->insert('tbl_main_category', $data);
     }
 
+
     // Save sub category
     public function get_main_category_id_and_name() {
         $this->db->select('main_category_id');

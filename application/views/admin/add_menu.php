@@ -27,8 +27,6 @@
                             <div class="form-group">
                                 <div class="col-sm-12">
                                     <div class="space-4"></div>
-
-
                                     <div class="form-group">
                                         <div class="space-4"></div>
                                         <div class="col-sm-12">
@@ -37,14 +35,13 @@
                                                 <option>Select your main menu........</option>
                                             </select>
                                         </div>
-
                                         <div class="col-sm-12">
                                             <div class="space-4"></div>
                                             <div class="space-6"></div>
                                             <level><strong>Select Sub menu &nbsp;&nbsp;&nbsp;</strong></level>
                                             <select name ="sub_category_id" required="1">
                                                 <option>Select your Sub menu</option>
-                                                <option ng-repeat="i in sub_menu | filter:{main_category_id:mci}:true | orderBy: 'sub_category_name'" value="{{i.sub_category_id}}">{{i.sub_category_name}}</option>
+                                                <option ng-repeat="i in sub_menu| filter:{main_category_id:mci}:true | orderBy: 'sub_category_name'" value="{{i.sub_category_id}}">{{i.sub_category_name}}</option>
                                             </select>
                                             <level class="text-danger">
                                                 <?php
@@ -58,7 +55,13 @@
                                         </div>
                                     </div>
                                     <div class="space-4"></div>
-                                    <input type="text" name="category_name" class="form-control" placeholder="Enter menu name........" required="1">
+                                    <input type="text" name="category_name" value="<?php
+                                    $category_name = $this->session->userdata('category_name');
+                                    if ($category_name) {
+                                        echo $category_name;
+                                        $this->session->unset_userdata('category_name');
+                                    }
+                                    ?>" class="form-control" placeholder="Enter menu name........" required="1">
                                     <div class="space-4"></div>
                                     <div class="tcb">
                                         <label class="tcb-inline">
@@ -83,10 +86,10 @@
     </div>
 </div>
 <script>
-    angular.module('te', []).controller('menu', function($scope) {
+    angular.module('te', []).controller('menu', function ($scope) {
         $scope.main_menu = <?php echo $main_category; ?>;
         $scope.sub_menu = <?php echo $manu_category; ?>;
-        $scope.get_menu_id = function() {
+        $scope.get_menu_id = function () {
             $scope.mci = $scope.main_category.id;
         };
     });
