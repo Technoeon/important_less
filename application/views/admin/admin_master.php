@@ -129,7 +129,7 @@
                                     </li>
                                      <li>
 
-                                        <a href="<?php echo base_url(); ?>te_admin/manage_menu_grid">
+                                        <a href="<?php echo base_url(); ?>te_admin/manage_main_menu">
                                             <i class="fa fa-angle-double-right"></i>Manage Main Menu
                                         </a>
                                     </li>
@@ -285,7 +285,7 @@
 
                             <div class="page-header title">
                                 <!-- PAGE TITLE ROW -->
-                                <h3>Dashboard <span class="sub-title">//<?php echo $title;?></span></h3>									
+                                <h3>Dashboard <span class="sub-title"><?php echo $title;?></span></h3>									
                             </div>
 
                             <!-- /#ek-layout-button -->	

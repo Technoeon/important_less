@@ -8,110 +8,51 @@
             <div class="portlet">
                 <div class="portlet-heading inverse">
                     <div class="portlet-title">
-
                         <h4><i class="fa fa-edit"></i> Manage Main Menu</h4>	
                     </div>
                     <div class="clearfix"></div>
                 </div>
-
                 <div class="portlet-body no-padding-top no-padding-bottom">												
                     <table id="products" class="datatable table table-hover table-striped table-bordered tc-table">
                         <thead>
                             <tr>
                                 <th class="center"data-hide="phone,tablet">ID</th>
                                 <th class="center"data-class="expand">Menu Name</th>
-                                <th class="center"data-hide="phone">Status</td>
+
+                                <th class="center">Position</th>
+                                <th class="center"data-hide="phone">Status</th>
                                 <th class="center">Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
                             <?php
-                                   foreach ($all_main_menu as $v_main_menu)
-                                   {
-
-                                   ?>
-                                    <tr>
-                                      <td><?php echo $v_main_menu->main_category_id;?></td>
-                                      <td><?php echo $v_main_menu->main_category_name;?></td>
-                                                                    <td>
-                                           <?php 
-                                             if($v_main_menu->main_category_status==1)
-                                             {
-                                                 echo 'Published';
-                                             }
-                                             else{
-                                                 echo 'Unpublished';
-                                             }
-                                             ?>
-                                       </td>
-                                                                <?php } ?>
-                                <td><span class="label label-active ">Active</span></td>
-                                <td>
-                                    <div class="btn-group btn-group-xs ">
-                                        <a href="#" class="btn btn-inverse"><i class="fa fa-pencil icon-only"></i></a>
-                                        <a href="#" class="btn btn-danger"><i class="fa fa-times icon-only"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-
-                                <td>2</td>
-                                <td>Brown Boot</td>
-
-                                <td><span class="label label-pending">Pending</span></td>
-                                <td>
-                                    <div class="btn-group btn-group-xs ">
-                                        <a href="#" class="btn btn-inverse"><i class="fa fa-pencil icon-only"></i></a>
-                                        <a href="#" class="btn btn-danger"><i class="fa fa-times icon-only"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-
-                                <td>3</td>
-                                <td>Brown Boot</td>
-
-
-                                <td><span class="label label-success">Publish</span></td>
-                                <td>
-                                    <div class="btn-group btn-group-xs ">
-                                        <a href="#" class="btn btn-inverse"><i class="fa fa-pencil icon-only"></i></a>
-                                        <a href="#" class="btn btn-danger"><i class="fa fa-times icon-only"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-
-                                <td>4</td>
-                                <td>Brown Boot</td>
-
-                                <td><span class="label label-danger">Deleted</span></td>
-                                <td>
-                                    <div class="btn-group btn-group-xs ">
-                                        <a href="#" class="btn btn-inverse"><i class="fa fa-pencil icon-only"></i></a>
-                                        <a href="#" class="btn btn-danger"><i class="fa fa-times icon-only"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-
-                                <td>5</td>
-                                <td>Brown Boot</td>
-
-                                <td><span class="label label-active">Active</span></td>
-                                <td>
-                                    <div class="btn-group btn-group-xs ">
-                                        <a href="#" class="btn btn-inverse"><i class="fa fa-pencil icon-only"></i></a>
-                                        <a href="#" class="btn btn-danger"><i class="fa fa-times icon-only"></i></a>
-                                    </div>
-                                </td>
-                            </tr>													
+                            foreach ($main_menu as $v_main_menu) {
+                                ?>
+                                <tr>
+                                    <td><?php echo $v_main_menu->main_category_id; ?></td>
+                                    <td><?php echo $v_main_menu->main_category_name; ?></td>
+                                    <td><?php echo $v_main_menu->main_category_position; ?></td>
+                                    <td>
+                                        <?php
+                                        if ($v_main_menu->main_category_status == 1) {
+                                            ?>
+                                            <a href="<?php echo base_url(); ?>te_admin/unpublished_main_menu/<?php echo $v_main_menu->main_category_id; ?>"><span class="label label-inverse ">Disable</span></a>
+                                        <?php
+                                        } else {
+                                            ?>
+                                            <a href="<?php echo base_url(); ?>te_admin/published_main_menu/<?php echo $v_main_menu->main_category_id; ?>"><span class="label label-active">Active</span></a>
+                                        <?php } ?>
+                                    </td>
+                                    <td>
+                                        <div class="btn-group btn-group-xs ">
+                                            <a href="#" class="btn btn-inverse"><i class="fa fa-pencil icon-only"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+<?php } ?>
                         </tbody>
-
                     </table>
                     <div class="btn-group pull-right">
-
                         <ul class="pagination">
                             <li><a href="#">1</a></li>
                             <li><a href="#">2</a></li>

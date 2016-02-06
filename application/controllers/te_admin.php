@@ -40,16 +40,6 @@ class Te_Admin extends CI_Controller {
         redirect('te_admin/add_main_menu');
     }
 
-    //Start manage_main_menu_gird//
-    public function manage_main_menu() {
-        $data = array();
-        $data['title'] = 'Manage Main Menu Grid';
-        $data['all_main_menu'] = $this->admin_model->select_all_main_menu();
-        $data['main_content'] = $this->load->view('admin/manage_main_menu_grid', $data, TRUE);
-        $this->load->view('admin/admin_master', $data);
-    }
-
-    //End manage_main_menu_grid//
     //add_sub_menu//
     public function add_sub_menu() {
         $data = array();
@@ -106,7 +96,6 @@ class Te_Admin extends CI_Controller {
         $data['category_name'] = $this->input->post('category_name', true);
         $sub_category_id = $this->input->post('sub_category_id', true);
         $data['category_status'] = $this->input->post('category_status', true);
-
         if ($sub_category_id == 'Select your Sub menu') {
             $sdata['category_name'] = $data['category_name'];
             $sdata['required_msg'] = '* select a sub menu.';
@@ -123,15 +112,22 @@ class Te_Admin extends CI_Controller {
 
     //End all type of saving menu//
     //Start Manage Menu Grid//
-    public function manage_menu_grid() {
+    public function manage_main_menu() {
         $data = array();
-        $data['main_menu']=$this->admin_model->get_main_category();
-        echo '<pre>';
-        print_r($data);
-        exit();
-        $data['title'] = 'Manage Menu';       
-        $data['main_content'] = $this->load->view('admin/manage_menu_grid', '', TRUE);
+        $data['main_menu'] = $this->admin_model->get_main_category();
+        $data['title'] = 'Manage Menu';
+        $data['main_content'] = $this->load->view('admin/manage_main_menu_grid', $data, TRUE);
         $this->load->view('admin/admin_master', $data);
+    }
+
+    public function unpublished_main_menu($main_category_id) {
+        $this->admin_model->unpublished_main_menu_category($main_category_id);
+        redirect('te_admin/manage_main_menu');
+    }
+
+    public function published_main_menu($main_category_id) {
+        $this->admin_model->published_main_menu_category($main_category_id);
+        redirect('te_admin/manage_main_menu');
     }
 
     //End  Manage Menu Gride //

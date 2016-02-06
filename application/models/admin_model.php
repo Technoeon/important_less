@@ -19,7 +19,6 @@ class Admin_Model extends CI_Model {
         $this->db->insert('tbl_main_category', $data);
     }
 
-
     // Save sub category
     public function get_main_category_id_and_name() {
         $this->db->select('main_category_id');
@@ -41,6 +40,7 @@ class Admin_Model extends CI_Model {
         $query = $this->db->get();
         return $query->result();
     }
+
     public function get_sub_category_id_and_name() {
         $this->db->select('sub_category_id');
         $this->db->select('sub_category_name');
@@ -53,10 +53,11 @@ class Admin_Model extends CI_Model {
     public function save_category_info($data) {
         $this->db->insert('tbl_category', $data);
     }
+
     //---------End save category----------//
     //--------- Manage Menu Start--------//
     //--------- Manage Main Menu--------//
-    public function get_main_category(){
+    public function get_main_category() {
         $this->db->select('main_category_id');
         $this->db->select('main_category_name');
         $this->db->select('main_category_status');
@@ -65,5 +66,17 @@ class Admin_Model extends CI_Model {
         $query = $this->db->get();
         return $query->result();
     }
-    
+
+    public function unpublished_main_menu_category($main_category_id) {
+        $this->db->set('main_category_status', 0);
+        $this->db->select('main_category_id', $main_category_id);
+        $this->db->update('tbl_main_category');
+    }
+
+    public function published_main_menu_category($main_category_id) {
+        $this->db->set('main_category_status', 1);
+        $this->db->select('main_category_id', $main_category_id);
+        $this->db->update('tbl_main_category');
+    }
+
 }
