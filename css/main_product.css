@@ -967,3 +967,27 @@
     width: 10px;
     height: 10px;
 }
+
+.phone1 {
+	overflow: hidden;
+	font-size: 14px;
+	line-height: 35px;
+	color: #007fb8;
+	margin-bottom: 10px;
+	margin-top: 12px;
+}
+
+.contacts-info1 {
+	display: block;
+	margin: auto;
+	font-style: normal;
+	line-height: 1.5em;
+	color:  #222;
+	padding-top: 5px;
+	margin-top: 10px;
+	text-align: left;
+	padding-bottom: 5px;
+	margin-bottom: 7px;
+	font-size: 14px;
+	border: none;
+}
