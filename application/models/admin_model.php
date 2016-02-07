@@ -69,13 +69,13 @@ class Admin_Model extends CI_Model {
 
     public function unpublished_main_menu_category($main_category_id) {
         $this->db->set('main_category_status', 0);
-        $this->db->select('main_category_id', $main_category_id);
+        $this->db->where('main_category_id', $main_category_id);
         $this->db->update('tbl_main_category');
     }
 
     public function published_main_menu_category($main_category_id) {
         $this->db->set('main_category_status', 1);
-        $this->db->select('main_category_id', $main_category_id);
+        $this->db->where('main_category_id', $main_category_id);
         $this->db->update('tbl_main_category');
     }
 
