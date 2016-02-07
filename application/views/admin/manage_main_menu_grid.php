@@ -44,12 +44,12 @@
                                         <?php } ?>
                                     </td>
                                     <td>
-                                        <div class="btn-group btn-group-xs ">
-                                            <a href="#" class="btn btn-inverse"><i class="fa fa-pencil icon-only"></i></a>
+                                        <div class="btn-group btn-group-xs ">  
+                                            <a href="<?php echo base_url();?>te_admin/edit_main_menu/<?php echo $v_main_menu->main_category_id;?>" class="btn btn-inverse"><i class="fa fa-pencil icon-only"></i></a>
                                         </div>
                                     </td>
                                 </tr>
-<?php } ?>
+                            <?php } ?>
                         </tbody>
                     </table>
                     <div class="btn-group pull-right">
