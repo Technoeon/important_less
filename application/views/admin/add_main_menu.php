@@ -18,7 +18,6 @@
                             $this->session->unset_userdata('message');
                         }
                         ?>
-
                     </h5>
                     <div class="clearfix"></div>
                 </div>
@@ -29,30 +28,22 @@
                                 <div class="col-sm-12">
                                     <div class="space-4"></div>
                                     <input type="text" name="main_category_name" class="form-control" placeholder="Enter menu name........">
-
-
-                                    <div class="space-4"></div>
+                                     <div class="space-4"></div>
                                     <input type="number" name="main_category_position" class="form-control" placeholder="Enter menu possition...">
-
                                     <div class="space-4"></div>
-
                                     <div class="tcb">
                                         <label class="tcb-inline">
                                             <input type="radio" name="main_category_status" id="optionsRadios2" value="1" class="tc">
                                             <span class="labels">PUBLISHED</span>
                                         </label>
-
                                         <label class="tcb-inline">
                                             <input type="radio" name="main_category_status" id="optionsRadios3" value="0" class="tc">
                                             <span class="labels">UNPUBLISHED</span>
                                         </label>
-
                                     </div>
-
                                     <div class="space-6"></div>
                                     <button type="submit" value="save"class="pull-right btn btn-primary">Submit</button>
                                 </div>
-
                             </div>											
                         </form>
                     </div>
@@ -61,5 +52,4 @@
         </div>
         <div class="col-lg-4"></div>
     </div>
-
 </div>
