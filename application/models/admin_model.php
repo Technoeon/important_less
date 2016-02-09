@@ -140,5 +140,37 @@ class Admin_Model extends CI_Model {
         $this->db->where('sub_category_id', $sub_category_id);
         $this->db->update('tbl_sub_category');
     }
+    //----- sub category managing end------//
+    //-------category managing start------//
+    public function get_category_info(){/* select data from tbl_main_category, tbl_sub_category and tbl_category*/
+        $sql = 'select mc.main_category_name, sc.sub_category_name, c.category_id, c.category_name, c.category_status from tbl_category as c join tbl_sub_category as sc on c.sub_category_id=sc.sub_category_id join tbl_main_category as mc on sc.main_category_id = mc.main_category_id order by mc.main_category_position';
+        $query_result = $this->db->query($sql);
+        $result = $query_result->result();
+        return $result;
+    }
+    public function unpublished_category($category_id) {
+        $this->db->set('category_status', 0);
+        $this->db->where('category_id', $category_id);
+        $this->db->update('tbl_category');
+    }
 
+    public function published_category($category_id) {
+        $this->db->set('category_status', 1);
+        $this->db->where('category_id', $category_id);
+        $this->db->update('tbl_category');
+    }
+    public function get_category_name($category_id){
+        $this->db->select('category_name');
+        $this->db->where('category_id', $category_id);
+        $this->db->from('tbl_category');
+        $query = $this->db->get();
+        $result = $query->row();
+        return $result->sub_category_name;
+    }
+    public function update_category_name($category_name, $category_id) {
+        $this->db->set('category_name', $category_name);
+        $this->db->where('category_id', $category_id);
+        $this->db->update('tbl_category');
+    }
+//---------End Catgegory Managing ----------///
 }
