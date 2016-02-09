@@ -59,23 +59,7 @@ class onlineshop extends CI_Controller {
         return $data;
     }
 
-    public function sub_menu($position) {
-        $cdata = array();
-        $data = array();
-        $sub_menu = $this->onlineshop_model->get_sub_menu_by_position($position);
-        foreach ($sub_menu as $value) {
-            $cdata['sub_menu_id'] = $value->sub_menu_id;
-            $cdata['sub_menu_name'] = $value->sub_menu_name;
-            $cdata['menu_id'] = $value->menu_id;
-            $cdata['menu_name'] = $value->menu_name;
-            $data = $cdata;
-        }
-        echo '<pre>';
-        print_r($data);
-//        echo '<pre>';
-//        print_r($data);
-//        return $data;
-    }
+
 
     public function test($position) {
         $data = array();
