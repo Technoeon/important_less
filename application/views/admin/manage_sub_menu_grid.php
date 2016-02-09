@@ -47,7 +47,7 @@
 
                                     <td>
                                         <div class="btn-group btn-group-xs ">
-                                            <a href="#" class="btn btn-inverse"><i class="fa fa-pencil icon-only"></i></a>
+                                            <a href="<?php echo base_url(); ?>te_admin/edit_sub_menu/<?php echo $s_value->sub_category_id; ?>" class="btn btn-inverse"><i class="fa fa-pencil icon-only"></i></a>
                                         </div>
                                     </td>
 
