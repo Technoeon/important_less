@@ -285,7 +285,7 @@
 
                             <div class="page-header title">
                                 <!-- PAGE TITLE ROW -->
-                                <h3>Dashboard <span class="sub-title"><?php echo $title;?></span></h3>									
+                                <h5> <?php echo $title;?></h5>									
                             </div>
 
                             <!-- /#ek-layout-button -->	

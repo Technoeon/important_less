@@ -25,18 +25,33 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                               <td>Masud</td>
-                               <td>Rana</td>
-                               <td>1</td>
-                                <td>Brown Boot</td>
-                                <td><span class="label label-active ">Active</span></td>
-                                <td>
-                                    <div class="btn-group btn-group-xs ">
-                                        <a href="#" class="btn btn-inverse"><i class="fa fa-pencil icon-only"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
+                              <?php
+                            foreach ($menu as $v_menu) {
+                                ?>
+                                <tr>
+                                    <td><?php echo $v_menu->main_category_name; ?></td>
+                                    <td><?php echo $v_menu->sub_category_name; ?></td>
+                                    <td><?php echo $v_menu->category_id; ?></td>
+                                    <td><?php echo $v_menu->category_name; ?></td>
+                                    <td>
+                                        <?php
+                                        if ($v_menu->category_status == 1) {
+                                            ?>
+                                        <a href="<?php echo base_url(); ?>te_admin/unpublished_menu/<?php echo $v_menu->category_id; ?>"><span class="label label-active"title="Disable">Active</span></a>
+                                        <?php
+                                        } else {
+                                            ?>
+                                        <a href="<?php echo base_url(); ?>te_admin/published_menu/<?php echo $v_menu->category_id; ?>"><span class="label label-inverse"title="Active">Disable</span></a>
+                                        <?php } ?>
+                                    </td>
+                                    <td>
+                                        <div class="btn-group btn-group-xs ">  
+                                            <a href="<?php echo base_url();?>te_admin/edit_menu/<?php echo $v_menu->category_id;?>" class="btn btn-inverse"><i class="fa fa-pencil icon-only"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            <?php } ?>
+                            
                         </tbody>
                     </table>
                     <div class="btn-group pull-right">

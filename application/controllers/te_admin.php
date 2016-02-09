@@ -19,14 +19,13 @@ class Te_Admin extends CI_Controller {
         $this->load->view('admin/admin_master', $data);
     }
 
-    //add_main_menu//
+    //---------start addn menu and save menu----//
     public function add_main_menu() {
         $data = array();
         $data['title'] = 'Add main menu';
         $data['main_content'] = $this->load->view('admin/add_main_menu', '', true);
         $this->load->view('admin/admin_master', $data);
     }
-    //save_main_category//
     public function save_main_category() {
         $data = array();
         $data['main_category_name'] = $this->input->post('main_category_name', true);
@@ -44,7 +43,8 @@ class Te_Admin extends CI_Controller {
         $this->session->set_userdata($sdata);
         redirect('te_admin/add_main_menu');
     }
-    //add_sub_menu//
+     //---------End addn menu and save menu----//
+    //-------Start add_sub_menu and Save--------//
     public function add_sub_menu() {
         $data = array();
         $data['title'] = 'Add Sub Menu';
@@ -52,7 +52,7 @@ class Te_Admin extends CI_Controller {
         $data['main_content'] = $this->load->view('admin/add_sub_menu', $data, TRUE);
         $this->load->view('admin/admin_master', $data);
     }
-    //save_sub_category//
+   
     public function save_sub_category() {
         $data = array();
         $data['sub_category_name'] = $this->input->post('sub_category_name', true);
@@ -71,7 +71,9 @@ class Te_Admin extends CI_Controller {
             redirect('te_admin/add_sub_menu');
         }
     }
-    //add menu//
+    //-------End add_sub_menu and Save--------//
+   
+    //-------Start add_menu and Save--------//
     public function add_menu() {
         $main_category = $this->admin_model->get_main_category_id();
         $manu_category = $this->admin_model->get_sub_category_id_and_name();
@@ -82,7 +84,6 @@ class Te_Admin extends CI_Controller {
         $data['main_content'] = $this->load->view('admin/add_menu', $data, TRUE);
         $this->load->view('admin/admin_master', $data);
     }
-    //save sub menu//
     public function save_menu() {
         $data = array();
         $sdata = array();
@@ -102,9 +103,9 @@ class Te_Admin extends CI_Controller {
             redirect('te_admin/add_menu');
         }
     }
-
-    //End all type of saving menu//
-    //Start Manage Menu Grid//
+    //-------Start add_menu and Save--------//
+    
+    //------Start Main Menu Manage Grid------------//
     public function manage_main_menu() {
         $data = array();
         $data['main_menu'] = $this->admin_model->get_main_category();
@@ -145,7 +146,9 @@ class Te_Admin extends CI_Controller {
         $this->session->set_userdata($sdata);
         redirect('te_admin/edit_main_menu/' . $main_category_id);
     }
-//Start mange_sub_menu_grid//
+   //------Start Main Menu Manage Grid------------//
+   
+   //------Start sub_menu manage _grid//
     public function manage_sub_menu() {
         $data = array();
         $data['sub_menu'] = $this->admin_model->get_sub_menu_info();
@@ -178,40 +181,42 @@ class Te_Admin extends CI_Controller {
         $this->session->set_userdata($sdata);
         redirect('te_admin/edit_sub_menu/' . $sub_category_id);
     }
+    //------End sub_menu manage _grid//
+   
+    //------Start menu manage _grid//
    public function manage_menu() {
         $data = array();
-        //$data['main_menu'] = $this->admin_model->get_main_category();
+        $data['menu']=$this->admin_model->get_category_info();
         $data['title'] = 'Manage Menu';
         $data['main_content'] = $this->load->view('admin/manage_menu_grid', $data, TRUE);
         $this->load->view('admin/admin_master', $data);
     }
-    public function unpublished_menu($menu_category_id) {
-        $this->admin_model->unpublished_menu_category($menu_category_id);
+    public function unpublished_menu($category_id) {
+        $this->admin_model->unpublished_category($category_id);
         redirect('te_admin/manage_menu');
     }
-    public function published_menu($menu_category_id) {
-        $this->admin_model->published_menu_category($menu_category_id);
+    public function published_menu($category_id) {
+        $this->admin_model->published_category($category_id);
         redirect('te_admin/manage_menu');
     }
-     public function edit_menu($menu_category_id) {
+     public function edit_menu($category_id) {
         $data = array();
-        $data['menu_category_id']=$menu_category_id;
-        $data['menu_name'] = $this->admin_model->get_menu_name($menu_category_id);
+        $data['category_id']=$category_id;
+        $data['category_name'] = $this->admin_model->get_category_name($category_id);
         $data['title'] = 'Edit Menu';
         $data['main_content'] = $this->load->view('admin/edit_menu_form', $data, TRUE);
         $this->load->view('admin/admin_master', $data);
     }
     public function update_menu() {
-        $menu_category_name=$this->input->post('menu_category_name', true);
-        $menu_category_id = $this->input->post('menu_category_id', true);
-        $this->admin_model->update_sub_menu_info($menu_category_name,$menu_category_id);
+        $category_name=$this->input->post('category_name', true);
+        $category_id = $this->input->post('category_id', true);
+        $this->admin_model->update_category_name($category_name,$category_id);
         $sdata = array();
         $sdata['message'] = 'Update Sub Menu Information Successfully !';
         $this->session->set_userdata($sdata);
-        redirect('te_admin/edit_menu/' . $menu_category_id);
+        redirect('te_admin/edit_menu/' . $category_id);
     }
-    //End  Manage Menu Gride //
-    //End  Manage Menu Gride //
+     //------Start menu manage _grid//
     public function logout() {
         $this->session->unset_userdata('management_id');
         $this->session->unset_userdata('name');

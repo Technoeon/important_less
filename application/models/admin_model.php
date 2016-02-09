@@ -165,7 +165,7 @@ class Admin_Model extends CI_Model {
         $this->db->from('tbl_category');
         $query = $this->db->get();
         $result = $query->row();
-        return $result->sub_category_name;
+        return $result->category_name;
     }
     public function update_category_name($category_name, $category_id) {
         $this->db->set('category_name', $category_name);
