@@ -173,6 +173,23 @@ class Te_Admin extends CI_Controller {
         $this->admin_model->published_sub_menu_category($sub_category_id);
         redirect('te_admin/manage_sub_menu');
     }
+     public function edit_sub_menu($sub_category_id) {
+        $data = array();
+        $data['sub_category_id']=$sub_category_id;
+        $data['sub_menu_name'] = $this->admin_model->get_sub_menu_name($sub_category_id);
+        $data['title'] = 'Edit Menu';
+        $data['main_content'] = $this->load->view('admin/edit_sub_menu_form', $data, TRUE);
+        $this->load->view('admin/admin_master', $data);
+    }
+    public function update_sub_menu() {
+        $sub_category_name=$this->input->post('sub_category_name', true);
+        $sub_category_id = $this->input->post('sub_category_id', true);
+        $this->admin_model->update_sub_menu_info($sub_category_name,$sub_category_id);
+        $sdata = array();
+        $sdata['message'] = 'Update Sub Menu Information Successfully !';
+        $this->session->set_userdata($sdata);
+        redirect('te_admin/edit_sub_menu/' . $sub_category_id);
+    }
 
     //End  Manage Menu Gride //
     //End  Manage Menu Gride //
