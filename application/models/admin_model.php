@@ -136,8 +136,9 @@ class Admin_Model extends CI_Model {
         return $result->sub_category_name;
     }
     public function update_sub_menu_info($sub_category_name, $sub_category_id) {
+        $this->db->set('sub_category_name', $sub_category_name);
         $this->db->where('sub_category_id', $sub_category_id);
-        $this->db->update('tbl_sub_category', $sub_category_name);
+        $this->db->update('tbl_sub_category');
     }
 
 }
