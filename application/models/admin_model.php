@@ -108,4 +108,23 @@ class Admin_Model extends CI_Model {
         $this->db->update('tbl_main_category', $data);
     }
 
+    public function get_sub_menu_info() {
+        $sql = 'SELECT tbl_sub_category.sub_category_id,tbl_sub_category.sub_category_name,tbl_sub_category.sub_category_status,tbl_main_category.main_category_name FROM tbl_sub_category RIGHT JOIN tbl_main_category ON tbl_sub_category.main_category_id=tbl_main_category.main_category_id';
+        $query_result = $this->db->query($sql);
+        $result = $query_result->result();
+        return $result;
+    }
+
+    public function unpublished_sub_menu_category($sub_category_id) {
+        $this->db->set('sub_category_status', 0);
+        $this->db->where('sub_category_id', $sub_category_id);
+        $this->db->update('tbl_sub_category');
+    }
+
+    public function published_sub_menu_category($sub_category_id) {
+        $this->db->set('sub_category_status', 1);
+        $this->db->where('sub_category_id', $sub_category_id);
+        $this->db->update('tbl_sub_category');
+    }
+
 }

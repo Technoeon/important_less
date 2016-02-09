@@ -18,78 +18,41 @@
                     <table id="products" class="datatable table table-hover table-striped table-bordered tc-table">
                         <thead>
                             <tr>
-                                <th class="center"data-hide="phone,tablet">ID</th>
-                                <th class="center"data-class="expand">Menu Name</th>
-                                <th class="center"data-hide="phone">Status</td>
+                                <th class="center"data-hide="phone,tablet">Main Menu Name</th>
+                                <th class="center"data-class="expand">Sub Menu Id</th>
+                                <th class="center"data-hide="phone">Sub Menu Name</th>
                                 <th class="center">Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-
-                                <td>1</td>
-                                <td>Brown Boot</td>
-                                <td><span class="label label-active ">Active</span></td>
-                                <td>
-                                    <div class="btn-group btn-group-xs ">
-                                        <a href="#" class="btn btn-inverse"><i class="fa fa-pencil icon-only"></i></a>
-                                        <a href="#" class="btn btn-danger"><i class="fa fa-times icon-only"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-
-                                <td>2</td>
-                                <td>Brown Boot</td>
-
-                                <td><span class="label label-pending">Pending</span></td>
-                                <td>
-                                    <div class="btn-group btn-group-xs ">
-                                        <a href="#" class="btn btn-inverse"><i class="fa fa-pencil icon-only"></i></a>
-                                        <a href="#" class="btn btn-danger"><i class="fa fa-times icon-only"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-
-                                <td>3</td>
-                                <td>Brown Boot</td>
+                            <?php
+                            foreach ($sub_menu as $s_value) {
+                                ?>
+                                <tr>
+                                    <td><?php echo $s_value->main_category_name; ?></td>
+                                    <td><?php echo $s_value->sub_category_id; ?></td>
+                                    <td><?php echo $s_value->sub_category_name; ?></td>
+                                    <td>
+                                        <?php
+                                        if ($s_value->sub_category_status == 1) {
+                                            ?>
+                                            <a href="<?php echo base_url(); ?>te_admin/unpublished_sub_menu/<?php echo $s_value->sub_category_id; ?>"><span class="label label-active " title="Disable">Active</span></a>
+                                            <?php
+                                        } else {
+                                            ?>
+                                            <a href="<?php echo base_url(); ?>te_admin/published_sub_menu/<?php echo $s_value->sub_category_id; ?>"><span class="label label-inverse" title="Active">Disable</span></a>
+                                        <?php } ?>
+                                    </td>
 
 
-                                <td><span class="label label-success">Publish</span></td>
-                                <td>
-                                    <div class="btn-group btn-group-xs ">
-                                        <a href="#" class="btn btn-inverse"><i class="fa fa-pencil icon-only"></i></a>
-                                        <a href="#" class="btn btn-danger"><i class="fa fa-times icon-only"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
+                                    <td>
+                                        <div class="btn-group btn-group-xs ">
+                                            <a href="#" class="btn btn-inverse"><i class="fa fa-pencil icon-only"></i></a>
+                                        </div>
+                                    </td>
 
-                                <td>4</td>
-                                <td>Brown Boot</td>
-
-                                <td><span class="label label-danger">Deleted</span></td>
-                                <td>
-                                    <div class="btn-group btn-group-xs ">
-                                        <a href="#" class="btn btn-inverse"><i class="fa fa-pencil icon-only"></i></a>
-                                        <a href="#" class="btn btn-danger"><i class="fa fa-times icon-only"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-
-                                <td>5</td>
-                                <td>Brown Boot</td>
-
-                                <td><span class="label label-active">Active</span></td>
-                                <td>
-                                    <div class="btn-group btn-group-xs ">
-                                        <a href="#" class="btn btn-inverse"><i class="fa fa-pencil icon-only"></i></a>
-                                        <a href="#" class="btn btn-danger"><i class="fa fa-times icon-only"></i></a>
-                                    </div>
-                                </td>
-                            </tr>													
+                                </tr>
+                            <?php } ?>    													
                         </tbody>
 
                     </table>

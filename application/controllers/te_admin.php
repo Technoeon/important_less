@@ -75,14 +75,6 @@ class Te_Admin extends CI_Controller {
         }
     }
 
-    //Start mange_sub_menu_grid//
-    public function manage_sub_menu() {
-        $data = array();
-        $data['title'] = 'Manage Sub Menu Grid';
-        $data['main_content'] = $this->load->view('admin/manage_sub_menu_grid', '', TRUE);
-        $this->load->view('admin/admin_master', $data);
-    }
-
     //add menu//
     public function add_menu() {
         $main_category = $this->admin_model->get_main_category_id();
@@ -163,6 +155,26 @@ class Te_Admin extends CI_Controller {
         redirect('te_admin/edit_main_menu/' . $main_category_id);
     }
 
+//Start mange_sub_menu_grid//
+    public function manage_sub_menu() {
+        $data = array();
+        $data['sub_menu'] = $this->admin_model->get_sub_menu_info();
+        $data['title'] = 'Manage Sub Menu Grid';
+        $data['main_content'] = $this->load->view('admin/manage_sub_menu_grid', $data, TRUE);
+        $this->load->view('admin/admin_master', $data);
+    }
+
+    public function unpublished_sub_menu($sub_category_id) {
+        $this->admin_model->unpublished_sub_menu_category($sub_category_id);
+        redirect('te_admin/manage_sub_menu');
+    }
+
+    public function published_sub_menu($sub_category_id) {
+        $this->admin_model->published_sub_menu_category($sub_category_id);
+        redirect('te_admin/manage_sub_menu');
+    }
+
+    //End  Manage Menu Gride //
     //End  Manage Menu Gride //
     public function logout() {
         $this->session->unset_userdata('management_id');
