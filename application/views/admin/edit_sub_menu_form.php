@@ -32,8 +32,8 @@
                                     </div>
                                     <div class="space-4"></div>
                                     <level>Sub menu name:</level><br><br>
-                                    <input type="text" name="sub_category_name" class="form-control" value="<?php echo 'sub menu name'?>;"required="1">
-                                    <input type="hidden" name="sub_category_id" class="form-control" value="<?php echo  $sub_category_id?>;"required="1">
+                                    <input type="text" name="sub_category_name" class="form-control" value="<?php echo $sub_menu_name;?>"required="1">
+                                    <input type="hidden" name="sub_category_id" class="form-control" value="<?php echo $sub_category_id;?>"required="1">
                                     
                                     <div class="space-6"></div>
                                     <button type="submit" value="update"class="pull-right btn btn-primary">Update</button>
