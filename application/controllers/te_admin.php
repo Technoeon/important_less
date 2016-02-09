@@ -33,7 +33,13 @@ class Te_Admin extends CI_Controller {
         $data['main_category_name'] = $this->input->post('main_category_name', true);
         $data['main_category_position'] = $this->input->post('main_category_position', true);
         $data['main_category_status'] = $this->input->post('main_category_status', true);
-        $this->admin_model->save_main_category_info($data);
+        $check = $this->admin_model->check_position($data['main_category_position']);
+        if ($check == 1) {
+            $this->admin_model->update_main_category_position($data['main_category_position']);
+            $this->admin_model->save_main_category_info($data);
+        } else {
+            $this->admin_model->save_main_category_info($data);
+        }
         $sdata = array();
         $sdata['message'] = 'Save Category Information Successfully';
         $this->session->set_userdata($sdata);
@@ -129,25 +135,32 @@ class Te_Admin extends CI_Controller {
         $this->admin_model->published_main_menu_category($main_category_id);
         redirect('te_admin/manage_main_menu');
     }
-    public function edit_main_menu($main_category_id){
-        $data=array();
-        $data['main_menu_info']=$this->admin_model->get_main_menu_info($main_category_id);
-        $data['title'] ='Edit Menu';
+
+    public function edit_main_menu($main_category_id) {
+        $data = array();
+        $data['main_menu_info'] = $this->admin_model->get_main_menu_info($main_category_id);
+        $data['title'] = 'Edit Menu';
         $data['main_content'] = $this->load->view('admin/edit_main_menu_form', $data, TRUE);
         $this->load->view('admin/admin_master', $data);
     }
-       public function update_main_menu()
-    {
-        $data=array();
-        $data['main_category_name']=$this->input->post('main_category_name',true);
-        $data['main_category_position']=$this->input->post('main_category_position',true);
+
+    public function update_main_menu() {
+        $data = array();
+        $data['main_category_name'] = $this->input->post('main_category_name', true);
+        $data['main_category_position'] = $this->input->post('main_category_position', true);
         //$data['main_category_status'] = $this->input->post('main_category_status', true);
-        $main_category_id=$this->input->post('main_category_id',true);
-        $this->admin_model->update_main_menu_info($data,$main_category_id);
-        $sdata=array();
-        $sdata['message']='Update Main Menu Information Successfully !';
+        $main_category_id = $this->input->post('main_category_id', true);
+        $check = $this->admin_model->check_position($data['main_category_position']);
+        if ($check == 1) {
+            $this->admin_model->update_main_category_position($data['main_category_position']);
+            $this->admin_model->update_main_menu_info($data, $main_category_id);
+        } else {
+            $this->admin_model->update_main_menu_info($data, $main_category_id);
+        }
+        $sdata = array();
+        $sdata['message'] = 'Update Main Menu Information Successfully !';
         $this->session->set_userdata($sdata);
-        redirect('te_admin/edit_main_menu/'.$main_category_id);
+        redirect('te_admin/edit_main_menu/' . $main_category_id);
     }
 
     //End  Manage Menu Gride //

@@ -37,7 +37,7 @@
         <link href='<?php echo base_url(); ?>https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,700,800,400,600' rel='stylesheet' type='text/css'>
     </head>
 
-    <body ng-app="teClient">
+    <body>
         <div class="page">
             <header class="header-container">
                 <div class="header-top">

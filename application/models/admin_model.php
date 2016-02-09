@@ -15,6 +15,18 @@ class Admin_Model extends CI_Model {
 
     //---------start save category----------//
     //  Save main category
+    public function check_position($position) {
+        $sql = "SELECT count(main_category_position) as check_position FROM `tbl_main_category` WHERE main_category_position = '$position'";
+        $query_result = $this->db->query($sql);
+        $result = $query_result->row();
+        return $result->check_position;
+    }
+
+    public function update_main_category_position($position) {
+        $sql = "update tbl_main_category set main_category_position = main_category_position+1 where main_category_position >= '$position'";
+        $this->db->query($sql);
+    }
+
     public function save_main_category_info($data) {
         $this->db->insert('tbl_main_category', $data);
     }
@@ -63,6 +75,7 @@ class Admin_Model extends CI_Model {
         $this->db->select('main_category_status');
         $this->db->select('main_category_position');
         $this->db->from('tbl_main_category');
+        $this->db->order_by("main_category_position", "asc");
         $query = $this->db->get();
         return $query->result();
     }
@@ -78,21 +91,21 @@ class Admin_Model extends CI_Model {
         $this->db->where('main_category_id', $main_category_id);
         $this->db->update('tbl_main_category');
     }
-       public function get_main_menu_info($main_category_id) {
-        $this->db->select('main_category_id');
+
+    public function get_main_menu_info($main_category_id) {
         $this->db->select('main_category_name');
-        //$this->db->select('main_category_status');
+        $this->db->select('main_category_id');
         $this->db->select('main_category_position');
         $this->db->where('main_category_id', $main_category_id);
         $this->db->from('tbl_main_category');
         $query = $this->db->get();
-        $result=$query->row();
+        $result = $query->row();
         return $result;
     }
-     public function update_main_menu_info($data,$main_category_id)
-    {
-       $this->db->where('main_category_id',$main_category_id);
-       $this->db->update('tbl_main_category',$data);
+
+    public function update_main_menu_info($data, $main_category_id) {
+        $this->db->where('main_category_id', $main_category_id);
+        $this->db->update('tbl_main_category', $data);
     }
 
 }

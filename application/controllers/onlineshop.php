@@ -11,16 +11,15 @@
  *
  * @author Rubel
  */
-class onlineshop extends CI_Controller {
 
+class onlineshop extends CI_Controller {        
+    public function __construct() {
+        parent::__construct();
+    }
     //put your code here
     public function index() {
         $data = array();
-        $menu = array();
-        $menu['main_menu_7'] = $this->onlineshop_model->get_main_menu_by_position(7);
-        $menu['sub_menu_7'] = $this->onlineshop_model->get_sub_menu_by_position(7);
-        $menu['menu_7'] = $this->onlineshop_model->get_menu_by_position(7);
-        $data['nav_menu'] = $this->load->view('nav_menu', $menu, true);
+        $data['nav_menu'] = $this->load->view('nav_menu','', true);
         $data['user_main'] = $this->load->view('user_main_deshboard', $data, true);
         $this->load->view('main', $data);
     }

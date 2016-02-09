@@ -1,3 +1,8 @@
+<?php     
+        $main_menu_7 = $this->onlineshop_model->get_main_menu_by_position(7);
+        $sub_menu_7 = $this->onlineshop_model->get_sub_menu_by_position(7);
+        $menu_7 = $this->onlineshop_model->get_menu_by_position(7);?>
+
 <ul id="nav" class="hidden-xs">
 
     <li id="nav-home" class="level0 parent drop-menu"><a href="<?php echo base_url(); ?>onlineshop"><span>Home</span> </a></li>
