@@ -36,11 +36,11 @@
                                         <?php
                                         if ($v_main_menu->main_category_status == 1) {
                                             ?>
-                                            <a href="<?php echo base_url(); ?>te_admin/unpublished_main_menu/<?php echo $v_main_menu->main_category_id; ?>"><span class="label label-inverse ">Disable</span></a>
+                                        <a href="<?php echo base_url(); ?>te_admin/unpublished_main_menu/<?php echo $v_main_menu->main_category_id; ?>"><span class="label label-active"title="Disable">Active</span></a>
                                         <?php
                                         } else {
                                             ?>
-                                            <a href="<?php echo base_url(); ?>te_admin/published_main_menu/<?php echo $v_main_menu->main_category_id; ?>"><span class="label label-active">Active</span></a>
+                                        <a href="<?php echo base_url(); ?>te_admin/published_main_menu/<?php echo $v_main_menu->main_category_id; ?>"><span class="label label-inverse"title="Active">Disable</span></a>
                                         <?php } ?>
                                     </td>
                                     <td>
