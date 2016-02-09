@@ -19,6 +19,7 @@ class onlineshop extends CI_Controller {
     //put your code here
     public function index() {
         $data = array();
+        $data['leftside_manu'] = $this->load->view('leftside_manu','', true);
         $data['nav_menu'] = $this->load->view('nav_menu','', true);
         $data['user_main'] = $this->load->view('user_main_deshboard', $data, true);
         $this->load->view('main', $data);

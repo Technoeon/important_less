@@ -911,7 +911,7 @@ li.level0 > a:hover > span > .pin-bottom:before, #nav li.level0:hover > a > span
 	color: #fff;
 	display: block;
 	float: left;
-	font-size: 14px;
+	font-size: 13px;
 	line-height: 18px;
 	padding: 13px 16px;
 	text-decoration: none;
@@ -1109,7 +1109,7 @@ li.level0 > a:hover > span > .pin-bottom:before, #nav li.level0:hover > a > span
 	width: 70%;
 }
 #nav .grid12-8 ul.level0 > li {
-	width: 23%;
+	width: 22%;
 }
 #nav .grid12-8 ul.level0 > li.last {
 	width: 18%;
