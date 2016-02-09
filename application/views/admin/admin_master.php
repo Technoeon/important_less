@@ -150,7 +150,7 @@
                                     </li>
                                     <li>
                                         <a href="<?php echo base_url()?>te_admin/manage_menu">
-                                            <i class="fa fa-angle-double-right"></i>Manage Main Menu
+                                            <i class="fa fa-angle-double-right"></i>Manage Menu
                                         </a>
                                     </li>
                                 </ul>
