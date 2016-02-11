@@ -216,6 +216,12 @@ class Te_Admin extends CI_Controller {
         $this->session->set_userdata($sdata);
         redirect('te_admin/edit_menu/' . $category_id);
     }
+      public function add_product() {
+        $data = array();
+        $data['title'] = 'Add Product';
+        $data['main_content'] = $this->load->view('admin/add_product', '', true);
+        $this->load->view('admin/admin_master', $data);
+    }
      //------Start menu manage _grid//
     public function logout() {
         $this->session->unset_userdata('management_id');

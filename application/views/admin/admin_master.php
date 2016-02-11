@@ -174,7 +174,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="<?php echo base_url() ?>te_admin/add_product">
                                             <i class="fa fa-angle-double-right"></i>Add Product 
                                         </a>
                                     </li>
@@ -285,7 +285,7 @@
 
                             <div class="page-header title">
                                 <!-- PAGE TITLE ROW -->
-                                <h5> <?php echo $title;?></h5>									
+                                <h5> <?php echo $title;?> </h5>									
                             </div>
 
                             <!-- /#ek-layout-button -->	
