@@ -216,13 +216,85 @@ class Te_Admin extends CI_Controller {
         $this->session->set_userdata($sdata);
         redirect('te_admin/edit_menu/' . $category_id);
     }
+    //-------start add manufacturer-----//
+    public function add_manufacturer() {
+        $data = array();
+        $data['title'] = 'Add manufacturer';
+        $data['main_content'] = $this->load->view('admin/add_manufacturer', '', true);
+        $this->load->view('admin/admin_master', $data);
+    }
+    public function save_manufacturer(){
+        $data=array();
+        $data['manufacturer_name']=  $this->input->post('manufacturer_name',TRUE);
+        $data['manufacturer_status']=  $this->input->post('manufacturer_status',TRUE);
+        $this->admin_model->save_manufactuer_by_product($data);
+        $sdata['message'] = 'Save Menufacturer Information Successfully !';
+        $this->session->set_userdata($sdata);
+        redirect('te_admin/add_manufacturer');
+    }
       public function add_product() {
         $data = array();
         $data['title'] = 'Add Product';
         $data['main_content'] = $this->load->view('admin/add_product', '', true);
         $this->load->view('admin/admin_master', $data);
     }
-     //------Start menu manage _grid//
+    //--Start Product Image--//
+   
+        public function product_image() {
+        $data = array();
+        $product_id=2;
+        $default_image = $this->input->post('default_image', TRUE);
+        //$menu_image = $this->input->post('menu_image', TRUE);
+        //$slider_image = $this->input->post('slider_image', TRUE);
+        $config['upload_path'] = 'images/product_image/';
+        $config['allowed_types'] = 'gif|jpg|png';
+        $config['max_size'] = '5000';
+        $config['max_width'] = '2024';
+        $config['max_height'] = '1768';
+        $error = '';
+        $fdata = array();
+        /*echo '<pre>';
+        print_r($_FILES);
+        exit();*/
+        
+        
+        $this->load->library('upload', $config);
+
+        if (!$this->upload->do_multi_upload('product_image')) {
+            $error = $this->upload->display_errors();
+            echo $error;
+            exit();
+        } else {
+            $return = $this->upload->get_multi_upload_data();
+           /* echo '<pre>';
+            print_r($return);
+            exit();*/
+            foreach ($return as $value) {
+                $data['image_path'] = $config['upload_path'] . $value['file_name'];
+                $data['product_id'] = $product_id;
+                $data['default_image'] = $default_image;
+                $this->admin_model->save_product_image_info($data);
+                 /*echo '<pre>';
+                    print_r($return);
+                    exit();*/
+                $default_image = 0;
+            }
+        }
+        }
+    //--End Product Image--//
+    
+        //Start Product size/
+        public function product_size(){
+            $data=array();
+            $data['product_id']=$this->input->post('product_id', TRUE);
+            $data['product_size'] = $this->input->post('product_size', TRUE);
+            $this->admin_model->save_product_size($data);
+            //$product_size='product_size';
+            /*echo '<pre>';
+            print_r($product_size);
+            exit();*/
+        }
+        //End Product size/
     public function logout() {
         $this->session->unset_userdata('management_id');
         $this->session->unset_userdata('name');

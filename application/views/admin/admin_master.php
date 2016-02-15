@@ -164,7 +164,7 @@
                                 </a>
                                 <ul class="collapse nav" id="charts">
                                     <li>
-                                        <a href="#">
+                                        <a href="<?php echo base_url()?>te_admin/add_manufacturer">
                                             <i class="fa fa-angle-double-right"></i>Add Manufacturer
                                         </a>
                                     </li>

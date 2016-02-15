@@ -1,3 +1,4 @@
+<!--Start Add Product-->
 <div class="col-lg-12">
 
     <!-- START YOUR CONTENT HERE -->
@@ -9,13 +10,15 @@
             <div class="clearfix"></div>
         </div>
         <div class="portlet-body">
-            <form class="form-horizontal" id="validate-form" method="get" novalidate="novalidate">
+            
+                    
+                <form class="form-horizontal" id="validate-form" method="post" enctype="multipart/form-data" action="<?php echo base_url()?>te_admin/product_size"novalidate="novalidate">
                 <div id="bwizard">
                     <div class="bw-navbar">
                         <div class="navbar-inner">
                             <ul class="bwizard-steps">
                                 <li class="active"><a href="#tab1" data-toggle="tab" aria-expanded="true">Product</a></li>
-                                 <li class=""><a href="#tab5" data-toggle="tab" aria-expanded="false">Product Size</a></li>
+                                <li class=""><a href="#tab5" data-toggle="tab" aria-expanded="false">Product Size</a></li>
                                 <li class=""><a href="#tab4" data-toggle="tab" aria-expanded="false">Description</a></li>
                                 <li class=""><a href="#tab2" data-toggle="tab" aria-expanded="false">Image</a></li>
                                 <li class=""><a href="#tab3" data-toggle="tab" aria-expanded="false">Discount</a></li>
@@ -152,7 +155,7 @@
 
 
                         </div>
-                             <div class="tab-pane" id="tab5">
+                        <div class="tab-pane" id="tab5">
 
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">Select Product Size</label>
@@ -163,8 +166,9 @@
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <input  name="product_size[]" type="text" > 
+                                            <input  type="text"name="product_id[]" value="2" >
                                         </div>
-                                       
+
                                     </div>
 
                                     <div class="row">
@@ -178,15 +182,15 @@
 
                             </div>
 
-                             </div>
+                        </div>
                         <div class="tab-pane" id="tab2">
 
                             <div class="form-group has-success">
                                 <label class="col-sm-3 control-label">Image Select:</label>
-                                 <div class="col-sm-7">                          
-                                     <button type="button" onClick="imagechange()">Add More Image</button>
-                                     <br>
-                                     <br>
+                                <div class="col-sm-7">                          
+                                    <button type="button" onClick="imagechange()">Add More Image</button>
+                                    <br>
+                                    <br>
 
                                     <div class="row">
                                         <div class="col-sm-4">
@@ -206,7 +210,7 @@
 
                                 </div>
                             </div>
-                           
+
                             <div class="form-group has-success">
                                 <label class="col-sm-3 control-label">Menu Image:</label>
                                 <div class="col-sm-5">
@@ -254,7 +258,7 @@
                             <div class="form-actions">
                                 <div class="form-group">
                                     <div class="col-sm-offset-3 col-sm-9">
-                                        <button type="button" class="btn bg-danger" name="previous" value="Prev">Submit</button>						
+                                        <button type="submit" class="btn bg-danger" >Submit</button>						
                                     </div>	
                                 </div>		
                             </div>
@@ -271,9 +275,9 @@
     </div>
 </div>
 
-
+<!--End Add Product-->
 <script language="javascript">
-    var i = 1, j=1, k=1;
+    var i = 1, j = 1, k = 1;
     function description()
     {
         if (i > 4) {
@@ -289,7 +293,7 @@
         if (j > 4) {
             alert("Maximum 5product image is allowed");
         } else {
-            r_div.innerHTML = r_div.innerHTML +"<br><input type='file' name='product_image[]'>" 
+            r_div.innerHTML = r_div.innerHTML + "<br><input type='file' name='product_image[]'>"
 
         }
         j++;
@@ -299,7 +303,8 @@
         if (k > 4) {
             alert("Maximum 5product image is allowed");
         } else {
-            size_div.innerHTML = size_div.innerHTML +"<br><input type='text' name='product_size[]'>" 
+            size_div.innerHTML = size_div.innerHTML + "<br><input type='text' name='product_size[]'>";
+            size_div.innerHTML = size_div.innerHTML + "<br><input type='text' value='2'name='product_id[]'>";
 
         }
         k++;
