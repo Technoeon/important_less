@@ -28,22 +28,35 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td><a href=""><span class="label label-active"title="Disable">Active</span></a></td>
+                            <?php
+                            foreach ($all_product as $v_product) {
+                                ?>
+                                <tr>
+                                    <td><img src="<?php echo base_url().$v_product->image_path;?>"width="50" height="50" ></td>
+                                    <td><?php echo $v_product->product_name; ?></td>
+                                    <td><?php echo $v_product->product_model; ?></td>
+                                    <td><?php echo $v_product->product_sku; ?></td>
+                                    <td><?php echo $v_product->product_quantity; ?></td>
+                                    <td><?php echo $v_product->product_price; ?></td>
+                                    <td><?php echo $v_product->discount_price; ?></td>
+                                <td>
+                                        <?php
+                                        if ($v_product->product_status == 1) {
+                                            ?>
+                                        <a href="<?php echo base_url(); ?>te_admin/unpublished_product_info/<?php echo $v_product->product_id; ?>"><span class="label label-active"title="Disable">Active</span></a>
+                                        <?php
+                                        } else {
+                                            ?>
+                                        <a href="<?php echo base_url(); ?>te_admin/published_product_info/<?php echo $v_product->product_id; ?>"><span class="label label-inverse"title="Active">Disable</span></a>
+                                        <?php } ?>
+                                    </td>
                                     <td>
                                         <div class="btn-group btn-group-xs ">  
-                                            <a href="" class="btn btn-inverse"><i class="fa fa-pencil icon-only"></i></a>
+                                            <a href="<?php echo base_url()?>te_admin/edit_product/<?php echo $v_product->product_id; ?>" class="btn btn-inverse"><i class="fa fa-pencil icon-only"></i></a>
                                         </div>
                                     </td>
                                 </tr>
-                           
+                            <?php } ?>
                         </tbody>
                     </table>
                     <div class="btn-group pull-right">

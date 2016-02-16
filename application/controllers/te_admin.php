@@ -460,11 +460,42 @@ class Te_Admin extends CI_Controller {
 //------start manage product-----------//
     public function manage_product(){
         $data=array();
-        //$data['all_product']=$this->te_admin_model->get_product_info();
+        $data['all_product']=$this->te_product_model->get_all_product();
+        /*echo '<pre>';
+        print_r($data);
+        exit();*/
         $data['main_content']=  $this->load->view('admin/manage_product_grid',$data,TRUE);
         $data['title']='Manage Product';
         $this->load->view('admin/admin_master',$data);
     }
+    public function unpublished_product_info($product_id){
+      $this->te_product_model->unpublished_product($product_id);
+      redirect('te_admin/manage_product');
+    }
+    public function published_product_info($product_id){
+        $this->te_product_model->published_product($product_id);
+        redirect('te_admin/manage_product');
+    }
+    public function edit_product($product_id) {
+        $data = array();
+        $data['product_id']=$product_id;
+        $data['product_info']=$this->te_product_model->get_product_and_discount($product_id);
+        /*echo '<pre>';
+        print_r($data);
+        exit();*/
+        $data['title'] = 'Edit Product';
+        $data['main_content'] = $this->load->view('admin/edit_product_form',$data,TRUE);
+        $this->load->view('admin/admin_master',$data);
+    }
+    /*public function update_manufacturer() {
+        $manufacturer_name=$this->input->post('manufacturer_name', true);
+        $manufacturer_id = $this->input->post('manufacturer_id', true);
+        $this->admin_model->update_manufacturer_name($manufacturer_name,$manufacturer_id);
+        $sdata = array();
+        $sdata['message'] = 'Update Manufacturer Information Successfully !';
+        $this->session->set_userdata($sdata);
+        redirect('te_admin/edit_manufacturer/' . $manufacturer_id);
+    }*/
     public function logout() {
         $this->session->unset_userdata('management_id');
         $this->session->unset_userdata('name');
