@@ -173,7 +173,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="<?php echo base_url()?>te_admin/manage_manufacturer">
                                             <i class="fa fa-angle-double-right"></i>Manage manufacturer
                                         </a>
                                     </li>
@@ -183,7 +183,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="<?php echo base_url()?>te_admin/manage_product">
                                             <i class="fa fa-angle-double-right"></i>Manage Product 
                                         </a>
                                     </li>
