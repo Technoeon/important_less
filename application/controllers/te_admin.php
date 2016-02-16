@@ -461,9 +461,6 @@ class Te_Admin extends CI_Controller {
     public function manage_product(){
         $data=array();
         $data['all_product']=$this->te_product_model->get_all_product();
-        /*echo '<pre>';
-        print_r($data);
-        exit();*/
         $data['main_content']=  $this->load->view('admin/manage_product_grid',$data,TRUE);
         $data['title']='Manage Product';
         $this->load->view('admin/admin_master',$data);
@@ -480,22 +477,29 @@ class Te_Admin extends CI_Controller {
         $data = array();
         $data['product_id']=$product_id;
         $data['product_info']=$this->te_product_model->get_product_and_discount($product_id);
-        /*echo '<pre>';
-        print_r($data);
-        exit();*/
         $data['title'] = 'Edit Product';
         $data['main_content'] = $this->load->view('admin/edit_product_form',$data,TRUE);
         $this->load->view('admin/admin_master',$data);
     }
-    /*public function update_manufacturer() {
-        $manufacturer_name=$this->input->post('manufacturer_name', true);
-        $manufacturer_id = $this->input->post('manufacturer_id', true);
-        $this->admin_model->update_manufacturer_name($manufacturer_name,$manufacturer_id);
+    public function update_product() {
+        $product = array();
+        $discount = array();
+        $product_id=$this->input->post('product_id', true);
+        $product['product_name']=$this->input->post('product_name', true);
+        $product['product_model']=$this->input->post('product_model', true);
+        $product['product_quantity']=$this->input->post('product_quantity', true);
+        $product['product_price']=$this->input->post('product_price', true);
+        $product['product_sku']=$this->input->post('product_sku', true);
+        $discount['discount_price']=  $this->input->post('discount_price', true);
+        $discount['start_date']=  $this->input->post('start_date', true);
+        $discount['end_date']=  $this->input->post('end_date', true);
+        $this->te_product_model->update_product($product_id,$product);
+         $this->te_product_model->update_discount($product_id,$discount);
         $sdata = array();
-        $sdata['message'] = 'Update Manufacturer Information Successfully !';
+        $sdata['message'] = 'Update Product Information Successfully !';
         $this->session->set_userdata($sdata);
-        redirect('te_admin/edit_manufacturer/' . $manufacturer_id);
-    }*/
+        redirect('te_admin/manage_product');
+    }
     public function logout() {
         $this->session->unset_userdata('management_id');
         $this->session->unset_userdata('name');
