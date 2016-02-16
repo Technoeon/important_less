@@ -3,7 +3,7 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-/*start winter head */
+/*add product manu start*/
 ﻿.first-border-div
 {
     border: 1px solid #35a3d3;
@@ -27,629 +27,7 @@
      vertical-align:middle;
      overflow:hidden;
 }
-
-
-.home-first-category-block
-{
-    margin-top:30px;
-}
-.first-block-category-menu-container
-{
-    width:190px;
-    height:326px;
-    float:left;
-    overflow:hidden;
-   
-        
-}
-.first-block-image-container
-{
-    background-color:#CCC;
-    width:263px;
-    height:326px;
-    float:left;
-}
-
-.home-second-category-block
-{
-    margin-top:30px;
-}
-.second-block-category-menu-container
-{
-    width:190px;
-    height:326px;
-    float:left;
-    overflow:hidden;
-   
-        
-}
-.second-block-image-container
-{
-    background-color:#CCC;
-    width:263px;
-    height:326px;
-    float:left;
-}
-/* start show more product */
-
-.first-block-product-container
-{
-    width:52.4%;
-    width:calc(100% - 453px); 
-    width: -webkit-calc(100% - 453px);
-    width: -moz-calc(100% - 453px);
-    float:left;
-    height:326px;
-    overflow:hidden;
-}
-
-.home-first-category-block
-{
-    margin-top:30px;
-}
-
-.first-block-category-menu-container
-{
-    width:200px;
-    height:389px;
-    float:left;
-    overflow:hidden;
-   
-        
-}
-/* Start of Winter Category Block*/
-
-
-
-.home-13-0-block-category-menu-header
-{
-    width:100%;
-    background-color:#D7CB1D;
-    height: 40px;
-    line-height:40px;
-    float:left;
-    font-size:20px;
-    font-family:SolaimanLipi;
-}
-.home-13-0-block-category-menu-header h1
-{
-    width:100%;
-    margin-top:0px;
-    margin-bottom:0px;
-    float:left;
-    font-size:20px;
-    font-family:SolaimanLipi;
-    color:#FFF!important;
-    height: 40px;
-    line-height:40px;
-}
-
-.home-13-0-block-category-menu-header h1 a
-{
-    float:left;
-    text-decoration:none;
-    color:#FFF!important;
-    padding-left:20px;
-    width: 100%;
-    font-weight:normal;
-    
-}
-.home-13-0-block-category-menu-header h1 a:hover
-{
-    float:left;
-    text-decoration:none;
-    color:#333;
-    padding-left:20px;
-    width: 100%;
-    font-weight:normal;
-    
-}
-.home-13-0-block-category-menu-wrapper
-{
-    float:left;
-    width: 100%;
-    height:311px;
-    overflow:hidden;
-    padding-top:10px;
-    border-left: 1px solid #eee;
-}
-.home-13-0-block-category-menu-bottom
-{
-    float:left;
-    width: 100%;
-    height:36px;
-    line-height:36px;
-    padding-left:20px;
-    background-color:#EEE;
-    cursor:pointer;
-    background: none repeat scroll 0 0 #EEE;
-    border-bottom: 1px solid #cfcfcf;
-}
-
-.home-13-0-block-subcategory-name
-{
-    float:left;
-    width: 100%;
-    height:30px;
-    line-height:30px;
-    
-}
-.home-13-0-block-subcategory-name h3
-{
-    float:left;
-    width: 100%;
-    height:30px;
-    line-height:30px;
-    margin-bottom:0px;
-    margin-top:0px;
-    color:#222;
-    font-size:15px;
-}
-.home-13-0-block-subcategory-name a
-{
-     float:left;
-    text-decoration:none;
-    color: #707da3;
-    padding-left:20px;
-    width: 100%;
-    font-weight:normal;
-    font-size:15px;
-     outline-style:none;
-}
-.home-13-0-block-subcategory-name a:hover
-{
-    float:left;
-    text-decoration:none;
-    color:#27c934;
-    padding-left:20px;
-    width: 100%;
-    font-weight:normal;
-    font-size:15px;
-}
-
-.first-block-image-container
-{
-    background-color:#CCC;
-    width:287px;
-    height:387px;
-    float:left;
-}
-.home-category-product-wrapper
-{
-    float:left;
-    width:100%;
-    border-bottom:.5px solid #F5F5F5;
-    /*border-right:0.5px solid #F5F5F5;*/
-    height:163px;
-}
-.home-category-product-image
-{
-    float:left;
-    width:100%;
-    height:119px;
-    text-align:center;
-    
-}
-.home-category-product-image img
-{
-    height: 100px;
-    margin-top: 18px;
-    max-width: 100%;
-}
-.home-category-product-title
-{
-    float:left;
-    
-    font-family: SolaimanLipi,Helvetica,Verdana;
-    font-size: 15px;
-    font-weight:normal;
-    height: 30px;
-    margin: 0px 2px 0px 2px;
-    text-align:center;
-    overflow: hidden;
-    line-height: 30px;
-   
-    padding: 0 2%;
-   letter-spacing: 1px;
-    width: 96%;
-    
-}
-.home-category-product-title a
-{
-    
-   
-    font-family: SolaimanLipi,Helvetica,Verdana;
-    font-size: 15px;
-    
-    height: 30px;
-    line-height: 30px;
-    text-decoration:none;
-    color:#333;
-    font-weight:normal;
-}
-.home-category-product-title a:hover
-{
-    text-decoration:none;
-    color:#337ab7;
-}
-.home-category-product-title a:visited
-{
-    text-decoration:none;
-    color:#333;
-}
-.home-category-product-price
-{
-    float:left;
-    width:100%;
-    height: 15px;
-    line-height: 15px;
-    margin-bottom: 10px;
-    text-align:center;
-    overflow:hidden;
-    font-size:16px;
-    font-family: SolaimanLipi,Helvetica,Verdana;
-    color:#f16e52;
-}
-
-
-.home-category-product-title a h2{
-    float: left;
-    font-family: SolaimanLipi,Helvetica,Verdana;
-    font-size: 13px;
-    font-weight: normal;
-    height: 30px;
-    letter-spacing: 1px;
-    line-height: 30px;
-    margin: 0 2px;
-    overflow: hidden;
-    padding: 0 2%;
-    text-align: center;
-    width: 100%;
-    color:#333;
-    text-transform: capitalize;
-}
-.home-category-product-title a h2:hover
-{
-    text-decoration:none;
-    color:#27c934;
-    text-transform: capitalize;
-}
-/* Start more winter product */
-
-.home-show-more
-{
-	text-align:right;
-	margin-top:20px;
-	
-}
-.home-show-more a
-{
-	text-decoration:none;
-	font-size:16px;
-	color:#929d8d;
-			 	
-}
-.home-show-more a:hover
-{
-	text-decoration:none;
-	font-size:16px;
-	color:#27c934;
-}
-
-/* End more winter product */
-
-/* Start women fasion */
-.home-first-category-block-women-fasion
-{
-    margin-top:30px;
-}
-.first-block-category-menu-container-women-fasion
-{
-    width:190px;
-    height:326px;
-    float:left;
-    overflow:hidden;
-   
-        
-}
-.first-block-image-container-women-fasion
-{
-    background-color:#CCC;
-    width:263px;
-    height:326px;
-    float:left;
-}
-
-.home-second-category-block-women-fasion
-{
-    margin-top:30px;
-}
-.second-block-category-menu-container-women-fasion
-{
-    width:190px;
-    height:326px;
-    float:left;
-    overflow:hidden;
-   
-        
-}
-.second-block-image-container-women-fasion
-{
-    background-color:#CCC;
-    width:263px;
-    height:326px;
-    float:left;
-}
-/* start show more product */
-
-.first-block-product-container-women-fasion
-{
-    width:52.4%;
-    width:calc(100% - 453px); 
-    width: -webkit-calc(100% - 453px);
-    width: -moz-calc(100% - 453px);
-    float:left;
-    height:326px;
-    overflow:hidden;
-}
-
-.home-first-category-block-women-fasion
-{
-    margin-top:30px;
-}
-
-.first-block-category-menu-container-women-fasion
-{
-    width:200px;
-    height:389px;
-    float:left;
-    overflow:hidden;
-   
-        
-}
-/* Start of Winter Category Block*/
-
-
-
-.home-13-0-block-category-menu-header-women-fasion
-{
-    width:100%;
-    background-color:#c77eb5;
-    height: 40px;
-    line-height:40px;
-    float:left;
-    font-size:20px;
-    font-family:SolaimanLipi;
-}
-.home-13-0-block-category-menu-header-women-fasion h1
-{
-    width:100%;
-    margin-top:0px;
-    margin-bottom:0px;
-    float:left;
-    font-size:20px;
-    font-family:SolaimanLipi;
-    color:#FFF!important;
-    height: 40px;
-    line-height:40px;
-}
-
-.home-13-0-block-category-menu-header-women-fasion h1 a
-{
-    float:left;
-    text-decoration:none;
-    color:#FFF!important;
-    padding-left:20px;
-    width: 100%;
-    font-weight:normal;
-    
-}
-.home-13-0-block-category-menu-header-women-fasion h1 a:hover
-{
-    float:left;
-    text-decoration:none;
-    color:#333;
-    padding-left:20px;
-    width: 100%;
-    font-weight:normal;
-    
-}
-.home-13-0-block-category-menu-wrapper-women-fasion
-{
-    float:left;
-    width: 100%;
-    height:250px;
-    overflow:hidden;
-    padding-top:10px;
-    border-left: 1px solid #eee;
-}
-.home-13-0-block-category-menu-bottom-women-fasion
-{
-    float:left;
-    width: 100%;
-    height:36px;
-    line-height:36px;
-    padding-left:20px;
-    background-color:#EEE;
-    cursor:pointer;
-    background: none repeat scroll 0 0 #EEE;
-    border-bottom: 1px solid #cfcfcf;
-}
-
-
-
-.home-13-0-block-subcategory-name-women-fasion
-{
-    float:left;
-    width: 100%;
-    height:30px;
-    line-height:30px;
-    
-}
-.home-13-0-block-subcategory-name-women-fasion h3
-{
-    float:left;
-    width: 100%;
-    height:30px;
-    line-height:30px;
-    margin-bottom:0px;
-    margin-top:0px;
-    color:#222;
-    font-size:15px;
-}
-.home-13-0-block-subcategory-name-women-fasion a
-{
-     float:left;
-    text-decoration:none;
-    color: #707da3;
-    padding-left:20px;
-    width: 100%;
-    font-weight:normal;
-    font-size:15px;
-     outline-style:none;
-}
-.home-13-0-block-subcategory-name-women-fasion a:hover
-{
-    float:left;
-    text-decoration:none;
-    color:#c77eb5;
-    padding-left:20px;
-    width: 100%;
-    font-weight:normal;
-    font-size:15px;
-}
-
-.first-block-image-container-women-fasion
-{
-    background-color:#CCC;
-    width:287px;
-    height:387px;
-    float:left;
-}
-.home-category-product-wrapper-women-fasion
-{
-    float:left;
-    width:100%;
-    border-bottom:.5px solid #F5F5F5;
-    /*border-right:0.5px solid #F5F5F5;*/
-    height:163px;
-}
-.home-category-product-image-women-fasion
-{
-    float:left;
-    width:100%;
-    height:119px;
-    text-align:center;
-    
-}
-.home-category-product-image-women-fasion img
-{
-    height: 100px;
-    margin-top: 18px;
-    max-width: 100%;
-}
-.home-category-product-title-women-fasion
-{
-    float:left;
-    
-    font-family: SolaimanLipi,Helvetica,Verdana;
-    font-size: 15px;
-    font-weight:normal;
-    height: 30px;
-    margin: 0px 2px 0px 2px;
-    text-align:center;
-    overflow: hidden;
-    line-height: 30px;
-   
-    padding: 0 2%;
-   letter-spacing: 1px;
-    width: 96%;
-    
-}
-.home-category-product-title-women-fasion a
-{
-    
-   
-    font-family: SolaimanLipi,Helvetica,Verdana;
-    font-size: 15px;
-    
-    height: 30px;
-    line-height: 30px;
-    text-decoration:none;
-    color:#333;
-    font-weight:normal;
-}
-.home-category-product-title-women-fasion a:hover
-{
-    text-decoration:none;
-    color:#337ab7;
-}
-.home-category-product-title-women-fasion a:visited
-{
-    text-decoration:none;
-    color:#333;
-}
-.home-category-product-price-women-fasion
-{
-    float:left;
-    width:100%;
-    height: 15px;
-    line-height: 15px;
-    margin-bottom: 10px;
-    text-align:center;
-    overflow:hidden;
-    font-size:16px;
-    font-family: SolaimanLipi,Helvetica,Verdana;
-    color:#f16e52;
-}
-
-
-.home-category-product-title-women-fasion a h2{
-    float: left;
-    font-family: SolaimanLipi,Helvetica,Verdana;
-    font-size: 13px;
-    font-weight: normal;
-    height: 30px;
-    letter-spacing: 1px;
-    line-height: 30px;
-    margin: 0 2px;
-    overflow: hidden;
-    padding: 0 2%;
-    text-align: center;
-    width: 100%;
-    color:#333;
-    text-transform: capitalize;
-}
-.home-category-product-title-women-fasion a h2:hover
-{
-    text-decoration:none;
-    color:#c77eb5;
-    text-transform: capitalize;
-}
-/* Start more winter product */
-
-.home-show-more-women-fasion
-{
-	text-align:right;
-	margin-top:20px;
-	
-}
-.home-show-more-women-fasion a
-{
-	text-decoration:none;
-	font-size:16px;
-	color:#929d8d;
-			 	
-}
-.home-show-more-women-fasion a:hover
-{
-	text-decoration:none;
-	font-size:16px;
-	color:#c77eb5;
-}
-
-/* End women fasion */
-
+/*add product manu1 start*/
 /* Start men fasion */
 .home-first-category-block-men-fasion
 {
@@ -719,7 +97,7 @@
    
         
 }
-/* Start of men Category Block*/
+/* Start Category Block*/
 
 
 
@@ -794,7 +172,7 @@
 {
     float:left;
     width: 100%;
-    height:30px;
+    height:24px;
     line-height:30px;
     
 }
@@ -991,3 +369,2759 @@
 	font-size: 14px;
 	border: none;
 }
+/* End men fasion */
+/*add product manu1 End*/
+
+/*add product manu2 start*/
+/* Start men fasion */
+.home-first-category-block-manu2-fasion
+{
+    margin-top:30px;
+}
+.first-block-category-menu-container-manu2-fasion
+{
+    width:190px;
+    height:326px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+.first-block-image-container-manu2-fasion
+{
+    background-color:#CCC;
+    width:263px;
+    height:326px;
+    float:left;
+}
+
+.home-second-category-block-manu2-fasion
+{
+    margin-top:30px;
+}
+.second-block-category-menu-container-manu2-fasion
+{
+    width:190px;
+    height:326px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+.second-block-image-container-manu2-fasion
+{
+    background-color:#CCC;
+    width:263px;
+    height:326px;
+    float:left;
+}
+/* start show more product */
+
+.first-block-product-container-manu2-fasion
+{
+    width:52.4%;
+    width:calc(100% - 453px); 
+    width: -webkit-calc(100% - 453px);
+    width: -moz-calc(100% - 453px);
+    float:left;
+    height:326px;
+    overflow:hidden;
+}
+
+.home-first-category-block-manu2-fasion
+{
+    margin-top:30px;
+}
+
+.first-block-category-menu-container-manu2-fasion
+{
+    width:200px;
+    height:389px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+/* Start Category Block*/
+
+
+
+.home-13-0-block-category-menu-header-manu2-fasion
+{
+    width:100%;
+    background-color:#D12631;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+.home-13-0-block-category-menu-header-manu2-fasion h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+}
+
+.home-13-0-block-category-menu-header-manu2-fasion h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-13-0-block-category-menu-header-manu2-fasion h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-13-0-block-category-menu-wrapper-manu2-fasion
+{
+    float:left;
+    width: 100%;
+    height:311px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-13-0-block-category-menu-bottom-manu2-fasion
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+
+
+.home-13-0-block-subcategory-name-manu2-fasion
+{
+    float:left;
+    width: 100%;
+    height:24px;
+    line-height:30px;
+    
+}
+.home-13-0-block-subcategory-name-manu2-fasion h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+.home-13-0-block-subcategory-name-manu2-fasion a
+{
+     float:left;
+    text-decoration:none;
+    color: #707da3;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-13-0-block-subcategory-name-manu2-fasion a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#e85985;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+.first-block-image-container-manu2-fasion
+{
+    background-color:#CCC;
+    width:287px;
+    height:387px;
+    float:left;
+}
+.home-category-product-wrapper-manu2-fasion
+{
+    float:left;
+    width:100%;
+    border-bottom:.5px solid #F5F5F5;
+    /*border-right:0.5px solid #F5F5F5;*/
+    height:163px;
+}
+.home-category-product-image-manu2-fasion
+{
+    float:left;
+    width:100%;
+    height:119px;
+    text-align:center;
+    
+}
+.home-category-product-image-manu2-fasion img
+{
+    height: 100px;
+    margin-top: 18px;
+    max-width: 100%;
+}
+.home-category-product-title-manu2-fasion
+{
+    float:left;
+    
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 15px;
+    font-weight:normal;
+    height: 30px;
+    margin: 0px 2px 0px 2px;
+    text-align:center;
+    overflow: hidden;
+    line-height: 30px;
+   
+    padding: 0 2%;
+   letter-spacing: 1px;
+    width: 96%;
+    
+}
+.home-category-product-title-manu2-fasion a
+{
+    
+   
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 15px;
+    
+    height: 30px;
+    line-height: 30px;
+    text-decoration:none;
+    color:#333;
+    font-weight:normal;
+}
+.home-category-product-title-manu2-fasion a:hover
+{
+    text-decoration:none;
+    color:#e85985;
+}
+.home-category-product-title-manu2-fasion a:visited
+{
+    text-decoration:none;
+    color:#333;
+}
+.home-category-product-price-manu2-fasion
+{
+    float:left;
+    width:100%;
+    height: 15px;
+    line-height: 15px;
+    margin-bottom: 10px;
+    text-align:center;
+    overflow:hidden;
+    font-size:16px;
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    color:#f16e52;
+}
+
+
+.home-category-product-title-manu2-fasion a h2{
+    float: left;
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 13px;
+    font-weight: normal;
+    height: 30px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    margin: 0 2px;
+    overflow: hidden;
+    padding: 0 2%;
+    text-align: center;
+    width: 100%;
+    color:#333;
+    text-transform: capitalize;
+}
+.home-category-product-title-manu2-fasion a h2:hover
+{
+    text-decoration:none;
+    color:#e85985;
+    text-transform: capitalize;
+}
+/* Start more winter product */
+
+.home-show-more-manu2-fasion
+{
+	text-align:right;
+	margin-top:20px;
+	
+}
+.home-show-more-manu2-fasion a
+{
+	text-decoration:none;
+	font-size:16px;
+	color:#929d8d;
+			 	
+}
+.home-show-more-manu2-fasion a:hover
+{
+	text-decoration:none;
+	font-size:16px;
+        color: #b482d7;
+        
+}
+
+/* End women fasion color:#e85985;*/
+
+.payment-method{
+    width: 10px;
+    height: 10px;
+}
+
+.phone1 {
+	overflow: hidden;
+	font-size: 14px;
+	line-height: 35px;
+	color: #007fb8;
+	margin-bottom: 10px;
+	margin-top: 12px;
+}
+
+.contacts-info1 {
+	display: block;
+	margin: auto;
+	font-style: normal;
+	line-height: 1.5em;
+	color:  #222;
+	padding-top: 5px;
+	margin-top: 10px;
+	text-align: left;
+	padding-bottom: 5px;
+	margin-bottom: 7px;
+	font-size: 14px;
+	border: none;
+}
+/* End men fasion */
+/*add product manu2 End*/
+
+/*add product manu3 start*/
+/* Start men fasion */
+.home-first-category-block-menu3-fasion
+{
+    margin-top:30px;
+}
+.first-block-category-menu-container-menu3-fasion
+{
+    width:190px;
+    height:326px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+.first-block-image-container-menu3-fasion
+{
+    background-color:#CCC;
+    width:263px;
+    height:326px;
+    float:left;
+}
+
+.home-second-category-block-menu3-fasion
+{
+    margin-top:30px;
+}
+.second-block-category-menu-container-menu3-fasion
+{
+    width:190px;
+    height:326px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+.second-block-image-container-menu3-fasion
+{
+    background-color:#CCC;
+    width:263px;
+    height:326px;
+    float:left;
+}
+/* start show more product */
+
+.first-block-product-container-menu3-fasion
+{
+    width:52.4%;
+    width:calc(100% - 453px); 
+    width: -webkit-calc(100% - 453px);
+    width: -moz-calc(100% - 453px);
+    float:left;
+    height:326px;
+    overflow:hidden;
+}
+
+.home-first-category-block-menu3-fasion
+{
+    margin-top:30px;
+}
+
+.first-block-category-menu-container-menu3-fasion
+{
+    width:200px;
+    height:389px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+/* Start Category Block*/
+
+
+
+.home-13-0-block-category-menu-header-menu3-fasion
+{
+    width:100%;
+    background-color:#e85985;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+.home-13-0-block-category-menu-header-menu3-fasion h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+}
+
+.home-13-0-block-category-menu-header-menu3-fasion h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-13-0-block-category-menu-header-menu3-fasion h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-13-0-block-category-menu-wrapper-menu3-fasion
+{
+    float:left;
+    width: 100%;
+    height:311px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-13-0-block-category-menu-bottom-menu3-fasion
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+
+
+.home-13-0-block-subcategory-name-menu3-fasion
+{
+    float:left;
+    width: 100%;
+    height:24px;
+    line-height:30px;
+    
+}
+.home-13-0-block-subcategory-name-menu3-fasion h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+.home-13-0-block-subcategory-name-menu3-fasion a
+{
+     float:left;
+    text-decoration:none;
+    color: #707da3;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-13-0-block-subcategory-name-menu3-fasion a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#e85985;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+.first-block-image-container-menu3-fasion
+{
+    background-color:#CCC;
+    width:287px;
+    height:387px;
+    float:left;
+}
+.home-category-product-wrapper-menu3-fasion
+{
+    float:left;
+    width:100%;
+    border-bottom:.5px solid #F5F5F5;
+    /*border-right:0.5px solid #F5F5F5;*/
+    height:163px;
+}
+.home-category-product-image-menu3-fasion
+{
+    float:left;
+    width:100%;
+    height:119px;
+    text-align:center;
+    
+}
+.home-category-product-image-menu3-fasion img
+{
+    height: 100px;
+    margin-top: 18px;
+    max-width: 100%;
+}
+.home-category-product-title-menu3-fasion
+{
+    float:left;
+    
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 15px;
+    font-weight:normal;
+    height: 30px;
+    margin: 0px 2px 0px 2px;
+    text-align:center;
+    overflow: hidden;
+    line-height: 30px;
+   
+    padding: 0 2%;
+   letter-spacing: 1px;
+    width: 96%;
+    
+}
+.home-category-product-title-menu3-fasion a
+{
+    
+   
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 15px;
+    
+    height: 30px;
+    line-height: 30px;
+    text-decoration:none;
+    color:#333;
+    font-weight:normal;
+}
+.home-category-product-title-menu3-fasion a:hover
+{
+    text-decoration:none;
+    color:#e85985;
+}
+.home-category-product-title-menu3-fasion a:visited
+{
+    text-decoration:none;
+    color:#333;
+}
+.home-category-product-price-menu3-fasion
+{
+    float:left;
+    width:100%;
+    height: 15px;
+    line-height: 15px;
+    margin-bottom: 10px;
+    text-align:center;
+    overflow:hidden;
+    font-size:16px;
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    color:#f16e52;
+}
+
+
+.home-category-product-title-menu3-fasion a h2{
+    float: left;
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 13px;
+    font-weight: normal;
+    height: 30px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    margin: 0 2px;
+    overflow: hidden;
+    padding: 0 2%;
+    text-align: center;
+    width: 100%;
+    color:#333;
+    text-transform: capitalize;
+}
+.home-category-product-title-menu3-fasion a h2:hover
+{
+    text-decoration:none;
+    color:#e85985;
+    text-transform: capitalize;
+}
+/* Start more winter product */
+
+.home-show-more-menu3-fasion
+{
+	text-align:right;
+	margin-top:20px;
+	
+}
+.home-show-more-menu3-fasion a
+{
+	text-decoration:none;
+	font-size:16px;
+	color:#929d8d;
+			 	
+}
+.home-show-more-menu3-fasion a:hover
+{
+	text-decoration:none;
+	font-size:16px;
+        color: #b482d7;
+        
+}
+
+/* End women fasion color:#e85985;*/
+
+.payment-method{
+    width: 10px;
+    height: 10px;
+}
+
+.phone1 {
+	overflow: hidden;
+	font-size: 14px;
+	line-height: 35px;
+	color: #007fb8;
+	margin-bottom: 10px;
+	margin-top: 12px;
+}
+
+.contacts-info1 {
+	display: block;
+	margin: auto;
+	font-style: normal;
+	line-height: 1.5em;
+	color:  #222;
+	padding-top: 5px;
+	margin-top: 10px;
+	text-align: left;
+	padding-bottom: 5px;
+	margin-bottom: 7px;
+	font-size: 14px;
+	border: none;
+}
+/* End men fasion */
+/*add product manu3 End*/
+/*add product manu4 start*/
+/* Start men fasion */
+.home-first-category-block-menu4-fasion
+{
+    margin-top:30px;
+}
+.first-block-category-menu-container-menu4-fasion
+{
+    width:190px;
+    height:326px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+.first-block-image-container-menu4-fasion
+{
+    background-color:#CCC;
+    width:263px;
+    height:326px;
+    float:left;
+}
+
+.home-second-category-block-menu4-fasion
+{
+    margin-top:30px;
+}
+.second-block-category-menu-container-menu4-fasion
+{
+    width:190px;
+    height:326px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+.second-block-image-container-menu4-fasion
+{
+    background-color:#CCC;
+    width:263px;
+    height:326px;
+    float:left;
+}
+/* start show more product */
+
+.first-block-product-container-menu4-fasion
+{
+    width:52.4%;
+    width:calc(100% - 453px); 
+    width: -webkit-calc(100% - 453px);
+    width: -moz-calc(100% - 453px);
+    float:left;
+    height:326px;
+    overflow:hidden;
+}
+
+.home-first-category-block-menu4-fasion
+{
+    margin-top:30px;
+}
+
+.first-block-category-menu-container-menu4-fasion
+{
+    width:200px;
+    height:389px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+/* Start Category Block*/
+
+
+
+.home-13-0-block-category-menu-header-menu4-fasion
+{
+    width:100%;
+    background-color:#1A88A0;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+.home-13-0-block-category-menu-header-menu4-fasion h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+}
+
+.home-13-0-block-category-menu-header-menu4-fasion h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-13-0-block-category-menu-header-menu4-fasion h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-13-0-block-category-menu-wrapper-menu4-fasion
+{
+    float:left;
+    width: 100%;
+    height:311px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-13-0-block-category-menu-bottom-menu4-fasion
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+
+
+.home-13-0-block-subcategory-name-menu4-fasion
+{
+    float:left;
+    width: 100%;
+    height:24px;
+    line-height:30px;
+    
+}
+.home-13-0-block-subcategory-name-menu4-fasion h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+.home-13-0-block-subcategory-name-menu4-fasion a
+{
+     float:left;
+    text-decoration:none;
+    color: #707da3;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-13-0-block-subcategory-name-menu4-fasion a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#e85985;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+.first-block-image-container-menu4-fasion
+{
+    background-color:#CCC;
+    width:287px;
+    height:387px;
+    float:left;
+}
+.home-category-product-wrapper-menu4-fasion
+{
+    float:left;
+    width:100%;
+    border-bottom:.5px solid #F5F5F5;
+    /*border-right:0.5px solid #F5F5F5;*/
+    height:163px;
+}
+.home-category-product-image-menu4-fasion
+{
+    float:left;
+    width:100%;
+    height:119px;
+    text-align:center;
+    
+}
+.home-category-product-image-menu4-fasion img
+{
+    height: 100px;
+    margin-top: 18px;
+    max-width: 100%;
+}
+.home-category-product-title-menu4-fasion
+{
+    float:left;
+    
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 15px;
+    font-weight:normal;
+    height: 30px;
+    margin: 0px 2px 0px 2px;
+    text-align:center;
+    overflow: hidden;
+    line-height: 30px;
+   
+    padding: 0 2%;
+   letter-spacing: 1px;
+    width: 96%;
+    
+}
+.home-category-product-title-menu4-fasion a
+{
+    
+   
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 15px;
+    
+    height: 30px;
+    line-height: 30px;
+    text-decoration:none;
+    color:#333;
+    font-weight:normal;
+}
+.home-category-product-title-menu4-fasion a:hover
+{
+    text-decoration:none;
+    color:#e85985;
+}
+.home-category-product-title-menu4-fasion a:visited
+{
+    text-decoration:none;
+    color:#333;
+}
+.home-category-product-price-menu4-fasion
+{
+    float:left;
+    width:100%;
+    height: 15px;
+    line-height: 15px;
+    margin-bottom: 10px;
+    text-align:center;
+    overflow:hidden;
+    font-size:16px;
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    color:#f16e52;
+}
+
+
+.home-category-product-title-menu4-fasion a h2{
+    float: left;
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 13px;
+    font-weight: normal;
+    height: 30px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    margin: 0 2px;
+    overflow: hidden;
+    padding: 0 2%;
+    text-align: center;
+    width: 100%;
+    color:#333;
+    text-transform: capitalize;
+}
+.home-category-product-title-menu4-fasion a h2:hover
+{
+    text-decoration:none;
+    color:#e85985;
+    text-transform: capitalize;
+}
+/* Start more winter product */
+
+.home-show-more-menu4-fasion
+{
+	text-align:right;
+	margin-top:20px;
+	
+}
+.home-show-more-menu4-fasion a
+{
+	text-decoration:none;
+	font-size:16px;
+	color:#929d8d;
+			 	
+}
+.home-show-more-menu4-fasion a:hover
+{
+	text-decoration:none;
+	font-size:16px;
+        color: #b482d7;
+        
+}
+
+/* End women fasion color:#e85985;*/
+
+.payment-method{
+    width: 10px;
+    height: 10px;
+}
+
+.phone1 {
+	overflow: hidden;
+	font-size: 14px;
+	line-height: 35px;
+	color: #007fb8;
+	margin-bottom: 10px;
+	margin-top: 12px;
+}
+
+.contacts-info1 {
+	display: block;
+	margin: auto;
+	font-style: normal;
+	line-height: 1.5em;
+	color:  #222;
+	padding-top: 5px;
+	margin-top: 10px;
+	text-align: left;
+	padding-bottom: 5px;
+	margin-bottom: 7px;
+	font-size: 14px;
+	border: none;
+}
+/* End men fasion */
+/*add product manu4 End*/
+/*add product manu5 start*/
+/* Start men fasion */
+.home-first-category-block-menu5-fasion
+{
+    margin-top:30px;
+}
+.first-block-category-menu-container-menu5-fasion
+{
+    width:190px;
+    height:326px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+.first-block-image-container-menu5-fasion
+{
+    background-color:#CCC;
+    width:263px;
+    height:326px;
+    float:left;
+}
+
+.home-second-category-block-menu5-fasion
+{
+    margin-top:30px;
+}
+.second-block-category-menu-container-menu5-fasion
+{
+    width:190px;
+    height:326px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+.second-block-image-container-menu5-fasion
+{
+    background-color:#CCC;
+    width:263px;
+    height:326px;
+    float:left;
+}
+/* start show more product */
+
+.first-block-product-container-menu5-fasion
+{
+    width:52.4%;
+    width:calc(100% - 453px); 
+    width: -webkit-calc(100% - 453px);
+    width: -moz-calc(100% - 453px);
+    float:left;
+    height:326px;
+    overflow:hidden;
+}
+
+.home-first-category-block-menu5-fasion
+{
+    margin-top:30px;
+}
+
+.first-block-category-menu-container-menu5-fasion
+{
+    width:200px;
+    height:389px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+/* Start Category Block*/
+
+
+
+.home-13-0-block-category-menu-header-menu5-fasion
+{
+    width:100%;
+    background-color:#B159E8;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+.home-13-0-block-category-menu-header-menu5-fasion h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+}
+
+.home-13-0-block-category-menu-header-menu5-fasion h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-13-0-block-category-menu-header-menu5-fasion h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-13-0-block-category-menu-wrapper-menu5-fasion
+{
+    float:left;
+    width: 100%;
+    height:311px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-13-0-block-category-menu-bottom-menu5-fasion
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+
+
+.home-13-0-block-subcategory-name-menu5-fasion
+{
+    float:left;
+    width: 100%;
+    height:24px;
+    line-height:30px;
+    
+}
+.home-13-0-block-subcategory-name-menu5-fasion h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+.home-13-0-block-subcategory-name-menu5-fasion a
+{
+     float:left;
+    text-decoration:none;
+    color: #707da3;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-13-0-block-subcategory-name-menu5-fasion a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#e85985;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+.first-block-image-container-menu5-fasion
+{
+    background-color:#CCC;
+    width:287px;
+    height:387px;
+    float:left;
+}
+.home-category-product-wrapper-menu5-fasion
+{
+    float:left;
+    width:100%;
+    border-bottom:.5px solid #F5F5F5;
+    /*border-right:0.5px solid #F5F5F5;*/
+    height:163px;
+}
+.home-category-product-image-menu5-fasion
+{
+    float:left;
+    width:100%;
+    height:119px;
+    text-align:center;
+    
+}
+.home-category-product-image-menu5-fasion img
+{
+    height: 100px;
+    margin-top: 18px;
+    max-width: 100%;
+}
+.home-category-product-title-menu5-fasion
+{
+    float:left;
+    
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 15px;
+    font-weight:normal;
+    height: 30px;
+    margin: 0px 2px 0px 2px;
+    text-align:center;
+    overflow: hidden;
+    line-height: 30px;
+   
+    padding: 0 2%;
+   letter-spacing: 1px;
+    width: 96%;
+    
+}
+.home-category-product-title-menu5-fasion a
+{
+    
+   
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 15px;
+    
+    height: 30px;
+    line-height: 30px;
+    text-decoration:none;
+    color:#333;
+    font-weight:normal;
+}
+.home-category-product-title-menu5-fasion a:hover
+{
+    text-decoration:none;
+    color:#e85985;
+}
+.home-category-product-title-menu5-fasion a:visited
+{
+    text-decoration:none;
+    color:#333;
+}
+.home-category-product-price-menu5-fasion
+{
+    float:left;
+    width:100%;
+    height: 15px;
+    line-height: 15px;
+    margin-bottom: 10px;
+    text-align:center;
+    overflow:hidden;
+    font-size:16px;
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    color:#f16e52;
+}
+
+
+.home-category-product-title-menu5-fasion a h2{
+    float: left;
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 13px;
+    font-weight: normal;
+    height: 30px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    margin: 0 2px;
+    overflow: hidden;
+    padding: 0 2%;
+    text-align: center;
+    width: 100%;
+    color:#333;
+    text-transform: capitalize;
+}
+.home-category-product-title-menu5-fasion a h2:hover
+{
+    text-decoration:none;
+    color:#e85985;
+    text-transform: capitalize;
+}
+/* Start more winter product */
+
+.home-show-more-menu5-fasion
+{
+	text-align:right;
+	margin-top:20px;
+	
+}
+.home-show-more-menu5-fasion a
+{
+	text-decoration:none;
+	font-size:16px;
+	color:#929d8d;
+			 	
+}
+.home-show-more-menu5-fasion a:hover
+{
+	text-decoration:none;
+	font-size:16px;
+        color: #b482d7;
+        
+}
+
+/* End women fasion color:#e85985;*/
+
+.payment-method{
+    width: 10px;
+    height: 10px;
+}
+
+.phone1 {
+	overflow: hidden;
+	font-size: 14px;
+	line-height: 35px;
+	color: #007fb8;
+	margin-bottom: 10px;
+	margin-top: 12px;
+}
+
+.contacts-info1 {
+	display: block;
+	margin: auto;
+	font-style: normal;
+	line-height: 1.5em;
+	color:  #222;
+	padding-top: 5px;
+	margin-top: 10px;
+	text-align: left;
+	padding-bottom: 5px;
+	margin-bottom: 7px;
+	font-size: 14px;
+	border: none;
+}
+/* End men fasion */
+/*add product manu5 End*/
+/*add product manu6 start*/
+/* Start men fasion */
+.home-first-category-block-menu6-fasion
+{
+    margin-top:30px;
+}
+.first-block-category-menu-container-menu6-fasion
+{
+    width:190px;
+    height:326px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+.first-block-image-container-menu6-fasion
+{
+    background-color:#CCC;
+    width:263px;
+    height:326px;
+    float:left;
+}
+
+.home-second-category-block-menu6-fasion
+{
+    margin-top:30px;
+}
+.second-block-category-menu-container-menu6-fasion
+{
+    width:190px;
+    height:326px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+.second-block-image-container-menu6-fasion
+{
+    background-color:#CCC;
+    width:263px;
+    height:326px;
+    float:left;
+}
+/* start show more product */
+
+.first-block-product-container-menu6-fasion
+{
+    width:52.4%;
+    width:calc(100% - 453px); 
+    width: -webkit-calc(100% - 453px);
+    width: -moz-calc(100% - 453px);
+    float:left;
+    height:326px;
+    overflow:hidden;
+}
+
+.home-first-category-block-menu6-fasion
+{
+    margin-top:30px;
+}
+
+.first-block-category-menu-container-menu6-fasion
+{
+    width:200px;
+    height:389px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+/* Start Category Block*/
+
+
+
+.home-13-0-block-category-menu-header-menu6-fasion
+{
+    width:100%;
+    background-color:#7D0193;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+.home-13-0-block-category-menu-header-menu6-fasion h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+}
+
+.home-13-0-block-category-menu-header-menu6-fasion h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-13-0-block-category-menu-header-menu6-fasion h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-13-0-block-category-menu-wrapper-menu6-fasion
+{
+    float:left;
+    width: 100%;
+    height:311px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-13-0-block-category-menu-bottom-menu6-fasion
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+
+
+.home-13-0-block-subcategory-name-menu6-fasion
+{
+    float:left;
+    width: 100%;
+    height:24px;
+    line-height:30px;
+    
+}
+.home-13-0-block-subcategory-name-menu6-fasion h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+.home-13-0-block-subcategory-name-menu6-fasion a
+{
+     float:left;
+    text-decoration:none;
+    color: #707da3;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-13-0-block-subcategory-name-menu6-fasion a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#e85985;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+.first-block-image-container-menu6-fasion
+{
+    background-color:#CCC;
+    width:287px;
+    height:387px;
+    float:left;
+}
+.home-category-product-wrapper-menu6-fasion
+{
+    float:left;
+    width:100%;
+    border-bottom:.5px solid #F5F5F5;
+    /*border-right:0.5px solid #F5F5F5;*/
+    height:163px;
+}
+.home-category-product-image-menu6-fasion
+{
+    float:left;
+    width:100%;
+    height:119px;
+    text-align:center;
+    
+}
+.home-category-product-image-menu6-fasion img
+{
+    height: 100px;
+    margin-top: 18px;
+    max-width: 100%;
+}
+.home-category-product-title-menu6-fasion
+{
+    float:left;
+    
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 15px;
+    font-weight:normal;
+    height: 30px;
+    margin: 0px 2px 0px 2px;
+    text-align:center;
+    overflow: hidden;
+    line-height: 30px;
+   
+    padding: 0 2%;
+   letter-spacing: 1px;
+    width: 96%;
+    
+}
+.home-category-product-title-menu6-fasion a
+{
+    
+   
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 15px;
+    
+    height: 30px;
+    line-height: 30px;
+    text-decoration:none;
+    color:#333;
+    font-weight:normal;
+}
+.home-category-product-title-menu6-fasion a:hover
+{
+    text-decoration:none;
+    color:#e85985;
+}
+.home-category-product-title-menu6-fasion a:visited
+{
+    text-decoration:none;
+    color:#333;
+}
+.home-category-product-price-menu6-fasion
+{
+    float:left;
+    width:100%;
+    height: 15px;
+    line-height: 15px;
+    margin-bottom: 10px;
+    text-align:center;
+    overflow:hidden;
+    font-size:16px;
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    color:#f16e52;
+}
+
+
+.home-category-product-title-menu6-fasion a h2{
+    float: left;
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 13px;
+    font-weight: normal;
+    height: 30px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    margin: 0 2px;
+    overflow: hidden;
+    padding: 0 2%;
+    text-align: center;
+    width: 100%;
+    color:#333;
+    text-transform: capitalize;
+}
+.home-category-product-title-menu6-fasion a h2:hover
+{
+    text-decoration:none;
+    color:#e85985;
+    text-transform: capitalize;
+}
+/* Start more winter product */
+
+.home-show-more-menu6-fasion
+{
+	text-align:right;
+	margin-top:20px;
+	
+}
+.home-show-more-menu6-fasion a
+{
+	text-decoration:none;
+	font-size:16px;
+	color:#929d8d;
+			 	
+}
+.home-show-more-menu6-fasion a:hover
+{
+	text-decoration:none;
+	font-size:16px;
+        color: #b482d7;
+        
+}
+
+/* End women fasion color:#e85985;*/
+
+.payment-method{
+    width: 10px;
+    height: 10px;
+}
+
+.phone1 {
+	overflow: hidden;
+	font-size: 14px;
+	line-height: 35px;
+	color: #007fb8;
+	margin-bottom: 10px;
+	margin-top: 12px;
+}
+
+.contacts-info1 {
+	display: block;
+	margin: auto;
+	font-style: normal;
+	line-height: 1.5em;
+	color:  #222;
+	padding-top: 5px;
+	margin-top: 10px;
+	text-align: left;
+	padding-bottom: 5px;
+	margin-bottom: 7px;
+	font-size: 14px;
+	border: none;
+}
+/* End men fasion */
+/*add product manu6 End*/
+/*add product manu7 start*/
+/* Start men fasion */
+.home-first-category-block-menu7-fasion
+{
+    margin-top:30px;
+}
+.first-block-category-menu-container-menu7-fasion
+{
+    width:190px;
+    height:326px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+.first-block-image-container-menu7-fasion
+{
+    background-color:#CCC;
+    width:263px;
+    height:326px;
+    float:left;
+}
+
+.home-second-category-block-menu7-fasion
+{
+    margin-top:30px;
+}
+.second-block-category-menu-container-menu7-fasion
+{
+    width:190px;
+    height:326px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+.second-block-image-container-menu7-fasion
+{
+    background-color:#CCC;
+    width:263px;
+    height:326px;
+    float:left;
+}
+/* start show more product */
+
+.first-block-product-container-menu7-fasion
+{
+    width:52.4%;
+    width:calc(100% - 453px); 
+    width: -webkit-calc(100% - 453px);
+    width: -moz-calc(100% - 453px);
+    float:left;
+    height:326px;
+    overflow:hidden;
+}
+
+.home-first-category-block-menu7-fasion
+{
+    margin-top:30px;
+}
+
+.first-block-category-menu-container-menu7-fasion
+{
+    width:200px;
+    height:389px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+/* Start Category Block*/
+
+
+
+.home-13-0-block-category-menu-header-menu7-fasion
+{
+    width:100%;
+    background-color:#FFC60A;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+.home-13-0-block-category-menu-header-menu7-fasion h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+}
+
+.home-13-0-block-category-menu-header-menu7-fasion h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-13-0-block-category-menu-header-menu7-fasion h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-13-0-block-category-menu-wrapper-menu7-fasion
+{
+    float:left;
+    width: 100%;
+    height:311px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-13-0-block-category-menu-bottom-menu7-fasion
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+
+
+.home-13-0-block-subcategory-name-menu7-fasion
+{
+    float:left;
+    width: 100%;
+    height:24px;
+    line-height:30px;
+    
+}
+.home-13-0-block-subcategory-name-menu7-fasion h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+.home-13-0-block-subcategory-name-menu7-fasion a
+{
+     float:left;
+    text-decoration:none;
+    color: #707da3;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-13-0-block-subcategory-name-menu7-fasion a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#e85985;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+.first-block-image-container-menu7-fasion
+{
+    background-color:#CCC;
+    width:287px;
+    height:387px;
+    float:left;
+}
+.home-category-product-wrapper-menu7-fasion
+{
+    float:left;
+    width:100%;
+    border-bottom:.5px solid #F5F5F5;
+    /*border-right:0.5px solid #F5F5F5;*/
+    height:163px;
+}
+.home-category-product-image-menu7-fasion
+{
+    float:left;
+    width:100%;
+    height:119px;
+    text-align:center;
+    
+}
+.home-category-product-image-menu7-fasion img
+{
+    height: 100px;
+    margin-top: 18px;
+    max-width: 100%;
+}
+.home-category-product-title-menu7-fasion
+{
+    float:left;
+    
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 15px;
+    font-weight:normal;
+    height: 30px;
+    margin: 0px 2px 0px 2px;
+    text-align:center;
+    overflow: hidden;
+    line-height: 30px;
+   
+    padding: 0 2%;
+   letter-spacing: 1px;
+    width: 96%;
+    
+}
+.home-category-product-title-menu7-fasion a
+{
+    
+   
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 15px;
+    
+    height: 30px;
+    line-height: 30px;
+    text-decoration:none;
+    color:#333;
+    font-weight:normal;
+}
+.home-category-product-title-menu7-fasion a:hover
+{
+    text-decoration:none;
+    color:#e85985;
+}
+.home-category-product-title-menu7-fasion a:visited
+{
+    text-decoration:none;
+    color:#333;
+}
+.home-category-product-price-menu7-fasion
+{
+    float:left;
+    width:100%;
+    height: 15px;
+    line-height: 15px;
+    margin-bottom: 10px;
+    text-align:center;
+    overflow:hidden;
+    font-size:16px;
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    color:#f16e52;
+}
+
+
+.home-category-product-title-menu7-fasion a h2{
+    float: left;
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 13px;
+    font-weight: normal;
+    height: 30px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    margin: 0 2px;
+    overflow: hidden;
+    padding: 0 2%;
+    text-align: center;
+    width: 100%;
+    color:#333;
+    text-transform: capitalize;
+}
+.home-category-product-title-menu7-fasion a h2:hover
+{
+    text-decoration:none;
+    color:#e85985;
+    text-transform: capitalize;
+}
+/* Start more winter product */
+
+.home-show-more-menu7-fasion
+{
+	text-align:right;
+	margin-top:20px;
+	
+}
+.home-show-more-menu7-fasion a
+{
+	text-decoration:none;
+	font-size:16px;
+	color:#929d8d;
+			 	
+}
+.home-show-more-menu7-fasion a:hover
+{
+	text-decoration:none;
+	font-size:16px;
+        color: #b482d7;
+        
+}
+
+/* End women fasion color:#e85985;*/
+
+.payment-method{
+    width: 10px;
+    height: 10px;
+}
+
+.phone1 {
+	overflow: hidden;
+	font-size: 14px;
+	line-height: 35px;
+	color: #007fb8;
+	margin-bottom: 10px;
+	margin-top: 12px;
+}
+
+.contacts-info1 {
+	display: block;
+	margin: auto;
+	font-style: normal;
+	line-height: 1.5em;
+	color:  #222;
+	padding-top: 5px;
+	margin-top: 10px;
+	text-align: left;
+	padding-bottom: 5px;
+	margin-bottom: 7px;
+	font-size: 14px;
+	border: none;
+}
+/* End men fasion */
+/*add product manu7 End*/
+/*add product manu8 start*/
+/* Start men fasion */
+.home-first-category-block-menu8-fasion
+{
+    margin-top:30px;
+}
+.first-block-category-menu-container-menu8-fasion
+{
+    width:190px;
+    height:326px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+.first-block-image-container-menu8-fasion
+{
+    background-color:#CCC;
+    width:263px;
+    height:326px;
+    float:left;
+}
+
+.home-second-category-block-menu8-fasion
+{
+    margin-top:30px;
+}
+.second-block-category-menu-container-menu8-fasion
+{
+    width:190px;
+    height:326px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+.second-block-image-container-menu8-fasion
+{
+    background-color:#CCC;
+    width:263px;
+    height:326px;
+    float:left;
+}
+/* start show more product */
+
+.first-block-product-container-menu8-fasion
+{
+    width:52.4%;
+    width:calc(100% - 453px); 
+    width: -webkit-calc(100% - 453px);
+    width: -moz-calc(100% - 453px);
+    float:left;
+    height:326px;
+    overflow:hidden;
+}
+
+.home-first-category-block-menu8-fasion
+{
+    margin-top:30px;
+}
+
+.first-block-category-menu-container-menu8-fasion
+{
+    width:200px;
+    height:389px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+/* Start Category Block*/
+
+
+
+.home-13-0-block-category-menu-header-menu8-fasion
+{
+    width:100%;
+    background-color:#04B4C7;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+.home-13-0-block-category-menu-header-menu8-fasion h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+}
+
+.home-13-0-block-category-menu-header-menu8-fasion h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-13-0-block-category-menu-header-menu8-fasion h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-13-0-block-category-menu-wrapper-menu8-fasion
+{
+    float:left;
+    width: 100%;
+    height:311px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-13-0-block-category-menu-bottom-menu8-fasion
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+
+
+.home-13-0-block-subcategory-name-menu8-fasion
+{
+    float:left;
+    width: 100%;
+    height:24px;
+    line-height:30px;
+    
+}
+.home-13-0-block-subcategory-name-menu8-fasion h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+.home-13-0-block-subcategory-name-menu8-fasion a
+{
+     float:left;
+    text-decoration:none;
+    color: #707da3;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-13-0-block-subcategory-name-menu8-fasion a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#e85985;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+.first-block-image-container-menu8-fasion
+{
+    background-color:#CCC;
+    width:287px;
+    height:387px;
+    float:left;
+}
+.home-category-product-wrapper-menu8-fasion
+{
+    float:left;
+    width:100%;
+    border-bottom:.5px solid #F5F5F5;
+    /*border-right:0.5px solid #F5F5F5;*/
+    height:163px;
+}
+.home-category-product-image-menu8-fasion
+{
+    float:left;
+    width:100%;
+    height:119px;
+    text-align:center;
+    
+}
+.home-category-product-image-menu8-fasion img
+{
+    height: 100px;
+    margin-top: 18px;
+    max-width: 100%;
+}
+.home-category-product-title-menu8-fasion
+{
+    float:left;
+    
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 15px;
+    font-weight:normal;
+    height: 30px;
+    margin: 0px 2px 0px 2px;
+    text-align:center;
+    overflow: hidden;
+    line-height: 30px;
+   
+    padding: 0 2%;
+   letter-spacing: 1px;
+    width: 96%;
+    
+}
+.home-category-product-title-menu8-fasion a
+{
+    
+   
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 15px;
+    
+    height: 30px;
+    line-height: 30px;
+    text-decoration:none;
+    color:#333;
+    font-weight:normal;
+}
+.home-category-product-title-menu8-fasion a:hover
+{
+    text-decoration:none;
+    color:#e85985;
+}
+.home-category-product-title-menu8-fasion a:visited
+{
+    text-decoration:none;
+    color:#333;
+}
+.home-category-product-price-menu8-fasion
+{
+    float:left;
+    width:100%;
+    height: 15px;
+    line-height: 15px;
+    margin-bottom: 10px;
+    text-align:center;
+    overflow:hidden;
+    font-size:16px;
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    color:#f16e52;
+}
+
+
+.home-category-product-title-menu8-fasion a h2{
+    float: left;
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 13px;
+    font-weight: normal;
+    height: 30px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    margin: 0 2px;
+    overflow: hidden;
+    padding: 0 2%;
+    text-align: center;
+    width: 100%;
+    color:#333;
+    text-transform: capitalize;
+}
+.home-category-product-title-menu8-fasion a h2:hover
+{
+    text-decoration:none;
+    color:#e85985;
+    text-transform: capitalize;
+}
+/* Start more winter product */
+
+.home-show-more-menu8-fasion
+{
+	text-align:right;
+	margin-top:20px;
+	
+}
+.home-show-more-menu8-fasion a
+{
+	text-decoration:none;
+	font-size:16px;
+	color:#929d8d;
+			 	
+}
+.home-show-more-menu8-fasion a:hover
+{
+	text-decoration:none;
+	font-size:16px;
+        color: #b482d7;
+        
+}
+
+/* End women fasion color:#e85985;*/
+
+.payment-method{
+    width: 10px;
+    height: 10px;
+}
+
+.phone1 {
+	overflow: hidden;
+	font-size: 14px;
+	line-height: 35px;
+	color: #007fb8;
+	margin-bottom: 10px;
+	margin-top: 12px;
+}
+
+.contacts-info1 {
+	display: block;
+	margin: auto;
+	font-style: normal;
+	line-height: 1.5em;
+	color:  #222;
+	padding-top: 5px;
+	margin-top: 10px;
+	text-align: left;
+	padding-bottom: 5px;
+	margin-bottom: 7px;
+	font-size: 14px;
+	border: none;
+}
+/* End men fasion */
+/*add product manu8 End*/
+/*add product manu9 start*/
+/* Start men fasion */
+.home-first-category-block-menu9-fasion
+{
+    margin-top:30px;
+}
+.first-block-category-menu-container-menu9-fasion
+{
+    width:190px;
+    height:326px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+.first-block-image-container-menu9-fasion
+{
+    background-color:#CCC;
+    width:263px;
+    height:326px;
+    float:left;
+}
+
+.home-second-category-block-menu9-fasion
+{
+    margin-top:30px;
+}
+.second-block-category-menu-container-menu9-fasion
+{
+    width:190px;
+    height:326px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+.second-block-image-container-menu9-fasion
+{
+    background-color:#CCC;
+    width:263px;
+    height:326px;
+    float:left;
+}
+/* start show more product */
+
+.first-block-product-container-menu9-fasion
+{
+    width:52.4%;
+    width:calc(100% - 453px); 
+    width: -webkit-calc(100% - 453px);
+    width: -moz-calc(100% - 453px);
+    float:left;
+    height:326px;
+    overflow:hidden;
+}
+
+.home-first-category-block-menu9-fasion
+{
+    margin-top:30px;
+}
+
+.first-block-category-menu-container-menu9-fasion
+{
+    width:200px;
+    height:389px;
+    float:left;
+    overflow:hidden;
+   
+        
+}
+/* Start Category Block*/
+
+
+
+.home-13-0-block-category-menu-header-menu9-fasion
+{
+    width:100%;
+    background-color:#84AD23;
+    height: 40px;
+    line-height:40px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+}
+.home-13-0-block-category-menu-header-menu9-fasion h1
+{
+    width:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    float:left;
+    font-size:20px;
+    font-family:SolaimanLipi;
+    color:#FFF!important;
+    height: 40px;
+    line-height:40px;
+}
+
+.home-13-0-block-category-menu-header-menu9-fasion h1 a
+{
+    float:left;
+    text-decoration:none;
+    color:#FFF!important;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-13-0-block-category-menu-header-menu9-fasion h1 a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#333;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    
+}
+.home-13-0-block-category-menu-wrapper-menu9-fasion
+{
+    float:left;
+    width: 100%;
+    height:311px;
+    overflow:hidden;
+    padding-top:10px;
+    border-left: 1px solid #eee;
+}
+.home-13-0-block-category-menu-bottom-menu9-fasion
+{
+    float:left;
+    width: 100%;
+    height:36px;
+    line-height:36px;
+    padding-left:20px;
+    background-color:#EEE;
+    cursor:pointer;
+    background: none repeat scroll 0 0 #EEE;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+
+
+.home-13-0-block-subcategory-name-menu9-fasion
+{
+    float:left;
+    width: 100%;
+    height:24px;
+    line-height:30px;
+    
+}
+.home-13-0-block-subcategory-name-menu9-fasion h3
+{
+    float:left;
+    width: 100%;
+    height:30px;
+    line-height:30px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#222;
+    font-size:15px;
+}
+.home-13-0-block-subcategory-name-menu9-fasion a
+{
+     float:left;
+    text-decoration:none;
+    color: #707da3;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+     outline-style:none;
+}
+.home-13-0-block-subcategory-name-menu9-fasion a:hover
+{
+    float:left;
+    text-decoration:none;
+    color:#e85985;
+    padding-left:20px;
+    width: 100%;
+    font-weight:normal;
+    font-size:15px;
+}
+
+.first-block-image-container-menu9-fasion
+{
+    background-color:#CCC;
+    width:287px;
+    height:387px;
+    float:left;
+}
+.home-category-product-wrapper-menu9-fasion
+{
+    float:left;
+    width:100%;
+    border-bottom:.5px solid #F5F5F5;
+    /*border-right:0.5px solid #F5F5F5;*/
+    height:163px;
+}
+.home-category-product-image-menu9-fasion
+{
+    float:left;
+    width:100%;
+    height:119px;
+    text-align:center;
+    
+}
+.home-category-product-image-menu9-fasion img
+{
+    height: 100px;
+    margin-top: 18px;
+    max-width: 100%;
+}
+.home-category-product-title-menu9-fasion
+{
+    float:left;
+    
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 15px;
+    font-weight:normal;
+    height: 30px;
+    margin: 0px 2px 0px 2px;
+    text-align:center;
+    overflow: hidden;
+    line-height: 30px;
+   
+    padding: 0 2%;
+   letter-spacing: 1px;
+    width: 96%;
+    
+}
+.home-category-product-title-menu9-fasion a
+{
+    
+   
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 15px;
+    
+    height: 30px;
+    line-height: 30px;
+    text-decoration:none;
+    color:#333;
+    font-weight:normal;
+}
+.home-category-product-title-menu9-fasion a:hover
+{
+    text-decoration:none;
+    color:#e85985;
+}
+.home-category-product-title-menu9-fasion a:visited
+{
+    text-decoration:none;
+    color:#333;
+}
+.home-category-product-price-menu9-fasion
+{
+    float:left;
+    width:100%;
+    height: 15px;
+    line-height: 15px;
+    margin-bottom: 10px;
+    text-align:center;
+    overflow:hidden;
+    font-size:16px;
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    color:#f16e52;
+}
+
+
+.home-category-product-title-menu9-fasion a h2{
+    float: left;
+    font-family: SolaimanLipi,Helvetica,Verdana;
+    font-size: 13px;
+    font-weight: normal;
+    height: 30px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    margin: 0 2px;
+    overflow: hidden;
+    padding: 0 2%;
+    text-align: center;
+    width: 100%;
+    color:#333;
+    text-transform: capitalize;
+}
+.home-category-product-title-menu9-fasion a h2:hover
+{
+    text-decoration:none;
+    color:#e85985;
+    text-transform: capitalize;
+}
+/* Start more winter product */
+
+.home-show-more-menu9-fasion
+{
+	text-align:right;
+	margin-top:20px;
+	
+}
+.home-show-more-menu9-fasion a
+{
+	text-decoration:none;
+	font-size:16px;
+	color:#929d8d;
+			 	
+}
+.home-show-more-menu9-fasion a:hover
+{
+	text-decoration:none;
+	font-size:16px;
+        color: #b482d7;
+        
+}
+
+/* End women fasion color:#e85985;*/
+
+.payment-method{
+    width: 10px;
+    height: 10px;
+}
+
+.phone1 {
+	overflow: hidden;
+	font-size: 14px;
+	line-height: 35px;
+	color: #007fb8;
+	margin-bottom: 10px;
+	margin-top: 12px;
+}
+
+.contacts-info1 {
+	display: block;
+	margin: auto;
+	font-style: normal;
+	line-height: 1.5em;
+	color:  #222;
+	padding-top: 5px;
+	margin-top: 10px;
+	text-align: left;
+	padding-bottom: 5px;
+	margin-bottom: 7px;
+	font-size: 14px;
+	border: none;
+}
+/* End men fasion */
+/*add product manu9 End*/
