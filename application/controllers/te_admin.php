@@ -376,7 +376,7 @@ class Te_Admin extends CI_Controller {
         */
         
         
-            $config2['upload_path'] = 'images/product_image/menu_image/';
+            $config2['upload_path'] = 'images/product_image/';
             $config2['allowed_types'] = 'gif|jpg|png';
             $config2['max_size']	= '1000';
             $config2['max_width']  = '1024';
@@ -413,7 +413,7 @@ class Te_Admin extends CI_Controller {
         */
         
         
-            $config3['upload_path'] = 'images/product_image/slider_image/';
+            $config3['upload_path'] = 'images/product_image/';
             $config3['allowed_types'] = 'gif|jpg|png';
             $config3['max_size']	= '1000';
             $config3['max_width']  = '1024';
