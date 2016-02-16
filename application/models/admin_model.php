@@ -182,12 +182,42 @@ class Admin_Model extends CI_Model {
 
 //---------End Catgegory Managing ----------///
 //------------save manufacturer ---------------//
-    public function save_manufactuer_by_product($data) {
+ public function save_manufactuer_by_product($data) {
         $this->db->insert('tbl_manufacturer', $data);
     }
-
-    public function save_product_size($data) {
-        $this->db->insert('tbl_product_size', $data);
+     public function get_menufacturer_info() {
+        $this->db->select('manufacturer_id');
+        $this->db->select('manufacturer_name');
+        $this->db->select('manufacturer_status');
+        $this->db->from('tbl_manufacturer');
+        $query = $this->db->get();
+        return $query->result();
     }
+    public function published_manufacturer_info($manufacturer_id) {
+        $this->db->set('manufacturer_status', 1);
+        $this->db->where('manufacturer_id', $manufacturer_id);
+        $this->db->update('tbl_manufacturer');
+    }
+     public function unpublished_manufacturer_info($manufacturer_id) {
+        $this->db->set('manufacturer_status', 0);
+        $this->db->where('manufacturer_id', $manufacturer_id);
+        $this->db->update('tbl_manufacturer');
+    }
+    public function get_manufacturer_name($manufacturer_id) {
+        $this->db->select('manufacturer_name');
+        $this->db->where('manufacturer_id', $manufacturer_id);
+        $this->db->from('tbl_manufacturer');
+        $query = $this->db->get();
+        $result = $query->row();
+        return $result->manufacturer_name;
+    }
+     public function update_manufacturer_name($manufacturer_name, $manufacturer_id) {
+        $this->db->set('manufacturer_name', $manufacturer_name);
+        $this->db->where('manufacturer_id', $manufacturer_id);
+        $this->db->update('tbl_manufacturer');
+    }
+    // ---------end manufacturer--------//
+ 
 
+    
 }
