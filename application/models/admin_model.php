@@ -186,11 +186,6 @@ class Admin_Model extends CI_Model {
         $this->db->insert('tbl_manufacturer', $data);
     }
 
-    //----------Save product image--------------------//
-    public function save_product_image_info($data) {
-        $this->db->insert('tbl_image', $data);
-    }
-
     public function save_product_size($data) {
         $this->db->insert('tbl_product_size', $data);
     }

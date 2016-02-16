@@ -328,51 +328,138 @@ class Te_Admin extends CI_Controller {
                 $default_image = 0;
             }
         }
-        /* ------image upload end------ */
+        /* ------Product image upload end------ */
+        /*
+         * Start Menu Image Upload
+         */
+           /* echo '<pre>';
+            print_r($_FILES);
+        exit();
+        */
+        
+        
+            $config2['upload_path'] = 'images/product_image/menu_image/';
+            $config2['allowed_types'] = 'gif|jpg|png';
+            $config2['max_size']	= '1000';
+            $config2['max_width']  = '1024';
+            $config2['max_height']  = '768';
+            $error='';
+            $this->load->library('upload', $config2);
+
+            if ( ! $this->upload->do_upload('menu_image'))
+            {
+                    $error = $this->upload->display_errors();
+                    echo $error;
+                    exit();
+                    // $this->load->view('upload_form', $error);
+            }
+            else
+            {
+                    $fdata = $this->upload->data();
+                    /*echo '<pre>';
+                    print_r($fdata);
+                    exit();*/
+                    $menu_image=$config2['upload_path'].$fdata['file_name'];
+                    $this->te_product_model->save_menu_image($product_id,$menu_image);
+            }
+        
+        /*
+         * End  menu Image Upload
+         */
+         /*
+         * Start Menu Image Upload
+         */
+           /* echo '<pre>';
+            print_r($_FILES);
+        exit();
+        */
+        
+        
+            $config3['upload_path'] = 'images/product_image/slider_image/';
+            $config3['allowed_types'] = 'gif|jpg|png';
+            $config3['max_size']	= '1000';
+            $config3['max_width']  = '1024';
+            $config3['max_height']  = '768';
+            $error='';
+            $this->load->library('upload', $config3);
+
+            if ( ! $this->upload->do_upload('slider_image'))
+            {
+                    $error = $this->upload->display_errors();
+                    echo $error;
+                    exit();
+                    // $this->load->view('upload_form', $error);
+            }
+            else
+            {
+                    $fdata = $this->upload->data();
+                    /*echo '<pre>';
+                    print_r($fdata);
+                    exit();*/
+                    $slider_image=$config3['upload_path'].$fdata['file_name'];
+                    $this->te_product_model->save_slider_image($product_id,$slider_image);
+            }
+        
+        /*
+         * End  menu Image Upload
+         */
+         /*
+         * Start Menu Image Upload
+         */
+            $discount=array();
+            $discount['product_id']=$product_id;
+            $discount['discount_price']=  $this->input->post('discount_price',TRUE);
+            $discount['start_date']= $this->input->post('start_date',TRUE);
+            $discount['end_date']= $this->input->post('end_date',TRUE);
+            $this->te_product_model->set_discount($discount);
+         /*
+         * End  menu Image Upload
+         */
+         redirect('te_admin/add_product');
     }
 
     //--Start Product Image--//
 
-    public function product_image() {
-        $product_image = array();
-        $default_image = $this->input->post('default_image', TRUE);
-        //$menu_image = $this->input->post('menu_image', TRUE);
-        //$slider_image = $this->input->post('slider_image', TRUE);
-        $config['upload_path'] = 'images/product_image/';
-        $config['allowed_types'] = 'gif|jpg|png';
-        $config['max_size'] = '5000';
-        $config['max_width'] = '2024';
-        $config['max_height'] = '1768';
-        $error = '';
-        $fdata = array();
-        /* echo '<pre>';
-          print_r($_FILES);
-          exit(); */
-
-
-        $this->load->library('upload', $config);
-
-        if (!$this->upload->do_multi_upload('product_image')) {
-            $error = $this->upload->display_errors();
-            echo $error;
-            exit();
-        } else {
-            $return = $this->upload->get_multi_upload_data();
-            /* echo '<pre>';
-              print_r($return);
-              exit(); */
-            foreach ($return as $value) {
-                $product_image['image_path'] = $config['upload_path'] . $value['file_name'];
-                $product_image['product_id'] = $product_id;
-                $product_image['default_image'] = $default_image;
-                $this->admin_model->save_product_image_info($product_image);
-                /* echo '<pre>';
-                  print_r($return);
-                  exit(); */
-                $default_image = 0;
-            }
-        }
-    }
+//    public function product_image() {
+//        $product_image = array();
+//        $default_image = $this->input->post('default_image', TRUE);
+//        //$menu_image = $this->input->post('menu_image', TRUE);
+//        //$slider_image = $this->input->post('slider_image', TRUE);
+//        $config['upload_path'] = 'images/product_image/';
+//        $config['allowed_types'] = 'gif|jpg|png';
+//        $config['max_size'] = '5000';
+//        $config['max_width'] = '2024';
+//        $config['max_height'] = '1768';
+//        $error = '';
+//        $fdata = array();
+//        /* echo '<pre>';
+//          print_r($_FILES);
+//          exit(); */
+//
+//
+//        $this->load->library('upload', $config);
+//
+//        if (!$this->upload->do_multi_upload('product_image')) {
+//            $error = $this->upload->display_errors();
+//            echo $error;
+//            exit();
+//        } else {
+//            $return = $this->upload->get_multi_upload_data();
+//            /* echo '<pre>';
+//              print_r($return);
+//              exit(); */
+//            foreach ($return as $value) {
+//                $product_image['image_path'] = $config['upload_path'] . $value['file_name'];
+//                $product_image['product_id'] = $product_id;
+//                $product_image['default_image'] = $default_image;
+//                $this->te_product_model->save_product_image_info($product_image);
+//                /* echo '<pre>';
+//                  print_r($return);
+//                  exit(); */
+//                $default_image = 0;
+//            }
+//        }
+//    }
 
     //--End Product Image--//
 

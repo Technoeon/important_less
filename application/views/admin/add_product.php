@@ -183,8 +183,7 @@
 
                                     <div class="row">
                                         <div class="col-sm-4">
-                                            <input  name="product_size[]" type="text" > 
-                                            <input  type="text"name="product_id[]" value="2" >
+                                            <input  name="product_size[]" type="text" >
                                         </div>
 
                                     </div>
