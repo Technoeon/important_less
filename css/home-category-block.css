@@ -1,5 +1,40 @@
 ﻿/* start of all category border color*/
 
+
+.home-01-0-block-category-border-div /* Menz */
+{
+    border: 1px solid #014693;
+}
+.home-02-0-block-category-border-div /* Menz */
+{
+    border: 1px solid #e85985;
+}
+.home-03-0-block-category-border-div /* Menz */
+{
+    border: 1px solid #1A88A0;
+}
+.home-04-0-block-category-border-div /* Menz */
+{
+    border: 1px solid #B159E8;
+}
+.home-05-0-block-category-border-div /* Menz */
+{
+    border: 1px solid #B159E8;
+}
+.home-06-0-block-category-border-div /* Menz */
+{
+    border: 1px solid #FFC60A;
+}
+.home-07-0-block-category-border-div /* Menz */
+{
+    border: 1px solid #04B4C7;
+}
+.home-08-0-block-category-border-div /* Menz */
+{
+    border: 1px solid #84AD23;
+}
+/*End*/
+
 .home-11-0-block-category-border-div /* Menz */
 {
     border: 1px solid #5a867e;
@@ -125,7 +160,7 @@
 }
 .home-56-0-block-category-border-div /* perfume-body-spray */
 {
-    border: 1px solid #014693;
+    border: 1px solid #D12631;
 }
 
 .home-60-0-block-category-border-div /* sweet-meat */
