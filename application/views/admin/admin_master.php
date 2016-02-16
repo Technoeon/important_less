@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="te">
     <head>
         <meta charset="utf-8">
         <title> </title>
@@ -28,6 +28,10 @@
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/only-for-demos.css">
         <!-- Add Angular JS CDN Link--->
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js"></script>
+        <script>
+            var te = angular.module('te', ['ngSanitize']);
+        </script>
     </head>
 
     <body ng-app="te">

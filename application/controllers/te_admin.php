@@ -26,6 +26,7 @@ class Te_Admin extends CI_Controller {
         $data['main_content'] = $this->load->view('admin/add_main_menu', '', true);
         $this->load->view('admin/admin_master', $data);
     }
+
     public function save_main_category() {
         $data = array();
         $data['main_category_name'] = $this->input->post('main_category_name', true);
@@ -43,7 +44,8 @@ class Te_Admin extends CI_Controller {
         $this->session->set_userdata($sdata);
         redirect('te_admin/add_main_menu');
     }
-     //---------End addn menu and save menu----//
+
+    //---------End addn menu and save menu----//
     //-------Start add_sub_menu and Save--------//
     public function add_sub_menu() {
         $data = array();
@@ -52,7 +54,7 @@ class Te_Admin extends CI_Controller {
         $data['main_content'] = $this->load->view('admin/add_sub_menu', $data, TRUE);
         $this->load->view('admin/admin_master', $data);
     }
-   
+
     public function save_sub_category() {
         $data = array();
         $data['sub_category_name'] = $this->input->post('sub_category_name', true);
@@ -71,8 +73,8 @@ class Te_Admin extends CI_Controller {
             redirect('te_admin/add_sub_menu');
         }
     }
+
     //-------End add_sub_menu and Save--------//
-   
     //-------Start add_menu and Save--------//
     public function add_menu() {
         $main_category = $this->admin_model->get_main_category_id();
@@ -84,6 +86,7 @@ class Te_Admin extends CI_Controller {
         $data['main_content'] = $this->load->view('admin/add_menu', $data, TRUE);
         $this->load->view('admin/admin_master', $data);
     }
+
     public function save_menu() {
         $data = array();
         $sdata = array();
@@ -103,8 +106,8 @@ class Te_Admin extends CI_Controller {
             redirect('te_admin/add_menu');
         }
     }
+
     //-------Start add_menu and Save--------//
-    
     //------Start Main Menu Manage Grid------------//
     public function manage_main_menu() {
         $data = array();
@@ -113,14 +116,17 @@ class Te_Admin extends CI_Controller {
         $data['main_content'] = $this->load->view('admin/manage_main_menu_grid', $data, TRUE);
         $this->load->view('admin/admin_master', $data);
     }
+
     public function unpublished_main_menu($main_category_id) {
         $this->admin_model->unpublished_main_menu_category($main_category_id);
         redirect('te_admin/manage_main_menu');
     }
+
     public function published_main_menu($main_category_id) {
         $this->admin_model->published_main_menu_category($main_category_id);
         redirect('te_admin/manage_main_menu');
     }
+
     public function edit_main_menu($main_category_id) {
         $data = array();
         $data['main_menu_info'] = $this->admin_model->get_main_menu_info($main_category_id);
@@ -128,6 +134,7 @@ class Te_Admin extends CI_Controller {
         $data['main_content'] = $this->load->view('admin/edit_main_menu_form', $data, TRUE);
         $this->load->view('admin/admin_master', $data);
     }
+
     public function update_main_menu() {
         $data = array();
         $data['main_category_name'] = $this->input->post('main_category_name', true);
@@ -146,9 +153,9 @@ class Te_Admin extends CI_Controller {
         $this->session->set_userdata($sdata);
         redirect('te_admin/edit_main_menu/' . $main_category_id);
     }
-   //------Start Main Menu Manage Grid------------//
-   
-   //------Start sub_menu manage _grid//
+
+    //------Start Main Menu Manage Grid------------//
+    //------Start sub_menu manage _grid//
     public function manage_sub_menu() {
         $data = array();
         $data['sub_menu'] = $this->admin_model->get_sub_menu_info();
@@ -156,93 +163,134 @@ class Te_Admin extends CI_Controller {
         $data['main_content'] = $this->load->view('admin/manage_sub_menu_grid', $data, TRUE);
         $this->load->view('admin/admin_master', $data);
     }
+
     public function unpublished_sub_menu($sub_category_id) {
         $this->admin_model->unpublished_sub_menu_category($sub_category_id);
         redirect('te_admin/manage_sub_menu');
     }
+
     public function published_sub_menu($sub_category_id) {
         $this->admin_model->published_sub_menu_category($sub_category_id);
         redirect('te_admin/manage_sub_menu');
     }
-     public function edit_sub_menu($sub_category_id) {
+
+    public function edit_sub_menu($sub_category_id) {
         $data = array();
-        $data['sub_category_id']=$sub_category_id;
+        $data['sub_category_id'] = $sub_category_id;
         $data['sub_menu_name'] = $this->admin_model->get_sub_menu_name($sub_category_id);
         $data['title'] = 'Edit Menu';
         $data['main_content'] = $this->load->view('admin/edit_sub_menu_form', $data, TRUE);
         $this->load->view('admin/admin_master', $data);
     }
+
     public function update_sub_menu() {
-        $sub_category_name=$this->input->post('sub_category_name', true);
+        $sub_category_name = $this->input->post('sub_category_name', true);
         $sub_category_id = $this->input->post('sub_category_id', true);
-        $this->admin_model->update_sub_menu_info($sub_category_name,$sub_category_id);
+        $this->admin_model->update_sub_menu_info($sub_category_name, $sub_category_id);
         $sdata = array();
         $sdata['message'] = 'Update Sub Menu Information Successfully !';
         $this->session->set_userdata($sdata);
         redirect('te_admin/edit_sub_menu/' . $sub_category_id);
     }
+
     //------End sub_menu manage _grid//
-   
     //------Start menu manage _grid//
-   public function manage_menu() {
+    public function manage_menu() {
         $data = array();
-        $data['menu']=$this->admin_model->get_category_info();
+        $data['menu'] = $this->admin_model->get_category_info();
         $data['title'] = 'Manage Menu';
         $data['main_content'] = $this->load->view('admin/manage_menu_grid', $data, TRUE);
         $this->load->view('admin/admin_master', $data);
     }
+
     public function unpublished_menu($category_id) {
         $this->admin_model->unpublished_category($category_id);
         redirect('te_admin/manage_menu');
     }
+
     public function published_menu($category_id) {
         $this->admin_model->published_category($category_id);
         redirect('te_admin/manage_menu');
     }
-     public function edit_menu($category_id) {
+
+    public function edit_menu($category_id) {
         $data = array();
-        $data['category_id']=$category_id;
+        $data['category_id'] = $category_id;
         $data['category_name'] = $this->admin_model->get_category_name($category_id);
         $data['title'] = 'Edit Menu';
         $data['main_content'] = $this->load->view('admin/edit_menu_form', $data, TRUE);
         $this->load->view('admin/admin_master', $data);
     }
+
     public function update_menu() {
-        $category_name=$this->input->post('category_name', true);
+        $category_name = $this->input->post('category_name', true);
         $category_id = $this->input->post('category_id', true);
-        $this->admin_model->update_category_name($category_name,$category_id);
+        $this->admin_model->update_category_name($category_name, $category_id);
         $sdata = array();
         $sdata['message'] = 'Update Sub Menu Information Successfully !';
         $this->session->set_userdata($sdata);
         redirect('te_admin/edit_menu/' . $category_id);
     }
-    //-------start add manufacturer-----//
-    public function add_manufacturer() {
+
+    public function save_manufacturer() {
         $data = array();
-        $data['title'] = 'Add manufacturer';
-        $data['main_content'] = $this->load->view('admin/add_manufacturer', '', true);
-        $this->load->view('admin/admin_master', $data);
-    }
-    public function save_manufacturer(){
-        $data=array();
-        $data['manufacturer_name']=  $this->input->post('manufacturer_name',TRUE);
-        $data['manufacturer_status']=  $this->input->post('manufacturer_status',TRUE);
+        $data['manufacturer_name'] = $this->input->post('manufacturer_name', TRUE);
+        $data['manufacturer_status'] = $this->input->post('manufacturer_status', TRUE);
         $this->admin_model->save_manufactuer_by_product($data);
         $sdata['message'] = 'Save Menufacturer Information Successfully !';
         $this->session->set_userdata($sdata);
         redirect('te_admin/add_manufacturer');
     }
-      public function add_product() {
+
+    public function add_product() {
         $data = array();
         $data['title'] = 'Add Product';
-        $data['main_content'] = $this->load->view('admin/add_product', '', true);
+        $menu = array();
+        $menu['manufacturer'] = json_encode($this->te_product_model->get_manufacturer());
+        $menu['main_category'] = json_encode($this->te_product_model->get_main_category());
+        $menu['sub_category'] = json_encode($this->te_product_model->get_sub_category());
+        $menu['category'] = json_encode($this->te_product_model->get_category());
+        $data['main_content'] = $this->load->view('admin/add_product', $menu, true);
         $this->load->view('admin/admin_master', $data);
     }
-    //--Start Product Image--//
-   
-        public function product_image() {
+
+    public function save_product() {
         $data = array();
-        $product_id=2;
+        $product_size = array();
+        $product_description = array();
+        $data['manufacturer_id'] = $this->input->post('manufacturer_id', TRUE);
+        $data['main_category_id'] = $this->input->post('main_category_id', TRUE);
+        $data['sub_category_id'] = $this->input->post('sub_category_id', TRUE);
+        $data['category_id'] = $this->input->post('category_id', TRUE);
+        $data['product_name'] = $this->input->post('product_name', TRUE);
+        $data['product_model'] = $this->input->post('product_model', TRUE);
+        $data['product_sku'] = $this->input->post('product_sku', TRUE);
+        $data['product_quantity'] = $this->input->post('product_quantity', TRUE);
+        $data['product_price'] = $this->input->post('product_price', TRUE);
+        $data['product_status'] = $this->input->post('product_status', TRUE);
+        $product_id = $this->te_product_model->save_product_general_info($data);
+        // working with product size
+        $size = $this->input->post('product_size');
+        if (isset($size)) {
+            $j = count($size);
+            for ($i = 0; $i < $j; $i++) {
+                $product_size['product_id'] = $product_id;
+                $product_size['size_name'] = $size[$i];
+                $this->te_product_model->save_size($product_size);
+            }
+        }
+        // working with product Description
+        $description = $this->input->post('product_description');
+        if (isset($description)) {
+            $k = count($description);
+            for ($l = 0; $l < $k; $l++) {
+                $product_description['product_id'] = $product_id;
+                $product_description['description'] = $description[$l];
+                $this->te_product_model->save_description($product_description);
+            }
+        }
+        //-----working with product image-------//
+        $product_image = array();
         $default_image = $this->input->post('default_image', TRUE);
         //$menu_image = $this->input->post('menu_image', TRUE);
         //$slider_image = $this->input->post('slider_image', TRUE);
@@ -253,11 +301,11 @@ class Te_Admin extends CI_Controller {
         $config['max_height'] = '1768';
         $error = '';
         $fdata = array();
-        /*echo '<pre>';
-        print_r($_FILES);
-        exit();*/
-        
-        
+        /* echo '<pre>';
+          print_r($_FILES);
+          exit(); */
+
+
         $this->load->library('upload', $config);
 
         if (!$this->upload->do_multi_upload('product_image')) {
@@ -266,35 +314,155 @@ class Te_Admin extends CI_Controller {
             exit();
         } else {
             $return = $this->upload->get_multi_upload_data();
-           /* echo '<pre>';
-            print_r($return);
-            exit();*/
+            /* echo '<pre>';
+              print_r($return);
+              exit(); */
             foreach ($return as $value) {
-                $data['image_path'] = $config['upload_path'] . $value['file_name'];
-                $data['product_id'] = $product_id;
-                $data['default_image'] = $default_image;
-                $this->admin_model->save_product_image_info($data);
-                 /*echo '<pre>';
-                    print_r($return);
-                    exit();*/
+                $product_image['image_path'] = $config['upload_path'] . $value['file_name'];
+                $product_image['product_id'] = $product_id;
+                $product_image['default_image'] = $default_image;
+                $this->te_product_model->save_product_image_info($product_image);
+                /* echo '<pre>';
+                  print_r($return);
+                  exit(); */
                 $default_image = 0;
             }
         }
-        }
+        /* ------Product image upload end------ */
+        /*
+         * Start Menu Image Upload
+         */
+           /* echo '<pre>';
+            print_r($_FILES);
+        exit();
+        */
+        
+        
+            $config2['upload_path'] = 'images/product_image/menu_image/';
+            $config2['allowed_types'] = 'gif|jpg|png';
+            $config2['max_size']	= '1000';
+            $config2['max_width']  = '1024';
+            $config2['max_height']  = '768';
+            $error='';
+            $this->load->library('upload', $config2);
+
+            if ( ! $this->upload->do_upload('menu_image'))
+            {
+                    $error = $this->upload->display_errors();
+                    echo $error;
+                    exit();
+                    // $this->load->view('upload_form', $error);
+            }
+            else
+            {
+                    $fdata = $this->upload->data();
+                    /*echo '<pre>';
+                    print_r($fdata);
+                    exit();*/
+                    $menu_image=$config2['upload_path'].$fdata['file_name'];
+                    $this->te_product_model->save_menu_image($product_id,$menu_image);
+            }
+        
+        /*
+         * End  menu Image Upload
+         */
+         /*
+         * Start Menu Image Upload
+         */
+           /* echo '<pre>';
+            print_r($_FILES);
+        exit();
+        */
+        
+        
+            $config3['upload_path'] = 'images/product_image/slider_image/';
+            $config3['allowed_types'] = 'gif|jpg|png';
+            $config3['max_size']	= '1000';
+            $config3['max_width']  = '1024';
+            $config3['max_height']  = '768';
+            $error='';
+            $this->load->library('upload', $config3);
+
+            if ( ! $this->upload->do_upload('slider_image'))
+            {
+                    $error = $this->upload->display_errors();
+                    echo $error;
+                    exit();
+                    // $this->load->view('upload_form', $error);
+            }
+            else
+            {
+                    $fdata = $this->upload->data();
+                    /*echo '<pre>';
+                    print_r($fdata);
+                    exit();*/
+                    $slider_image=$config3['upload_path'].$fdata['file_name'];
+                    $this->te_product_model->save_slider_image($product_id,$slider_image);
+            }
+        
+        /*
+         * End  menu Image Upload
+         */
+         /*
+         * Start Menu Image Upload
+         */
+            $discount=array();
+            $discount['product_id']=$product_id;
+            $discount['discount_price']=  $this->input->post('discount_price',TRUE);
+            $discount['start_date']= $this->input->post('start_date',TRUE);
+            $discount['end_date']= $this->input->post('end_date',TRUE);
+            $this->te_product_model->set_discount($discount);
+         /*
+         * End  menu Image Upload
+         */
+         redirect('te_admin/add_product');
+    }
+
+    //--Start Product Image--//
+
+//    public function product_image() {
+//        $product_image = array();
+//        $default_image = $this->input->post('default_image', TRUE);
+//        //$menu_image = $this->input->post('menu_image', TRUE);
+//        //$slider_image = $this->input->post('slider_image', TRUE);
+//        $config['upload_path'] = 'images/product_image/';
+//        $config['allowed_types'] = 'gif|jpg|png';
+//        $config['max_size'] = '5000';
+//        $config['max_width'] = '2024';
+//        $config['max_height'] = '1768';
+//        $error = '';
+//        $fdata = array();
+//        /* echo '<pre>';
+//          print_r($_FILES);
+//          exit(); */
+//
+//
+//        $this->load->library('upload', $config);
+//
+//        if (!$this->upload->do_multi_upload('product_image')) {
+//            $error = $this->upload->display_errors();
+//            echo $error;
+//            exit();
+//        } else {
+//            $return = $this->upload->get_multi_upload_data();
+//            /* echo '<pre>';
+//              print_r($return);
+//              exit(); */
+//            foreach ($return as $value) {
+//                $product_image['image_path'] = $config['upload_path'] . $value['file_name'];
+//                $product_image['product_id'] = $product_id;
+//                $product_image['default_image'] = $default_image;
+//                $this->te_product_model->save_product_image_info($product_image);
+//                /* echo '<pre>';
+//                  print_r($return);
+//                  exit(); */
+//                $default_image = 0;
+//            }
+//        }
+//    }
+
     //--End Product Image--//
-    
-        //Start Product size/
-        public function product_size(){
-            $data=array();
-            $data['product_id']=$this->input->post('product_id', TRUE);
-            $data['product_size'] = $this->input->post('product_size', TRUE);
-            $this->admin_model->save_product_size($data);
-            //$product_size='product_size';
-            /*echo '<pre>';
-            print_r($product_size);
-            exit();*/
-        }
-        //End Product size/
+
     public function logout() {
         $this->session->unset_userdata('management_id');
         $this->session->unset_userdata('name');

@@ -1,5 +1,5 @@
-<!--Start Add Product-->
-<div class="col-lg-12">
+
+<div class="col-lg-12" ng-controller="product">
 
     <!-- START YOUR CONTENT HERE -->
     <div class="portlet">
@@ -9,10 +9,8 @@
             </div>
             <div class="clearfix"></div>
         </div>
-        <div class="portlet-body">
-            
-                    
-                <form class="form-horizontal" id="validate-form" method="post" enctype="multipart/form-data" action="<?php echo base_url()?>te_admin/product_size"novalidate="novalidate">
+        <div class="portlet-body">                   
+            <form class="form-horizontal" id="validate-form" method="post" enctype="multipart/form-data" action="<?php echo base_url() ?>te_admin/save_product" novalidate="novalidate">
                 <div id="bwizard">
                     <div class="bw-navbar">
                         <div class="navbar-inner">
@@ -33,11 +31,25 @@
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab1">
                             <div class="form-group has-success">
+                                <label class="col-sm-3 control-label">Product Manufacturer:</label>
+                                <div class="col-sm-5">
+                                    <div class="clearfix">
+                                        <select class="" name="manufacturer_id"
+                                                ng-model="manufactur"
+                                                ng-options="manufactur as manufactur.manufacturer_name for manufactur in  manufacturer track by manufactur.manufacturer_id">                                           
+                                        </select>
+                                    </div><div for="email" class="help-block"></div>
+                                </div>
+                            </div>
+                            <div class="form-group has-success">
                                 <label class="col-sm-3 control-label">Main Product Category:</label>
                                 <div class="col-sm-5">
                                     <div class="clearfix">
-                                        <select class="">
-                                            <option>select the Main Category</option>
+                                        <select class="" name="main_category_id"
+                                                ng-model="main"
+                                                ng-options="main as main.main_category_name for main in  main_menu track by main.main_category_id"
+                                                ng-change="changeMainMenu()"
+                                                required>                                           
                                         </select>
                                     </div><div for="email" class="help-block"></div>
                                 </div>
@@ -46,8 +58,12 @@
                                 <label class="col-sm-3 control-label">Sub Product Category:</label>
                                 <div class="col-sm-5">
                                     <div class="clearfix">
-                                        <select class="">
-                                            <option>select the Sub Category</option>
+                                        <select name="sub_category_id" 
+                                                ng-show="main.main_category_id"
+                                                ng-model="sub"
+                                                ng-options="sub as sub.sub_category_name for sub in sub_menu | filter:{ main_category_id : main.main_category_id }:true track by sub.sub_category_id"
+                                                ng-change="changeSubMenu()"
+                                                required>
                                         </select>
                                     </div><div for="email" class="help-block"></div>
                                 </div>
@@ -56,8 +72,10 @@
                                 <label class="col-sm-3 control-label">Category:</label>
                                 <div class="col-sm-5">
                                     <div class="clearfix">
-                                        <select class="">
-                                            <option>select the Category</option>
+                                        <select name ="category_id"
+                                                ng-show="sub.sub_category_id"
+                                                ng-model="menul"
+                                                ng-options="menul as menul.category_name for menul in menu | filter:{ sub_category_id : sub.sub_category_id }:true track by menul.category_id">
                                         </select>
                                     </div><div for="email" class="help-block"></div>
                                 </div>
@@ -165,8 +183,7 @@
 
                                     <div class="row">
                                         <div class="col-sm-4">
-                                            <input  name="product_size[]" type="text" > 
-                                            <input  type="text"name="product_id[]" value="2" >
+                                            <input  name="product_size[]" type="text" >
                                         </div>
 
                                     </div>
@@ -258,7 +275,9 @@
                             <div class="form-actions">
                                 <div class="form-group">
                                     <div class="col-sm-offset-3 col-sm-9">
+
                                         <button type="submit" class="btn bg-danger" >Submit</button>						
+
                                     </div>	
                                 </div>		
                             </div>
@@ -303,16 +322,28 @@
         if (k > 4) {
             alert("Maximum 5product image is allowed");
         } else {
-            size_div.innerHTML = size_div.innerHTML + "<br><input type='text' name='product_size[]'>";
-            size_div.innerHTML = size_div.innerHTML + "<br><input type='text' value='2'name='product_id[]'>";
+
+            size_div.innerHTML = size_div.innerHTML + "<br><input type='text' name='product_size[]'><br>"
 
         }
         k++;
     }
 
-//    $('[data-toggle=tab]').click(function () {
-//        if ($(this).parent().hasClass('active')) {
-//            $($(this).attr("href")).toggleClass('active');
-//        }
-//    })
+    //    $('[data-toggle=tab]').click(function () {
+    //        if ($(this).parent().hasClass('active')) {
+    //            $($(this).attr("href")).toggleClass('active');
+    //        }
+    //    })
+</script>
+<script>
+    te.controller('product', function($scope) {
+        $scope.manufacturer = <?php echo $manufacturer; ?>;
+        $scope.main_menu = <?php echo $main_category; ?>;
+        $scope.changeMainMenu = function() {
+            $scope.sub_menu = <?php echo $sub_category; ?>;
+        };
+        $scope.changeSubMenu = function() {
+            $scope.menu = <?php echo $category; ?>;
+        };
+    });
 </script>

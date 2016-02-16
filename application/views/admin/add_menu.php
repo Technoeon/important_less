@@ -86,7 +86,7 @@
     </div>
 </div>
 <script>
-    angular.module('te', []).controller('menu', function ($scope) {
+    te.controller('menu', function ($scope) {
         $scope.main_menu = <?php echo $main_category; ?>;
         $scope.sub_menu = <?php echo $manu_category; ?>;
         $scope.get_menu_id = function () {
