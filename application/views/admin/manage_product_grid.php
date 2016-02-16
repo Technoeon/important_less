@@ -18,25 +18,25 @@
                             <tr>
                                 <th class="center"data-hide="phone,tablet">Image</th>
                                 <th class="center"data-class="expand">Product Name</th>
-                                <th class="center"data-hide="phone">Price</th>
+                                <th class="center"data-hide="phone">Model</th>
+                                <th class="center"data-hide="phone">Code</th>
                                 <th class="center"data-hide="phone">Quantity</th>
-                                 <th class="center"data-hide="phone">Status</th>
+                                <th class="center"data-hide="phone">Price</th>
+                                <th class="center"data-hide="phone">Discount</th>
+                                <th class="center"data-hide="phone">Status</th>
                                 <th class="center">Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            
-                                <tr>
+                            <tr>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    
-                                    <td>
-                                        
-                                        <a href=""><span class="label label-active"title="Disable">Active</span></a>
-                                        
-                                        
-                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><a href=""><span class="label label-active"title="Disable">Active</span></a></td>
                                     <td>
                                         <div class="btn-group btn-group-xs ">  
                                             <a href="" class="btn btn-inverse"><i class="fa fa-pencil icon-only"></i></a>

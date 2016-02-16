@@ -83,5 +83,6 @@ class Te_Product_Model extends CI_model {
     public function set_discount($discount) {
         $this->db->insert('tbl_discount', $discount);
     }
-
+    //------------Start product manage--------//
 }
+

@@ -120,9 +120,7 @@
                                     </div><div for="email" class="help-block">Please provide a valid Product Price.</div>
                                 </div>
                             </div>
-
                             <hr class="separator">
-
                             <div class="form-group has-info">
                                 <label class="col-sm-3 control-label">Product Status:</label>
                                 <div class="col-sm-9">
@@ -140,17 +138,12 @@
                                     </div>
                                 </div>
                             </div>
-
-
                         </div>
                         <div class="tab-pane" id="tab4">
-
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">Select Description Box</label>
-
                                 <div class="col-sm-7">                          
                                     <button type="button" onClick="description()">Add More Description</button><br><br>
-
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <textarea  name="product_description[]" type="text" ></textarea>   
@@ -159,46 +152,29 @@
                                             <input type="radio" name="default_image" value="1" checked>  Default Image
                                         </div>
                                     </div>
-
                                     <div class="row">
                                         <div id="my_div" class="col-sm-4">
-
                                         </div>
                                     </div>
-
-
                                 </div>
-
                             </div>
-
-
                         </div>
                         <div class="tab-pane" id="tab5">
-
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">Select Product Size</label>
-
                                 <div class="col-sm-7">                          
                                     <button type="button" onClick="productsize()">Add More Size</button><br><br>
-
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <input  name="product_size[]" type="text" >
                                         </div>
-
                                     </div>
-
                                     <div class="row">
                                         <div id="size_div" class="col-sm-4">
-
                                         </div>
                                     </div>
-
-
                                 </div>
-
                             </div>
-
                         </div>
                         <div class="tab-pane" id="tab2">
 
@@ -208,7 +184,6 @@
                                     <button type="button" onClick="imagechange()">Add More Image</button>
                                     <br>
                                     <br>
-
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <input  name="product_image[]" type="file" >   
@@ -217,14 +192,10 @@
                                             <input type="radio" name="default_image" value="1" checked>  Default Image
                                         </div>
                                     </div>
-
                                     <div class="row">
                                         <div id="r_div" class="col-sm-4">
-
                                         </div>
                                     </div>
-
-
                                 </div>
                             </div>
 
@@ -275,18 +246,11 @@
                             <div class="form-actions">
                                 <div class="form-group">
                                     <div class="col-sm-offset-3 col-sm-9">
-
                                         <button type="submit" class="btn bg-danger" >Submit</button>						
-
                                     </div>	
                                 </div>		
                             </div>
-
                         </div>
-
-
-
-
                     </div>
                 </div>
             </form>

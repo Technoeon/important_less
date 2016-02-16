@@ -456,54 +456,12 @@ class Te_Admin extends CI_Controller {
          redirect('te_admin/add_product');
     }
 
-    //--Start Product Image--//
-
-//    public function product_image() {
-//        $product_image = array();
-//        $default_image = $this->input->post('default_image', TRUE);
-//        //$menu_image = $this->input->post('menu_image', TRUE);
-//        //$slider_image = $this->input->post('slider_image', TRUE);
-//        $config['upload_path'] = 'images/product_image/';
-//        $config['allowed_types'] = 'gif|jpg|png';
-//        $config['max_size'] = '5000';
-//        $config['max_width'] = '2024';
-//        $config['max_height'] = '1768';
-//        $error = '';
-//        $fdata = array();
-//        /* echo '<pre>';
-//          print_r($_FILES);
-//          exit(); */
-//
-//
-//        $this->load->library('upload', $config);
-//
-//        if (!$this->upload->do_multi_upload('product_image')) {
-//            $error = $this->upload->display_errors();
-//            echo $error;
-//            exit();
-//        } else {
-//            $return = $this->upload->get_multi_upload_data();
-//            /* echo '<pre>';
-//              print_r($return);
-//              exit(); */
-//            foreach ($return as $value) {
-//                $product_image['image_path'] = $config['upload_path'] . $value['file_name'];
-//                $product_image['product_id'] = $product_id;
-//                $product_image['default_image'] = $default_image;
-//                $this->te_product_model->save_product_image_info($product_image);
-//                /* echo '<pre>';
-//                  print_r($return);
-//                  exit(); */
-//                $default_image = 0;
-//            }
-//        }
-//    }
-
     //--End Product Image--//
 //------start manage product-----------//
     public function manage_product(){
         $data=array();
-        $data['main_content']=  $this->load->view('admin/manage_product_grid','',TRUE);
+        //$data['all_product']=$this->te_admin_model->get_product_info();
+        $data['main_content']=  $this->load->view('admin/manage_product_grid',$data,TRUE);
         $data['title']='Manage Product';
         $this->load->view('admin/admin_master',$data);
     }
