@@ -72,7 +72,7 @@ echo $leftside_manu;
             ?> 
             
             <div class='home-13-0-block-category-menu-header-men-fasion'>
-                <h1> <li class="parent dropdown "> <?php foreach ($main_menu_1 as $value) { ?> <a href="<?php echo $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
+                <h1><?php foreach ($main_menu_1 as $value) { ?> <a href="<?php echo $value->id; ?>"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
             </div>
           
                
@@ -270,7 +270,7 @@ echo $leftside_manu;
             $sub_menu_id = NULL;
             ?> 
             <div class='home-13-0-block-category-menu-header'>
-                <h1> <li class="parent dropdown "> <?php foreach ($main_menu_2 as $value) { ?> <a href="<?php echo $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
+                <h1> <?php foreach ($main_menu_2 as $value) { ?> <a href="<?php echo $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
             </div>
             <div class='home-13-0-block-category-menu-wrapper'>
                 <?php foreach ($sub_menu_2 as $sub_menu_value) { ?>
@@ -595,7 +595,7 @@ echo $leftside_manu;
             ?> 
             
             <div class='home-13-0-block-category-menu-header-men-fasion'>
-                <h1> <li class="parent dropdown "> <?php foreach ($main_menu_3 as $value) { ?> <a href="<?php echo $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
+                <h1><?php foreach ($main_menu_3 as $value) { ?> <a href="<?php echo $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
             </div>
           
                
@@ -794,7 +794,7 @@ echo $leftside_manu;
             ?> 
             
             <div class='home-13-0-block-category-menu-header-men-fasion'>
-                <h1> <li class="parent dropdown "> <?php foreach ($main_menu_4 as $value) { ?> <a href="<?php echo $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
+                <h1><?php foreach ($main_menu_4 as $value) { ?> <a href="<?php echo $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
             </div>
           
                
@@ -993,7 +993,7 @@ echo $leftside_manu;
             ?> 
             
             <div class='home-13-0-block-category-menu-header-men-fasion'>
-                <h1> <li class="parent dropdown "> <?php foreach ($main_menu_5 as $value) { ?> <a href="<?php echo $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
+                <h1><?php foreach ($main_menu_5 as $value) { ?> <a href="<?php echo $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
             </div>
           
                
@@ -1192,7 +1192,7 @@ echo $leftside_manu;
             ?> 
             
             <div class='home-13-0-block-category-menu-header-men-fasion'>
-                <h1> <li class="parent dropdown "> <?php foreach ($main_menu_6 as $value) { ?> <a href="<?php echo $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
+                <h1><?php foreach ($main_menu_6 as $value) { ?> <a href="<?php echo $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
             </div>
           
                
@@ -1391,7 +1391,7 @@ echo $leftside_manu;
             ?> 
             
             <div class='home-13-0-block-category-menu-header-men-fasion'>
-                <h1> <li class="parent dropdown "> <?php foreach ($main_menu_7 as $value) { ?> <a href="<?php echo $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
+                <h1><?php foreach ($main_menu_7 as $value) { ?> <a href="<?php echo $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
             </div>
           
                
@@ -1590,7 +1590,7 @@ echo $leftside_manu;
             ?> 
             
             <div class='home-13-0-block-category-menu-header-men-fasion'>
-                <h1> <li class="parent dropdown "> <?php foreach ($main_menu_8 as $value) { ?> <a href="<?php echo $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
+                <h1><?php foreach ($main_menu_8 as $value) { ?> <a href="<?php echo $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
             </div>
           
                
@@ -1789,7 +1789,7 @@ echo $leftside_manu;
             ?> 
             
             <div class='home-13-0-block-category-menu-header-men-fasion'>
-                <h1> <li class="parent dropdown "> <?php foreach ($main_menu_9 as $value) { ?> <a href="<?php echo $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
+                <h1><?php foreach ($main_menu_9 as $value) { ?> <a href="<?php echo $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
             </div>
           
                
@@ -1977,5 +1977,5 @@ echo $leftside_manu;
         </a>
     </div>
 </div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
