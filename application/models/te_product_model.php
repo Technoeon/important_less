@@ -83,5 +83,40 @@ class Te_Product_Model extends CI_model {
     public function set_discount($discount) {
         $this->db->insert('tbl_discount', $discount);
     }
+    //-----------Manage Product------------//
+    // --------Start Managing general product and discount---------// 
+    public function get_all_product(){
+        $sql = 'select p.product_id, p.product_name, p.product_model, p.product_quantity, p.product_status, p.product_price, p.product_sku, img.image_path, d.discount_price from tbl_product as p join tbl_image as img on p.product_id = img.product_id join tbl_discount as d on p.product_id = d.product_id where img.default_image=1';
+        $query_result = $this->db->query($sql);
+        $result = $query_result->result();
+        return $result;
+    }
+    public function unpublished_product($product_id) {
+        $this->db->set('product_status', 0);
+        $this->db->where('product_id', $product_id);
+        $this->db->update('tbl_product');
+    }
+
+    public function published_product($product_id) {
+        $this->db->set('product_status', 1);
+        $this->db->where('product_id', $product_id);
+        $this->db->update('tbl_product');
+    }
+    public function get_product_and_discount(){
+        $sql = 'select p.product_name, p.product_model, p.product_quantity, p.product_price, p.product_sku, d.discount_price, d.start_date, d.end_date from tbl_product as p join tbl_discount as d on p.product_id = d.product_id';
+        $query_result = $this->db->query($sql);
+        $result = $query_result->result();
+        return $result;
+    }
+    public function update_product($product_id,$product){
+        $this->db->where('product_id', $product_id);
+        $this->db->update('tbl_product', $product);
+    }
+    public function update_discount($product_id,$discount){
+        $this->db->where('product_id', $product_id);
+        $this->db->update('tbl_discount', $discount);
+    }
+    // --------End Managing general product and discount---------// 
+    
 
 }
