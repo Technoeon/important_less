@@ -31,4 +31,5 @@ class onlineshop_model extends CI_Model{
         $result=$query_result->result();
         return $result;
     }
+    
 }

@@ -59,9 +59,6 @@ class onlineshop extends CI_Controller {
         //$data['menu']= $main_menu;
         return $data;
     }
-
-
-
     public function test($position) {
         $data = array();
         $data['main_menu'] = $this->onlineshop_model->get_main_menu_by_position($position);
@@ -72,5 +69,7 @@ class onlineshop extends CI_Controller {
 //        exit();
         $this->load->view('test', $data);
     }
+    
+    
 
 }

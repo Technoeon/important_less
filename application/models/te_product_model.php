@@ -63,4 +63,25 @@ class Te_Product_Model extends CI_model {
     public function save_description($product_description){
         $this->db->insert('tbl_description', $product_description);
     }
+    //----------Save product image--------------------//
+    public function save_product_image_info($data) {
+        $this->db->insert('tbl_image', $data);
+    }
+    // ----------save menu Image-------------------//
+    public function save_menu_image($product_id, $menu_image) {
+        $this->db->set('product_id', $product_id);
+        $this->db->set('menu_image', $menu_image);
+        $this->db->insert('tbl_others_image');
+    }
+    // ----------save menu Image-------------------//
+    public function save_slider_image($product_id, $slider_image) {
+        $this->db->set('product_id', $product_id);
+        $this->db->set('slider_image', $slider_image);
+        $this->db->insert('tbl_others_image');
+    }
+    // ----------Saving Discount-----------//
+    public function set_discount($discount) {
+        $this->db->insert('tbl_discount', $discount);
+    }
+
 }
