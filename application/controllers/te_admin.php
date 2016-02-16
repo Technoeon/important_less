@@ -151,7 +151,7 @@ class Te_Admin extends CI_Controller {
         $sdata = array();
         $sdata['message'] = 'Update Main Menu Information Successfully !';
         $this->session->set_userdata($sdata);
-        redirect('te_admin/edit_main_menu/' . $main_category_id);
+        redirect('te_admin/manage_main_menu/' . $main_category_id);
     }
 
     //------Start Main Menu Manage Grid------------//
@@ -190,7 +190,7 @@ class Te_Admin extends CI_Controller {
         $sdata = array();
         $sdata['message'] = 'Update Sub Menu Information Successfully !';
         $this->session->set_userdata($sdata);
-        redirect('te_admin/edit_sub_menu/' . $sub_category_id);
+        redirect('te_admin/manage_sub_menu/' . $sub_category_id);
     }
 
     //------End sub_menu manage _grid//
@@ -231,17 +231,55 @@ class Te_Admin extends CI_Controller {
         $this->session->set_userdata($sdata);
         redirect('te_admin/edit_menu/' . $category_id);
     }
-
-    public function save_manufacturer() {
+//-------Start Manufacturer---------//
+    public function add_manufacturer() {
         $data = array();
-        $data['manufacturer_name'] = $this->input->post('manufacturer_name', TRUE);
-        $data['manufacturer_status'] = $this->input->post('manufacturer_status', TRUE);
+        $data['title'] = 'Add manufacturer';
+        $data['main_content'] = $this->load->view('admin/add_manufacturer', '', true);
+        $this->load->view('admin/admin_master', $data);
+    }
+    public function save_manufacturer(){
+        $data=array();
+        $data['manufacturer_name']=  $this->input->post('manufacturer_name',TRUE);
+        $data['manufacturer_status']=  $this->input->post('manufacturer_status',TRUE);
         $this->admin_model->save_manufactuer_by_product($data);
         $sdata['message'] = 'Save Menufacturer Information Successfully !';
         $this->session->set_userdata($sdata);
         redirect('te_admin/add_manufacturer');
     }
-
+    public function manage_manufacturer(){
+      $data=array();
+      $data['title']='Manage Manufacturer';
+      $data['manufacturer']=$this->admin_model->get_menufacturer_info();
+      $data['main_content']=  $this->load->view('admin/manage_manufacturer_grid',$data,TRUE);
+      $this->load->view('admin/admin_master',$data);
+    }
+    public function unpublished_manufacturer($manufacturer_id){
+      $this->admin_model->unpublished_manufacturer_info($manufacturer_id);
+      redirect('te_admin/manage_manufacturer');
+    }
+    public function published_manufacturer($manufacturer_id){
+        $this->admin_model->published_manufacturer_info($manufacturer_id);
+        redirect('te_admin/manage_manufacturer');
+    }
+     public function edit_manufacturer($manufacturer_id) {
+        $data = array();
+        $data['manufacturer_id']=$manufacturer_id;
+        $data['manufacturer_name']=$this->admin_model->get_manufacturer_name($manufacturer_id);
+        $data['title'] = 'Edit Manufacturer';
+        $data['main_content'] = $this->load->view('admin/edit_manufacturer_form',$data,TRUE);
+        $this->load->view('admin/admin_master',$data);
+    }
+    public function update_manufacturer() {
+        $manufacturer_name=$this->input->post('manufacturer_name', true);
+        $manufacturer_id = $this->input->post('manufacturer_id', true);
+        $this->admin_model->update_manufacturer_name($manufacturer_name,$manufacturer_id);
+        $sdata = array();
+        $sdata['message'] = 'Update Manufacturer Information Successfully !';
+        $this->session->set_userdata($sdata);
+        redirect('te_admin/edit_manufacturer/' . $manufacturer_id);
+    }
+    //------ end manufacturer----------//
     public function add_product() {
         $data = array();
         $data['title'] = 'Add Product';
@@ -375,7 +413,13 @@ class Te_Admin extends CI_Controller {
     }
 
     //--End Product Image--//
-
+//------start manage product-----------//
+    public function manage_product(){
+        $data=array();
+        $data['main_content']=  $this->load->view('admin/manage_product_grid','',TRUE);
+        $data['title']='Manage Product';
+        $this->load->view('admin/admin_master',$data);
+    }
     public function logout() {
         $this->session->unset_userdata('management_id');
         $this->session->unset_userdata('name');
