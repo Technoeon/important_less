@@ -108,6 +108,7 @@ class Te_Product_Model extends CI_model {
         $result = $query_result->row();
         return $result;
     }
+    
     public function update_product($product_id,$product){
         $this->db->where('product_id', $product_id);
         $this->db->update('tbl_product', $product);
