@@ -118,6 +118,24 @@ class Te_Product_Model extends CI_model {
         $this->db->update('tbl_discount', $discount);
     }
     // --------End Managing general product and discount---------// 
+    // --------Start Managing product product size and discription---------//
+    public function get_size_by_product_id($product_id){
+        $this->db->select('sub_category_id');
+        $this->db->select('sub_category_name');
+        $this->db->where('product_id',$product_id);
+        $this->db->from('tbl_product_size');
+        $query = $this->db->get();
+        return $query->result();
+    }
+    public function get_description_by_product_id($product_id){
+        $this->db->select('sub_category_id');
+        $this->db->select('sub_category_name');
+        $this->db->where('product_id',$product_id);
+        $this->db->from('tbl_description');
+        $query = $this->db->get();
+        return $query->result();
+    }
+    // --------Start Managing product product size and discription---------//
     
 
 }
