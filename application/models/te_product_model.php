@@ -86,7 +86,7 @@ class Te_Product_Model extends CI_model {
     //-----------Manage Product------------//
     // --------Start Managing general product and discount---------// 
     public function get_all_product(){
-        $sql = 'select p.product_id, p.product_name, p.product_model, p.product_quantity, p.product_status, p.product_price, p.product_sku, img.image_path, d.discount_price from tbl_product as p join tbl_image as img on p.product_id = img.product_id join tbl_discount as d on p.product_id = d.product_id where img.default_image=1';
+        $sql = 'select p.product_id, p.product_name, p.product_model, p.product_quantity, p.product_status, p.product_price, p.product_sku, img.image_path, d.discount_price from tbl_product as p left outer join tbl_image as img on p.product_id = img.product_id left outer join tbl_discount as d on p.product_id = d.product_id where img.default_image=1';
         $query_result = $this->db->query($sql);
         $result = $query_result->result();
         return $result;
@@ -108,6 +108,7 @@ class Te_Product_Model extends CI_model {
         $result = $query_result->row();
         return $result;
     }
+    
     public function update_product($product_id,$product){
         $this->db->where('product_id', $product_id);
         $this->db->update('tbl_product', $product);
@@ -117,6 +118,24 @@ class Te_Product_Model extends CI_model {
         $this->db->update('tbl_discount', $discount);
     }
     // --------End Managing general product and discount---------// 
+    // --------Start Managing product product size and discription---------//
+    public function get_size_by_product_id($product_id){
+        $this->db->select('sub_category_id');
+        $this->db->select('sub_category_name');
+        $this->db->where('product_id',$product_id);
+        $this->db->from('tbl_product_size');
+        $query = $this->db->get();
+        return $query->result();
+    }
+    public function get_description_by_product_id($product_id){
+        $this->db->select('sub_category_id');
+        $this->db->select('sub_category_name');
+        $this->db->where('product_id',$product_id);
+        $this->db->from('tbl_description');
+        $query = $this->db->get();
+        return $query->result();
+    }
+    // --------Start Managing product product size and discription---------//
     
 
 }

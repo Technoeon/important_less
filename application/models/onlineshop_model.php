@@ -37,5 +37,14 @@ class onlineshop_model extends CI_Model{
         $result=$query_result->result();
         return $result;
     }
+    public function get_sub_category_by_main_category_id($main_category_id){
+        $this->db->select('sub_category_id');
+        $this->db->select('sub_category_name');
+        $this->db->where('main_category_id',$main_category_id);
+        $this->db->where('sub_category_status',1);
+        $this->db->from('tbl_sub_category');
+        $query = $this->db->get();
+        return $query->result();
+    }
     
 }

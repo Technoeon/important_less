@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xml:lang="en">
+<html ng-app="client">
     <head>
         <meta charset="utf-8">
         <title>Somoyer Deal</title>
@@ -35,6 +35,11 @@
 
         <!-- Google Fonts -->
         <link href='<?php echo base_url(); ?>https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,700,800,400,600' rel='stylesheet' type='text/css'>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js"></script>
+        <script>
+            var client = angular.module('client', ['ngSanitize']);
+        </script>
     </head>
 
     <body>
