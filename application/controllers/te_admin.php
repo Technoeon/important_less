@@ -504,9 +504,14 @@ class Te_Admin extends CI_Controller {
      public function manage_size(){
       $data=array();
       $data['title']='Manage Product Size';
-      //$data['product_id']=$this->input->post('product_id',TRUE);
       $data['product_name']=$this->input->post('product_name',TRUE);
-     // $data['product_size']=$this->te_product_model->get_size_by_product_id($product_id);
+      $product_id=$this->input->post('product_id',TRUE);
+      
+      $data['product_size']=json_encode($this->te_product_model->get_size_by_product_id($product_id));
+      
+     /*echo '<pre>';
+      print_r($data);
+      exit();*/
       $data['main_content']=  $this->load->view('admin/manage_size_grid',$data,TRUE);
       $this->load->view('admin/admin_master',$data);
     }
@@ -514,6 +519,14 @@ class Te_Admin extends CI_Controller {
       $data=array();
       $data['title']='Manage Product discription';
       $data['product_name']=$this->input->post('product_name',TRUE);
+      $product_id=$this->input->post('product_id',TRUE);
+       /*echo '<pre>';
+      print_r($product_id);
+      exit();*/
+      $data['product_description']=json_encode($this->te_product_model->get_description_by_product_id($product_id));
+       /*echo '<pre>';
+      print_r($data);
+      exit();*/
       //$data['manufacturer']=$this->admin_model->get_menufacturer_info();
       $data['main_content']=  $this->load->view('admin/manage_description_grid',$data,TRUE);
       $this->load->view('admin/admin_master',$data);

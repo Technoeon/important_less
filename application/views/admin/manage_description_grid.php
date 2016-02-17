@@ -1,7 +1,7 @@
 
 <!-- START YOUR CONTENT HERE -->										
 <!-- //row -->
-<div class="col-lg-12">
+<div class="col-lg-12" ng-controller="productDescription">
     <div class="row">
         <div class="col-lg-1"></div>
         <div class="col-lg-10">
@@ -22,8 +22,8 @@
                         </thead>
                         <tbody>
 
-                            <tr>
-                                <td></td>
+                            <tr ng-repeat="pdescription in pdescription">
+                                <td>{{pdescription.description}}</td>
                                
 
                                 <td>
@@ -53,6 +53,12 @@
 </div>
 
 <!-- END YOUR CONTENT HERE -->
+<script>
+    te.controller('productDescription', function($scope) {
+        $scope.pdescription = <?php echo $product_description; ?>;
+        
+    });
+</script>
 
 
 

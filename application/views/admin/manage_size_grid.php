@@ -1,7 +1,7 @@
 
 <!-- START YOUR CONTENT HERE -->										
 <!-- //row -->
-<div class="col-lg-12">
+<div class="col-lg-12" ng-controller="productSize">
     <div class="row">
         <div class="col-lg-1"></div>
         <div class="col-lg-10">
@@ -22,10 +22,10 @@
                             </tr>
                         </thead>
                         <tbody>
-
-                            <tr>
-                                <td></td>
-                                <td></td>
+                            
+                            <tr ng-repeat="size in size">
+                               
+                                <td>{{size.size_name}}</td>
 
 
                                 <td>
@@ -57,7 +57,12 @@
 </div>
 
 <!-- END YOUR CONTENT HERE -->
-
+<script>
+    te.controller('productSize', function($scope) {
+        $scope.size = <?php echo $product_size; ?>;
+        
+    });
+</script>
 
 
 
