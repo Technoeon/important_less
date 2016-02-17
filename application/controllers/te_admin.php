@@ -504,8 +504,9 @@ class Te_Admin extends CI_Controller {
      public function manage_size(){
       $data=array();
       $data['title']='Manage Product Size';
+      //$data['product_id']=$this->input->post('product_id',TRUE);
       $data['product_name']=$this->input->post('product_name',TRUE);
-      //$data['manufacturer']=$this->admin_model->get_menufacturer_info();
+     // $data['product_size']=$this->te_product_model->get_size_by_product_id($product_id);
       $data['main_content']=  $this->load->view('admin/manage_size_grid',$data,TRUE);
       $this->load->view('admin/admin_master',$data);
     }

@@ -8,7 +8,7 @@
             <div class="portlet">
                 <div class="portlet-heading inverse">
                     <div class="portlet-title">
-                        <h4><i class="fa fa-edit"></i><?php echo $product_name;?></h4>	
+                        <h4><i class="fa fa-edit"></i><?php echo ' '.$product_name;?></h4>	
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -16,7 +16,7 @@
                     <table id="products" class="datatable table table-hover table-striped table-bordered tc-table">
                         <thead>
                             <tr>
-                                <th class="center"data-hide="phone,tablet">Product Name</th>
+                                
                                 <th class="center"data-class="expand">Size</th>
                                 <th class="center">Action</th>
                             </tr>
