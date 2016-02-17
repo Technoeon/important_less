@@ -78,15 +78,11 @@ echo $leftside_manu;
 
 
             <div class='home-13-0-block-category-menu-wrapper-men-fasion'>
-                <?php foreach ($sub_menu_1 as $sub_menu_value) { ?>
-                    <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
+                
                         <div class='home-13-0-block-subcategory-name-men-fasion'>
-                            <h3><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php echo $sub_menu_value->sub_menu_name;
-                            $sub_menu_id = $sub_menu_value->sub_menu_id;
-                        ?></a></h3>
+                            <h3 ng-repeat="s1 in j_sub_category_1"><a href="<?php echo base_url()?>{{s1.sub_category_id}}">{{s1.sub_category_name}}</a></h3>
                         </div>
-                    <?php } ?>
-                <?php } ?>
+                    
             </div>
 
             <div class='home-13-0-block-category-menu-bottom-men-fasion' onclick='ShowHideSubCategory( & #39; home - 13 - 0BlockCategoryMenuWrapper & #39; , 13);'>
@@ -946,6 +942,7 @@ $p9=0;
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <?php
 $main_category_id1 = $this->onlineshop_model->get_product_by_main_category_id($p1);
+$j_sub_category_1= json_encode($this->onlineshop_model->get_sub_category_by_main_category_id($main_category_id));
 $product1 = json_encode($main_category_id1);
 $main_category_id2 = $this->onlineshop_model->get_product_by_main_category_id($p2);
 $product2 = json_encode($main_category_id2);
@@ -963,11 +960,12 @@ $main_category_id8 = $this->onlineshop_model->get_product_by_main_category_id($p
 $product8 = json_encode($main_category_id8);
 $main_category_id9 = $this->onlineshop_model->get_product_by_main_category_id($p9);
 $product9 = json_encode($main_category_id9);
+
 ?>
 <script>
             client.controller('userProduct1', function($scope) {
             $scope.product1 = <?php echo $product1; ?>;
-            
+            $scope.j_sub_category_1 = <?php echo $j_sub_category_1; ?>;
             });
             client.controller('userProduct2', function($scope) {
             $scope.product2 = <?php echo $product2; ?>;
