@@ -32,33 +32,45 @@
                             foreach ($all_product as $v_product) {
                                 ?>
                                 <tr>
-                                    <td><img src="<?php echo base_url().$v_product->image_path;?>"width="50" height="50" ></td>
+                                    <td><img src="<?php echo base_url() . $v_product->image_path; ?>"width="50" height="50" ></td>
                                     <td><?php echo $v_product->product_name; ?></td>
                                     <td><?php echo $v_product->product_model; ?></td>
                                     <td><?php echo $v_product->product_sku; ?></td>
                                     <td><?php echo $v_product->product_quantity; ?></td>
                                     <td><?php echo $v_product->product_price; ?></td>
                                     <td><?php echo $v_product->discount_price; ?></td>
-                                <td>
+                                    <td>
                                         <?php
                                         if ($v_product->product_status == 1) {
                                             ?>
-                                        <a href="<?php echo base_url(); ?>te_admin/unpublished_product_info/<?php echo $v_product->product_id; ?>"><span class="label label-active"title="Disable">Active</span></a>
-                                        <?php
+                                            <a href="<?php echo base_url(); ?>te_admin/unpublished_product_info/<?php echo $v_product->product_id; ?>"><span class="label label-active"title="Disable">Active</span></a>
+                                            <?php
                                         } else {
                                             ?>
-                                        <a href="<?php echo base_url(); ?>te_admin/published_product_info/<?php echo $v_product->product_id; ?>"><span class="label label-inverse"title="Active">Disable</span></a>
+                                            <a href="<?php echo base_url(); ?>te_admin/published_product_info/<?php echo $v_product->product_id; ?>"><span class="label label-inverse"title="Active">Disable</span></a>
                                         <?php } ?>
                                     </td>
                                     <td>
                                         <div class="btn-group btn-group-xs ">  
-                                            <a href="<?php echo base_url()?>te_admin/edit_product/<?php echo $v_product->product_id; ?>" class="btn btn-inverse"><i class="fa fa-pencil icon-only"></i></a>
-                                        </div>
+                                            <a href="<?php echo base_url() ?>te_admin/edit_product/<?php echo $v_product->product_id; ?>" class="btn btn-inverse"title="Edit"><i class="fa fa-pencil icon-only"></i></a>
+                                        </div
+                                        
+                                        <div class="btn-group btn-group-xs">
+                                            <form action="<?php echo base_url()?>te_admin/manage_size" method="post"><input type="hidden" name="product_name" value="<?php echo $v_product->product_name; ?>">
+                                                <button type="submit" class="btn btn-xs btn-success" title="size">S</button>
+                                            </form>
+                                            <form action="<?php echo base_url()?>te_admin/manage_description" method="post"><input type="hidden" name="product_name" value="<?php echo $v_product->product_name; ?>">
+                                                <button type="submit" class="btn btn-xs btn-primary" title="description">D</button>
+                                            </form>
+                                            
+                                        </div
+                                        
                                     </td>
                                 </tr>
                             <?php } ?>
                         </tbody>
                     </table>
+                    
                     <div class="btn-group pull-right">
                         <ul class="pagination">
                             <li><a href="#">1</a></li>
