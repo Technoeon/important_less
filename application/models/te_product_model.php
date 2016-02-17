@@ -120,16 +120,16 @@ class Te_Product_Model extends CI_model {
     // --------End Managing general product and discount---------// 
     // --------Start Managing product product size and discription---------//
     public function get_size_by_product_id($product_id){
-        $this->db->select('sub_category_id');
-        $this->db->select('sub_category_name');
+        $this->db->select('size_id');
+        $this->db->select('size_name');
         $this->db->where('product_id',$product_id);
         $this->db->from('tbl_product_size');
         $query = $this->db->get();
         return $query->result();
     }
     public function get_description_by_product_id($product_id){
-        $this->db->select('sub_category_id');
-        $this->db->select('sub_category_name');
+        $this->db->select('description_id');
+        $this->db->select('description');
         $this->db->where('product_id',$product_id);
         $this->db->from('tbl_description');
         $query = $this->db->get();
