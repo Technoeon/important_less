@@ -80,9 +80,8 @@ echo $leftside_manu;
             <div class='home-13-0-block-category-menu-wrapper-men-fasion'>
                 
                         <div class='home-13-0-block-subcategory-name-men-fasion'>
-                            <h3 ng-repeat="s1 in j_sub_category_1"><a href="<?php echo base_url()?>{{s1.sub_category_id}}">{{s1.sub_category_name}}</a></h3>
+                            <h3 ng-repeat="s1 in j_sub_category_1"><a ng-click="sub">{{s1.sub_category_name}}</a></h3>
                         </div>
-                    
             </div>
 
             <div class='home-13-0-block-category-menu-bottom-men-fasion' onclick='ShowHideSubCategory( & #39; home - 13 - 0BlockCategoryMenuWrapper & #39; , 13);'>
@@ -175,15 +174,11 @@ echo $leftside_manu;
 
 
             <div class='home-13-0-block-category-menu-wrapper-manu2-fasion'>
-                <?php foreach ($sub_menu_2 as $sub_menu_value) { ?>
-    <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
+                
                         <div class='home-13-0-block-subcategory-name-manu2-fasion'>
-                            <h3><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php echo $sub_menu_value->sub_menu_name;
-                            $sub_menu_id = $sub_menu_value->sub_menu_id;
-                            ?></a></h3>
+                            <h3 ng-repeat="s1 in j_sub_category_2"><a ng-click="sub">{{s1.sub_category_name}}</a></h3>
                         </div>
-    <?php } ?>
-<?php } ?>
+   
             </div>
 
             <div class='home-13-0-block-category-menu-bottom-manu2-fasion' onclick='ShowHideSubCategory( & #39; home - 13 - 0BlockCategoryMenuWrapper & #39; , 13);'>
@@ -223,8 +218,9 @@ echo $leftside_manu;
                                                     </div>
                                                 </div>
                                                 <div class="price-box">
-                                                    <p class="special-price"> <span class="price"> Tk. {{x.discount}}</span> </p>
-                                                    <p class="old-price"> <span class="price-sep">-</span> <span class="price"> TK. {{x.product_price}} </span> </p>
+                                                    <p class="special-price" ng-if="x.discount == NULL"> <span class="price"> Tk. {{x.product_price}}</span> </p>
+                                                    <p class="special-price" ng-if="x.discount != NULL"> <span class="price"> Tk. {{x.discount}}</span> </p>
+                                                    <p class="old-price" ng-if="x.discount != NULL"><span class="price-sep">-</span> <span class="price">TK. {{x.product_price}} </span> </p>
                                                 </div>
                                             </div>
                                             <!--item-content--> 
@@ -319,8 +315,9 @@ echo $leftside_manu;
                                                     </div>
                                                 </div>
                                                 <div class="price-box">
-                                                   <p class="special-price"> <span class="price"> Tk. {{x.discount}}</span> </p>
-                                                    <p class="old-price"> <span class="price-sep">-</span> <span class="price"> TK. {{x.product_price}} </span> </p>
+                                                    <p class="special-price" ng-if="x.discount == NULL"> <span class="price"> Tk. {{x.product_price}}</span> </p>
+                                                    <p class="special-price" ng-if="x.discount != NULL"> <span class="price"> Tk. {{x.discount}}</span> </p>
+                                                    <p class="old-price" ng-if="x.discount != NULL"><span class="price-sep">-</span> <span class="price">TK. {{x.product_price}} </span> </p>
                                                 </div>
                                             </div>
                                             <!--item-content--> 
@@ -415,8 +412,9 @@ $p4=0;
                                                     </div>
                                                 </div>
                                                 <div class="price-box">
-                                                    <p class="special-price"> <span class="price"> Tk. {{x.discount}}</span> </p>
-                                                    <p class="old-price"> <span class="price-sep">-</span> <span class="price"> TK. {{x.product_price}} </span> </p>
+                                                    <p class="special-price" ng-if="x.discount == NULL"> <span class="price"> Tk. {{x.product_price}}</span> </p>
+                                                    <p class="special-price" ng-if="x.discount != NULL"> <span class="price"> Tk. {{x.discount}}</span> </p>
+                                                    <p class="old-price" ng-if="x.discount != NULL"><span class="price-sep">-</span> <span class="price">TK. {{x.product_price}} </span> </p>
                                                 </div>
                                             </div>
                                             <!--item-content--> 
@@ -513,8 +511,9 @@ $p5=0;
                                                     </div>
                                                 </div>
                                                 <div class="price-box">
-                                                    <p class="special-price"> <span class="price"> Tk. {{x.discount}}</span> </p>
-                                                    <p class="old-price"> <span class="price-sep">-</span> <span class="price"> TK. {{x.product_price}} </span> </p>
+                                                    <p class="special-price" ng-if="x.discount == NULL"> <span class="price"> Tk. {{x.product_price}}</span> </p>
+                                                    <p class="special-price" ng-if="x.discount != NULL"> <span class="price"> Tk. {{x.discount}}</span> </p>
+                                                    <p class="old-price" ng-if="x.discount != NULL"><span class="price-sep">-</span> <span class="price">TK. {{x.product_price}} </span> </p>
                                                 </div>
                                             </div>
                                             <!--item-content--> 
@@ -610,8 +609,9 @@ $p6=0;
                                                     </div>
                                                 </div>
                                                 <div class="price-box">
-                                                   <p class="special-price"> <span class="price"> Tk. {{x.discount}}</span> </p>
-                                                    <p class="old-price"> <span class="price-sep">-</span> <span class="price"> TK. {{x.product_price}} </span> </p>
+                                                    <p class="special-price" ng-if="x.discount == NULL"> <span class="price"> Tk. {{x.product_price}}</span> </p>
+                                                    <p class="special-price" ng-if="x.discount != NULL"> <span class="price"> Tk. {{x.discount}}</span> </p>
+                                                    <p class="old-price" ng-if="x.discount != NULL"><span class="price-sep">-</span> <span class="price">TK. {{x.product_price}} </span> </p>
                                                 </div>
                                             </div>
                                             <!--item-content--> 
@@ -708,8 +708,9 @@ $p7=0;
                                                     </div>
                                                 </div>
                                                 <div class="price-box">
-                                                    <p class="special-price"> <span class="price"> Tk. {{x.discount}}</span> </p>
-                                                    <p class="old-price"> <span class="price-sep">-</span> <span class="price"> TK. {{x.product_price}} </span> </p>
+                                                    <p class="special-price" ng-if="x.discount == NULL"> <span class="price"> Tk. {{x.product_price}}</span> </p>
+                                                    <p class="special-price" ng-if="x.discount != NULL"> <span class="price"> Tk. {{x.discount}}</span> </p>
+                                                    <p class="old-price" ng-if="x.discount != NULL"><span class="price-sep">-</span> <span class="price">TK. {{x.product_price}} </span> </p>
                                                 </div>
                                             </div>
                                             <!--item-content--> 
@@ -805,8 +806,9 @@ $p8=0;
                                                     </div>
                                                 </div>
                                                 <div class="price-box">
-                                                   <p class="special-price"> <span class="price"> Tk. {{x.discount}}</span> </p>
-                                                    <p class="old-price"> <span class="price-sep">-</span> <span class="price"> TK. {{x.product_price}} </span> </p>
+                                                   <p class="special-price" ng-if="x.discount == NULL"> <span class="price"> Tk. {{x.product_price}}</span> </p>
+                                                    <p class="special-price" ng-if="x.discount != NULL"> <span class="price"> Tk. {{x.discount}}</span> </p>
+                                                    <p class="old-price" ng-if="x.discount != NULL"><span class="price-sep">-</span> <span class="price">TK. {{x.product_price}} </span> </p>
                                                 </div>
                                             </div>
                                             <!--item-content--> 
@@ -904,8 +906,9 @@ $p9=0;
                                                     </div>
                                                 </div>
                                                 <div class="price-box">
-                                                    <p class="special-price"> <span class="price"> Tk. {{x.discount}}</span> </p>
-                                                    <p class="old-price"> <span class="price-sep">-</span> <span class="price"> TK. {{x.product_price}} </span> </p>
+                                                    <p class="special-price" ng-if="x.discount == NULL"> <span class="price"> Tk. {{x.product_price}}</span> </p>
+                                                    <p class="special-price" ng-if="x.discount != NULL"> <span class="price"> Tk. {{x.discount}}</span> </p>
+                                                    <p class="old-price" ng-if="x.discount != NULL"><span class="price-sep">-</span> <span class="price">TK. {{x.product_price}} </span> </p>
                                                 </div>
                                             </div>
                                             <!--item-content--> 
@@ -942,23 +945,32 @@ $p9=0;
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <?php
 $main_category_id1 = $this->onlineshop_model->get_product_by_main_category_id($p1);
-$j_sub_category_1= json_encode($this->onlineshop_model->get_sub_category_by_main_category_id($main_category_id));
+$j_sub_category_1= json_encode($this->onlineshop_model->get_sub_category_by_main_category_id($p1));
+//echo $j_sub_category_1;
 $product1 = json_encode($main_category_id1);
 $main_category_id2 = $this->onlineshop_model->get_product_by_main_category_id($p2);
+$j_sub_category_2= json_encode($this->onlineshop_model->get_sub_category_by_main_category_id($p2));
 $product2 = json_encode($main_category_id2);
 $main_category_id3 = $this->onlineshop_model->get_product_by_main_category_id($p3);
+$j_sub_category_3= json_encode($this->onlineshop_model->get_sub_category_by_main_category_id($p3));
 $product3 = json_encode($main_category_id3);
 $main_category_id4 = $this->onlineshop_model->get_product_by_main_category_id($p4);
+$j_sub_category_4= json_encode($this->onlineshop_model->get_sub_category_by_main_category_id($p4));
 $product4 = json_encode($main_category_id4);
 $main_category_id5 = $this->onlineshop_model->get_product_by_main_category_id($p5);
+$j_sub_category_5= json_encode($this->onlineshop_model->get_sub_category_by_main_category_id($p5));
 $product5 = json_encode($main_category_id5);
 $main_category_id6 = $this->onlineshop_model->get_product_by_main_category_id($p6);
+$j_sub_category_6= json_encode($this->onlineshop_model->get_sub_category_by_main_category_id($p6));
 $product6 = json_encode($main_category_id6);
 $main_category_id7 = $this->onlineshop_model->get_product_by_main_category_id($p7);
+$j_sub_category_7= json_encode($this->onlineshop_model->get_sub_category_by_main_category_id($p7));
 $product7 = json_encode($main_category_id7);
 $main_category_id8 = $this->onlineshop_model->get_product_by_main_category_id($p8);
+$j_sub_category_8= json_encode($this->onlineshop_model->get_sub_category_by_main_category_id($p8));
 $product8 = json_encode($main_category_id8);
 $main_category_id9 = $this->onlineshop_model->get_product_by_main_category_id($p9);
+$j_sub_category_9= json_encode($this->onlineshop_model->get_sub_category_by_main_category_id($p9));
 $product9 = json_encode($main_category_id9);
 
 ?>
@@ -969,26 +981,34 @@ $product9 = json_encode($main_category_id9);
             });
             client.controller('userProduct2', function($scope) {
             $scope.product2 = <?php echo $product2; ?>;
+            $scope.j_sub_category_2 = <?php echo $j_sub_category_2; ?>;
             });
             client.controller('userProduct3', function($scope) {
             $scope.product3 = <?php echo $product3; ?>;
+            $scope.j_sub_category_3 = <?php echo $j_sub_category_3; ?>;
             });
             client.controller('userProduct4', function($scope) {
             $scope.product4 = <?php echo $product4; ?>;
+            $scope.j_sub_category_4 = <?php echo $j_sub_category_4; ?>;
             });
             client.controller('userProduct5', function($scope) {
             $scope.product5 = <?php echo $product5; ?>;
+            $scope.j_sub_category_5 = <?php echo $j_sub_category_5; ?>;
             });
             client.controller('userProduct6', function($scope) {
             $scope.product6 = <?php echo $product6; ?>;
+            $scope.j_sub_category_6 = <?php echo $j_sub_category_6; ?>;
             });
             client.controller('userProduct7', function($scope) {
             $scope.product7 = <?php echo $product7; ?>;
+            $scope.j_sub_category_7 = <?php echo $j_sub_category_7; ?>;
             });
             client.controller('userProduct8', function($scope) {
             $scope.product8 = <?php echo $product8; ?>;
+            $scope.j_sub_category_8 = <?php echo $j_sub_category_8; ?>;
             });
             client.controller('userProduct9', function($scope) {
             $scope.product9 = <?php echo $product9; ?>;
+            $scope.j_sub_category_9 = <?php echo $j_sub_category_9; ?>;
             });
 </script>
