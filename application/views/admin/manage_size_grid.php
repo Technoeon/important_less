@@ -1,7 +1,7 @@
 
 <!-- START YOUR CONTENT HERE -->										
 <!-- //row -->
-<div class="col-lg-12" ng-controller="productSize">
+<div class="col-lg-12">
     <div class="row">
         <div class="col-lg-1"></div>
         <div class="col-lg-10">
@@ -22,22 +22,24 @@
                             </tr>
                         </thead>
                         <tbody>
-                            
-                            <tr ng-repeat="size in size">
+                            <?php
+                            foreach ($product_size as $v_size) {
+                                ?>
+                            <tr>
                                
-                                <td>{{size.size_name}}</td>
-
+                                <td><?php echo $v_size->size_name?></td>
 
                                 <td>
                                     <div class="btn-group btn-group-xs ">
+                                       
+                                        <a href="<?php echo base_url() ?>te_admin/edit_size/<?php echo $v_size->size_name;?>" class="btn btn-inverse"><i class="fa fa-pencil icon-only"title="edit"></i></a>
                                         
-                                        <a href="#" class="btn btn-inverse"><i class="fa fa-pencil icon-only"title="edit"></i></a>
                                     
                                        <a href="#" class="btn btn-danger"><i class="fa fa-times icon-only"title="delete"></i></a>
                                     </div>
                                 </td>
                             </tr>
-
+                            <?php }?>
                         </tbody>
                     </table>
                     <div class="btn-group pull-right">
@@ -57,12 +59,7 @@
 </div>
 
 <!-- END YOUR CONTENT HERE -->
-<script>
-    te.controller('productSize', function($scope) {
-        $scope.size = <?php echo $product_size; ?>;
-        
-    });
-</script>
+
 
 
 
