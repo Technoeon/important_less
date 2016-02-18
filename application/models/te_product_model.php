@@ -103,7 +103,7 @@ class Te_Product_Model extends CI_model {
         $this->db->update('tbl_product');
     }
     public function get_product_and_discount($product_id){
-        $sql = "select p.product_name, p.product_model, p.product_quantity, p.product_price, p.product_sku, d.discount_price, d.start_date, d.end_date from tbl_product as p join tbl_discount as d on p.product_id = d.product_id where p.product_id='$product_id'";
+        $sql = "select p.product_name, p.product_model, p.product_quantity, p.product_price, p.product_sku, d.discount_id, d.discount_price, d.start_date, d.end_date from tbl_product as p left outer join tbl_discount as d on p.product_id = d.product_id where p.product_id='$product_id'";
         $query_result = $this->db->query($sql);
         $result = $query_result->row();
         return $result;
