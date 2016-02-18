@@ -477,6 +477,9 @@ class Te_Admin extends CI_Controller {
         $data = array();
         $data['product_id']=$product_id;
         $data['product_info']=$this->te_product_model->get_product_and_discount($product_id);
+//        echo '<pre>';
+//        print_r($data);
+//        exit();
         $data['title'] = 'Edit Product';
         $data['main_content'] = $this->load->view('admin/edit_product_form',$data,TRUE);
         $this->load->view('admin/admin_master',$data);
@@ -494,7 +497,7 @@ class Te_Admin extends CI_Controller {
         $discount['start_date']=  $this->input->post('start_date', true);
         $discount['end_date']=  $this->input->post('end_date', true);
         $this->te_product_model->update_product($product_id,$product);
-         $this->te_product_model->update_discount($product_id,$discount);
+        $this->te_product_model->update_discount($product_id,$discount);
         $sdata = array();
         $sdata['message'] = 'Update Product Information Successfully !';
         $this->session->set_userdata($sdata);
@@ -514,13 +517,20 @@ class Te_Admin extends CI_Controller {
         $data = array();
         $data['size_id']=$size_id;
         $data['product_size']=$this->te_product_model->get_size_by_size_id($size_id);
-        /*echo '<pre>';
-        print_r($data);
-        exit();*/
-        
         $data['title'] = 'Edit product size';
         $data['main_content'] = $this->load->view('admin/edit_product_size_form',$data,TRUE);
         $this->load->view('admin/admin_master',$data);
+    }
+    public function update_size(){
+      $data=array();
+      $size_id=$this->input->post('size_id', true);
+      $size_name=$this->input->post('size_name',true);
+      $this->te_product_model->update_product_size($size_id,$size_name);
+      $sdata = array();
+      $sdata['message']= 'Update Product Size Successfully !';
+      $this->session->set_userdata($sdata);
+      redirect('te_admin/manage_product');
+      
     }
      public function manage_description(){
       $data=array();
@@ -530,7 +540,7 @@ class Te_Admin extends CI_Controller {
        /*echo '<pre>';
       print_r($product_id);
       exit();*/
-      $data['product_description']=json_encode($this->te_product_model->get_description_by_product_id($product_id));
+      $data['product_description']=$this->te_product_model->get_description_by_product_id($product_id);
        /*echo '<pre>';
       print_r($data);
       exit();*/

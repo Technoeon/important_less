@@ -45,7 +45,7 @@
                                     <input type="text" name="product_price" class="form-control" value="<?php echo $product_info->product_price; ?>">
                                     <div class="space-4"></div>
                                     <level>Discount:</level><br><br>
-                                    <input type="text" name="discount_price" class="form-control" value="<?php echo $product_info->discount_price; ?>"><br>
+                                    <input type="text" name="discount_price" class="form-control" value="<?php if($product_info->product_discount){echo $product_info->discount_price; }?>"><br>
                                     <level>Discount Start Date</level>
                                     <input type="date" name="start_date" class="form-control" value="<?php echo $product_info->start_date; ?>"><br>
                                     <level>Discount Ending Date</level>

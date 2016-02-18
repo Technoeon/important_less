@@ -146,16 +146,18 @@ class Te_Product_Model extends CI_model {
         $this->db->delete('tbl_description');
     }
     public function get_size_by_size_id($size_id){
-        $this->db->select('size_id');
+        //$this->db->select('size_id');
         $this->db->select('size_name');
         $this->db->where('size_id',$size_id);
         $this->db->from('tbl_product_size');
         $query = $this->db->get();
-        return $query->row();
+        $result=$query->row();
+        return $result->size_name;
     }
-    public function update_product_size($size_id,$date){
+    public function update_product_size($size_id,$size_name){
+        $this->db->set('size_name',$size_name);
         $this->db->where('size_id', $size_id);
-        $this->db->update('tbl_product_size', $date);
+        $this->db->update('tbl_product_size');
     }
     public function get_description_by_description_id($description_id){
         $this->db->select('description_id');

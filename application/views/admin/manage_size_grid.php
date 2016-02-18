@@ -32,7 +32,7 @@
                                 <td>
                                     <div class="btn-group btn-group-xs ">
                                        
-                                        <a href="<?php echo base_url() ?>te_admin/edit_size/<?php echo $v_size->size_name;?>" class="btn btn-inverse"><i class="fa fa-pencil icon-only"title="edit"></i></a>
+                                        <a href="<?php echo base_url() ?>te_admin/edit_size/<?php echo $v_size->size_id;?>" class="btn btn-inverse"><i class="fa fa-pencil icon-only"title="edit"></i></a>
                                         
                                     
                                        <a href="#" class="btn btn-danger"><i class="fa fa-times icon-only"title="delete"></i></a>

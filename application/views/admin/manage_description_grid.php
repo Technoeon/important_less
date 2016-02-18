@@ -1,7 +1,7 @@
 
 <!-- START YOUR CONTENT HERE -->										
 <!-- //row -->
-<div class="col-lg-12" ng-controller="productDescription">
+<div class="col-lg-12">
     <div class="row">
         <div class="col-lg-1"></div>
         <div class="col-lg-10">
@@ -21,9 +21,13 @@
                             </tr>
                         </thead>
                         <tbody>
-
-                            <tr ng-repeat="pdescription in pdescription">
-                                <td>{{pdescription.description}}</td>
+                            <?php 
+                            foreach($product_description as $v_description){
+                                
+                            
+                            ?>
+                            <tr>
+                                <td><?php echo $v_description->description;?></td>
                                
 
                                 <td>
@@ -33,7 +37,7 @@
                                     </div>
                                 </td>
                             </tr>
-
+                            <?php } ?>
                         </tbody>
                     </table>
                     <div class="btn-group pull-right">
