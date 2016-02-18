@@ -824,9 +824,6 @@ $p8=0;
                                 </div>
                             </div>
                             <!-- End Item --> 
-
-                          
-
                         </div>
                     </div>
                 </div>
@@ -924,10 +921,6 @@ $p9=0;
                                 </div>
                             </div>
                             <!-- End Item --> 
-
-
-
-
                         </div>
                     </div>
                 </div>
