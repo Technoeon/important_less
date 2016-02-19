@@ -12,19 +12,30 @@
                     </div>
                     <div class="clearfix"></div>
                 </div>
-                <div class="portlet-body no-padding-top no-padding-bottom">												
+                <div class="portlet-body no-padding-top no-padding-bottom">
+                     <div class="btn-group btn-group-xs pull-right"><br>
+                        <div class="btn-group ">
+                            <form action="<?php echo base_url()?>te_admin/add_description" method="post">
+<!--                                <textarea rows="4" cols="50"></textarea>-->
+                                <input type="hidden" name="product_id"value="<?php echo $product_id;?>">
+                                <input type="submit" value="Add More Description"class="btn btn-danger ">
+                                
+                            </form>
+                    </div>
+                      
+                    </div>
+                    <br><br><br>
                     <table id="products" class="datatable table table-hover table-striped table-bordered tc-table">
                         <thead>
                             <tr>
                                 <th class="center"data-class="expand">Description</th>
-                                <th class="center">Action</th>
+                                <th class="center">Edit</th>
+                                <th class="center">Delete</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php 
                             foreach($product_description as $v_description){
-                                
-                            
                             ?>
                             <tr>
                                 <td><?php echo $v_description->description;?></td>
@@ -32,10 +43,15 @@
 
                                 <td>
                                     <div class="btn-group btn-group-xs ">
-                                        <a href="#" class="btn btn-inverse"><i class="fa fa-pencil icon-only"title="edit"></i></a>
-                                        <a href="#" class="btn btn-danger"><i class="fa fa-times icon-only"title="delete"></i></a>
+                                        <a href="<?php echo base_url()?>te_admin/edit_description/<?php echo $v_description->description_id;?>" class="btn btn-inverse"><i class="fa fa-pencil icon-only"title="edit"></i></a>
+                                        
                                     </div>
                                 </td>
+                                <td>
+                                    <div class="btn-group btn-group-xs ">
+                                        <a href="<?php echo base_url()?>te_admin/delete_description/<?php echo $v_description->description_id;?>" class="btn btn-danger"><i class="fa fa-times icon-only"title="delete"></i></a>
+                                </div>
+                                    </td>
                             </tr>
                             <?php } ?>
                         </tbody>
