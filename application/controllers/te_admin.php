@@ -116,6 +116,18 @@ class Te_Admin extends CI_Controller {
         $data['main_content'] = $this->load->view('admin/manage_main_menu_grid', $data, TRUE);
         $this->load->view('admin/admin_master', $data);
     }
+    public function set_main_menu_image($main_category_id){
+        $data['title'] = 'Menu Menu ID: '. $main_category_id;
+        $data['image']=  $this->admin_model->select_main_category_image($main_category_id);
+        $data['main_content'] = $this->load->view('admin/main_menu_image_grid', $data, TRUE);
+        $this->load->view('admin/admin_master', $data);
+    }
+    public function update_menu_image(){
+        $main_category_id=  $this->input->post('main_category_id', TRUE);
+        $other_image_id=  $this->input->post('other_image_id', TRUE);
+        $this->admin_model->update_main_menu_image($main_category_id,$other_image_id);
+        redirect('te_admin/manage_main_menu');
+    }
 
     public function unpublished_main_menu($main_category_id) {
         $this->admin_model->unpublished_main_menu_category($main_category_id);

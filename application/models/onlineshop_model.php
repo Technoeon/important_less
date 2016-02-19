@@ -14,7 +14,7 @@
 class onlineshop_model extends CI_Model{
     //put your code here
     public function get_main_menu_by_position($position){
-        $sql ="select main_menu_id as id, main_menu_name from vmenu where position='$position' and main_menu_status =1 group by main_menu_id";
+        $sql ="select main_category_id as id, main_category_name as main_menu_name from tbl_main_category where main_category_position='$position' and main_category_status =1";
         $query_result = $this->db->query($sql);
         $result=$query_result->result();
         return $result;
