@@ -160,12 +160,13 @@ class Te_Product_Model extends CI_model {
         $this->db->update('tbl_product_size');
     }
     public function get_description_by_description_id($description_id){
-        $this->db->select('description_id');
+        //$this->db->select('description_id');
         $this->db->select('description');
         $this->db->where('description_id',$description_id);
         $this->db->from('tbl_description');
         $query = $this->db->get();
-        return $query->row();
+        $result=  $query->row();
+        return $result->description;
     }    
     public function update_description($description_id,$data){
         $this->db->where('description_id', $description_id);
@@ -173,7 +174,11 @@ class Te_Product_Model extends CI_model {
     }
 
     // --------Start Managing product product size and discription---------//
-    
-
+    //---------save description----------////////////
+    public function save_description_by_product_id($data){
+        $this->db->insert('tbl_description',$data);
+    }
+    public function save_size_by_product_id($data){
+        $this->db->insert('tbl_product_size',$data);
+    }
 }
-
