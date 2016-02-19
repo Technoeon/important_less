@@ -132,7 +132,7 @@
                                     </div>
                                     <div class="tcb">
                                         <label>
-                                            <input name="product_status" value="2" type="radio" class="tc">
+                                            <input name="product_status" value="0" type="radio" class="tc">
                                             <span class="labels"> Unpublished</span>
                                         </label>
                                     </div>

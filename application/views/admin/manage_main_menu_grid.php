@@ -22,6 +22,7 @@
                                 <th class="center">Position</th>
                                 <th class="center"data-hide="phone">Status</th>
                                 <th class="center">Action</th>
+                                <th class="center">Image</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -36,17 +37,30 @@
                                         <?php
                                         if ($v_main_menu->main_category_status == 1) {
                                             ?>
-                                        <a href="<?php echo base_url(); ?>te_admin/unpublished_main_menu/<?php echo $v_main_menu->main_category_id; ?>"><span class="label label-active"title="Disable">Active</span></a>
-                                        <?php
+                                            <a href="<?php echo base_url(); ?>te_admin/unpublished_main_menu/<?php echo $v_main_menu->main_category_id; ?>"><span class="label label-active"title="Disable">Active</span></a>
+                                            <?php
                                         } else {
                                             ?>
-                                        <a href="<?php echo base_url(); ?>te_admin/published_main_menu/<?php echo $v_main_menu->main_category_id; ?>"><span class="label label-inverse"title="Active">Disable</span></a>
+                                            <a href="<?php echo base_url(); ?>te_admin/published_main_menu/<?php echo $v_main_menu->main_category_id; ?>"><span class="label label-inverse"title="Active">Disable</span></a>
                                         <?php } ?>
                                     </td>
                                     <td>
                                         <div class="btn-group btn-group-xs ">  
-                                            <a href="<?php echo base_url();?>te_admin/edit_main_menu/<?php echo $v_main_menu->main_category_id;?>" class="btn btn-inverse"><i class="fa fa-pencil icon-only"></i></a>
+                                            <a href="<?php echo base_url(); ?>te_admin/edit_main_menu/<?php echo $v_main_menu->main_category_id; ?>" class="btn btn-inverse"><i class="fa fa-pencil icon-only"></i></a>
                                         </div>
+                                    </td>
+                                    <td>
+                                        <?php if ($v_main_menu->other_image_id == 0) { ?>
+                                            <div class="btn-group btn-group-sm ">  
+                                                <a href="<?php echo base_url(); ?>te_admin/set_main_menu_image/<?php echo $v_main_menu->main_category_id; ?>" class="btn btn-info"><i class="fa fa-image icon-only"></i></a>
+                                            </div>
+                                        <?php } else {
+                                            $image=$this->admin_model->get_main_menu_image($v_main_menu->other_image_id);
+                                            ?>
+                                            <div>
+                                                <a href="<?php echo base_url(); ?>te_admin/set_main_menu_image/<?php echo $v_main_menu->main_category_id; ?>"><img class="img-responsive" src="<?php echo base_url().$image ?>" alt="" style="width:60px; height: 50px;"></a>
+                                            </div>
+                                        <?php } ?>
                                     </td>
                                 </tr>
                             <?php } ?>
