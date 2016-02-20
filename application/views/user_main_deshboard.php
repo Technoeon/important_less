@@ -69,22 +69,28 @@ echo $leftside_manu;
         <div class='first-block-category-menu-container-men-fasion'>
             <?php
             $sub_menu_id = NULL;
-            $p1=0;
+            $p1 = 0;
             ?> 
 
             <div class='home-13-0-block-category-menu-header-men-fasion'>
-                <h1><?php foreach ($main_menu_1 as $value) { ?> <a href="<?php echo $p1=$value->id; ?>"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
+                <h1><?php foreach ($main_menu_1 as $value) { ?> <a href="<?php echo $p1 = $value->id; ?>"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
             </div>
 
 
             <div class='home-13-0-block-category-menu-wrapper-men-fasion'>
-                
-                        <div class='home-13-0-block-subcategory-name-men-fasion'>
-                            <h3 ng-repeat="s1 in j_sub_category_1"><a ng-click="sub">{{s1.sub_category_name}}</a></h3>
-                        </div>
+
+                <div class='home-13-0-block-subcategory-name-men-fasion'>
+                    <ul>
+                <li>
+                    <label class="lps" ng-repeat="category in j_sub_category_1" ng-init="i = $parent">{{category.sub_category_name}}&nbsp&nbsp&nbsp&nbsp&nbsp
+                        <input class="ips" type="radio" name="category" ng-model="i.sub_category_id" ng-value="category.sub_category_id" />
+                    </label>
+                </li>
+            </ul>
+                    </div>
             </div>
 
-            <div class='home-13-0-block-category-menu-bottom-men-fasion' onclick='ShowHideSubCategory( & #39; home - 13 - 0BlockCategoryMenuWrapper & #39; , 13);'>
+            <div class='home-13-0-block-category-menu-bottom-men-fasion'>
                 More Winter Product  &nbsp;<img id='subcategoryExpandCollaps13' src='images/winter_product/E13.png' width='15' style='padding-bottom:1px;' />
             </div>
         </div>
@@ -105,14 +111,14 @@ echo $leftside_manu;
                         <div class="slider-items slider-width-col3"> 
 
                             <!-- Item -->
-                            <div class="item" ng-repeat="x in product1">
+                            <div class="item" ng-repeat="product in product1| filter:sub_category_id">
                                 <div class="col-item">
                                     <div class="sale-label sale-top-right">Sale</div>
-                                    <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url(); ?>onlineshop/product_details"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="a" /> </a></div>
+                                    <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url(); ?>onlineshop/product_details"> <img src="<?php echo base_url(); ?>{{product.image_path}}" class="img-responsive" alt="a" /> </a></div>
                                     <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="quick-view.html"><span>quickview</span></a> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> <a title="Add to Compare" class="link-compare" href="#"><span>Add to Compare</span></a></span> </div>
                                     <div class="info">
                                         <div class="info-inner">
-                                            <div class="item-title"> <a title=" Sample Product" href="product-detail.html">{{x.product_name}}</a> </div>
+                                            <div class="item-title"> <a title=" Sample Product" href="product-detail.html">{{product.product_name}}</a> </div>
                                             <!--item-title-->
                                             <div class="item-content">
                                                 <div class="ratings">
@@ -121,10 +127,10 @@ echo $leftside_manu;
                                                     </div>
                                                 </div>
                                                 <div class="price-box">
-                                                    
-                                                    <p class="special-price" ng-if="x.discount == NULL"> <span class="price"> Tk. {{x.product_price}}</span> </p>
-                                                    <p class="special-price" ng-if="x.discount != NULL"> <span class="price"> Tk. {{x.discount}}</span> </p>
-                                                    <p class="old-price" ng-if="x.discount != NULL"><span class="price-sep">-</span> <span class="price">TK. {{x.product_price}} </span> </p>
+
+                                                    <p class="special-price" ng-if="product.discount == NULL"> <span class="price"> Tk. {{product.product_price}}</span> </p>
+                                                    <p class="special-price" ng-if="product.discount != NULL"> <span class="price"> Tk. {{product.discount}}</span> </p>
+                                                    <p class="old-price" ng-if="product.discount != NULL"><span class="price-sep">-</span> <span class="price">TK. {{product.product_price}} </span> </p>
                                                 </div>
                                             </div>
                                             <!--item-content--> 
@@ -165,20 +171,20 @@ echo $leftside_manu;
         <div class='first-block-category-menu-container-manu2-fasion'>
             <?php
             $sub_menu_id = NULL;
-            $p2=0;
+            $p2 = 0;
             ?> 
 
             <div class='home-13-0-block-category-menu-header-manu2-fasion'>
-                <h1><?php foreach ($main_menu_2 as $value) { ?> <a href="<?php echo $p2=$value->id; ?>"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
+                <h1><?php foreach ($main_menu_2 as $value) { ?> <a href="<?php echo $p2 = $value->id; ?>"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
             </div>
 
 
             <div class='home-13-0-block-category-menu-wrapper-manu2-fasion'>
-                
-                        <div class='home-13-0-block-subcategory-name-manu2-fasion'>
-                            <h3 ng-repeat="s1 in j_sub_category_2"><a ng-click="sub">{{s1.sub_category_name}}</a></h3>
-                        </div>
-   
+
+                <div class='home-13-0-block-subcategory-name-manu2-fasion'>
+                    <h3 ng-repeat="s1 in j_sub_category_2"><a ng-click="sub">{{s1.sub_category_name}}</a></h3>
+                </div>
+
             </div>
 
             <div class='home-13-0-block-category-menu-bottom-manu2-fasion' onclick='ShowHideSubCategory( & #39; home - 13 - 0BlockCategoryMenuWrapper & #39; , 13);'>
@@ -209,7 +215,7 @@ echo $leftside_manu;
                                     <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="quick-view.html"><span>quickview</span></a> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> <a title="Add to Compare" class="link-compare" href="#"><span>Add to Compare</span></a></span> </div>
                                     <div class="info">
                                         <div class="info-inner">
-                                           <div class="item-title"> <a title=" Sample Product" href="product-detail.html">{{x.product_name}}</a> </div>
+                                            <div class="item-title"> <a title=" Sample Product" href="product-detail.html">{{x.product_name}}</a> </div>
                                             <!--item-title-->
                                             <div class="item-content">
                                                 <div class="ratings">
@@ -235,7 +241,7 @@ echo $leftside_manu;
                                     </div>
                                 </div>
                             </div>
-                         
+
                         </div>
                     </div>
                 </div>
@@ -258,23 +264,24 @@ echo $leftside_manu;
         <div class='first-block-category-menu-container-menu3-fasion'>
             <?php
             $sub_menu_id = NULL;
-            $p3=0;
+            $p3 = 0;
             ?> 
 
             <div class='home-13-0-block-category-menu-header-menu3-fasion'>
-                <h1><?php foreach ($main_menu_3 as $value) { ?> <a href="<?php echo $p3=$value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
+                <h1><?php foreach ($main_menu_3 as $value) { ?> <a href="<?php echo $p3 = $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
             </div>
 
 
             <div class='home-13-0-block-category-menu-wrapper-menu3-fasion'>
-<?php foreach ($sub_menu_3 as $sub_menu_value) { ?>
-                                <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
+                <?php foreach ($sub_menu_3 as $sub_menu_value) { ?>
+                    <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
                         <div class='home-13-0-block-subcategory-name-menu3-fasion'>
-                            <h3><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php echo $sub_menu_value->sub_menu_name;
+                            <h3><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php
+                                    echo $sub_menu_value->sub_menu_name;
                                     $sub_menu_id = $sub_menu_value->sub_menu_id;
                                     ?></a></h3>
                         </div>
-    <?php } ?>
+                    <?php } ?>
 <?php } ?>
             </div>
 
@@ -333,7 +340,7 @@ echo $leftside_manu;
                                 </div>
                             </div>
                             <!-- End Item --> 
-                         </div>
+                        </div>
                     </div>
                 </div>
 
@@ -353,22 +360,23 @@ echo $leftside_manu;
     </div>
     <div class=''>
         <div class='first-block-category-menu-container-menu4-fasion'>
-<?php
-$sub_menu_id = NULL;
-$p4=0;
-?> 
+            <?php
+            $sub_menu_id = NULL;
+            $p4 = 0;
+            ?> 
 
             <div class='home-13-0-block-category-menu-header-menu4-fasion'>
-                <h1><?php foreach ($main_menu_4 as $value) { ?> <a href="<?php echo $p4=$value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
+                <h1><?php foreach ($main_menu_4 as $value) { ?> <a href="<?php echo $p4 = $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
             </div>
 
 
             <div class='home-13-0-block-category-menu-wrapper-menu4-fasion'>
-                            <?php foreach ($sub_menu_4 as $sub_menu_value) { ?>
-                                <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
+                <?php foreach ($sub_menu_4 as $sub_menu_value) { ?>
+    <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
                         <div class='home-13-0-block-subcategory-name-menu4-fasion'>
-                            <h3><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php echo $sub_menu_value->sub_menu_name;
-                $sub_menu_id = $sub_menu_value->sub_menu_id;
+                            <h3><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php
+                                    echo $sub_menu_value->sub_menu_name;
+                                    $sub_menu_id = $sub_menu_value->sub_menu_id;
                                     ?></a></h3>
                         </div>
     <?php } ?>
@@ -399,11 +407,11 @@ $p4=0;
                             <div class="item" ng-repeat="x in product4">
                                 <div class="col-item">
                                     <div class="sale-label sale-top-right">Sale</div>
-                                   <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url(); ?>onlineshop/product_details"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="a" /> </a></div>
+                                    <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url(); ?>onlineshop/product_details"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="a" /> </a></div>
                                     <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="quick-view.html"><span>quickview</span></a> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> <a title="Add to Compare" class="link-compare" href="#"><span>Add to Compare</span></a></span> </div>
                                     <div class="info">
                                         <div class="info-inner">
-                                           <div class="item-title"> <a title=" Sample Product" href="product-detail.html">{{x.product_name}}</a> </div>
+                                            <div class="item-title"> <a title=" Sample Product" href="product-detail.html">{{x.product_name}}</a> </div>
                                             <!--item-title-->
                                             <div class="item-content">
                                                 <div class="ratings">
@@ -431,7 +439,7 @@ $p4=0;
                             </div>
                             <!-- End Item --> 
 
-                         
+
                         </div>
                     </div>
                 </div>
@@ -452,23 +460,24 @@ $p4=0;
     </div>
     <div class=''>
         <div class='first-block-category-menu-container-menu5-fasion'>
-<?php
-$sub_menu_id = NULL;
-$p5=0;
-?> 
+            <?php
+            $sub_menu_id = NULL;
+            $p5 = 0;
+            ?> 
 
             <div class='home-13-0-block-category-menu-header-menu5-fasion'>
-                <h1><?php foreach ($main_menu_5 as $value) { ?> <a href="<?php echo $p5=$value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
+                <h1><?php foreach ($main_menu_5 as $value) { ?> <a href="<?php echo $p5 = $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
             </div>
 
 
             <div class='home-13-0-block-category-menu-wrapper-menu5-fasion'>
-                            <?php foreach ($sub_menu_5 as $sub_menu_value) { ?>
-                    <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
+<?php foreach ($sub_menu_5 as $sub_menu_value) { ?>
+                                <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
                         <div class='home-13-0-block-subcategory-name-menu5-fasion'>
-                            <h3><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php echo $sub_menu_value->sub_menu_name;
-                $sub_menu_id = $sub_menu_value->sub_menu_id;
-                ?></a></h3>
+                            <h3><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php
+                            echo $sub_menu_value->sub_menu_name;
+                            $sub_menu_id = $sub_menu_value->sub_menu_id;
+                                    ?></a></h3>
                         </div>
     <?php } ?>
 <?php } ?>
@@ -550,23 +559,24 @@ $p5=0;
     </div>
     <div class=''>
         <div class='first-block-category-menu-container-menu6-fasion'>
-<?php
-$sub_menu_id = NULL;
-$p6=0;
-?> 
+            <?php
+            $sub_menu_id = NULL;
+            $p6 = 0;
+            ?> 
 
             <div class='home-13-0-block-category-menu-header-menu6-fasion'>
-                <h1><?php foreach ($main_menu_6 as $value) { ?> <a href="<?php echo $p6=$value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
+                <h1><?php foreach ($main_menu_6 as $value) { ?> <a href="<?php echo $p6 = $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
             </div>
 
 
             <div class='home-13-0-block-category-menu-wrapper-menu6-fasion'>
-                <?php foreach ($sub_menu_6 as $sub_menu_value) { ?>
-                    <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
+                            <?php foreach ($sub_menu_6 as $sub_menu_value) { ?>
+                                <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
                         <div class='home-13-0-block-subcategory-name-menu6-fasion'>
-                            <h3><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php echo $sub_menu_value->sub_menu_name;
-                $sub_menu_id = $sub_menu_value->sub_menu_id;
-                ?></a></h3>
+                            <h3><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php
+                        echo $sub_menu_value->sub_menu_name;
+                        $sub_menu_id = $sub_menu_value->sub_menu_id;
+                        ?></a></h3>
                         </div>
     <?php } ?>
 <?php } ?>
@@ -629,7 +639,7 @@ $p6=0;
                             <!-- End Item --> 
 
 
-                         </div>
+                        </div>
                     </div>
                 </div>
 
@@ -651,21 +661,22 @@ $p6=0;
         <div class='first-block-category-menu-container-menu7-fasion'>
 <?php
 $sub_menu_id = NULL;
-$p7=0;
+$p7 = 0;
 ?> 
 
             <div class='home-13-0-block-category-menu-header-menu7-fasion'>
-                <h1><?php foreach ($main_menu_7 as $value) { ?> <a href="<?php echo $p7=$value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
+                <h1><?php foreach ($main_menu_7 as $value) { ?> <a href="<?php echo $p7 = $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
             </div>
 
 
             <div class='home-13-0-block-category-menu-wrapper-menu7-fasion'>
-                <?php foreach ($sub_menu_7 as $sub_menu_value) { ?>
-                    <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
+                            <?php foreach ($sub_menu_7 as $sub_menu_value) { ?>
+                                <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
                         <div class='home-13-0-block-subcategory-name-menu7-fasion'>
-                            <h3><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php echo $sub_menu_value->sub_menu_name;
-                $sub_menu_id = $sub_menu_value->sub_menu_id;
-                ?></a></h3>
+                            <h3><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php
+                        echo $sub_menu_value->sub_menu_name;
+                        $sub_menu_id = $sub_menu_value->sub_menu_id;
+                        ?></a></h3>
                         </div>
     <?php } ?>
 <?php } ?>
@@ -726,7 +737,7 @@ $p7=0;
                                 </div>
                             </div>
                             <!-- End Item --> 
- 
+
                         </div>
                     </div>
                 </div>
@@ -749,21 +760,22 @@ $p7=0;
         <div class='first-block-category-menu-container-menu8-fasion'>
 <?php
 $sub_menu_id = NULL;
-$p8=0;
+$p8 = 0;
 ?> 
 
             <div class='home-13-0-block-category-menu-header-menu8-fasion'>
-                <h1><?php foreach ($main_menu_8 as $value) { ?> <a href="<?php echo $p8=$value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
+                <h1><?php foreach ($main_menu_8 as $value) { ?> <a href="<?php echo $p8 = $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
             </div>
 
 
             <div class='home-13-0-block-category-menu-wrapper-menu8-fasion'>
-                <?php foreach ($sub_menu_8 as $sub_menu_value) { ?>
-    <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
+                            <?php foreach ($sub_menu_8 as $sub_menu_value) { ?>
+                    <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
                         <div class='home-13-0-block-subcategory-name-menu8-fasion'>
-                            <h3><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php echo $sub_menu_value->sub_menu_name;
-        $sub_menu_id = $sub_menu_value->sub_menu_id;
-        ?></a></h3>
+                            <h3><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php
+                echo $sub_menu_value->sub_menu_name;
+                $sub_menu_id = $sub_menu_value->sub_menu_id;
+                ?></a></h3>
                         </div>
     <?php } ?>
 <?php } ?>
@@ -806,7 +818,7 @@ $p8=0;
                                                     </div>
                                                 </div>
                                                 <div class="price-box">
-                                                   <p class="special-price" ng-if="x.discount == NULL"> <span class="price"> Tk. {{x.product_price}}</span> </p>
+                                                    <p class="special-price" ng-if="x.discount == NULL"> <span class="price"> Tk. {{x.product_price}}</span> </p>
                                                     <p class="special-price" ng-if="x.discount != NULL"> <span class="price"> Tk. {{x.discount}}</span> </p>
                                                     <p class="old-price" ng-if="x.discount != NULL"><span class="price-sep">-</span> <span class="price">TK. {{x.product_price}} </span> </p>
                                                 </div>
@@ -846,21 +858,22 @@ $p8=0;
         <div class='first-block-category-menu-container-menu9-fasion'>
 <?php
 $sub_menu_id = NULL;
-$p9=0;
+$p9 = 0;
 ?> 
 
             <div class='home-13-0-block-category-menu-header-menu9-fasion'>
-                <h1><?php foreach ($main_menu_9 as $value) { ?> <a href="<?php echo $p9=$value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
+                <h1><?php foreach ($main_menu_9 as $value) { ?> <a href="<?php echo $p9 = $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
             </div>
 
 
             <div class='home-13-0-block-category-menu-wrapper-menu9-fasion'>
-<?php foreach ($sub_menu_9 as $sub_menu_value) { ?>
-    <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
+                <?php foreach ($sub_menu_9 as $sub_menu_value) { ?>
+                    <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
                         <div class='home-13-0-block-subcategory-name-menu9-fasion'>
-                            <h3><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php echo $sub_menu_value->sub_menu_name;
-        $sub_menu_id = $sub_menu_value->sub_menu_id;
-        ?></a></h3>
+                            <h3><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php
+                echo $sub_menu_value->sub_menu_name;
+                $sub_menu_id = $sub_menu_value->sub_menu_id;
+                ?></a></h3>
                         </div>
     <?php } ?>
 <?php } ?>
@@ -938,70 +951,76 @@ $p9=0;
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <?php
 $main_category_id1 = $this->onlineshop_model->get_product_by_main_category_id($p1);
-$j_sub_category_1= json_encode($this->onlineshop_model->get_sub_category_by_main_category_id($p1));
+$j_sub_category_1 = json_encode($this->onlineshop_model->get_sub_category_by_main_category_id($p1));
 //echo $j_sub_category_1;
 $product1 = json_encode($main_category_id1);
+echo $product1;
+echo '</br>';
+echo $j_sub_category_1;
+
 $main_category_id2 = $this->onlineshop_model->get_product_by_main_category_id($p2);
-$j_sub_category_2= json_encode($this->onlineshop_model->get_sub_category_by_main_category_id($p2));
+$j_sub_category_2 = json_encode($this->onlineshop_model->get_sub_category_by_main_category_id($p2));
 $product2 = json_encode($main_category_id2);
 $main_category_id3 = $this->onlineshop_model->get_product_by_main_category_id($p3);
-$j_sub_category_3= json_encode($this->onlineshop_model->get_sub_category_by_main_category_id($p3));
+$j_sub_category_3 = json_encode($this->onlineshop_model->get_sub_category_by_main_category_id($p3));
 $product3 = json_encode($main_category_id3);
 $main_category_id4 = $this->onlineshop_model->get_product_by_main_category_id($p4);
-$j_sub_category_4= json_encode($this->onlineshop_model->get_sub_category_by_main_category_id($p4));
+$j_sub_category_4 = json_encode($this->onlineshop_model->get_sub_category_by_main_category_id($p4));
 $product4 = json_encode($main_category_id4);
 $main_category_id5 = $this->onlineshop_model->get_product_by_main_category_id($p5);
-$j_sub_category_5= json_encode($this->onlineshop_model->get_sub_category_by_main_category_id($p5));
+$j_sub_category_5 = json_encode($this->onlineshop_model->get_sub_category_by_main_category_id($p5));
 $product5 = json_encode($main_category_id5);
 $main_category_id6 = $this->onlineshop_model->get_product_by_main_category_id($p6);
-$j_sub_category_6= json_encode($this->onlineshop_model->get_sub_category_by_main_category_id($p6));
+$j_sub_category_6 = json_encode($this->onlineshop_model->get_sub_category_by_main_category_id($p6));
 $product6 = json_encode($main_category_id6);
 $main_category_id7 = $this->onlineshop_model->get_product_by_main_category_id($p7);
-$j_sub_category_7= json_encode($this->onlineshop_model->get_sub_category_by_main_category_id($p7));
+$j_sub_category_7 = json_encode($this->onlineshop_model->get_sub_category_by_main_category_id($p7));
 $product7 = json_encode($main_category_id7);
 $main_category_id8 = $this->onlineshop_model->get_product_by_main_category_id($p8);
-$j_sub_category_8= json_encode($this->onlineshop_model->get_sub_category_by_main_category_id($p8));
+$j_sub_category_8 = json_encode($this->onlineshop_model->get_sub_category_by_main_category_id($p8));
 $product8 = json_encode($main_category_id8);
 $main_category_id9 = $this->onlineshop_model->get_product_by_main_category_id($p9);
-$j_sub_category_9= json_encode($this->onlineshop_model->get_sub_category_by_main_category_id($p9));
+$j_sub_category_9 = json_encode($this->onlineshop_model->get_sub_category_by_main_category_id($p9));
 $product9 = json_encode($main_category_id9);
-
 ?>
 <script>
-            client.controller('userProduct1', function($scope) {
-            $scope.product1 = <?php echo $product1; ?>;
-            $scope.j_sub_category_1 = <?php echo $j_sub_category_1; ?>;
-            });
-            client.controller('userProduct2', function($scope) {
-            $scope.product2 = <?php echo $product2; ?>;
-            $scope.j_sub_category_2 = <?php echo $j_sub_category_2; ?>;
-            });
-            client.controller('userProduct3', function($scope) {
-            $scope.product3 = <?php echo $product3; ?>;
-            $scope.j_sub_category_3 = <?php echo $j_sub_category_3; ?>;
-            });
-            client.controller('userProduct4', function($scope) {
-            $scope.product4 = <?php echo $product4; ?>;
-            $scope.j_sub_category_4 = <?php echo $j_sub_category_4; ?>;
-            });
-            client.controller('userProduct5', function($scope) {
-            $scope.product5 = <?php echo $product5; ?>;
-            $scope.j_sub_category_5 = <?php echo $j_sub_category_5; ?>;
-            });
-            client.controller('userProduct6', function($scope) {
-            $scope.product6 = <?php echo $product6; ?>;
-            $scope.j_sub_category_6 = <?php echo $j_sub_category_6; ?>;
-            });
-            client.controller('userProduct7', function($scope) {
-            $scope.product7 = <?php echo $product7; ?>;
-            $scope.j_sub_category_7 = <?php echo $j_sub_category_7; ?>;
-            });
-            client.controller('userProduct8', function($scope) {
-            $scope.product8 = <?php echo $product8; ?>;
-            $scope.j_sub_category_8 = <?php echo $j_sub_category_8; ?>;
-            });
-            client.controller('userProduct9', function($scope) {
-            $scope.product9 = <?php echo $product9; ?>;
-            $scope.j_sub_category_9 = <?php echo $j_sub_category_9; ?>;
-            });
+    client.controller('userProduct1', function($scope) {
+    $scope.product1 = <?php echo $product1; ?>;
+    $scope.j_sub_category_1 = <?php echo $j_sub_category_1; ?>;
+    
+    //return (val.j_sub_category_1 != 2);
+    
+    });
+    client.controller('userProduct2', function($scope) {
+    $scope.product2 = <?php echo $product2; ?>;
+    $scope.j_sub_category_2 = <?php echo $j_sub_category_2; ?>;
+    });
+    client.controller('userProduct3', function($scope) {
+    $scope.product3 = <?php echo $product3; ?>;
+    $scope.j_sub_category_3 = <?php echo $j_sub_category_3; ?>;
+    });
+    client.controller('userProduct4', function($scope) {
+    $scope.product4 = <?php echo $product4; ?>;
+    $scope.j_sub_category_4 = <?php echo $j_sub_category_4; ?>;
+    });
+    client.controller('userProduct5', function($scope) {
+    $scope.product5 = <?php echo $product5; ?>;
+    $scope.j_sub_category_5 = <?php echo $j_sub_category_5; ?>;
+    });
+    client.controller('userProduct6', function($scope) {
+    $scope.product6 = <?php echo $product6; ?>;
+    $scope.j_sub_category_6 = <?php echo $j_sub_category_6; ?>;
+    });
+    client.controller('userProduct7', function($scope) {
+    $scope.product7 = <?php echo $product7; ?>;
+    $scope.j_sub_category_7 = <?php echo $j_sub_category_7; ?>;
+    });
+    client.controller('userProduct8', function($scope) {
+    $scope.product8 = <?php echo $product8; ?>;
+    $scope.j_sub_category_8 = <?php echo $j_sub_category_8; ?>;
+    });
+    client.controller('userProduct9', function($scope) {
+    $scope.product9 = <?php echo $product9; ?>;
+    $scope.j_sub_category_9 = <?php echo $j_sub_category_9; ?>;
+    });
 </script>

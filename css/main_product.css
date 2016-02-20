@@ -3125,3 +3125,14 @@
 }
 /* End men fasion */
 /*add product manu9 End*/
+
+.ips {
+    visibility:hidden;
+}
+.lps {
+    cursor: pointer;
+    margin-left: 10px;
+}
+.ips :checked + .lps {
+    background: red;
+}
