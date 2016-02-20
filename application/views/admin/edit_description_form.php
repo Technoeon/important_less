@@ -17,14 +17,14 @@
                 
                 <div id="f-1" class="panel-collapse collapse in">
                     <div class="portlet-body">
-                        <form class="form-horizontal" action="<?php echo base_url(); ?>te_admin/update_size" method="post">
+                        <form class="form-horizontal" action="<?php echo base_url(); ?>te_admin/update_description" method="post">
                             <div class="form-group">
                                 <div class="col-sm-12">
                                     <div class="space-4"></div>
-                                    <input type="text" name="size_name" class="form-control" value="<?php echo $product_size;?>"required>
-                                    <input type="hidden" name="size_id" class="form-control" value="<?php echo $size_id;?>"required>
+                                    <textarea rows="4" cols="4" name="description" class="form-control" ><?php echo $description;?></textarea>
+                                    <input type="hidden" name="description_id" class="form-control" value="<?php echo $description_id;?>">
                                     <div class="space-6"></div>
-                                    <button type="submit" value="save"class="pull-right btn btn-primary">Update</button>
+                                    <button type="submit" value="save"class="pull-right btn btn-primary">Submit</button>
                                 </div>
                             </div>											
                         </form>

@@ -103,7 +103,7 @@ class Te_Product_Model extends CI_model {
         $this->db->update('tbl_product');
     }
     public function get_product_and_discount($product_id){
-        $sql = "select p.product_name, p.product_model, p.product_quantity, p.product_price, p.product_sku, d.discount_price, d.start_date, d.end_date from tbl_product as p join tbl_discount as d on p.product_id = d.product_id where p.product_id='$product_id'";
+        $sql = "select p.product_name, p.product_model, p.product_quantity, p.product_price, p.product_sku, d.discount_id, d.discount_price, d.start_date, d.end_date from tbl_product as p left outer join tbl_discount as d on p.product_id = d.product_id where p.product_id='$product_id'";
         $query_result = $this->db->query($sql);
         $result = $query_result->row();
         return $result;
@@ -146,24 +146,27 @@ class Te_Product_Model extends CI_model {
         $this->db->delete('tbl_description');
     }
     public function get_size_by_size_id($size_id){
-        $this->db->select('size_id');
+        //$this->db->select('size_id');
         $this->db->select('size_name');
         $this->db->where('size_id',$size_id);
         $this->db->from('tbl_product_size');
         $query = $this->db->get();
-        return $query->row();
+        $result=$query->row();
+        return $result->size_name;
     }
-    public function update_product_size($size_id,$date){
+    public function update_product_size($size_id,$size_name){
+        $this->db->set('size_name',$size_name);
         $this->db->where('size_id', $size_id);
-        $this->db->update('tbl_product_size', $date);
+        $this->db->update('tbl_product_size');
     }
     public function get_description_by_description_id($description_id){
-        $this->db->select('description_id');
+        //$this->db->select('description_id');
         $this->db->select('description');
         $this->db->where('description_id',$description_id);
         $this->db->from('tbl_description');
         $query = $this->db->get();
-        return $query->row();
+        $result=  $query->row();
+        return $result->description;
     }    
     public function update_description($description_id,$data){
         $this->db->where('description_id', $description_id);
@@ -171,7 +174,11 @@ class Te_Product_Model extends CI_model {
     }
 
     // --------Start Managing product product size and discription---------//
-    
-
+    //---------save description----------////////////
+    public function save_description_by_product_id($data){
+        $this->db->insert('tbl_description',$data);
+    }
+    public function save_size_by_product_id($data){
+        $this->db->insert('tbl_product_size',$data);
+    }
 }
-

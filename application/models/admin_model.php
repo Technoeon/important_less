@@ -70,14 +70,30 @@ class Admin_Model extends CI_Model {
     //--------- Manage Menu Start--------//
     //--------- Manage Main Menu--------//
     public function get_main_category() {
-        $this->db->select('main_category_id');
-        $this->db->select('main_category_name');
-        $this->db->select('main_category_status');
-        $this->db->select('main_category_position');
+        $this->db->select('*');
         $this->db->from('tbl_main_category');
         $this->db->order_by("main_category_position", "asc");
         $query = $this->db->get();
         return $query->result();
+    }
+    public function get_main_menu_image($other_image_id){
+        $this->db->select('menu_image');
+        $this->db->where('other_image_id', $other_image_id);
+        $this->db->from('tbl_others_image ');
+        $query = $this->db->get();
+        $result= $query->row();
+        return $result->menu_image;
+    }
+    public function select_main_category_image($main_category_id){
+        $sql = "select p.main_category_id, p.product_name, o.other_image_id, o.menu_image from tbl_product as p join tbl_others_image as o on p.product_id=o.product_id where p.main_category_id='$main_category_id' and o.menu_image IS NOT NULL";
+        $query_result = $this->db->query($sql);
+        $result = $query_result->result();
+        return $result;
+    }
+    public function update_main_menu_image($main_category_id,$other_image_id){
+        $this->db->set('other_image_id',$other_image_id);
+        $this->db->where('main_category_id', $main_category_id);
+        $this->db->update('tbl_main_category');
     }
 
     public function unpublished_main_menu_category($main_category_id) {

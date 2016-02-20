@@ -12,7 +12,16 @@
                     </div>
                     <div class="clearfix"></div>
                 </div>
-                <div class="portlet-body no-padding-top no-padding-bottom">												
+                <div class="portlet-body no-padding-top no-padding-bottom">
+                    <h5 style="color: green; text-align: center;">
+                    <?php
+                    $message = $this->session->userdata('message');
+                    if ($message) {
+                        echo $message;
+                        $this->session->unset_userdata('message');
+                    }
+                    ?>
+                </h5>
                     <table id="products" class="datatable table table-hover table-striped table-bordered tc-table">
                         <thead>
                             <tr>

@@ -12,15 +12,7 @@
                     </div>
                     <div class="clearfix"></div>
                 </div>
-                <h5 style="color: green; text-align: center;">
-                    <?php
-                    $message = $this->session->userdata('message');
-                    if ($message) {
-                        echo $message;
-                        $this->session->unset_userdata('message');
-                    }
-                    ?>
-                </h5>
+                
                 <div id="f-1" class="panel-collapse collapse in">
                     <div class="portlet-body">
                         <form class="form-horizontal" action="<?php echo base_url(); ?>te_admin/update_product" method="post">
@@ -43,13 +35,14 @@
                                     <div class="space-4"></div>
                                     <level>Price:</level><br><br>
                                     <input type="text" name="product_price" class="form-control" value="<?php echo $product_info->product_price; ?>">
-                                    <div class="space-4"></div>
+                                    <div class="space-4"></div><?php if(isset($product_info->discount_id)){ ?>
                                     <level>Discount:</level><br><br>
-                                    <input type="text" name="discount_price" class="form-control" value="<?php echo $product_info->discount_price; ?>"><br>
+                                    <input type="text" name="discount_price" class="form-control" value="<?php echo $product_info->discount_price;?>"><br>
                                     <level>Discount Start Date</level>
                                     <input type="date" name="start_date" class="form-control" value="<?php echo $product_info->start_date; ?>"><br>
                                     <level>Discount Ending Date</level>
                                     <input type="date" name="end_date" class="form-control" value="<?php echo $product_info->end_date; ?>"><br>
+                                    <?php }?>
                                     <div class="space-6"></div>
                                     <button type="submit" value="update"class="pull-right btn btn-primary">Update</button>
                                 </div>
