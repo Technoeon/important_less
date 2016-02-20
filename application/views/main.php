@@ -67,7 +67,7 @@
                                     <div class="links">
                                         <div class="myaccount"><a title="My Account" href="<?php echo base_url(); ?>onlineshop/user_account"><span class="hidden-xs">Contact Us</span></a></div>
                                         <div class="myaccount"><a title="My Account" href="<?php echo base_url(); ?>onlineshop/user_account"><span class="hidden-xs">My Account</span></a></div>
-                                        <div class="wishlist"><a title="My Wishlist"  href="<?php echo base_url(); ?>onlineshop/user_wishlist"><span class="hidden-xs">Wishlist</span></a></div>
+                                        <div class="wishlist"><a title="My Wishlist"  href="<?php echo base_url(); ?>onlineshop/product_category"><span class="hidden-xs">Wishlist</span></a></div>
                                         <div class="check"><a title="Checkout" href="<?php echo base_url(); ?>onlineshop/user_checkout"><span class="hidden-xs">Checkout</span></a></div>
                                         <div class="login"><a title="Login" href="<?php echo base_url(); ?>onlineshop/user_login"><span  class="hidden-xs">Log In</span></a></div>
                                     </div>
