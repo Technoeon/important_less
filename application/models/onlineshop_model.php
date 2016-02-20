@@ -46,5 +46,17 @@ class onlineshop_model extends CI_Model{
         $query = $this->db->get();
         return $query->result();
     }
+    public function get_product_by_category_id($category_id){
+        $sql ="select `product_id`,`main_category_id`,`sub_category_id`,`category_id` ,`product_name`,`product_price`,`image_path`, ( CASE WHEN start_date <= CURDATE() AND end_date >= CURDATE() THEN `discount_price` ELSE `discount_price`=null END) as discount from vproduct where default_image=1 and product_status=1 and category_id='$category_id'";
+        $query_result = $this->db->query($sql);
+        $result=$query_result->result();
+        return $result;
+    }
+    public function get_product_by_sub_category_id($sub_category_id){
+        $sql ="select `product_id`,`main_category_id`,`sub_category_id`,`category_id` ,`product_name`,`product_price`,`image_path`, ( CASE WHEN start_date <= CURDATE() AND end_date >= CURDATE() THEN `discount_price` ELSE `discount_price`=null END) as discount from vproduct where default_image=1 and product_status=1 and sub_category_id='$sub_category_id'";
+        $query_result = $this->db->query($sql);
+        $result=$query_result->result();
+        return $result;
+    }
     
 }
