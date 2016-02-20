@@ -485,6 +485,10 @@ class Te_Admin extends CI_Controller {
 
     public function edit_product($product_id) {
         $data = array();
+//        $data['discount_price']=$discount_price;
+//        echo '<pre>';
+//        print_r($discount_id);
+//        exit();
         $data['product_id'] = $product_id;
         $data['product_info'] = $this->te_product_model->get_product_and_discount($product_id);
 //        echo '<pre>';
@@ -517,7 +521,17 @@ class Te_Admin extends CI_Controller {
         $this->session->set_userdata($sdata);
         redirect('te_admin/manage_product');
     }
-
+//-------start add discount-------//
+    public function add_discount(){
+        $discount = array();
+        $product_id=$this->input->post('product_id',TRUE);
+        $discount['product_id']=$product_id;
+        $discount['discount_price'] = $this->input->post('discount_price', TRUE);
+        $discount['start_date'] = $this->input->post('start_date', TRUE);
+        $discount['end_date'] = $this->input->post('end_date', TRUE);
+        $this->te_product_model->set_discount($discount);
+        redirect('te_admin/edit_product/'.$product_id);
+    }
     //-----start add_size-------//
   public function add_size() {
         $data = array();

@@ -8,7 +8,7 @@
                         <h4>Update Main Menu</h4>
                     </div>
                     <div class="portlet-widgets">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#f-1"><i class="fa fa-chevron-down"></i></a>
+                        <a data-toggle="collapse" data-parent="#accordion" href="#f-1"><i class="#"></i></a>
                     </div>
 
                     <div class="clearfix"></div>

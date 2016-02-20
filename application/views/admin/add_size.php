@@ -19,7 +19,7 @@
                             <div class="form-group">
                                 <div class="col-sm-12">
                                     <div class="space-4"></div>
-                                    <textarea rows="4" cols="50" name="size_name"></textarea>
+                                    <input type="text"name="size_name">
                                     <input type="hidden" name="product_id" value="<?php echo $product_id?>">
                                     <button type="submit" value="save"class="pull-right btn btn-primary">Submit</button>
                                 </div>
