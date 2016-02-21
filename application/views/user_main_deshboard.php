@@ -70,7 +70,7 @@ echo $leftside_manu;
             <?php
             $sub_menu_id = NULL;
             $p1 = 0;
-            $main_menu_1_img = 0;
+            $main_menu_1_img;
             ?> 
             <?php
             foreach ($main_menu_1 as $value) {
@@ -80,9 +80,7 @@ echo $leftside_manu;
                     $main_menu_product_id_1 = $value->product_id;
                 }
                 ?>
-            <?php } ?>
-
-
+<?php } ?>
             <div class='home-13-0-block-category-menu-header-men-fasion'>
                 <h1><?php foreach ($main_menu_1 as $value) { ?> <a href="<?php echo $p1 = $value->id; ?>"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
             </div>
@@ -91,24 +89,19 @@ echo $leftside_manu;
             <div class='home-13-0-block-category-menu-wrapper-men-fasion'>
 
                 <div class='home-13-0-block-subcategory-name-men-fasion'>
-                    <ul>
-                        <li>
-                            <label class="lps" ng-repeat="category in j_sub_category_1" ng-init="i = $parent">{{category.sub_category_name}}&nbsp&nbsp&nbsp&nbsp&nbsp
-                                <input class="ips" type="radio" name="category" ng-model="i.sub_category_id" ng-value="category.sub_category_id" />
-                            </label>
-                        </li>
-                    </ul>
+                    <h3 ng-repeat="s1 in j_sub_category_1"><a href="<?php echo base_url().'onlineshop/product_sub_category/'?>{{s1.sub_category_id}}">{{s1.sub_category_name}}</a></h3>
                 </div>
+
             </div>
 
-            <div class='home-13-0-block-category-menu-bottom-men-fasion'>
+            <div class='home-13-0-block-category-menu-bottom-men-fasion' onclick='ShowHideSubCategory( & #39; home - 13 - 0BlockCategoryMenuWrapper & #39; , 13);'>
                 More Winter Product  &nbsp;<img id='subcategoryExpandCollaps13' src='images/winter_product/E13.png' width='15' style='padding-bottom:1px;' />
             </div>
         </div>
         <?php if (isset($main_menu_product_id_1)) { ?>
             <div class='first-block-image-container-men-fasion' >
-                <a href='<?php base_url() ?>onlineshop/' title='More Winter'  target='_blank'>
-                    <img  src='<?php echo base_url() . $main_menu_1_img; ?>'/>
+                <a href='<?php echo base_url() ?>onlineshop/' title='more women'  target='_blank'>
+                    <img style="width: 287px;height: 387px;" src='<?php echo base_url() . $main_menu_1_img; ?>'/>
                 </a>
             </div>
         <?php } ?>
@@ -180,7 +173,7 @@ echo $leftside_manu;
             <?php
             $sub_menu_id = NULL;
             $p2 = 0;
-            $main_menu_2_img = 0;
+            $main_menu_2_img;
             ?> 
             <?php
             foreach ($main_menu_2 as $value) {
@@ -199,7 +192,7 @@ echo $leftside_manu;
             <div class='home-13-0-block-category-menu-wrapper-manu2-fasion'>
 
                 <div class='home-13-0-block-subcategory-name-manu2-fasion'>
-                    <h3 ng-repeat="s1 in j_sub_category_2"><a ng-click="sub">{{s1.sub_category_name}}</a></h3>
+                    <h3 ng-repeat="s1 in j_sub_category_2"><a href="<?php echo base_url().'onlineshop/product_sub_category/'?>{{s1.sub_category_id}}">{{s1.sub_category_name}}</a></h3>
                 </div>
 
             </div>
@@ -208,13 +201,13 @@ echo $leftside_manu;
                 More Winter Product  &nbsp;<img id='subcategoryExpandCollaps13' src='images/winter_product/E13.png' width='15' style='padding-bottom:1px;' />
             </div>
         </div>
-<?php if (isset($main_menu_product_id_2)) { ?>
+        <?php if (isset($main_menu_product_id_2)) { ?>
             <div class='first-block-image-container-manu2-fasion' >
                 <a href='<?php echo base_url() ?>onlineshop/' title='more women'  target='_blank'>
-                    <img style="width: 300px;height: 280px;" src='<?php echo base_url() . $main_menu_2_img; ?>'/>
+                    <img style="width: 287px;height: 387px;" src='<?php echo base_url() . $main_menu_2_img; ?>'/>
                 </a>
             </div>
-<?php } ?>
+        <?php } ?>
 
         <div class="col-md-7">
             <div class="shoes-product-slider small-pr-slider wow bounceInRight animated">
@@ -283,35 +276,32 @@ echo $leftside_manu;
             <?php
             $sub_menu_id = NULL;
             $p3 = 0;
+            $main_menu_3_img;
             ?> 
 
             <div class='home-13-0-block-category-menu-header-menu3-fasion'>
                 <h1><?php foreach ($main_menu_3 as $value) { ?> <a href="<?php echo $p3 = $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
             </div>
-
-
             <div class='home-13-0-block-category-menu-wrapper-menu3-fasion'>
-                <?php foreach ($sub_menu_3 as $sub_menu_value) { ?>
-    <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
-                        <div class='home-13-0-block-subcategory-name-menu3-fasion'>
-                            <h3><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php
-                                    echo $sub_menu_value->sub_menu_name;
-                                    $sub_menu_id = $sub_menu_value->sub_menu_id;
-                                    ?></a></h3>
-                        </div>
-                    <?php } ?>
-<?php } ?>
+
+                <div class='home-13-0-block-subcategory-name-menu3-fasion'>
+                    <h3 ng-repeat="s1 in j_sub_category_3"><a href="<?php echo base_url().'onlineshop/product_sub_category/'?>{{s1.sub_category_id}}">{{s1.sub_category_name}}</a></h3>
+                </div>
+
             </div>
+
 
             <div class='home-13-0-block-category-menu-bottom-menu3-fasion' onclick='ShowHideSubCategory( & #39; home - 13 - 0BlockCategoryMenuWrapper & #39; , 13);'>
                 More Winter Product  &nbsp;<img id='subcategoryExpandCollaps13' src='images/winter_product/E13.png' width='15' style='padding-bottom:1px;' />
             </div>
         </div>
-        <div class='first-block-image-container-menu3-fasion' >
-            <a href='Product/153357/full-sleeve-gents-sweater.html' title='More Winter'  target='_blank'>
-                <img src='<?php echo base_url(); ?>images/winter_product/Offer1094.jpg'/>
-            </a>
-        </div>
+        <?php if (isset($main_menu_product_id_3)) { ?>
+            <div class='first-block-image-container-manu3-fasion' >
+                <a href='<?php echo base_url() ?>onlineshop/' title='more women'  target='_blank'>
+                    <img style="width: 300px;height: 280px;" src='<?php echo base_url() . $main_menu_3_img; ?>'/>
+                </a>
+            </div>
+        <?php } ?>
 
 
         <div class="col-md-7">
@@ -381,35 +371,31 @@ echo $leftside_manu;
             <?php
             $sub_menu_id = NULL;
             $p4 = 0;
+            $main_menu_4_img;
             ?> 
 
             <div class='home-13-0-block-category-menu-header-menu4-fasion'>
                 <h1><?php foreach ($main_menu_4 as $value) { ?> <a href="<?php echo $p4 = $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
             </div>
-
-
             <div class='home-13-0-block-category-menu-wrapper-menu4-fasion'>
-                <?php foreach ($sub_menu_4 as $sub_menu_value) { ?>
-    <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
-                        <div class='home-13-0-block-subcategory-name-menu4-fasion'>
-                            <h3><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php
-                                    echo $sub_menu_value->sub_menu_name;
-                                    $sub_menu_id = $sub_menu_value->sub_menu_id;
-                                    ?></a></h3>
-                        </div>
-                    <?php } ?>
-<?php } ?>
+
+                <div class='home-13-0-block-subcategory-name-menu4-fasion'>
+                    <h3 ng-repeat="s1 in j_sub_category_4"><a href="<?php echo base_url().'onlineshop/product_sub_category/'?>{{s1.sub_category_id}}">{{s1.sub_category_name}}</a></h3>
+                </div>
+
             </div>
 
             <div class='home-13-0-block-category-menu-bottom-menu4-fasion' onclick='ShowHideSubCategory( & #39; home - 13 - 0BlockCategoryMenuWrapper & #39; , 13);'>
                 More Winter Product  &nbsp;<img id='subcategoryExpandCollaps13' src='images/winter_product/E13.png' width='15' style='padding-bottom:1px;' />
             </div>
         </div>
-        <div class='first-block-image-container-menu4-fasion' >
-            <a href='Product/153357/full-sleeve-gents-sweater.html' title='More Winter'  target='_blank'>
-                <img src='<?php echo base_url(); ?>images/winter_product/Offer1094.jpg'/>
-            </a>
-        </div>
+        <?php if (isset($main_menu_product_id_4)) { ?>
+            <div class='first-block-image-container-men-fasion' >
+                <a href='<?php echo base_url() ?>onlineshop/' title='more women'  target='_blank'>
+                    <img style="width: 287px;height: 387px;" src='<?php echo base_url() . $main_menu_4_img; ?>'/>
+                </a>
+            </div>
+        <?php } ?>
 
 
         <div class="col-md-7">
@@ -481,35 +467,31 @@ echo $leftside_manu;
             <?php
             $sub_menu_id = NULL;
             $p5 = 0;
+            $main_menu_5_img;
             ?> 
 
             <div class='home-13-0-block-category-menu-header-menu5-fasion'>
                 <h1><?php foreach ($main_menu_5 as $value) { ?> <a href="<?php echo $p5 = $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
             </div>
-
-
             <div class='home-13-0-block-category-menu-wrapper-menu5-fasion'>
-                <?php foreach ($sub_menu_5 as $sub_menu_value) { ?>
-    <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
-                        <div class='home-13-0-block-subcategory-name-menu5-fasion'>
-                            <h3><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php
-                                    echo $sub_menu_value->sub_menu_name;
-                                    $sub_menu_id = $sub_menu_value->sub_menu_id;
-                                    ?></a></h3>
-                        </div>
-                    <?php } ?>
-<?php } ?>
+
+                <div class='home-13-0-block-subcategory-name-menu5-fasion'>
+                    <h3 ng-repeat="s1 in j_sub_category_5"><a href="<?php echo base_url().'onlineshop/product_sub_category/'?>{{s1.sub_category_id}}">{{s1.sub_category_name}}</a></h3>
+                </div>
+
             </div>
 
             <div class='home-13-0-block-category-menu-bottom-menu5-fasion' onclick='ShowHideSubCategory( & #39; home - 13 - 0BlockCategoryMenuWrapper & #39; , 13);'>
                 More Winter Product  &nbsp;<img id='subcategoryExpandCollaps13' src='images/winter_product/E13.png' width='15' style='padding-bottom:1px;' />
             </div>
         </div>
-        <div class='first-block-image-container-menu5-fasion' >
-            <a href='Product/153357/full-sleeve-gents-sweater.html' title='More Winter'  target='_blank'>
-                <img src='<?php echo base_url(); ?>images/winter_product/Offer1094.jpg'/>
-            </a>
-        </div>
+        <?php if (isset($main_menu_product_id_5)) { ?>
+            <div class='first-block-image-container-men-fasion' >
+                <a href='<?php echo base_url() ?>onlineshop/' title='more women'  target='_blank'>
+                    <img style="width: 287px;height: 387px;" src='<?php echo base_url() . $main_menu_5_img; ?>'/>
+                </a>
+            </div>
+        <?php } ?>
 
 
         <div class="col-md-7">
@@ -580,35 +562,31 @@ echo $leftside_manu;
             <?php
             $sub_menu_id = NULL;
             $p6 = 0;
+            $main_menu_6_img;
             ?> 
 
             <div class='home-13-0-block-category-menu-header-menu6-fasion'>
                 <h1><?php foreach ($main_menu_6 as $value) { ?> <a href="<?php echo $p6 = $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
             </div>
-
-
             <div class='home-13-0-block-category-menu-wrapper-menu6-fasion'>
-                <?php foreach ($sub_menu_6 as $sub_menu_value) { ?>
-    <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
-                        <div class='home-13-0-block-subcategory-name-menu6-fasion'>
-                            <h3><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php
-                                    echo $sub_menu_value->sub_menu_name;
-                                    $sub_menu_id = $sub_menu_value->sub_menu_id;
-                                    ?></a></h3>
-                        </div>
-                    <?php } ?>
-<?php } ?>
+
+                <div class='home-13-0-block-subcategory-name-menu6-fasion'>
+                    <h3 ng-repeat="s1 in j_sub_category_6"><a href="<?php echo base_url().'onlineshop/product_sub_category/'?>{{s1.sub_category_id}}">{{s1.sub_category_name}}</a></h3>
+                </div>
+
             </div>
 
             <div class='home-13-0-block-category-menu-bottom-menu6-fasion' onclick='ShowHideSubCategory( & #39; home - 13 - 0BlockCategoryMenuWrapper & #39; , 13);'>
                 More Winter Product  &nbsp;<img id='subcategoryExpandCollaps13' src='images/winter_product/E13.png' width='15' style='padding-bottom:1px;' />
             </div>
         </div>
-        <div class='first-block-image-container-menu6-fasion' >
-            <a href='Product/153357/full-sleeve-gents-sweater.html' title='More Winter'  target='_blank'>
-                <img src='<?php echo base_url(); ?>images/winter_product/Offer1094.jpg'/>
-            </a>
-        </div>
+        <?php if (isset($main_menu_product_id_6)) { ?>
+            <div class='first-block-image-container-men-fasion' >
+                <a href='<?php echo base_url() ?>onlineshop/' title='more women'  target='_blank'>
+                    <img style="width: 287px;height: 387px;" src='<?php echo base_url() . $main_menu_6_img; ?>'/>
+                </a>
+            </div>
+        <?php } ?>
 
 
         <div class="col-md-7">
@@ -680,35 +658,31 @@ echo $leftside_manu;
             <?php
             $sub_menu_id = NULL;
             $p7 = 0;
+            $main_menu_7_img;
             ?> 
 
             <div class='home-13-0-block-category-menu-header-menu7-fasion'>
                 <h1><?php foreach ($main_menu_7 as $value) { ?> <a href="<?php echo $p7 = $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
             </div>
-
-
             <div class='home-13-0-block-category-menu-wrapper-menu7-fasion'>
-                <?php foreach ($sub_menu_7 as $sub_menu_value) { ?>
-    <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
-                        <div class='home-13-0-block-subcategory-name-menu7-fasion'>
-                            <h3><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php
-                                    echo $sub_menu_value->sub_menu_name;
-                                    $sub_menu_id = $sub_menu_value->sub_menu_id;
-                                    ?></a></h3>
-                        </div>
-                    <?php } ?>
-<?php } ?>
+
+                <div class='home-13-0-block-subcategory-name-menu7-fasion'>
+                    <h3 ng-repeat="s1 in j_sub_category_7"><a href="<?php echo base_url().'onlineshop/product_sub_category/'?>{{s1.sub_category_id}}">{{s1.sub_category_name}}</a></h3>
+                </div>
+
             </div>
 
             <div class='home-13-0-block-category-menu-bottom-menu7-fasion' onclick='ShowHideSubCategory( & #39; home - 13 - 0BlockCategoryMenuWrapper & #39; , 13);'>
                 More Winter Product  &nbsp;<img id='subcategoryExpandCollaps13' src='images/winter_product/E13.png' width='15' style='padding-bottom:1px;' />
             </div>
         </div>
-        <div class='first-block-image-container-menu7-fasion' >
-            <a href='Product/153357/full-sleeve-gents-sweater.html' title='More Winter'  target='_blank'>
-                <img src='<?php echo base_url(); ?>images/winter_product/Offer1094.jpg'/>
-            </a>
-        </div>
+        <?php if (isset($main_menu_product_id_7)) { ?>
+            <div class='first-block-image-container-men-fasion' >
+                <a href='<?php echo base_url() ?>onlineshop/' title='more women'  target='_blank'>
+                    <img style="width: 287px;height: 387px;" src='<?php echo base_url() . $main_menu_7_img; ?>'/>
+                </a>
+            </div>
+        <?php } ?>
 
 
         <div class="col-md-7">
@@ -779,35 +753,31 @@ echo $leftside_manu;
             <?php
             $sub_menu_id = NULL;
             $p8 = 0;
+            $main_menu_8_img;
             ?> 
 
             <div class='home-13-0-block-category-menu-header-menu8-fasion'>
                 <h1><?php foreach ($main_menu_8 as $value) { ?> <a href="<?php echo $p8 = $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
             </div>
-
-
             <div class='home-13-0-block-category-menu-wrapper-menu8-fasion'>
-                <?php foreach ($sub_menu_8 as $sub_menu_value) { ?>
-    <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
-                        <div class='home-13-0-block-subcategory-name-menu8-fasion'>
-                            <h3><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php
-                                    echo $sub_menu_value->sub_menu_name;
-                                    $sub_menu_id = $sub_menu_value->sub_menu_id;
-                                    ?></a></h3>
-                        </div>
-                    <?php } ?>
-<?php } ?>
+
+                <div class='home-13-0-block-subcategory-name-menu8-fasion'>
+                    <h3 ng-repeat="s1 in j_sub_category_8"><a href="<?php echo base_url().'onlineshop/product_sub_category/'?>{{s1.sub_category_id}}">{{s1.sub_category_name}}</a></h3>
+                </div>
+
             </div>
 
             <div class='home-13-0-block-category-menu-bottom-menu8-fasion' onclick='ShowHideSubCategory( & #39; home - 13 - 0BlockCategoryMenuWrapper & #39; , 13);'>
                 More Winter Product  &nbsp;<img id='subcategoryExpandCollaps13' src='images/winter_product/E13.png' width='15' style='padding-bottom:1px;' />
             </div>
         </div>
-        <div class='first-block-image-container-menu8-fasion' >
-            <a href='Product/153357/full-sleeve-gents-sweater.html' title='More Winter'  target='_blank'>
-                <img src='<?php echo base_url(); ?>images/winter_product/Offer1094.jpg'/>
-            </a>
-        </div>
+        <?php if (isset($main_menu_product_id_8)) { ?>
+            <div class='first-block-image-container-men-fasion' >
+                <a href='<?php echo base_url() ?>onlineshop/' title='more women'  target='_blank'>
+                    <img style="width: 287px;height: 387px;" src='<?php echo base_url() . $main_menu_8_img; ?>'/>
+                </a>
+            </div>
+        <?php } ?>
 
 
         <div class="col-md-7">
@@ -877,35 +847,30 @@ echo $leftside_manu;
             <?php
             $sub_menu_id = NULL;
             $p9 = 0;
+            $main_menu_9_img;
             ?> 
 
             <div class='home-13-0-block-category-menu-header-menu9-fasion'>
                 <h1><?php foreach ($main_menu_9 as $value) { ?> <a href="<?php echo $p9 = $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
             </div>
-
-
             <div class='home-13-0-block-category-menu-wrapper-menu9-fasion'>
-                <?php foreach ($sub_menu_9 as $sub_menu_value) { ?>
-    <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
-                        <div class='home-13-0-block-subcategory-name-menu9-fasion'>
-                            <h3><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php
-                                    echo $sub_menu_value->sub_menu_name;
-                                    $sub_menu_id = $sub_menu_value->sub_menu_id;
-                                    ?></a></h3>
-                        </div>
-                    <?php } ?>
-<?php } ?>
-            </div>
 
+                <div class='home-13-0-block-subcategory-name-menu9-fasion'>
+                    <h3 ng-repeat="s1 in j_sub_category_9"><a href="<?php echo base_url().'onlineshop/product_sub_category/'?>{{s1.sub_category_id}}">{{s1.sub_category_name}}</a></h3>
+                </div>
+
+            </div>
             <div class='home-13-0-block-category-menu-bottom-menu9-fasion' onclick='ShowHideSubCategory( & #39; home - 13 - 0BlockCategoryMenuWrapper & #39; , 13);'>
                 More Winter Product  &nbsp;<img id='subcategoryExpandCollaps13' src='images/winter_product/E13.png' width='15' style='padding-bottom:1px;' />
             </div>
         </div>
-        <div class='first-block-image-container-menu9-fasion' >
-            <a href='Product/153357/full-sleeve-gents-sweater.html' title='More Winter'  target='_blank'>
-                <img src='<?php echo base_url(); ?>images/winter_product/Offer1094.jpg'/>
-            </a>
-        </div>
+        <?php if (isset($main_menu_product_id_9)) { ?>
+            <div class='first-block-image-container-men-fasion' >
+                <a href='<?php echo base_url() ?>onlineshop/' title='more women'  target='_blank'>
+                    <img style="width: 287px;height: 387px;" src='<?php echo base_url() . $main_menu_9_img; ?>'/>
+                </a>
+            </div>
+        <?php } ?>
 
 
         <div class="col-md-7">
@@ -972,9 +937,9 @@ $main_category_id1 = $this->onlineshop_model->get_product_by_main_category_id($p
 $j_sub_category_1 = json_encode($this->onlineshop_model->get_sub_category_by_main_category_id($p1));
 //echo $j_sub_category_1;
 $product1 = json_encode($main_category_id1);
-echo $product1;
-echo '</br>';
-echo $j_sub_category_1;
+//echo $product1;
+//echo '</br>';
+//echo $j_sub_category_1;
 
 $main_category_id2 = $this->onlineshop_model->get_product_by_main_category_id($p2);
 $j_sub_category_2 = json_encode($this->onlineshop_model->get_sub_category_by_main_category_id($p2));

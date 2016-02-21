@@ -74,13 +74,13 @@
                                                                     <div class="mega-col col-sm-66 " data-widgets="wid-5" data-colwidth="6">
                                                                         <div class="mega-col-inner">
                                                                             <div class="ves-widget">
-                                                                                <div class="menu-title"><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php echo $sub_menu_value->sub_menu_name; $sub_menu_id = $sub_menu_value->sub_menu_id; ?></a></div>
+                                                                                <div class="menu-title"><a href="<?php echo base_url().'onlineshop/product_sub_category/'.$sub_menu_value->sub_menu_id ?>"><?php echo $sub_menu_value->sub_menu_name; $sub_menu_id = $sub_menu_value->sub_menu_id; ?></a></div>
                                                                                 <div class="widget-html">
                                                                                     <div class="widget-inner">
                                                                                         <ul>
                                                                                             <?php foreach ($menu_1 as $menu_value) { ?>
                                                                                                 <?php if ($menu_value->sub_menu_id == $sub_menu_value->sub_menu_id) { ?>
-                                                                                                  <li><a href="<?php echo $menu_value->menu_id ?>"><span><?php echo $menu_value->menu_name; ?></span></a> </li>
+                                                                                                  <li><a href="<?php echo base_url().'onlineshop/product_category/'. $menu_value->menu_id ?>"><span><?php echo $menu_value->menu_name; ?></span></a> </li>
 
                                                                                                 <?php } ?>
                                                                                              <?php } ?>
@@ -109,13 +109,13 @@
                                                                     <div class="mega-col col-sm-66 " data-widgets="wid-5" data-colwidth="6">
                                                                         <div class="mega-col-inner">
                                                                             <div class="ves-widget">
-                                                                                <div class="menu-title"><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php echo $sub_menu_value->sub_menu_name; $sub_menu_id = $sub_menu_value->sub_menu_id; ?></a></div>
+                                                                                <div class="menu-title"><a href="<?php echo base_url().'onlineshop/product_sub_category/'.$sub_menu_value->sub_menu_id ?>"><?php echo $sub_menu_value->sub_menu_name; $sub_menu_id = $sub_menu_value->sub_menu_id; ?></a></div>
                                                                                 <div class="widget-html">
                                                                                     <div class="widget-inner">
                                                                                         <ul>
                                                                                             <?php foreach ($menu_2 as $menu_value) { ?>
                                                                                                 <?php if ($menu_value->sub_menu_id == $sub_menu_value->sub_menu_id) { ?>
-                                                                                                  <li><a href="<?php echo $menu_value->menu_id ?>"><span><?php echo $menu_value->menu_name; ?></span></a> </li>
+                                                                                                  <li><a href="<?php echo base_url().'onlineshop/product_category/'. $menu_value->menu_id ?>"><span><?php echo $menu_value->menu_name; ?></span></a> </li>
 
                                                                                                 <?php } ?>
                                                                                              <?php } ?>
@@ -144,13 +144,13 @@
                                                                     <div class="mega-col col-sm-66 " data-widgets="wid-5" data-colwidth="6">
                                                                         <div class="mega-col-inner">
                                                                             <div class="ves-widget">
-                                                                                <div class="menu-title"><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php echo $sub_menu_value->sub_menu_name; $sub_menu_id = $sub_menu_value->sub_menu_id; ?></a></div>
+                                                                                <div class="menu-title"><a href="<?php echo base_url().'onlineshop/product_sub_category/'.$sub_menu_value->sub_menu_id ?>"><?php echo $sub_menu_value->sub_menu_name; $sub_menu_id = $sub_menu_value->sub_menu_id; ?></a></div>
                                                                                 <div class="widget-html">
                                                                                     <div class="widget-inner">
                                                                                         <ul>
                                                                                             <?php foreach ($menu_3 as $menu_value) { ?>
                                                                                                 <?php if ($menu_value->sub_menu_id == $sub_menu_value->sub_menu_id) { ?>
-                                                                                                  <li><a href="<?php echo $menu_value->menu_id ?>"><span><?php echo $menu_value->menu_name; ?></span></a> </li>
+                                                                                                  <li><a href="<?php echo base_url().'onlineshop/product_category/'. $menu_value->menu_id ?>"><span><?php echo $menu_value->menu_name; ?></span></a> </li>
 
                                                                                                 <?php } ?>
                                                                                              <?php } ?>
@@ -179,13 +179,13 @@
                                                                     <div class="mega-col col-sm-66 " data-widgets="wid-5" data-colwidth="6">
                                                                         <div class="mega-col-inner">
                                                                             <div class="ves-widget">
-                                                                                <div class="menu-title"><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php echo $sub_menu_value->sub_menu_name; $sub_menu_id = $sub_menu_value->sub_menu_id; ?></a></div>
+                                                                                <div class="menu-title"><a href="<?php echo base_url().'onlineshop/product_sub_category/'.$sub_menu_value->sub_menu_id ?>"><?php echo $sub_menu_value->sub_menu_name; $sub_menu_id = $sub_menu_value->sub_menu_id; ?></a></div>
                                                                                 <div class="widget-html">
                                                                                     <div class="widget-inner">
                                                                                         <ul>
                                                                                             <?php foreach ($menu_4 as $menu_value) { ?>
                                                                                                 <?php if ($menu_value->sub_menu_id == $sub_menu_value->sub_menu_id) { ?>
-                                                                                                  <li><a href="<?php echo $menu_value->menu_id ?>"><span><?php echo $menu_value->menu_name; ?></span></a> </li>
+                                                                                                  <li><a href="<?php echo base_url().'onlineshop/product_category/'. $menu_value->menu_id ?>"><span><?php echo $menu_value->menu_name; ?></span></a> </li>
 
                                                                                                 <?php } ?>
                                                                                              <?php } ?>
@@ -214,13 +214,13 @@
                                                                     <div class="mega-col col-sm-66 " data-widgets="wid-5" data-colwidth="6">
                                                                         <div class="mega-col-inner">
                                                                             <div class="ves-widget">
-                                                                                <div class="menu-title"><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php echo $sub_menu_value->sub_menu_name; $sub_menu_id = $sub_menu_value->sub_menu_id; ?></a></div>
+                                                                                <div class="menu-title"><a href="<?php echo base_url().'onlineshop/product_sub_category/'.$sub_menu_value->sub_menu_id ?>"><?php echo $sub_menu_value->sub_menu_name; $sub_menu_id = $sub_menu_value->sub_menu_id; ?></a></div>
                                                                                 <div class="widget-html">
                                                                                     <div class="widget-inner">
                                                                                         <ul>
                                                                                             <?php foreach ($menu_5 as $menu_value) { ?>
                                                                                                 <?php if ($menu_value->sub_menu_id == $sub_menu_value->sub_menu_id) { ?>
-                                                                                                  <li><a href="<?php echo $menu_value->menu_id ?>"><span><?php echo $menu_value->menu_name; ?></span></a> </li>
+                                                                                                  <li><a href="<?php echo base_url().'onlineshop/product_category/'. $menu_value->menu_id ?>"><span><?php echo $menu_value->menu_name; ?></span></a> </li>
 
                                                                                                 <?php } ?>
                                                                                              <?php } ?>
@@ -249,13 +249,13 @@
                                                                     <div class="mega-col col-sm-66 " data-widgets="wid-5" data-colwidth="6">
                                                                         <div class="mega-col-inner">
                                                                             <div class="ves-widget">
-                                                                                <div class="menu-title"><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php echo $sub_menu_value->sub_menu_name; $sub_menu_id = $sub_menu_value->sub_menu_id; ?></a></div>
+                                                                                <div class="menu-title"><a href="<?php echo base_url().'onlineshop/product_sub_category/'.$sub_menu_value->sub_menu_id ?>"><?php echo $sub_menu_value->sub_menu_name; $sub_menu_id = $sub_menu_value->sub_menu_id; ?></a></div>
                                                                                 <div class="widget-html">
                                                                                     <div class="widget-inner">
                                                                                         <ul>
                                                                                             <?php foreach ($menu_6 as $menu_value) { ?>
                                                                                                 <?php if ($menu_value->sub_menu_id == $sub_menu_value->sub_menu_id) { ?>
-                                                                                                  <li><a href="<?php echo $menu_value->menu_id ?>"><span><?php echo $menu_value->menu_name; ?></span></a> </li>
+                                                                                                  <li><a href="<?php echo base_url().'onlineshop/product_category/'. $menu_value->menu_id ?>"><span><?php echo $menu_value->menu_name; ?></span></a> </li>
 
                                                                                                 <?php } ?>
                                                                                              <?php } ?>
@@ -284,13 +284,13 @@
                                                                     <div class="mega-col col-sm-66 " data-widgets="wid-5" data-colwidth="6">
                                                                         <div class="mega-col-inner">
                                                                             <div class="ves-widget">
-                                                                                <div class="menu-title"><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php echo $sub_menu_value->sub_menu_name; $sub_menu_id = $sub_menu_value->sub_menu_id; ?></a></div>
+                                                                                <div class="menu-title"><a href="<?php echo base_url().'onlineshop/product_sub_category/'.$sub_menu_value->sub_menu_id ?>"><?php echo $sub_menu_value->sub_menu_name; $sub_menu_id = $sub_menu_value->sub_menu_id; ?></a></div>
                                                                                 <div class="widget-html">
                                                                                     <div class="widget-inner">
                                                                                         <ul>
                                                                                             <?php foreach ($menu_7 as $menu_value) { ?>
                                                                                                 <?php if ($menu_value->sub_menu_id == $sub_menu_value->sub_menu_id) { ?>
-                                                                                                  <li><a href="<?php echo $menu_value->menu_id ?>"><span><?php echo $menu_value->menu_name; ?></span></a> </li>
+                                                                                                  <li><a href="<?php echo base_url().'onlineshop/product_category/'. $menu_value->menu_id ?>"><span><?php echo $menu_value->menu_name; ?></span></a> </li>
 
                                                                                                 <?php } ?>
                                                                                              <?php } ?>
@@ -319,13 +319,13 @@
                                                                     <div class="mega-col col-sm-66 " data-widgets="wid-5" data-colwidth="6">
                                                                         <div class="mega-col-inner">
                                                                             <div class="ves-widget">
-                                                                                <div class="menu-title"><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php echo $sub_menu_value->sub_menu_name; $sub_menu_id = $sub_menu_value->sub_menu_id; ?></a></div>
+                                                                                <div class="menu-title"><a href="<?php echo base_url().'onlineshop/product_sub_category/'.$sub_menu_value->sub_menu_id ?>"><?php echo $sub_menu_value->sub_menu_name; $sub_menu_id = $sub_menu_value->sub_menu_id; ?></a></div>
                                                                                 <div class="widget-html">
                                                                                     <div class="widget-inner">
                                                                                         <ul>
                                                                                             <?php foreach ($menu_8 as $menu_value) { ?>
                                                                                                 <?php if ($menu_value->sub_menu_id == $sub_menu_value->sub_menu_id) { ?>
-                                                                                                  <li><a href="<?php echo $menu_value->menu_id ?>"><span><?php echo $menu_value->menu_name; ?></span></a> </li>
+                                                                                                  <li><a href="<?php echo base_url().'onlineshop/product_category/'. $menu_value->menu_id ?>"><span><?php echo $menu_value->menu_name; ?></span></a> </li>
 
                                                                                                 <?php } ?>
                                                                                              <?php } ?>
@@ -354,13 +354,13 @@
                                                                     <div class="mega-col col-sm-66 " data-widgets="wid-5" data-colwidth="6">
                                                                         <div class="mega-col-inner">
                                                                             <div class="ves-widget">
-                                                                                <div class="menu-title"><a href="<?php echo $sub_menu_value->sub_menu_id ?>"><?php echo $sub_menu_value->sub_menu_name; $sub_menu_id = $sub_menu_value->sub_menu_id; ?></a></div>
+                                                                                <div class="menu-title"><a href="<?php echo base_url().'onlineshop/product_sub_category/'.$sub_menu_value->sub_menu_id ?>"><?php echo $sub_menu_value->sub_menu_name; $sub_menu_id = $sub_menu_value->sub_menu_id; ?></a></div>
                                                                                 <div class="widget-html">
                                                                                     <div class="widget-inner">
                                                                                         <ul>
                                                                                             <?php foreach ($menu_9 as $menu_value) { ?>
                                                                                                 <?php if ($menu_value->sub_menu_id == $sub_menu_value->sub_menu_id) { ?>
-                                                                                                  <li><a href="<?php echo $menu_value->menu_id ?>"><span><?php echo $menu_value->menu_name; ?></span></a> </li>
+                                                                                                  <li><a href="<?php echo base_url().'onlineshop/product_category/'. $menu_value->menu_id ?>"><span><?php echo $menu_value->menu_name; ?></span></a> </li>
 
                                                                                                 <?php } ?>
                                                                                              <?php } ?>
@@ -395,7 +395,7 @@
                                 <div    class='tp-caption sfb  tp-resizeme ' data-x='45'  data-y='360'  data-endspeed='500'  data-speed='500' data-start='1500' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:4;max-width:auto;max-height:auto;white-space:nowrap;'><a href='#' class="view-more">View More</a> <a href='#' class="buy-btn">Buy Now</a></div>
                                 <div    class='tp-caption Title sft  tp-resizeme ' data-x='45'  data-y='150'  data-endspeed='500'  data-speed='500' data-start='1500' data-easing='Power2.easeInOut' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:4;max-width:auto;max-height:auto;white-space:nowrap;'>Biggest online market places,<br>
                                     All are original product .</div>
-                              </li>
+                            </li>
                             <li data-transition='random' data-slotamount='7' data-masterspeed='1000' data-thumb='<?php echo base_url(); ?>images/slider_img_2.jpg' class="black-text"><img src='<?php echo base_url(); ?>images/index-2-img/slide-img2.jpg'  data-bgposition='left top'  data-bgfit='cover' data-bgrepeat='no-repeat' alt="banner"  />
                                 <div class='tp-caption ExtraLargeTitle sft  tp-resizeme ' data-x='45'  data-y='30'  data-endspeed='500'  data-speed='500' data-start='1100' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:2;max-width:auto;max-height:auto;white-space:nowrap;'>Women Sale</div>
                                 <div    class='tp-caption LargeTitle sfl  tp-resizeme ' data-x='45'  data-y='70'  data-endspeed='500'  data-speed='500' data-start='1300' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:3;max-width:auto;max-height:auto;white-space:nowrap;'>Go Lightly</div>
