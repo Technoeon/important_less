@@ -58,5 +58,41 @@ class onlineshop_model extends CI_Model{
         $result=$query_result->result();
         return $result;
     }
+    public function get_manufacturer_by_main_category_id($main_category_id){
+        $sql ="SELECT m.manufacturer_id, m.manufacturer_name, p.main_category_id, COUNT(p.manufacturer_id) AS have_product FROM tbl_manufacturer as m join tbl_product as p on m.manufacturer_id= p.manufacturer_id where m.manufacturer_status=1 and p.product_status=1 and  p.main_category_id ='$main_category_id' group by m.manufacturer_id";
+        $query_result = $this->db->query($sql);
+        $result=$query_result->result();
+        return $result;
+    }
+    public function get_manufacturer_by_sub_category_id($sub_category_id){
+        $sql ="SELECT m.manufacturer_id, m.manufacturer_name, p.sub_category_id, COUNT(p.manufacturer_id) AS have_product FROM tbl_manufacturer as m join tbl_product as p on m.manufacturer_id= p.manufacturer_id where m.manufacturer_status=1 and p.product_status=1 and p.sub_category_id ='$sub_category_id' group by m.manufacturer_id";
+        $query_result = $this->db->query($sql);
+        $result=$query_result->result();
+        return $result;
+    }
+    public function get_manufacturer_by_category_id($category_id){
+        $sql ="SELECT m.manufacturer_id, m.manufacturer_name, p.category_id, COUNT(p.manufacturer_id) AS have_product FROM tbl_manufacturer as m join tbl_product as p on m.manufacturer_id= p.manufacturer_id where m.manufacturer_status=1 and p.product_status=1 and p.category_id ='$category_id' group by m.manufacturer_id";
+        $query_result = $this->db->query($sql);
+        $result=$query_result->result();
+        return $result;
+    }
+    public function get_size_by_main_category_id($main_category_id){
+        $sql ="select p.main_category_id, s.size_name, count(s.size_name) as have_product from tbl_product_size as s join tbl_product as p on s.product_id=p.product_id where p.product_status=1 and p.main_category_id='$main_category_id' group by s.size_name";
+        $query_result = $this->db->query($sql);
+        $result=$query_result->result();
+        return $result;
+    }
+    public function get_size_by_sub_category_id($sub_category_id){
+        $sql ="select p.sub_category_id, s.size_name, count(s.size_name) as have_product from tbl_product_size as s join tbl_product as p on s.product_id=p.product_id where p.product_status=1 and p.sub_category_id='$sub_category_id' group by s.size_name";
+        $query_result = $this->db->query($sql);
+        $result=$query_result->result();
+        return $result;
+    }
+    public function get_size_by_category_id($category_id){
+        $sql ="select p.category_id, s.size_name, count(s.size_name) as have_product from tbl_product_size as s join tbl_product as p on s.product_id=p.product_id where p.product_status=1 and p.category_id='$category_id' group by s.size_name";
+        $query_result = $this->db->query($sql);
+        $result=$query_result->result();
+        return $result;
+    }
     
 }

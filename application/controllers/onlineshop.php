@@ -33,6 +33,8 @@ public function product_details(){
 
     public function product_category($category_id){
         $data = array();
+        $data['manufacturer']=json_encode($this->onlineshop_model->get_manufacturer_by_category_id($category_id));
+        $data['size']=  json_encode($this->onlineshop_model->get_size_by_category_id($category_id));
         $data['product'] = json_encode($this->onlineshop_model->get_product_by_category_id($category_id));
         $data['nav_menu'] = $this->load->view('nav_menu','', true);
         $data['user_main'] = $this->load->view('product_category',$data, true);
@@ -41,6 +43,8 @@ public function product_details(){
     }
     public function product_main_category($main_category_id){
         $data = array();
+        $data['manufacturer']= json_encode($this->onlineshop_model->get_manufacturer_by_main_category_id($main_category_id));
+        $data['size']=  json_encode($this->onlineshop_model->get_size_by_main_category_id($main_category_id));
         $data['product'] = json_encode($this->onlineshop_model->get_product_by_main_category_id($main_category_id));
         $data['nav_menu'] = $this->load->view('nav_menu','', true);
         $data['user_main'] = $this->load->view('product_category',$data, true);
@@ -48,14 +52,14 @@ public function product_details(){
     }
     public function product_sub_category($sub_category_id){
         $data = array();
+        $data['manufacturer']=  json_encode($this->onlineshop_model->get_manufacturer_by_sub_category_id($sub_category_id));
+        $data['size']=  json_encode($this->onlineshop_model->get_size_by_sub_category_id($sub_category_id));
         $data['product'] = json_encode($this->onlineshop_model->get_product_by_sub_category_id($sub_category_id));
         $data['nav_menu'] = $this->load->view('nav_menu','', true);
         $data['user_main'] = $this->load->view('product_category',$data, true);
-        $this->load->view('main', $data);
-        
+        $this->load->view('main', $data);        
     }
    
-
     public function user_login() {
         $data = array();
         $data['nav_menu'] = $this->load->view('nav_menu','', true);
