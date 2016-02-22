@@ -38,8 +38,7 @@ public function product_details(){
         $data['product'] = json_encode($this->onlineshop_model->get_product_by_category_id($category_id));
         $data['nav_menu'] = $this->load->view('nav_menu','', true);
         $data['user_main'] = $this->load->view('product_category',$data, true);
-        $this->load->view('main', $data);
-        
+        $this->load->view('main', $data);        
     }
     public function product_main_category($main_category_id){
         $data = array();
@@ -100,15 +99,14 @@ public function product_details(){
     }
     public function test($position) {
         $data = array();
-        $data['main_menu'] = $this->onlineshop_model->get_main_menu_by_position($position);
-        $data['sub_menu'] = $this->onlineshop_model->get_sub_menu_by_position($position);
-        $data['menu'] = $this->onlineshop_model->get_menu_by_position($position);
-//        echo '<pre>';
-//        print_r($data);
-//        exit();
+//        $data['main_menu'] = $this->onlineshop_model->get_main_menu_by_position($position);
+//        $data['sub_menu'] = $this->onlineshop_model->get_sub_menu_by_position($position);
+//        $data['menu'] = $this->onlineshop_model->get_menu_by_position($position);
+        $data['price']=  $this->onlineshop_model->get_price_by_main_category_id($position);
+        echo '<pre>';
+        print_r($data);
+        exit();
         $this->load->view('test', $data);
     }
-    
-    
 
 }
