@@ -90,8 +90,12 @@
                 <dt class="odd">Price</dt>
                 <dd class="odd">
                   <ol>
-                    <li> <a href="#"><span class="price">$0.00</span> - <span class="price">$99.99</span></a> (6) </li>
-                    <li> <a href="#"><span class="price">$100.00</span> and above</a> (6) </li>
+                    <li> <a href="#"><span class="price">TK 0.00</span> - <span class="price"> TK 500.00</span></a> (6) </li>
+                    <li> <a href="#"><span class="price">TK 501.00</span> - <span class="price"> TK 1000.00</span></a> (6) </li>
+                    <li> <a href="#"><span class="price">TK 1001.00</span> - <span class="price"> TK 2000.00</span></a> (6) </li>
+                    <li> <a href="#"><span class="price">TK 2001.00</span> - <span class="price"> TK 5000.00</span></a> (6) </li>
+                    <li> <a href="#"><span class="price">TK 5001.00</span> - <span class="price"> TK 10000.00</span></a> (6) </li>
+                    <li> <a href="#"><span class="price">TK 10001.00</span> and above</a> (6) </li>
                   </ol>
                 </dd>
                 <dt class="even">Manufacturer</dt>

@@ -106,8 +106,8 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                 </div>
                 <?php if (isset($main_menu_product_id_1)) { ?>
                     <div class="nav-block nav-block-right std grid12-4">
-                        <div class="static-img-block"><a href="#"><img style="width: 200px;height: 180px;" src="<?php echo base_url() . $main_menu_1_img; ?>" alt="Responsive"></a></div>
-                        <h3 class="heading" style="margin-left: 100px;"><?php echo $main_menu_product_name_1 ?></h3>
+                        <div class="static-img-block"><a href="#"><img style="width: 210px;height: 287px;" src="<?php echo base_url() . $main_menu_1_img; ?>" alt="Responsive"></a></div>
+                        <h3 class="heading" style="text-align: center;"><?php echo $main_menu_product_name_1 ?></h3>
                     </div>
                 <?php } ?>
             </div>
@@ -163,8 +163,8 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                 </div>
                 <?php if (isset($main_menu_product_id_2)) { ?>
                     <div class="nav-block nav-block-right std grid12-4">
-                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_2 ?>"><img style="width: 300px;height: 280px;" src="<?php echo base_url() . $main_menu_2_img; ?>" alt="Responsive"></a></div>
-                        <h3 class="heading" style="margin-left: 100px;"><?php echo $main_menu_product_name_2 ?></h3>
+                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_2 ?>"><img style="width: 210px;height: 287px;" src="<?php echo base_url() . $main_menu_2_img; ?>" alt="Responsive"></a></div>
+                        <h3 class="heading" style="text-align: center;"><?php echo $main_menu_product_name_2 ?></h3>
                     </div>
                 <?php } ?>
             </div>
@@ -218,8 +218,8 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                 </div>
                 <?php if (isset($main_menu_product_id_3)) { ?>
                     <div class="nav-block nav-block-right std grid12-4">
-                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_3 ?>"><img style="width: 300px;height: 280px;" src="<?php echo base_url() . $main_menu_3_img; ?>" alt="Responsive"></a></div>
-                        <h3 class="heading" style="margin-left: 100px;"><?php echo $main_menu_product_name_3 ?></h3>
+                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_3 ?>"><img style="width: 210px;height: 287px;" src="<?php echo base_url() . $main_menu_3_img; ?>" alt="Responsive"></a></div>
+                        <h3 class="heading" style="text-align: center;"><?php echo $main_menu_product_name_3 ?></h3>
                     </div>
                 <?php } ?>
             </div>
@@ -273,8 +273,8 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                 </div>
                 <?php if (isset($main_menu_product_id_4)) { ?>
                     <div class="nav-block nav-block-right std grid12-4">
-                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_4 ?>"><img style="width: 300px;height: 280px;" src="<?php echo base_url() . $main_menu_4_img; ?>" alt="Responsive"></a></div>
-                        <h3 class="heading" style="margin-left: 100px;"><?php echo $main_menu_product_name_4 ?></h3>
+                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_4 ?>"><img style="width: 210px;height: 287px;" src="<?php echo base_url() . $main_menu_4_img; ?>" alt="Responsive"></a></div>
+                        <h3 class="heading" style="text-align: center;"><?php echo $main_menu_product_name_4 ?></h3>
                     </div>
                 <?php } ?>
             </div>
@@ -328,8 +328,8 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                 </div>
                 <?php if (isset($main_menu_product_id_5)) { ?>
                     <div class="nav-block nav-block-right std grid12-4">
-                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_5 ?>"><img style="width: 300px;height: 280px;" src="<?php echo base_url() . $main_menu_5_img; ?>" alt="Responsive"></a></div>
-                        <h3 class="heading" style="margin-left: 100px;"><?php echo $main_menu_product_name_5 ?></h3>
+                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_5 ?>"><img style="width: 210px;height: 287px;" src="<?php echo base_url() . $main_menu_5_img; ?>" alt="Responsive"></a></div>
+                        <h3 class="heading" style="text-align: center;"><?php echo $main_menu_product_name_5 ?></h3>
                     </div>
                 <?php } ?>
             </div>
@@ -383,8 +383,8 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                 </div>
                 <?php if (isset($main_menu_product_id_6)) { ?>
                     <div class="nav-block nav-block-right std grid12-4">
-                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_6 ?>"><img style="width: 300px;height: 280px;" src="<?php echo base_url() . $main_menu_6_img; ?>" alt="Responsive"></a></div>
-                        <h3 class="heading" style="margin-left: 100px;"><?php echo $main_menu_product_name_6 ?></h3>
+                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_6 ?>"><img style="width: 210px;height: 287px;" src="<?php echo base_url() . $main_menu_6_img; ?>" alt="Responsive"></a></div>
+                        <h3 class="heading" style="text-align: center;"><?php echo $main_menu_product_name_6 ?></h3>
                     </div>
                 <?php } ?></div>
         </div>
@@ -437,8 +437,8 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                 </div>
                 <?php if (isset($main_menu_product_id_7)) { ?>
                     <div class="nav-block nav-block-right std grid12-4">
-                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_7 ?>"><img style="width: 300px;height: 280px;" src="<?php echo base_url() . $main_menu_7_img; ?>" alt="Responsive"></a></div>
-                        <h3 class="heading" style="margin-left: 100px;"><?php echo $main_menu_product_name_7 ?></h3>
+                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_7 ?>"><img style="width: 210px;height: 287px;" src="<?php echo base_url() . $main_menu_7_img; ?>" alt="Responsive"></a></div>
+                        <h3 class="heading" style="text-align: center;"><?php echo $main_menu_product_name_7 ?></h3>
                     </div>
                 <?php } ?></div>
         </div>
@@ -492,8 +492,8 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                 </div>
                 <?php if (isset($main_menu_product_id_8)) { ?>
                     <div class="nav-block nav-block-right std grid12-4">
-                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_8 ?>"><img style="width: 300px;height: 280px;" src="<?php echo base_url() . $main_menu_8_img; ?>" alt="Responsive"></a></div>
-                        <h3 class="heading" style="margin-left: 100px;"><?php echo $main_menu_product_name_8 ?></h3>
+                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_8 ?>"><img style="width: 210px;height: 287px;" src="<?php echo base_url() . $main_menu_8_img; ?>" alt="Responsive"></a></div>
+                        <h3 class="heading" style="text-align: center;"><?php echo $main_menu_product_name_8 ?></h3>
                     </div>
                 <?php } ?></div>
         </div>
@@ -505,7 +505,7 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
     $main_menu_product_name_9;
     ?>    
     <?php
-    foreach ($main_menu_2 as $value) {
+    foreach ($main_menu_9 as $value) {
         if (isset($value->product_id)) {
             $main_menu_9_img = $value->menu_image;
             $main_menu_product_id_9 = $value->product_id;
@@ -546,8 +546,8 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                 </div>
                 <?php if (isset($main_menu_product_id_9)) { ?>
                     <div class="nav-block nav-block-right std grid12-4">
-                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_9 ?>"><img style="width: 300px;height: 280px;" src="<?php echo base_url() . $main_menu_9_img; ?>" alt="Responsive"></a></div>
-                        <h3 class="heading" style="margin-left: 100px;"><?php echo $main_menu_product_name_9 ?></h3>
+                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_9 ?>"><img style="width: 210px;height: 287px;" src="<?php echo base_url() . $main_menu_9_img; ?>" alt="Responsive"></a></div>
+                        <h3 class="heading" style="text-align: center;"><?php echo $main_menu_product_name_9 ?></h3>
                     </div>
                 <?php } ?></div>
         </div>
