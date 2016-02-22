@@ -588,7 +588,7 @@ class Te_Admin extends CI_Controller {
 
     public function delete_size($size_id) {
         $this->te_product_model->delete_product_size($size_id);
-        redirect('te_admin/manage_product');
+        redirect('te_admin/manage_size');
     }
 
     // End manage size///
