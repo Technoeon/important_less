@@ -357,11 +357,4 @@
 <script type="text/javascript" src="<?php echo base_url();?>js/cloud-zoom.js"></script>
   </section>
   <!--End main-container --> 
-  <script>
-    client.controller('productDetails', function($scope) {
-    $scope.product1 = <?php echo $product1; ?>;
-    
-    //return (val.j_sub_category_1 != 2);
 
-    });
-  </script>
