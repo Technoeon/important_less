@@ -90,8 +90,8 @@
                 <dt class="odd">Price</dt>
                 <dd class="odd">
                   <ol>
-                    <li> <a href="#"><span class="price">TK 0.00</span> - <span class="price"> TK 500.00</span></a> (6) </li>
-                    <li> <a href="#"><span class="price">TK 501.00</span> - <span class="price"> TK 1000.00</span></a> (6) </li>
+                    <li> <a href="#" ng-click="getPrice1()"><span class="price">TK 0.00</span> - <span class="price"> TK 500.00</span></a> (6) </li>
+                    <li> <a href="#" ng-click="getPrice2()"><span class="price">TK 501.00</span> - <span class="price"> TK 1000.00</span></a> (6) </li>
                     <li> <a href="#"><span class="price">TK 1001.00</span> - <span class="price"> TK 2000.00</span></a> (6) </li>
                     <li> <a href="#"><span class="price">TK 2001.00</span> - <span class="price"> TK 5000.00</span></a> (6) </li>
                     <li> <a href="#"><span class="price">TK 5001.00</span> - <span class="price"> TK 10000.00</span></a> (6) </li>
@@ -99,21 +99,18 @@
                   </ol>
                 </dd>
                 <dt class="even">Manufacturer</dt>
-                <dd class="even">
+                <dd class="even" ng-repeat="manufacturer in pmanufacturer">
                   <ol>
-                    <li> <a href="#">TheBrand</a> (9) </li>
-                    <li> <a href="#">Company</a> (4) </li>
-                    <li> <a href="#">LogoFashion</a> (1) </li>
+                    <li> <a href="#">{{manufacturer.manufacturer_name}}</a> ({{manufacturer.have_product}}) </li>
+                   
                   </ol>
                 </dd>
                 
                 <dt class="last even">Size</dt>
-                <dd class="last even">
+                <dd class="last even" ng-repeat="size in psize">
                   <ol>
-                    <li> <a href="#">S</a> (6) </li>
-                    <li> <a href="#">M</a> (6) </li>
-                    <li> <a href="#">L</a> (4) </li>
-                    <li> <a href="#">XL</a> (4) </li>
+                    <li> <a href="#">{{size.size_name}}</a> ({{size.have_product}}) </li>
+                    
                   </ol>
                 </dd>
               </dl>
@@ -153,7 +150,17 @@
     </div>
   </section>
 <script>
- client.controller('categoryProduct', function($scope) {
+ client.controller('categoryProduct', function($scope, $http) {
     $scope.products = <?php echo $product; ?>;
+     $scope.psize = <?php echo $size; ?>;
+    $scope.pmanufacturer = <?php echo $manufacturer; ?>;
+    $scope.getPrice1=function(){
+       $http.get("customers.php").then(function (response) {
+      $scope.price1 = response.data.products;
+  });}
+  $scope.getPrice2=function(){
+       $http.get("customers.php").then(function (response) {
+      $scope.price2 = response.data.products;
+  });}
    });
 </script>
