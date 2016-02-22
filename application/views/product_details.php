@@ -39,16 +39,17 @@
                   <div class="clear"></div>
                 </div>
                 <div class="product-shop col-sm-7 wow bounceInLeft animated">
-                  <div class="product-next-prev"> <a class="product-next" href="#"><span></span></a> <a class="product-prev" href="#"><span></span></a> </div>
                   <div class="product-name">
                     <h1>Sample Product</h1>
                   </div>
+                    <br>
                   <div class="ratings">
                     <div class="rating-box">
                       <div style="width:60%" class="rating"></div>
                     </div>
                     <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Your Review</a> </p>
                   </div>
+                    <br>
                   <p class="availability in-stock"><span>In Stock</span></p>
                   <div class="price-block">
                     <div class="price-box">
@@ -56,31 +57,15 @@
                       <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> $309.99 </span> </p>
                     </div>
                   </div>
+                  <br>
                   <div class="short-description">
-                    <h2>Quick Overview</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.</p>
+                    Size:
                   </div>
-                  <div class="add-to-box">
-                    <div class="add-to-cart">
-                      <label for="qty">Quantity:</label>
-                      <div class="pull-left">
-                        <div class="custom pull-left">
-                          <input type="text" class="input-text qty" title="Qty" value="1" maxlength="12" id="qty" name="qty">
-                          <button onClick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty )) result.value++;return false;" class="increase items-count" type="button"><i class="icon-plus">&nbsp;</i></button>
-                          <button onClick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 0 ) result.value--;return false;" class="reduced items-count" type="button"><i class="icon-minus">&nbsp;</i></button>
-                        </div>
-                      </div>
-                      <div class="">
-                        <button onClick="productAddToCartForm.submit(this)" class="button btn-cart" title="Add to Cart" type="button"><span><i class="icon-basket"></i> Add to Cart</span></button>
-                      </div>
-                    </div>
-                    <div class="email-addto-box">
-                      <ul class="add-to-links">
-                        <li> <a class="link-wishlist" href="#"><span>Add to Wishlist</span></a></li>
-                        <li><span class="separator">|</span> <a class="link-compare" href="#"><span>Add to Compare</span></a></li>
-                      </ul>
-                      <p class="email-friend"><a href="#" class=""><span>Email to a Friend</span></a></p>
-                    </div>
+                  <br>
+                  <div class="actions">
+                      <button type="button" value="save" class="button btn-cart"><a href="#"><span>Add to Cart</span></a></button>
+                      <button type="button" value="save" class="button btn-app"><span>Add to Wishlist</span></button>
+                      <button type="button" value="save" class="button btn-cart"><span>Order Now</span></button>
                   </div>
                 </div>
               </form>
@@ -89,36 +74,16 @@
               <div class="col-sm-12 wow bounceInUp animated">
                 <ul id="product-detail-tab" class="nav nav-tabs product-tabs">
                   <li class="active"> <a href="#product_tabs_description" data-toggle="tab"> Product Description </a> </li>
-                  <li><a href="#product_tabs_tags" data-toggle="tab">Tags</a></li>
                   <li> <a href="#reviews_tabs" data-toggle="tab">Reviews</a> </li>
-                  <li> <a href="#product_tabs_custom" data-toggle="tab">Custom Tab</a> </li>
-                  <li> <a href="#product_tabs_custom1" data-toggle="tab">Custom Tab1</a> </li>
+                  
                 </ul>
                 <div id="productTabContent" class="tab-content">
                   <div class="tab-pane fade in active" id="product_tabs_description">
                     <div class="std">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero. Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, lorem et placerat vestibulum, metus nisi posuere nisl, in accumsan elit odio quis mi. Cras neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in imperdiet ligula euismod eget. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam erat mi, rutrum at sollicitudin rhoncus, ultricies posuere erat. Duis convallis, arcu nec aliquam consequat, purus felis vehicula felis, a dapibus enim lorem nec augue.</p>
-                      <p> Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.</p>
+                        <label>Product Model:</label>
                     </div>
                   </div>
-                  <div class="tab-pane fade" id="product_tabs_tags">
-                    <div class="box-collateral box-tags">
-                      <div class="tags">
-                        <form id="addTagForm" action="#" method="get">
-                          <div class="form-add-tags">
-                            <label for="productTagName">Add Tags:</label>
-                            <div class="input-box">
-                              <input class="input-text required-entry" name="productTagName" id="productTagName" type="text" style="width:35%;">
-                              <button type="button" title="Add Tags" class=" button btn-add" onClick="submitTagForm()"> <span>Add Tags</span> </button>
-                            </div>
-                            <!--input-box--> 
-                          </div>
-                        </form>
-                      </div>
-                      <!--tags-->
-                      <p class="note">Use spaces to separate tags. Use single quotes (') for phrases.</p>
-                    </div>
-                  </div>
+                  
                   <div class="tab-pane fade" id="reviews_tabs">
                     <div class="box-collateral box-reviews" id="customer-reviews">
                       <div class="box-reviews1">
@@ -318,36 +283,8 @@
                       <div class="clear"></div>
                     </div>
                   </div>
-                  <div class="tab-pane fade" id="product_tabs_custom">
-                    <div class="product-tabs-content-inner clearfix">
-                      <p><strong>Lorem Ipsum</strong><span>&nbsp;is
-                        simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                        has been the industry's standard dummy text ever since the 1500s, when 
-                        an unknown printer took a galley of type and scrambled it to make a type
-                        specimen book. It has survived not only five centuries, but also the 
-                        leap into electronic typesetting, remaining essentially unchanged. It 
-                        was popularised in the 1960s with the release of Letraset sheets 
-                        containing Lorem Ipsum passages, and more recently with desktop 
-                        publishing software like Aldus PageMaker including versions of Lorem 
-                        Ipsum.</span></p>
-                    </div>
-                  </div>
-                  <div class="tab-pane fade" id="product_tabs_custom1">
-                    <div class="product-tabs-content-inner clearfix">
-                      <p> <strong> Comfortable </strong><span>&nbsp;preshrunk shirts. Highest Quality Printing.  6.1 oz. 100% preshrunk heavyweight cotton Shoulder-to-shoulder taping Double-needle sleeves and bottom hem     
-                        
-                        Lorem Ipsumis
-                        simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                        has been the industry's standard dummy text ever since the 1500s, when 
-                        an unknown printer took a galley of type and scrambled it to make a type
-                        specimen book. It has survived not only five centuries, but also the 
-                        leap into electronic typesetting, remaining essentially unchanged. It 
-                        was popularised in the 1960s with the release of Letraset sheets 
-                        containing Lorem Ipsum passages, and more recently with desktop 
-                        publishing software like Aldus PageMaker including versions of Lorem 
-                        Ipsum.</span></p>
-                    </div>
-                  </div>
+                 
+                  
                 </div>
               </div>
              
@@ -355,6 +292,61 @@
           </div>
         </div>
       </div>
+         <div class="col-sm-12">
+                <div class="box-additional">
+                  <div class="related-pro wow bounceInUp animated">
+                    <div class="slider-items-products">
+                      <div class="new_title center">
+                        <h2>Related Products</h2>
+                      </div>
+                      <div id="related-products-slider" class="product-flexslider hidden-buttons">
+                        <div class="slider-items slider-width-col4"> 
+                          
+                          <!-- Item -->
+                          <div class="item">
+                            <div class="col-item">
+                              <div class="sale-label sale-top-right">Sale</div>
+                              <div class="product-image-area"> <a class="product-image" title="Sample Product" href="product-detail.html"> <img src="<?php echo base_url();?>images/products-images/p3.jpg" class="img-responsive" alt="a" /> </a></div>
+                              <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="quick-view.html"><span>quickview</span></a> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> <a title="Add to Compare" class="link-compare" href="#"><span>Add to Compare</span></a></span> </div>
+                              <div class="info">
+                                <div class="info-inner">
+                                  <div class="item-title"> <a href="#l" title=" Sample Product"> Sample Product </a> </div>
+                                  <!--item-title-->
+                                  <div class="item-content">
+                                    <div class="ratings">
+                                      <div class="rating-box">
+                                        <div style="width:60%" class="rating"></div>
+                                      </div>
+                                    </div>
+                                    <div class="price-box">
+                                      <p class="special-price"> <span class="price"> $45.00 </span> </p>
+                                      <p class="old-price"> <span class="price-sep">-</span> <span class="price"> $50.00 </span> </p>
+                                    </div>
+                                  </div>
+                                  <!--item-content--> 
+                                </div>
+                                <!--info-inner-->
+                                <div class="actions">
+                                  <button type="button" title="Add to Cart" class="button btn-cart"><span>Add to Cart</span></button>
+                                </div>
+                                <!--actions-->
+                                
+                                <div class="clearfix"> </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- End Item --> 
+                         
+                          
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+				
+              </div>
+        <br><br><br>
         <!-- JavaScript --> 
 <script type="text/javascript" src="<?php echo base_url();?>js/jquery.min.js"></script> 
 <script type="text/javascript" src="<?php echo base_url();?>js/bootstrap.min.js"></script> 
@@ -365,4 +357,11 @@
 <script type="text/javascript" src="<?php echo base_url();?>js/cloud-zoom.js"></script>
   </section>
   <!--End main-container --> 
+  <script>
+    client.controller('productDetails', function($scope) {
+    $scope.product1 = <?php echo $product1; ?>;
+    
+    //return (val.j_sub_category_1 != 2);
 
+    });
+  </script>

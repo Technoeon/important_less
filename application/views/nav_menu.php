@@ -61,17 +61,17 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
     $main_menu_1_img;
     $main_menu_product_id_1;
     $main_menu_product_name_1;
+    
     ?>    
     <?php
     foreach ($main_menu_1 as $value) {
-
         if (isset($value->product_id)) {
             $main_menu_1_img = $value->menu_image;
             $main_menu_product_id_1 = $value->product_id;
             $main_menu_product_name_1 = $value->product_name;
         }
         ?>
-        <li class="level0 nav-6 level-top parent"> <a href="<?php echo $value->id; ?>" class="level-top"> <span><?php echo $value->main_menu_name; ?></span> </a>
+       <li class="level0 nav-6 level-top parent"> <a href="<?php echo base_url().'onlineshop/product_main_category/'.$value->id; ?>" class="level-top"> <span><?php echo $value->main_menu_name; ?></span> </a>
         <?php } ?>
         <div class="level0-wrapper dropdown-6col" style="left: 0pt; display: none;">
             <div class="level0-wrapper2">
@@ -81,7 +81,7 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                             <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
                                 <li class="level1 nav-5">
 
-                                    <a type="hidden"href="<?php echo $sub_menu_value->sub_menu_id ?>/onlineshop/product_category"> 
+                                    <a href="<?php echo base_url().'onlineshop/product_sub_category/'.$sub_menu_value->sub_menu_id ?>"> 
                                         <span><?php
                                             echo $sub_menu_value->sub_menu_name;
                                             $sub_menu_id = $sub_menu_value->sub_menu_id;
@@ -90,7 +90,7 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                                     <ul class="level1">
                                         <?php foreach ($menu_1 as $menu_value) { ?>
                                             <?php if ($menu_value->sub_menu_id == $sub_menu_value->sub_menu_id) { ?>
-                                                <li><a href="<?php echo $menu_value->menu_id ?>/onlineshop/product_category"><?php echo $menu_value->menu_name; ?></a></li>
+                                                <li><a href="<?php echo base_url().'onlineshop/product_category/'. $menu_value->menu_id ?>"><?php echo $menu_value->menu_name; ?></a></li>
                                             <?php }
                                             ?>
                                         <?php } ?>
@@ -106,8 +106,8 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                 </div>
                 <?php if (isset($main_menu_product_id_1)) { ?>
                     <div class="nav-block nav-block-right std grid12-4">
-                        <div class="static-img-block"><a href="#"><img style="width: 300px;height: 280px;" src="<?php echo base_url() . $main_menu_1_img; ?>" alt="Responsive"></a></div>
-
+                        <div class="static-img-block"><a href="#"><img style="width: 210px;height: 287px;" src="<?php echo base_url() . $main_menu_1_img; ?>" alt="Responsive"></a></div>
+                        <h3 class="heading" style="text-align: center;"><?php echo $main_menu_product_name_1 ?></h3>
                     </div>
                 <?php } ?>
             </div>
@@ -128,7 +128,7 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
             $main_menu_product_name_2 = $value->product_name;
         }
         ?>
-        <li class="level0 nav-6 level-top parent"> <a href="<?php echo $value->id; ?>" class="level-top"> <span><?php echo $value->main_menu_name; ?></span> </a>
+        <li class="level0 nav-6 level-top parent"> <a href="<?php echo base_url().'onlineshop/product_main_category/'.$value->id;?>" class="level-top"> <span><?php echo $value->main_menu_name; ?></span> </a>
         <?php } ?>
         <div class="level0-wrapper dropdown-6col" style="left: 0pt; display: none;">
             <div class="level0-wrapper2">
@@ -138,7 +138,7 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                             <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
                                 <li class="level1 nav-5">
 
-                                    <a href="<?php echo $sub_menu_value->sub_menu_id ?>"> 
+                                    <a href="<?php echo base_url().'onlineshop/product_sub_category/'.$sub_menu_value->sub_menu_id ?>"> 
                                         <span><?php
                                             echo $sub_menu_value->sub_menu_name;
                                             $sub_menu_id = $sub_menu_value->sub_menu_id;
@@ -147,7 +147,7 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                                     <ul class="level1">
                                         <?php foreach ($menu_2 as $menu_value) { ?>
                                             <?php if ($menu_value->sub_menu_id == $sub_menu_value->sub_menu_id) { ?>
-                                                <li><a href="<?php echo $menu_value->menu_id ?>"><?php echo $menu_value->menu_name; ?></a></li>
+                                                <li><a href="<?php echo base_url().'onlineshop/product_category/'. $menu_value->menu_id ?>"><?php echo $menu_value->menu_name; ?></a></li>
                                             <?php }
                                             ?>
                                         <?php } ?>
@@ -163,8 +163,8 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                 </div>
                 <?php if (isset($main_menu_product_id_2)) { ?>
                     <div class="nav-block nav-block-right std grid12-4">
-                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_2 ?>"><img style="width: 300px;height: 280px;" src="<?php echo base_url() . $main_menu_2_img; ?>" alt="Responsive"></a></div>
-                        <h3 class="heading" style="margin-left: 100px;"><?php echo $main_menu_product_name_2 ?></h3>
+                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_2 ?>"><img style="width: 210px;height: 287px;" src="<?php echo base_url() . $main_menu_2_img; ?>" alt="Responsive"></a></div>
+                        <h3 class="heading" style="text-align: center;"><?php echo $main_menu_product_name_2 ?></h3>
                     </div>
                 <?php } ?>
             </div>
@@ -184,7 +184,7 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
             $main_menu_product_name_3 = $value->product_name;
         }
         ?>
-        <li class="level0 nav-6 level-top parent"> <a href="<?php echo $value->id; ?>" class="level-top"> <span><?php echo $value->main_menu_name; ?></span> </a>
+        <li class="level0 nav-6 level-top parent"> <a href="<?php echo base_url().'onlineshop/product_main_category/'.$value->id;?>" class="level-top"> <span><?php echo $value->main_menu_name; ?></span> </a>
         <?php } ?>
         <div class="level0-wrapper dropdown-6col" style="left: 0pt; display: none;">
             <div class="level0-wrapper2">
@@ -194,7 +194,7 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                             <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
                                 <li class="level1 nav-5">
 
-                                    <a href="<?php echo $sub_menu_value->sub_menu_id ?>"> 
+                                    <a href="<?php echo base_url().'onlineshop/product_sub_category/'.$sub_menu_value->sub_menu_id ?>"> 
                                         <span><?php
                                             echo $sub_menu_value->sub_menu_name;
                                             $sub_menu_id = $sub_menu_value->sub_menu_id;
@@ -203,7 +203,7 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                                     <ul class="level1">
                                         <?php foreach ($menu_3 as $menu_value) { ?>
                                             <?php if ($menu_value->sub_menu_id == $sub_menu_value->sub_menu_id) { ?>
-                                                <li><a href="<?php echo $menu_value->menu_id ?>"><?php echo $menu_value->menu_name; ?></a></li>
+                                                <li><a href="<?php echo base_url().'onlineshop/product_category/'. $menu_value->menu_id ?>"><?php echo $menu_value->menu_name; ?></a></li>
                                             <?php }
                                             ?>
                                         <?php } ?>
@@ -218,8 +218,8 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                 </div>
                 <?php if (isset($main_menu_product_id_3)) { ?>
                     <div class="nav-block nav-block-right std grid12-4">
-                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_3 ?>"><img style="width: 300px;height: 280px;" src="<?php echo base_url() . $main_menu_3_img; ?>" alt="Responsive"></a></div>
-                        <h3 class="heading" style="margin-left: 100px;"><?php echo $main_menu_product_name_3 ?></h3>
+                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_3 ?>"><img style="width: 210px;height: 287px;" src="<?php echo base_url() . $main_menu_3_img; ?>" alt="Responsive"></a></div>
+                        <h3 class="heading" style="text-align: center;"><?php echo $main_menu_product_name_3 ?></h3>
                     </div>
                 <?php } ?>
             </div>
@@ -239,7 +239,7 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
             $main_menu_product_name_4 = $value->product_name;
         }
         ?>
-        <li class="level0 nav-6 level-top parent"> <a href="<?php echo $value->id; ?>" class="level-top"> <span><?php echo $value->main_menu_name; ?></span> </a>
+        <li class="level0 nav-6 level-top parent"> <a href="<?php echo base_url().'onlineshop/product_main_category/'.$value->id;?>" class="level-top"> <span><?php echo $value->main_menu_name; ?></span> </a>
         <?php } ?>
         <div class="level0-wrapper dropdown-6col" style="left: 0pt; display: none;">
             <div class="level0-wrapper2">
@@ -249,7 +249,7 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                             <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
                                 <li class="level1 nav-5">
 
-                                    <a href="<?php echo $sub_menu_value->sub_menu_id ?>"> 
+                                    <a href="<?php echo base_url().'onlineshop/product_sub_category/'.$sub_menu_value->sub_menu_id ?>"> 
                                         <span><?php
                                             echo $sub_menu_value->sub_menu_name;
                                             $sub_menu_id = $sub_menu_value->sub_menu_id;
@@ -258,7 +258,7 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                                     <ul class="level1">
                                         <?php foreach ($menu_4 as $menu_value) { ?>
                                             <?php if ($menu_value->sub_menu_id == $sub_menu_value->sub_menu_id) { ?>
-                                                <li><a href="<?php echo $menu_value->menu_id ?>"><?php echo $menu_value->menu_name; ?></a></li>
+                                                <li><a href=" <?php echo base_url().'onlineshop/product_category/'. $menu_value->menu_id ?>"><?php echo $menu_value->menu_name; ?></a></li>
                                             <?php }
                                             ?>
                                         <?php } ?>
@@ -273,8 +273,8 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                 </div>
                 <?php if (isset($main_menu_product_id_4)) { ?>
                     <div class="nav-block nav-block-right std grid12-4">
-                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_4 ?>"><img style="width: 300px;height: 280px;" src="<?php echo base_url() . $main_menu_4_img; ?>" alt="Responsive"></a></div>
-                        <h3 class="heading" style="margin-left: 100px;"><?php echo $main_menu_product_name_4 ?></h3>
+                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_4 ?>"><img style="width: 210px;height: 287px;" src="<?php echo base_url() . $main_menu_4_img; ?>" alt="Responsive"></a></div>
+                        <h3 class="heading" style="text-align: center;"><?php echo $main_menu_product_name_4 ?></h3>
                     </div>
                 <?php } ?>
             </div>
@@ -294,7 +294,7 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
             $main_menu_product_name_5 = $value->product_name;
         }
         ?>
-        <li class="level0 nav-6 level-top parent"> <a href="<?php echo $value->id; ?>" class="level-top"> <span><?php echo $value->main_menu_name; ?></span> </a>
+        <li class="level0 nav-6 level-top parent"> <a href="<?php echo base_url().'onlineshop/product_main_category/'.$value->id;?>" class="level-top"> <span><?php echo $value->main_menu_name; ?></span> </a>
         <?php } ?>
         <div class="level0-wrapper dropdown-6col" style="left: 0pt; display: none;">
             <div class="level0-wrapper2">
@@ -304,7 +304,7 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                             <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
                                 <li class="level1 nav-5">
 
-                                    <a href="<?php echo $sub_menu_value->sub_menu_id ?>"> 
+                                    <a href="<?php echo base_url().'onlineshop/product_sub_category/'.$sub_menu_value->sub_menu_id ?>"> 
                                         <span><?php
                                             echo $sub_menu_value->sub_menu_name;
                                             $sub_menu_id = $sub_menu_value->sub_menu_id;
@@ -313,7 +313,7 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                                     <ul class="level1">
                                         <?php foreach ($menu_5 as $menu_value) { ?>
                                             <?php if ($menu_value->sub_menu_id == $sub_menu_value->sub_menu_id) { ?>
-                                                <li><a href="<?php echo $menu_value->menu_id ?>"><?php echo $menu_value->menu_name; ?></a></li>
+                                                <li><a href=" <?php echo base_url().'onlineshop/product_category/'. $menu_value->menu_id ?>"><?php echo $menu_value->menu_name; ?></a></li>
                                             <?php }
                                             ?>
                                         <?php } ?>
@@ -328,8 +328,8 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                 </div>
                 <?php if (isset($main_menu_product_id_5)) { ?>
                     <div class="nav-block nav-block-right std grid12-4">
-                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_5 ?>"><img style="width: 300px;height: 280px;" src="<?php echo base_url() . $main_menu_5_img; ?>" alt="Responsive"></a></div>
-                        <h3 class="heading" style="margin-left: 100px;"><?php echo $main_menu_product_name_5 ?></h3>
+                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_5 ?>"><img style="width: 210px;height: 287px;" src="<?php echo base_url() . $main_menu_5_img; ?>" alt="Responsive"></a></div>
+                        <h3 class="heading" style="text-align: center;"><?php echo $main_menu_product_name_5 ?></h3>
                     </div>
                 <?php } ?>
             </div>
@@ -349,7 +349,7 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
             $main_menu_product_name_6 = $value->product_name;
         }
         ?>
-        <li class="level0 nav-6 level-top parent"> <a href="<?php echo $value->id; ?>" class="level-top"> <span><?php echo $value->main_menu_name; ?></span> </a>
+        <li class="level0 nav-6 level-top parent"> <a href="<?php echo base_url().'onlineshop/product_main_category/'.$value->id;?>" class="level-top"> <span><?php echo $value->main_menu_name; ?></span> </a>
         <?php } ?>
         <div class="level0-wrapper dropdown-6col" style="left: 0pt; display: none;">
             <div class="level0-wrapper2">
@@ -359,7 +359,7 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                             <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
                                 <li class="level1 nav-5">
 
-                                    <a href="<?php echo $sub_menu_value->sub_menu_id ?>"> 
+                                    <a href="<?php echo base_url().'onlineshop/product_sub_category/'.$sub_menu_value->sub_menu_id ?>"> 
                                         <span><?php
                                             echo $sub_menu_value->sub_menu_name;
                                             $sub_menu_id = $sub_menu_value->sub_menu_id;
@@ -368,7 +368,7 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                                     <ul class="level1">
                                         <?php foreach ($menu_6 as $menu_value) { ?>
                                             <?php if ($menu_value->sub_menu_id == $sub_menu_value->sub_menu_id) { ?>
-                                                <li><a href="<?php echo $menu_value->menu_id ?>"><?php echo $menu_value->menu_name; ?></a></li>
+                                                <li><a href="<?php echo base_url().'onlineshop/product_category/'. $menu_value->menu_id ?>"><?php echo $menu_value->menu_name; ?></a></li>
                                             <?php }
                                             ?>
                                         <?php } ?>
@@ -383,8 +383,8 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                 </div>
                 <?php if (isset($main_menu_product_id_6)) { ?>
                     <div class="nav-block nav-block-right std grid12-4">
-                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_6 ?>"><img style="width: 300px;height: 280px;" src="<?php echo base_url() . $main_menu_6_img; ?>" alt="Responsive"></a></div>
-                        <h3 class="heading" style="margin-left: 100px;"><?php echo $main_menu_product_name_6 ?></h3>
+                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_6 ?>"><img style="width: 210px;height: 287px;" src="<?php echo base_url() . $main_menu_6_img; ?>" alt="Responsive"></a></div>
+                        <h3 class="heading" style="text-align: center;"><?php echo $main_menu_product_name_6 ?></h3>
                     </div>
                 <?php } ?></div>
         </div>
@@ -403,7 +403,7 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
             $main_menu_product_name_7 = $value->product_name;
         }
         ?>
-        <li class="level0 nav-6 level-top parent"> <a href="<?php echo $value->id; ?>" class="level-top"> <span><?php echo $value->main_menu_name; ?></span> </a>
+        <li class="level0 nav-6 level-top parent"> <a href="<?php echo base_url().'onlineshop/product_main_category/'.$value->id;?>" class="level-top"> <span><?php echo $value->main_menu_name; ?></span> </a>
         <?php } ?>
         <div class="level0-wrapper dropdown-6col" style="left: 0pt; display: none;">
             <div class="level0-wrapper2">
@@ -413,7 +413,7 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                             <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
                                 <li class="level1 nav-5">
 
-                                    <a href="<?php echo $sub_menu_value->sub_menu_id ?>"> 
+                                    <a href="<?php echo base_url().'onlineshop/product_sub_category/'.$sub_menu_value->sub_menu_id ?>"> 
                                         <span><?php
                                             echo $sub_menu_value->sub_menu_name;
                                             $sub_menu_id = $sub_menu_value->sub_menu_id;
@@ -422,7 +422,7 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                                     <ul class="level1">
                                         <?php foreach ($menu_7 as $menu_value) { ?>
                                             <?php if ($menu_value->sub_menu_id == $sub_menu_value->sub_menu_id) { ?>
-                                                <li><a href="<?php echo $menu_value->menu_id ?>"><?php echo $menu_value->menu_name; ?></a></li>
+                                                <li><a href=" <?php echo base_url().'onlineshop/product_category/'. $menu_value->menu_id ?>"><?php echo $menu_value->menu_name; ?></a></li>
                                             <?php }
                                             ?>
                                         <?php } ?>
@@ -437,8 +437,8 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                 </div>
                 <?php if (isset($main_menu_product_id_7)) { ?>
                     <div class="nav-block nav-block-right std grid12-4">
-                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_7 ?>"><img style="width: 300px;height: 280px;" src="<?php echo base_url() . $main_menu_7_img; ?>" alt="Responsive"></a></div>
-                        <h3 class="heading" style="margin-left: 100px;"><?php echo $main_menu_product_name_7 ?></h3>
+                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_7 ?>"><img style="width: 210px;height: 287px;" src="<?php echo base_url() . $main_menu_7_img; ?>" alt="Responsive"></a></div>
+                        <h3 class="heading" style="text-align: center;"><?php echo $main_menu_product_name_7 ?></h3>
                     </div>
                 <?php } ?></div>
         </div>
@@ -457,7 +457,7 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
             $main_menu_product_name_8 = $value->product_name;
         }
         ?>
-        <li class="level0 nav-6 level-top parent"> <a href="<?php echo $value->id; ?>" class="level-top"> <span><?php echo $value->main_menu_name; ?></span> </a>
+        <li class="level0 nav-6 level-top parent"> <a href="<?php echo base_url().'onlineshop/product_main_category/'.$value->id;?>" class="level-top"> <span><?php echo $value->main_menu_name; ?></span> </a>
         <?php } ?>
         <div class="level0-wrapper dropdown-6col" style="left: 0pt; display: none;">
             <div class="level0-wrapper2">
@@ -467,7 +467,7 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                             <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
                                 <li class="level1 nav-5">
 
-                                    <a href="<?php echo $sub_menu_value->sub_menu_id ?>"> 
+                                    <a href="<?php echo base_url().'onlineshop/product_sub_category/'.$sub_menu_value->sub_menu_id ?>"> 
                                         <span><?php
                                             echo $sub_menu_value->sub_menu_name;
                                             $sub_menu_id = $sub_menu_value->sub_menu_id;
@@ -476,7 +476,7 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                                     <ul class="level1">
                                         <?php foreach ($menu_8 as $menu_value) { ?>
                                             <?php if ($menu_value->sub_menu_id == $sub_menu_value->sub_menu_id) { ?>
-                                                <li><a href="<?php echo $menu_value->menu_id ?>"><?php echo $menu_value->menu_name; ?></a></li>
+                                                <li><a href="<?php echo base_url().'onlineshop/product_category/'. $menu_value->menu_id ?>"><?php echo $menu_value->menu_name; ?></a></li>
                                             <?php }
                                             ?>
                                         <?php } ?>
@@ -492,8 +492,8 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                 </div>
                 <?php if (isset($main_menu_product_id_8)) { ?>
                     <div class="nav-block nav-block-right std grid12-4">
-                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_8 ?>"><img style="width: 300px;height: 280px;" src="<?php echo base_url() . $main_menu_8_img; ?>" alt="Responsive"></a></div>
-                        <h3 class="heading" style="margin-left: 100px;"><?php echo $main_menu_product_name_8 ?></h3>
+                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_8 ?>"><img style="width: 210px;height: 287px;" src="<?php echo base_url() . $main_menu_8_img; ?>" alt="Responsive"></a></div>
+                        <h3 class="heading" style="text-align: center;"><?php echo $main_menu_product_name_8 ?></h3>
                     </div>
                 <?php } ?></div>
         </div>
@@ -505,14 +505,14 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
     $main_menu_product_name_9;
     ?>    
     <?php
-    foreach ($main_menu_2 as $value) {
+    foreach ($main_menu_9 as $value) {
         if (isset($value->product_id)) {
             $main_menu_9_img = $value->menu_image;
             $main_menu_product_id_9 = $value->product_id;
             $main_menu_product_name_9 = $value->product_name;
         }
         ?>
-        <li class="level0 nav-6 level-top parent"> <a href="<?php echo $value->id; ?>" class="level-top"> <span><?php echo $value->main_menu_name; ?></span> </a>
+        <li class="level0 nav-6 level-top parent"> <a href="<?php echo base_url().'onlineshop/product_main_category/'.$value->id;?>" class="level-top"> <span><?php echo $value->main_menu_name; ?></span> </a>
         <?php } ?>
         <div class="level0-wrapper dropdown-6col" style="left: 0pt; display: none;">
             <div class="level0-wrapper2">
@@ -522,7 +522,7 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                             <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
                                 <li class="level1 nav-5">
 
-                                    <a href="<?php echo $sub_menu_value->sub_menu_id ?>"> 
+                                    <a href="<?php echo base_url().'onlineshop/product_sub_category/'.$sub_menu_value->sub_menu_id ?>"> 
                                         <span><?php
                                             echo $sub_menu_value->sub_menu_name;
                                             $sub_menu_id = $sub_menu_value->sub_menu_id;
@@ -531,7 +531,7 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                                     <ul class="level1">
                                         <?php foreach ($menu_9 as $menu_value) { ?>
                                             <?php if ($menu_value->sub_menu_id == $sub_menu_value->sub_menu_id) { ?>
-                                                <li><a href="<?php echo $menu_value->menu_id ?>"><?php echo $menu_value->menu_name; ?></a></li>
+                                                <li><a href="<?php echo base_url().'onlineshop/product_category/'. $menu_value->menu_id ?>"><?php echo $menu_value->menu_name; ?></a></li>
                                             <?php }
                                             ?>
                                         <?php } ?>
@@ -546,8 +546,8 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                 </div>
                 <?php if (isset($main_menu_product_id_9)) { ?>
                     <div class="nav-block nav-block-right std grid12-4">
-                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_9 ?>"><img style="width: 300px;height: 280px;" src="<?php echo base_url() . $main_menu_9_img; ?>" alt="Responsive"></a></div>
-                        <h3 class="heading" style="margin-left: 100px;"><?php echo $main_menu_product_name_9 ?></h3>
+                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_9 ?>"><img style="width: 210px;height: 287px;" src="<?php echo base_url() . $main_menu_9_img; ?>" alt="Responsive"></a></div>
+                        <h3 class="heading" style="text-align: center;"><?php echo $main_menu_product_name_9 ?></h3>
                     </div>
                 <?php } ?></div>
         </div>

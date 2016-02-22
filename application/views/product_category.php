@@ -1,6 +1,7 @@
 <!-- Two columns content -->
-<form action="<?php echo base_url(); ?>onlineshop/product_category" method="post">
-  <section class="main-container col2-left-layout">
+<form action="<?php echo base_url(); ?>onlineshop/product_category" method="post"></form>
+
+<section class="main-container col2-left-layout" ng-controller="categoryProduct">
     <div class="main container">
       <div class="row">
         <section class="col-main col-sm-9 col-sm-push-3 wow bounceInUp animated">
@@ -26,14 +27,14 @@
               </div>
             </div>
             <ul class="products-grid">
-              <li class="item col-lg-4 col-md-3 col-sm-4 col-xs-6">
+                <li class="item col-lg-4 col-md-3 col-sm-4 col-xs-6" ng-repeat="product in products">
                 <div class="col-item">
                   <div class="sale-label sale-top-right">Sale</div>
-                  <div class="product-image-area"> <a class="product-image" title="Sample Product" href="product-detail.html"> <img src="<?php echo base_url(); ?>images/products-images/p3.jpg" class="img-responsive" alt="a" /> </a></div>
+                  <div class="product-image-area"> <a class="product-image" title="Sample Product" href="product-detail.html"> <img src="<?php echo base_url(); ?>{{product.image_path}}" class="img-responsive" alt="a" /> </a></div>
                   <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="<?php echo base_url(); ?>quick-view.html"><span>quickview</span></a> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> <a title="Add to Compare" class="link-compare" href="#"><span>Add to Compare</span></a></span> </div>
                   <div class="info">
                     <div class="info-inner">
-                      <div class="item-title"> <a title=" Sample Product" href="product-detail.html"> Sample Product </a> </div>
+                      <div class="item-title"> <a title=" Sample Product" href="product-detail.html">{{product.product_name}}</a> </div>
                       <!--item-title-->
                       <div class="item-content">
                         <div class="ratings">
@@ -42,8 +43,9 @@
                           </div>
                         </div>
                         <div class="price-box">
-                          <p class="special-price"> <span class="price"> $45.00 </span> </p>
-                          <p class="old-price"> <span class="price-sep">-</span> <span class="price"> $50.00 </span> </p>
+                          <p class="special-price" ng-if="product.discount == NULL"> <span class="price"> Tk. {{product.product_price}}</span> </p>
+                          <p class="special-price" ng-if="product.discount != NULL"> <span class="price"> Tk. {{product.discount}}</span> </p>
+                          <p class="old-price" ng-if="product.discount != NULL"><span class="price-sep">-</span> <span class="price">TK. {{product.product_price}} </span> </p>
                         </div>
                       </div>
                       <!--item-content--> 
@@ -58,250 +60,7 @@
                   </div>
                 </div>
               </li>
-              <li class="item col-lg-4 col-md-3 col-sm-4 col-xs-6">
-                <div class="col-item">
-                  <div class="new-label new-top-right">New</div>
-                  <div class="product-image-area"> <a class="product-image" title="Sample Product" href="product-detail.html"> <img src="<?php echo base_url(); ?>images/products-images/p2.jpg" class="img-responsive" alt="a" /> </a></div>
-                  <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="quick-view.html"><span>quickview</span></a> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> <a title="Add to Compare" class="link-compare" href="#"><span>Add to Compare</span></a></span> </div>
-                  <div class="info">
-                    <div class="info-inner">
-                      <div class="item-title"> <a title=" Sample Product" href="product-detail.html"> Sample Product </a> </div>
-                      <!--item-title-->
-                      <div class="item-content">
-                        <div class="ratings">
-                          <div class="rating-box">
-                            <div style="width:60%" class="rating"></div>
-                          </div>
-                        </div>
-                        <div class="price-box"> <span class="regular-price"> <span class="price">$422.00</span> </span> </div>
-                      </div>
-                      <!--item-content--> 
-                    </div>
-                    <!--info-inner-->
-                    <div class="actions">
-                      <button type="button" title="Add to Cart" class="button btn-cart"><span>Add to Cart</span></button>
-                    </div>
-                    <!--actions-->
-                    
-                    <div class="clearfix"> </div>
-                  </div>
-                </div>
-              </li>
-              <li class="item col-lg-4 col-md-3 col-sm-4 col-xs-6">
-                <div class="col-item">
-                  <div class="sale-label sale-top-right">Sale</div>
-                  <div class="product-image-area"> <a class="product-image" title="Sample Product" href="product-detail.html"> <img alt="a" class="img-responsive" src="<?php echo base_url(); ?>images/products-images/p4.jpg"> </a></div>
-                  <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="quick-view.html"><span>quickview</span></a> <a href="#" class="link-wishlist" title="Add to Wishlist"><span>Add to Wishlist</span></a> <a href="#" class="link-compare" title="Add to Compare"><span>Add to Compare</span></a></span> </div>
-                  <div class="info">
-                    <div class="info-inner">
-                      <div class="item-title"> <a title=" Sample Product" href="product-detail.html"> Sample Product </a> </div>
-                      <!--item-title-->
-                      <div class="item-content">
-                        <div class="ratings">
-                          <div class="rating-box">
-                            <div class="rating" style="width:0%"></div>
-                          </div>
-                        </div>
-                        <div class="price-box"> <span class="regular-price"> <span class="price">$50.00</span> </span> </div>
-                      </div>
-                      <!--item-content--> 
-                    </div>
-                    <!--info-inner-->
-                    <div class="actions">
-                      <button class="button btn-cart" title="Add to Cart" type="button"><span>Add to Cart</span></button>
-                    </div>
-                    <!--actions-->
-                    
-                    <div class="clearfix"> </div>
-                  </div>
-                </div>
-              </li>
-              <li class="item col-lg-4 col-md-3 col-sm-4 col-xs-6">
-                <div class="col-item">
-                  <div class="sale-label sale-top-right">Sale</div>
-                  <div class="product-image-area"> <a class="product-image" title="Sample Product" href="product-detail.html"> <img alt="a" class="img-responsive" src="<?php echo base_url(); ?>images/products-images/p1.jpg"> </a></div>
-                  <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="quick-view.html"><span>quickview</span></a> <a href="#" class="link-wishlist" title="Add to Wishlist"><span>Add to Wishlist</span></a> <a href="#" class="link-compare" title="Add to Compare"><span>Add to Compare</span></a></span> </div>
-                  <div class="info">
-                    <div class="info-inner">
-                      <div class="item-title"> <a title=" Sample Product" href="product-detail.html"> Sample Product </a> </div>
-                      <!--item-title-->
-                      <div class="item-content">
-                        <div class="ratings">
-                          <div class="rating-box">
-                            <div class="rating" style="width:50%"></div>
-                          </div>
-                        </div>
-                        <div class="price-box">
-                          <p class="special-price"> <span class="price"> $45.00 </span> </p>
-                          <p class="old-price"> <span class="price-sep">-</span> <span class="price"> $50.00 </span> </p>
-                        </div>
-                      </div>
-                      <!--item-content--> 
-                    </div>
-                    <!--info-inner-->
-                    <div class="actions">
-                      <button class="button btn-cart" title="Add to Cart" type="button"><span>Add to Cart</span></button>
-                    </div>
-                    <!--actions-->
-                    
-                    <div class="clearfix"> </div>
-                  </div>
-                </div>
-              </li>
-              <li class="item col-lg-4 col-md-3 col-sm-4 col-xs-6">
-                <div class="col-item">
-                  <div class="sale-label sale-top-right">Sale</div>
-                  <div class="product-image-area"> <a class="product-image" title="Sample Product" href="product-detail.html"> <img alt="a" class="img-responsive" src="<?php echo base_url(); ?>images/products-images/p6.jpg"> </a></div>
-                  <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="quick-view.html"><span>quickview</span></a> <a href="#" class="link-wishlist" title="Add to Wishlist"><span>Add to Wishlist</span></a> <a href="#" class="link-compare" title="Add to Compare"><span>Add to Compare</span></a></span> </div>
-                  <div class="info">
-                    <div class="info-inner">
-                      <div class="item-title"> <a title=" Sample Product" href="product-detail.html"> Sample Product </a> </div>
-                      <!--item-title-->
-                      <div class="item-content">
-                        <div class="ratings">
-                          <div class="rating-box">
-                            <div class="rating" style="width:60%"></div>
-                          </div>
-                        </div>
-                        <div class="price-box">
-                          <p class="special-price"> <span class="price"> $45.00 </span> </p>
-                          <p class="old-price"> <span class="price-sep">-</span> <span class="price"> $50.00 </span> </p>
-                        </div>
-                      </div>
-                      <!--item-content--> 
-                    </div>
-                    <!--info-inner-->
-                    <div class="actions">
-                      <button class="button btn-cart" title="Add to Cart" type="button"><span>Add to Cart</span></button>
-                    </div>
-                    <!--actions-->
-                    
-                    <div class="clearfix"> </div>
-                  </div>
-                </div>
-              </li>
-              <li class="item col-lg-4 col-md-3 col-sm-4 col-xs-6">
-                <div class="col-item">
-                  <div class="new-label new-top-right">New</div>
-                  <div class="product-image-area"> <a class="product-image" title="Sample Product" href="product-detail.html"> <img alt="a" class="img-responsive" src="<?php echo base_url(); ?>images/products-images/p7.jpg"> </a></div>
-                  <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="quick-view.html"><span>quickview</span></a> <a href="#" class="link-wishlist" title="Add to Wishlist"><span>Add to Wishlist</span></a> <a href="#" class="link-compare" title="Add to Compare"><span>Add to Compare</span></a></span> </div>
-                  <div class="info">
-                    <div class="info-inner">
-                      <div class="item-title"> <a title=" Sample Product" href="product-detail.html"> Sample Product </a> </div>
-                      <!--item-title-->
-                      <div class="item-content">
-                        <div class="ratings">
-                          <div class="rating-box">
-                            <div class="rating" style="width:60%"></div>
-                          </div>
-                        </div>
-                        <div class="price-box"> <span class="regular-price"> <span class="price">$422.00</span> </span> </div>
-                      </div>
-                      <!--item-content--> 
-                    </div>
-                    <!--info-inner-->
-                    <div class="actions">
-                      <button class="button btn-cart" title="Add to Cart" type="button"><span>Add to Cart</span></button>
-                    </div>
-                    <!--actions-->
-                    
-                    <div class="clearfix"> </div>
-                  </div>
-                </div>
-              </li>
-              <li class="item col-lg-4 col-md-3 col-sm-4 col-xs-6">
-                <div class="col-item">
-                  <div class="sale-label sale-top-right">Sale</div>
-                  <div class="product-image-area"> <a class="product-image" title="Sample Product" href="product-detail.html"> <img alt="a" class="img-responsive" src="<?php echo base_url(); ?>images/products-images/p8.jpg"> </a></div>
-                  <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="quick-view.html"><span>quickview</span></a> <a href="#" class="link-wishlist" title="Add to Wishlist"><span>Add to Wishlist</span></a> <a href="#" class="link-compare" title="Add to Compare"><span>Add to Compare</span></a></span> </div>
-                  <div class="info">
-                    <div class="info-inner">
-                      <div class="item-title"> <a title=" Sample Product" href="product-detail.html"> Sample Product </a> </div>
-                      <!--item-title-->
-                      <div class="item-content">
-                        <div class="ratings">
-                          <div class="rating-box">
-                            <div class="rating" style="width:0%"></div>
-                          </div>
-                        </div>
-                        <div class="price-box"> <span class="regular-price"> <span class="price">$50.00</span> </span> </div>
-                      </div>
-                      <!--item-content--> 
-                    </div>
-                    <!--info-inner-->
-                    <div class="actions">
-                      <button class="button btn-cart" title="Add to Cart" type="button"><span>Add to Cart</span></button>
-                    </div>
-                    <!--actions-->
-                    
-                    <div class="clearfix"> </div>
-                  </div>
-                </div>
-              </li>
-              <li class="item col-lg-4 col-md-3 col-sm-4 col-xs-6">
-                <div class="col-item">
-                  <div class="sale-label sale-top-right">Sale</div>
-                  <div class="product-image-area"> <a class="product-image" title="Sample Product" href="product-detail.html"> <img alt="a" class="img-responsive" src="<?php echo base_url(); ?>images/products-images/p9.jpg"> </a></div>
-                  <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="quick-view.html"><span>quickview</span></a> <a href="#" class="link-wishlist" title="Add to Wishlist"><span>Add to Wishlist</span></a> <a href="#" class="link-compare" title="Add to Compare"><span>Add to Compare</span></a></span> </div>
-                  <div class="info">
-                    <div class="info-inner">
-                      <div class="item-title"> <a title=" Sample Product" href="product-detail.html"> Sample Product </a> </div>
-                      <!--item-title-->
-                      <div class="item-content">
-                        <div class="ratings">
-                          <div class="rating-box">
-                            <div class="rating" style="width:50%"></div>
-                          </div>
-                        </div>
-                        <div class="price-box">
-                          <p class="special-price"> <span class="price"> $45.00 </span> </p>
-                          <p class="old-price"> <span class="price-sep">-</span> <span class="price"> $50.00 </span> </p>
-                        </div>
-                      </div>
-                      <!--item-content--> 
-                    </div>
-                    <!--info-inner-->
-                    <div class="actions">
-                      <button class="button btn-cart" title="Add to Cart" type="button"><span>Add to Cart</span></button>
-                    </div>
-                    <!--actions-->
-                    
-                    <div class="clearfix"> </div>
-                  </div>
-                </div>
-              </li>
-              <li class="item col-lg-4 col-md-3 col-sm-4 col-xs-6">
-                <div class="col-item">
-                  <div class="sale-label sale-top-right">Sale</div>
-                  <div class="product-image-area"> <a class="product-image" title="Sample Product" href="product-detail.html"> <img src="<?php echo base_url(); ?>images/products-images/p13.jpg" class="img-responsive" alt="a" /> </a></div>
-                  <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="quick-view.html"><span>quickview</span></a> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> <a title="Add to Compare" class="link-compare" href="#"><span>Add to Compare</span></a></span> </div>
-                  <div class="info">
-                    <div class="info-inner">
-                      <div class="item-title"> <a title=" Sample Product" href="product-detail.html"> Sample Product </a> </div>
-                      <!--item-title-->
-                      <div class="item-content">
-                        <div class="ratings">
-                          <div class="rating-box">
-                            <div style="width:60%" class="rating"></div>
-                          </div>
-                        </div>
-                        <div class="price-box">
-                          <p class="special-price"> <span class="price"> $45.00 </span> </p>
-                          <p class="old-price"> <span class="price-sep">-</span> <span class="price"> $50.00 </span> </p>
-                        </div>
-                      </div>
-                      <!--item-content--> 
-                    </div>
-                    <!--info-inner-->
-                    <div class="actions">
-                      <button type="button" title="Add to Cart" class="button btn-cart"><span>Add to Cart</span></button>
-                    </div>
-                    <!--actions-->
-                    
-                    <div class="clearfix"> </div>
-                  </div>
-                </div>
-              </li>
+         
             </ul>
 			<div class="toolbar">
 			<div class="pager">
@@ -331,8 +90,12 @@
                 <dt class="odd">Price</dt>
                 <dd class="odd">
                   <ol>
-                    <li> <a href="#"><span class="price">$0.00</span> - <span class="price">$99.99</span></a> (6) </li>
-                    <li> <a href="#"><span class="price">$100.00</span> and above</a> (6) </li>
+                    <li> <a href="#"><span class="price">TK 0.00</span> - <span class="price"> TK 500.00</span></a> (6) </li>
+                    <li> <a href="#"><span class="price">TK 501.00</span> - <span class="price"> TK 1000.00</span></a> (6) </li>
+                    <li> <a href="#"><span class="price">TK 1001.00</span> - <span class="price"> TK 2000.00</span></a> (6) </li>
+                    <li> <a href="#"><span class="price">TK 2001.00</span> - <span class="price"> TK 5000.00</span></a> (6) </li>
+                    <li> <a href="#"><span class="price">TK 5001.00</span> - <span class="price"> TK 10000.00</span></a> (6) </li>
+                    <li> <a href="#"><span class="price">TK 10001.00</span> and above</a> (6) </li>
                   </ol>
                 </dd>
                 <dt class="even">Manufacturer</dt>
@@ -389,4 +152,8 @@
       </div>
     </div>
   </section>
-</form>
+<script>
+ client.controller('categoryProduct', function($scope) {
+    $scope.products = <?php echo $product; ?>;
+   });
+</script>
