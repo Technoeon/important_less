@@ -20,6 +20,7 @@
                                 <input type="hidden" name="product_id" value="<?php echo $product_id?>">
                                 <input type="submit" value="Add More Size"class="btn btn-danger ">
                             </form>
+                            
                     </div>
                       
                     </div>
