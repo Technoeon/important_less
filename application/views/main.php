@@ -39,7 +39,24 @@
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js"></script>
         <script>
             var client = angular.module('client', ['ngSanitize']);
+            client.directive('loading', function() {
+                return {
+                    restrict: 'E',
+                    replace: true,
+                    template: '<div class="loading"><img src="<?php echo base_url()?>images/ajax-loader.gif" width="50" height="50" />LOADING...</div>',
+                    link: function(scope, element, attr) {
+                        scope.$watch('loading', function(val) {
+                            if (val)
+                                $(element).show();
+                            else
+                                $(element).hide();
+                        });
+                    }
+                }
+            })
+
         </script>
+        <style>.loading { text-align: center; border:0px solid #ddd; padding:20px; margin:40px 333px; width:200px;}</style>
     </head>
 
     <body>
