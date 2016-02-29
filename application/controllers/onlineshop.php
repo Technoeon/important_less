@@ -26,10 +26,12 @@ class onlineshop extends CI_Controller {
         $this->load->view('main', $data);
     }
 
-    public function product_details() {
+    public function product_details($product_id) {
         $data = array();
+        $data['default_image']=  $this->onlineshop_model->get_default_image_by_product_id($product_id);
+        $data['product_image']=json_encode($this->onlineshop_model->get_product_image_by_product_id($product_id));
         $data['nav_menu'] = $this->load->view('nav_menu', '', true);
-        $data['user_main'] = $this->load->view('product_details', '', true);
+        $data['user_main'] = $this->load->view('product_details',$data, true);
         $this->load->view('main', $data);
     }
 

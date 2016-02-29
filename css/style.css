@@ -1940,7 +1940,7 @@ a.btn-button-st:hover {
 	content: "\f004";
 }
 .col-item .actions-links .add-to-links a.link-compare:before {
-	content: "\f012";
+	content: "\f07a";
 }
 .col-item .actions-links .add-to-links a.link-wishlist {
 	color: #fff;
@@ -4588,7 +4588,7 @@ li .list {
 	content: "\f004";
 }
 .products-list .actions .add-to-links a.link-compare:before {
-	content: "\f012";
+	content: "\f07a";
 }
 .products-list .actions .add-to-links a.link-wishlist {
 	color: #aaaaaa;
@@ -4907,7 +4907,7 @@ li .list {
 	text-align: center;
 }
 .product-view .product-shop .add-to-links .link-compare:before {
-	content: "\f012";
+	content: "\f07a";
 	font-family: FontAwesome;
 	font-size: 15px;
 }
@@ -4946,7 +4946,7 @@ li .list {
 	display: inline-block;
 }
 .email-friend a:before {
-	content: "\f0e0";
+	content: "\f082";
 	font-family: FontAwesome;
 	font-size: 14px;
 	margin-right: 7px;

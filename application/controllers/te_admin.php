@@ -353,8 +353,8 @@ class Te_Admin extends CI_Controller {
         $config['upload_path'] = 'images/product_image/';
         $config['allowed_types'] = 'gif|jpg|png';
         $config['max_size'] = '5000';
-        $config['max_width'] = '2024';
-        $config['max_height'] = '1768';
+        $config['max_width'] = '700';
+        $config['max_height'] = '700';
         $error = '';
         $fdata = array();
         /* echo '<pre>';

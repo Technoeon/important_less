@@ -11,7 +11,7 @@
     </div>
   </div>
   
-  <section class="main-container col1-layout">
+<section class="main-container col1-layout" ng-controller="productDetails">
     <div class="main container">
       <div class="col-main">
         <div class="row">
@@ -22,14 +22,10 @@
                 <div class="product-img-box col-sm-5 wow bounceInRight animated">
                   <div class="new-label new-top-left"> New </div>
                   <div class="product-image">
-                    <div class="large-image"> <a href="<?php echo base_url();?>images/products-images/p4.jpg" class="cloud-zoom" id="zoom1" rel="useWrapper: false, adjustY:0, adjustX:20"> <img src="<?php echo base_url();?>images/products-images/p4.jpg"> </a> </div>
+                    <div class="large-image"> <a href="<?php echo base_url().$default_image; ?>" class="cloud-zoom" id="zoom1" rel="useWrapper: false, adjustY:0, adjustX:20"> <img src="<?php echo base_url().$default_image;?>"> </a> </div>
                     <div class="flexslider flexslider-thumb">
-                      <ul class="previews-list slides">
-                        <li><a href='<?php echo base_url();?>images/products-images/p6.jpg' class='cloud-zoom-gallery' rel="useZoom: 'zoom1', smallImage: '<?php echo base_url();?>images/products-images/p6.jpg' "><img src="<?php echo base_url();?>images/products-images/p6.jpg" alt = "Thumbnail 1"/></a></li>
-                        <li><a href='<?php echo base_url();?>images/products-images/p10.jpg' class='cloud-zoom-gallery' rel="useZoom: 'zoom1', smallImage: '<?php echo base_url();?>images/products-images/p10.jpg' "><img src="<?php echo base_url();?>images/products-images/p10.jpg" alt = "Thumbnail 2"/></a></li>
-                        <li><a href='<?php echo base_url();?>images/products-images/p3.jpg' class='cloud-zoom-gallery' rel="useZoom: 'zoom1', smallImage: '<?php echo base_url();?>images/products-images/p3.jpg' "><img src="<?php echo base_url();?>images/products-images/p3.jpg" alt = "Thumbnail 1"/></a></li>
-                        <li><a href='<?php echo base_url();?>images/products-images/p4.jpg' class='cloud-zoom-gallery' rel="useZoom: 'zoom1', smallImage: '<?php echo base_url();?>images/products-images/p4.jpg' "><img src="<?php echo base_url();?>images/products-images/p4.jpg" alt = "Thumbnail 2"/></a></li>
-                        <li><a href='<?php echo base_url();?>images/products-images/p5.jpg' class='cloud-zoom-gallery' rel="useZoom: 'zoom1', smallImage: '<?php echo base_url();?>images/products-images/p5.jpg' "><img src="<?php echo base_url();?>images/products-images/p5.jpg" alt = "Thumbnail 2"/></a></li>
+                      <ul class="previews-list slides">        
+                        <li ng-repeat="image in images"><a href='<?php echo base_url();?>{{image.image_path}}' class='cloud-zoom-gallery' rel="useZoom: 'zoom1', smallImage: '<?php echo base_url();?>{{image.image_path}}' "><img src="<?php echo base_url();?>{{image.image_path}}" alt = "Thumbnail 1"/></a></li>
                       </ul>
                     </div>
                   </div>
@@ -61,12 +57,34 @@
                   <div class="short-description">
                     Size:
                   </div>
-                  <br>
+                  <div class="add-to-box">
+                    <div class="add-to-cart">
+                      <label for="qty">Quantity:</label>
+                      <div class="pull-left">
+                        <div class="custom pull-left">
+                          <input type="text" class="input-text qty" title="Qty" value="1" maxlength="12" id="qty" name="qty">
+                          <button onClick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty )) result.value++;return false;" class="increase items-count" type="button"><i class="icon-plus">&nbsp;</i></button>
+                          <button onClick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 0 ) result.value--;return false;" class="reduced items-count" type="button"><i class="icon-minus">&nbsp;</i></button>
+                        </div>
+                      </div>
+                      <div class="">
+                        <button onClick="productAddToCartForm.submit(this)" class="button btn-cart" title="Add to Cart" type="button"><span><i class="icon-basket"></i> Add to Cart</span></button>
+                      </div>
+                    </div>
+                    <div class="email-addto-box">
+                      <ul class="add-to-links">
+                        <li> <a class="link-wishlist" href="#"><span>Add to Wishlist</span></a></li>
+                        <li><span class="separator">|</span> <a class="link-compare" href="#"><span>Order Now</span></a></li>
+                      </ul>
+                      <p class="email-friend"><a href="#" class=""><span>Share on Facebook</span></a></p>
+                    </div>
+                  </div>
+<!--                  <br>
                   <div class="actions">
                       <button type="button" value="save" class="button btn-cart"><a href="#"><span>Add to Cart</span></a></button>
                       <button type="button" value="save" class="button btn-app"><span>Add to Wishlist</span></button>
-                      <button type="button" value="save" class="button btn-cart"><span>Order Now</span></button>
-                  </div>
+                      <button type="button" value="save" class="button btn-checkout"><span>Order Now</span></button>
+                  </div>-->
                 </div>
               </form>
             </div>
@@ -355,6 +373,11 @@
 <script type="text/javascript" src="<?php echo base_url();?>js/owl.carousel.min.js"></script> 
 <script type="text/javascript" src="<?php echo base_url();?>js/jquery.flexslider.js"></script> 
 <script type="text/javascript" src="<?php echo base_url();?>js/cloud-zoom.js"></script>
-  </section>
+</section>
   <!--End main-container --> 
+ <script>
+   client.controller('productDetails', function($scope, $http) {
+        $scope.images = <?php echo $product_image; ?>;       
+    });
+</script>
 

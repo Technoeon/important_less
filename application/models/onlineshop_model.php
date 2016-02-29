@@ -398,4 +398,19 @@ class onlineshop_model extends CI_Model{
         $result=$query_result->result();
         return $result;
     }
+    public function get_default_image_by_product_id($product_id){
+        $this->db->select('image_path');
+        $this->db->where('product_id',$product_id);
+        $this->db->from('tbl_image');
+        $query = $this->db->get();
+        $result=$query->row();
+        return $result->image_path;
+    }
+    public function get_product_image_by_product_id($product_id){
+        $this->db->select('image_path');
+        $this->db->where('product_id',$product_id);
+        $this->db->from('tbl_image');
+        $query = $this->db->get();
+        return $query->result();
+    }
 }

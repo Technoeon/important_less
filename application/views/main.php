@@ -52,7 +52,7 @@
                                 $(element).hide();
                         });
                     }
-                }
+                };
             })
 
         </script>
