@@ -65,10 +65,10 @@
                                         </div
                                         
                                         <div class="btn-group btn-group-xs">
-                                            <form action="<?php echo base_url()?>te_admin/manage_size" method="post"><input type="hidden" name="product_name" value="<?php echo $v_product->product_name; ?>">
-                                                <input type="hidden" name="product_id" value="<?php echo $v_product->product_id; ?>">
+                                            <a href="<?php echo base_url()?>te_admin/manage_size/<?php echo $v_product->product_id; ?>/<?php echo $v_product->product_name; ?>">
+                                                
                                                 <button type="submit" class="btn btn-xs btn-success" title="size">SIZE</button>
-                                            </form>
+                                            </a>
                                             <form action="<?php echo base_url()?>te_admin/manage_description" method="post"><input type="hidden" name="product_name" value="<?php echo $v_product->product_name; ?>">
                                                 <input type="hidden" name="product_id" value="<?php echo $v_product->product_id; ?>">
                                                 <button type="submit" class="btn btn-xs btn-primary" title="description">DETAILS</button>

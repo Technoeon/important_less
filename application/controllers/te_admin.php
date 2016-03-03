@@ -533,10 +533,10 @@ class Te_Admin extends CI_Controller {
         redirect('te_admin/edit_product/'.$product_id);
     }
     //-----start add_size-------//
-  public function add_size() {
+  public function add_size($product_id) {
         $data = array();
         $data['title'] = 'Add Size';
-        $data['product_id'] = $this->input->post('product_id', TRUE);
+        $data['product_id'] = $product_id;
         $data['main_content'] = $this->load->view('admin/add_size',$data, true);
         $this->load->view('admin/admin_master', $data);
     }
@@ -551,15 +551,14 @@ class Te_Admin extends CI_Controller {
         $sdata = array();
         $sdata['message'] = 'Update Product Size Successfully !';
         $this->session->set_userdata($sdata);
-        redirect('te_admin/manage_product');
+        redirect('te_admin/manage_size/'.$product_id);
    }
     //-------end add_size--------//
     //-----start manage size----//
-    public function manage_size() {
+    public function manage_size($product_id) {
         $data = array();
         $data['title'] = 'Manage Product Size';
-        $data['product_name'] = $this->input->post('product_name', TRUE);
-        $product_id = $this->input->post('product_id', TRUE);
+        //$data['product_name'] = $product_name;
         $data['product_id']=$product_id;
         $data['product_size'] = $this->te_product_model->get_size_by_product_id($product_id);
         $data['main_content'] = $this->load->view('admin/manage_size_grid', $data, TRUE);
@@ -586,9 +585,11 @@ class Te_Admin extends CI_Controller {
         redirect('te_admin/manage_product');
     }
 
-    public function delete_size($size_id) {
+    public function delete_size($size_id,$product_id) {
         $this->te_product_model->delete_product_size($size_id);
-        redirect('te_admin/manage_size');
+        $sdata['message'] = 'Delete Product Size Successfully !';
+        $this->session->set_userdata($sdata);
+        redirect('te_admin/manage_size/'.$product_id);
     }
 
     // End manage size///

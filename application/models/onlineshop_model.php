@@ -398,19 +398,36 @@ class onlineshop_model extends CI_Model{
         $result=$query_result->result();
         return $result;
     }
-    public function get_default_image_by_product_id($product_id){
-        $this->db->select('image_path');
-        $this->db->where('product_id',$product_id);
-        $this->db->from('tbl_image');
-        $query = $this->db->get();
-        $result=$query->row();
-        return $result->image_path;
-    }
     public function get_product_image_by_product_id($product_id){
         $this->db->select('image_path');
         $this->db->where('product_id',$product_id);
         $this->db->from('tbl_image');
         $query = $this->db->get();
         return $query->result();
+    }
+    public function get_product_size_name_by_product_id($product_id){
+        $this->db->select('size_id');
+        $this->db->select('size_name');
+        $this->db->where('product_id',$product_id);
+        $this->db->from('tbl_product_size');
+        $query = $this->db->get();
+        return $query->result();
+    }
+    public function get_product_general_info_by_product_id($product_id){
+        $this->db->select('*');
+        $this->db->where('product_id',$product_id);
+        $this->db->from('vprice');
+        $query = $this->db->get();
+        $result=$query->row();
+        return $result;
+    }
+    public function get_main_category_name_and_id($main_category_id){
+        $this->db->select('main_category_id');
+        $this->db->select('main_category_name');
+        $this->db->where('main_category_id',$main_category_id);
+        $this->db->from('tbl_main_category');
+        $query = $this->db->get();
+        $result=$query->row();
+        return $result;
     }
 }

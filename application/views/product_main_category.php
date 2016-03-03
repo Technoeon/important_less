@@ -31,11 +31,11 @@
                         <li class="item col-lg-4 col-md-3 col-sm-4 col-xs-6" ng-repeat="product in products">
                             <div class="col-item">
                                 <div class="sale-label sale-top-right">Sale</div>
-                                <div class="product-image-area"> <a class="product-image" title="Sample Product" ng-href="<?php echo base_url().'onlineshop/product_details/'?>{{product.product_id}}"> <img src="<?php echo base_url(); ?>{{product.image_path}}" class="img-responsive" alt="{{product.product_name}}" /> </a></div>
+                                <div class="product-image-area"> <a class="product-image" title="Sample Product" ng-href="<?php echo base_url() . 'onlineshop/product_details/' ?>{{product.product_id}}"> <img src="<?php echo base_url(); ?>{{product.image_path}}" class="img-responsive" alt="{{product.product_name}}" /> </a></div>
                                 <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="<?php echo base_url(); ?>quick-view.html"><span>quickview</span></a> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> <a title="Add to Compare" class="link-compare" href="#"><span>Add to Compare</span></a></span> </div>
                                 <div class="info">
                                     <div class="info-inner">
-                                        <div class="item-title"> <a title="{{product.product_name}}" ng-href="<?php echo base_url().'onlineshop/product_details/'?>{{product.product_id}}">{{product.product_name}}</a></div>
+                                        <div class="item-title"> <a title="{{product.product_name}}" ng-href="<?php echo base_url() . 'onlineshop/product_details/' ?>{{product.product_id}}">{{product.product_name}}</a></div>
                                         <!--item-title-->
                                         <div class="item-content">
                                             <div class="ratings">
@@ -121,28 +121,21 @@
                     <div class="block-title ">My Cart</div>
                     <div class="block-content">
                         <div class="summary">
-                            <p class="amount">There are <a href="#">2 items</a> in your cart.</p>
-                            <p class="subtotal"> <span class="label">Cart Subtotal:</span> <span class="price">$27.99</span> </p>
+                            <p class="amount">There are <a href="#">{{totalItems}} items</a> in your cart.</p>
+                            <p class="subtotal"> <span class="label">Cart Total:</span> <span class="price">Tk. {{totalAmount}}</span> </p>
                         </div>
                         <div class="ajax-checkout">
                             <button type="submit" title="Submit" class="button button-checkout"><span>Checkout</span></button>
                         </div>
                         <p class="block-subtitle">Recently added item(s) </p>
                         <ul>
-                            <li class="item"> <a class="product-image" title="Fisher-Price Bubble Mower" href="#"><img width="80" alt="Fisher-Price Bubble Mower" src="products-images/p1.jpg"></a>
+                            <li class="item" ng-repeat="content in contents"> <a class="product-image" title="{{content.name}}" href="#"><img width="80" alt="{{content.name}}" src="<?php echo base_url(); ?>{{content.image}}"></a>
                                 <div class="product-details">
-                                    <div class="access"> <a class="btn-remove1" title="Remove This Item" href="#"> <span class="icon"></span> Remove </a> </div>
-                                    <p class="product-name"> <a href="#">Skater Dress In Leaf Print Grouped Product</a> </p>
-                                    <strong>1</strong> x <span class="price">$19.99</span> </div>
+                                    <div class="access"> <a class="btn-remove1" title="Remove This Item" href="" ng-click="removeItem(content.rowid)"> <span class="icon"></span> Remove </a> </div>
+                                    <p class="product-name"> <a href="#">{{content.name}}</a> </p>
+                                    <strong>{{content.qty}}</strong> x <span class="price">Tk. {{content.price}}</span> </div>
                             </li>
-                            <li class="item last"> <a class="product-image" title="Prince Lionheart Jumbo Toy Hammock" href="#"><img width="80" alt="Prince Lionheart Jumbo Toy Hammock" src="products-images/p48.jpg"></a>
-                                <div class="product-details">
-                                    <div class="access"> <a class="btn-remove1" title="Remove This Item" href="#"> <span class="icon"></span> Remove </a> </div>
-                                    <p class="product-name"> <a href="#"> Sample Fashion Product Prince Lionheart </a> </p>
-                                    <strong>1</strong> x <span class="price">$8.00</span> 
-                                    <!--access clearfix--> 
-                                </div>
-                            </li>
+
                         </ul>
                     </div>
                 </div>
@@ -253,7 +246,7 @@
             $scope.loading = true;
             $scope.code = null;
             $scope.response = null;
-            $scope.url = '<?php echo base_url() ?>onlineshop/fp_by_menufactuer_n_main_category/'+manufacturer_id+'/';
+            $scope.url = '<?php echo base_url() ?>onlineshop/fp_by_menufactuer_n_main_category/' + manufacturer_id + '/';
             $http({method: $scope.method, url: $scope.url + main_category_id}).
                     then(function(response) {
                         $scope.status = response.status;
@@ -264,11 +257,11 @@
                     });
             $scope.loading = false;
         };
-        $scope.fpbysnmid=function(size_name){
+        $scope.fpbysnmid = function(size_name) {
             $scope.loading = true;
             $scope.code = null;
             $scope.response = null;
-            $scope.url = '<?php echo base_url() ?>onlineshop/fp_by_size_n_main_category/'+size_name+'/';
+            $scope.url = '<?php echo base_url() ?>onlineshop/fp_by_size_n_main_category/' + size_name + '/';
             $http({method: $scope.method, url: $scope.url + main_category_id}).
                     then(function(response) {
                         $scope.status = response.status;
@@ -279,9 +272,8 @@
                     });
             $scope.loading = false;
         };
-        $scope.productdetails=function(product_id){
-           window.location = "<?php echo base_url().'onlineshop/product_details/'?>"+product_id; 
-        };
-
+        $scope.productdetails = function(product_id) {
+            window.location = "<?php echo base_url() . 'onlineshop/product_details/' ?>" + product_id;
+        };        
     });
 </script>

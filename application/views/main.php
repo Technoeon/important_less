@@ -43,7 +43,7 @@
                 return {
                     restrict: 'E',
                     replace: true,
-                    template: '<div class="loading"><img src="<?php echo base_url()?>images/ajax-loader.gif" width="50" height="50" />LOADING...</div>',
+                    template: '<div class="loading"><img src="<?php echo base_url() ?>images/ajax-loader.gif" width="50" height="50" />LOADING...</div>',
                     link: function(scope, element, attr) {
                         scope.$watch('loading', function(val) {
                             if (val)
@@ -56,10 +56,31 @@
             })
 
         </script>
-        <style>.loading { text-align: center; border:0px solid #ddd; padding:20px; margin:40px 333px; width:200px;}</style>
+        <style>.loading { text-align: center; border:0px solid #ddd; padding:20px; margin:40px 333px; width:200px;}
+            .uol {
+                list-style: none;
+            }
+            .l12 {
+                display: inline-block;
+                margin-right: -10px;
+            }
+            .radiosize {
+                visibility:hidden;
+            }
+            .rediolabel {
+                text-align: center;
+                min-width: 25px;
+                cursor: pointer;
+                padding: 5px;
+                box-shadow: 1px 1px 0px #DEB;
+            }
+            .radiosize:checked + .rediolabel {
+                background: #6dbe14;
+            }
+        </style>
     </head>
 
-    <body>
+    <body ng-controller="cart">
         <div class="page">
             <header class="header-container">
                 <div class="header-top">
@@ -98,7 +119,7 @@
                     <div class="row">
                         <div class="col-lg-2 col-sm-3 col-md-2"> 
                             <!-- Header Logo --> 
-                            <a class="logo" title="Magento Commerce" href="<?php echo base_url(); ?>onlineshop"><img alt="Magento Commerce" src="<?php echo base_url(); ?>images/logo.png"></a> 
+                            <a class="logo" title="Somoyer Deal" href="<?php echo base_url(); ?>onlineshop"><img alt="Somoyer Deal" src="<?php echo base_url(); ?>images/logo.png"></a> 
                             <!-- End Header Logo --> 
                         </div>
                         <div class="col-lg-8 col-sm-6 col-md-8"> 
@@ -132,33 +153,26 @@
                             <div class="top-cart-contain">
                                 <div class="mini-cart">
                                     <div data-toggle="dropdown" data-hover="dropdown" class="basket dropdown-toggle"> <a href="#"> <i class="glyphicon glyphicon-shopping-cart"></i>
-                                            <div class="cart-box"><span class="title">cart</span><span id="cart-total">2 item </span></div>
+                                            <div class="cart-box"><span class="title">cart</span><span id="cart-total">{{totalItems}} item</span></div>
                                         </a></div>
                                     <div>
                                         <div style="display: none;" class="top-cart-content arrow_box">
                                             <div class="block-subtitle">Recently added item(s)</div>
                                             <ul id="cart-sidebar" class="mini-products-list">
-                                                <li class="item even"> <a class="product-image" href="#" title="Downloadable Product "><img alt="Downloadable Product " src="<?php echo base_url(); ?>products-images/p3.jpg" width="80"></a>
+
+                                                <li class="item even" ng-repeat="content in contents"> <a class="product-image" href="#" title="{{content.name}}"><img alt="{{content.name}}" src="<?php echo base_url()?>{{content.image}}" width="80"></a>
                                                     <div class="detail-item">
-                                                        <div class="product-details"> <a href="#" title="Remove This Item" onClick="" class="glyphicon glyphicon-remove">&nbsp;</a> <a class="glyphicon glyphicon-pencil" title="Edit item" href="#">&nbsp;</a>
-                                                            <p class="product-name"> <a href="#" title="Downloadable Product">Downloadable Product </a> </p>
+                                                        <div class="product-details"> <a href="" title="Remove This Item" ng-click="removeItem(content.rowid)" class="glyphicon glyphicon-remove">&nbsp;</a> <a class="" title="Edit item" href="#">&nbsp;</a>
+                                                            <p class="product-name"> <a href="#" title="{{content.name}}">{{content.name}}</a> </p>
                                                         </div>
-                                                        <div class="product-details-bottom"> <span class="price">$100.00</span> <span class="title-desc">Qty:</span> <strong>1</strong> </div>
-                                                    </div>
-                                                </li>
-                                                <li class="item last odd"> <a class="product-image" href="#" title="  Sample Product "><img alt="  Sample Product " src="<?php echo base_url(); ?>products-images/p2.jpg" width="80"></a>
-                                                    <div class="detail-item">
-                                                        <div class="product-details"> <a href="#" title="Remove This Item" onClick="" class="glyphicon glyphicon-remove">&nbsp;</a> <a class="glyphicon glyphicon-pencil" title="Edit item" href="#">&nbsp;</a>
-                                                            <p class="product-name"> <a href="#" title="  Sample Product "> Sample Product </a> </p>
-                                                        </div>
-                                                        <div class="product-details-bottom"> <span class="price">$320.00</span> <span class="title-desc">Qty:</span> <strong>2</strong> </div>
+                                                        <div class="product-details-bottom"> <span class="price">Tk. {{content.price}}</span> <span class="title-desc">Qty:</span> <strong>{{content.qty}}</strong> </div>
                                                     </div>
                                                 </li>
                                             </ul>
-                                            <div class="top-subtotal">Subtotal: <span class="price">$420.00</span></div>
+                                            <div class="top-subtotal">Total: <span class="price">Tk. {{totalAmount}}</span></div>
                                             <div class="actions">
                                                 <button class="btn-checkout" type="button"><span>Checkout</span></button>
-                                                <form action="shopping-cart.html" method="post"><button class="view-cart" type="submit"><span>View Cart</span></button></form>
+                                                <form action="<?php echo base_url() . 'cart/show_cart'; ?>" method="post"><button class="view-cart" type="submit"><span>View Cart</span></button></form>
                                             </div>
                                         </div>
                                     </div>
@@ -387,6 +401,49 @@
                     startWithSlide: 0,
                     fullScreenOffsetContainer: ''
                 });
+            });
+        </script>
+        <?php
+            $contents = json_encode($this->cart->contents());
+            $total_item= $this->cart->total_items();
+            $total_amount= $this->cart->total();
+        ?>
+        <script>
+            client.controller('cart', function($scope, $rootScope, $http) {
+                $rootScope.contents =<?php echo $contents;?>;
+                $rootScope.totalItems =<?php echo $total_item;?>;
+                $rootScope.totalAmount =<?php echo $total_amount;?>;
+                $rootScope.removeItem = function(rowid) {
+                $rootScope.code = null;
+                $rootScope.response = null;
+                $rootScope.url = '<?php echo base_url() ?>cart/remove_from_cart/';
+                $rootScope.urltotalItems = '<?php echo base_url() ?>cart/total_items_remain';
+                $rootScope.urltotalAmount = '<?php echo base_url() ?>cart/total_amount';
+                $http({method: $rootScope.method, url: $rootScope.url + rowid}).
+                        then(function(response) {
+                            $rootScope.status = response.status;
+                            $rootScope.contents = response.data;
+                            $http({method: $rootScope.method, url: $rootScope.urltotalItems}).
+                                then(function(response) {
+                                    $rootScope.status = response.status;
+                                    $rootScope.totalItems = response.data;
+                                }, function(response) {
+                                    $rootScope.data = response.data || "Request failed";
+                                    $rootScope.status = response.status;
+                                });
+                            $http({method: $rootScope.method, url: $rootScope.urltotalAmount}).
+                                then(function(response) {
+                                    $rootScope.status = response.status;
+                                    $rootScope.totalAmount = response.data;
+                                }, function(response) {
+                                    $rootScope.data = response.data || "Request failed";
+                                    $rootScope.status = response.status;
+                                });
+                        }, function(response) {
+                            $rootScope.data = response.data || "Request failed";
+                            $rootScope.status = response.status;
+                        });
+            };
             });
         </script>
 

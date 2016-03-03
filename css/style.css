@@ -4789,7 +4789,7 @@ li .list {
 .product-view .product-shop {
 	margin-top: 0;
 	position: relative;
-	z-index: -9;
+/*	z-index: -9;*/
 }
 .product-view .product-name {
 	border-bottom: 1px solid #ddd;
