@@ -199,6 +199,11 @@
                                 </a>
                                 <ul class="collapse nav" id="forms">
                                     <li>
+                                        <a href="<?php echo base_url()?>te_admin/manage_order">
+                                            <i class="fa fa-angle-double-right"></i>Manage Order 
+                                        </a>
+                                    </li>
+                                    <li>
                                         <a href="#">
                                             <i class="fa fa-angle-double-right"></i>Pending Order 
                                         </a>

@@ -651,7 +651,16 @@ class Te_Admin extends CI_Controller {
         $this->te_product_model->delete_description($description_id);
         redirect('te_admin/manage_product');
     }
-    //--------start manage description---------//
+    //--------end manage description---------//
+    //------start manage order-----------//
+    public function manage_order() {
+        $data = array();
+//        $data['all_product'] = $this->te_product_model->get_all_product();
+        $data['main_content'] = $this->load->view('admin/manage_order_grid',$data,TRUE);
+        $data['title'] = 'Manage Order';
+        $this->load->view('admin/admin_master', $data);
+    }
+    
     public function logout() {
         $this->session->unset_userdata('management_id');
         $this->session->unset_userdata('name');
