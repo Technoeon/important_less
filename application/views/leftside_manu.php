@@ -101,7 +101,7 @@
                                             ?>    
                                             <li class="parent dropdown "> <?php foreach ($main_menu_2 as $value) { ?> <a href="<?php echo $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span><b class="round-arrow"></b></a>  <?php } ?>
 
-                                                <div class="dropdown-menu" style="width:620px;height: 460px;">
+                                                <div class="dropdown-menu" style="width:620px;min-height: 460px;">
                                                     <div class="dropdown-menu-inner">
                                                         <div class="row">
                                                             <?php foreach ($sub_menu_2 as $sub_menu_value) { ?>
@@ -171,7 +171,7 @@
                                             ?>    
                                             <li class="parent dropdown "> <?php foreach ($main_menu_4 as $value) { ?> <a href="<?php echo $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span><b class="round-arrow"></b></a>  <?php } ?>
 
-                                                <div class="dropdown-menu" style="width:620px; height: 460px;">
+                                                <div class="dropdown-menu" style="width:620px; min-height: 460px;">
                                                     <div class="dropdown-menu-inner">
                                                         <div class="row">
                                                             <?php foreach ($sub_menu_4 as $sub_menu_value) { ?>
@@ -206,7 +206,7 @@
                                             ?>    
                                             <li class="parent dropdown "> <?php foreach ($main_menu_5 as $value) { ?> <a href="<?php echo $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span><b class="round-arrow"></b></a>  <?php } ?>
 
-                                                <div class="dropdown-menu" style="width:620px;height: 460px;">
+                                                <div class="dropdown-menu" style="width:620px;min-height: 460px;">
                                                     <div class="dropdown-menu-inner">
                                                         <div class="row">
                                                             <?php foreach ($sub_menu_5 as $sub_menu_value) { ?>
@@ -241,7 +241,7 @@
                                             ?>    
                                             <li class="parent dropdown "> <?php foreach ($main_menu_6 as $value) { ?> <a href="<?php echo $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span><b class="round-arrow"></b></a>  <?php } ?>
 
-                                                <div class="dropdown-menu" style="width:620px;height: 460px;">
+                                                <div class="dropdown-menu" style="width:620px;min-height: 460px;">
                                                     <div class="dropdown-menu-inner">
                                                         <div class="row">
                                                             <?php foreach ($sub_menu_6 as $sub_menu_value) { ?>
@@ -276,7 +276,7 @@
                                             ?>    
                                             <li class="parent dropdown "> <?php foreach ($main_menu_7 as $value) { ?> <a href="<?php echo $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span><b class="round-arrow"></b></a>  <?php } ?>
 
-                                                <div class="dropdown-menu" style="width:620px;height: 460px;">
+                                                <div class="dropdown-menu" style="width:620px;min-height: 460px;">
                                                     <div class="dropdown-menu-inner">
                                                         <div class="row">
                                                             <?php foreach ($sub_menu_7 as $sub_menu_value) { ?>
@@ -311,7 +311,7 @@
                                             ?>    
                                             <li class="parent dropdown "> <?php foreach ($main_menu_8 as $value) { ?> <a href="<?php echo $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span><b class="round-arrow"></b></a>  <?php } ?>
 
-                                                <div class="dropdown-menu" style="width:620px;height: 460px;">
+                                                <div class="dropdown-menu" style="width:620px;min-height: 460px;">
                                                     <div class="dropdown-menu-inner">
                                                         <div class="row">
                                                             <?php foreach ($sub_menu_8 as $sub_menu_value) { ?>
@@ -346,7 +346,7 @@
                                             ?>    
                                             <li class="parent dropdown "> <?php foreach ($main_menu_9 as $value) { ?> <a href="<?php echo $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span><b class="round-arrow"></b></a>  <?php } ?>
 
-                                                <div class="dropdown-menu" style="width:620px;height: 460px;">
+                                                <div class="dropdown-menu" style="width:620px;min-height: 460px;">
                                                     <div class="dropdown-menu-inner">
                                                         <div class="row">
                                                             <?php foreach ($sub_menu_9 as $sub_menu_value) { ?>

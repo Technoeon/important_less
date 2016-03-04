@@ -10,7 +10,7 @@ class Mailer_Model extends CI_Model {
         //$this->email->bcc('topu_18_26@yahoo.com'); 
         $this->email->subject($data['subject']);
         $body = $this->load->view('mailscripts/' . $templateName, $data, true);
-        echo $body;exit;
+        //echo $body;exit;
         $this->email->message($body);
         // $this->email->send();
         $this->email->clear();
