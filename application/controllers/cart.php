@@ -28,7 +28,9 @@ class Cart extends CI_Controller {
           exit(); */
 
 
-
+        $sdata=array();
+        $sdata['main_category_id']=$product_info->main_category_id;
+        $this->session->set_userdata($sdata);
         $qty = $this->input->post('qty', true);
 //        echo $product_id.'---id----'.$size.'--size--'.$qty.'--quantity';
 //        if($product_info->product_special_price)
@@ -64,21 +66,29 @@ class Cart extends CI_Controller {
         $rowid = $this->input->post('rowid', true);
         //echo '------'.$drowid;
         //exit();
-        if ($drowid) {
-            $data = array(
-                'rowid' => $drowid,
-                'qty' => 0
-            );
-
-            $this->cart->update($data);
-        } else {
-            $data = array(
-                'rowid' => $rowid,
-                'qty' => $qty
-            );
-
-            $this->cart->update($data);
+        if (isset($qty)) {
+            $j = count($rowid);
+            for ($i = 0; $i < $j; $i++) {
+                $data['rowid'] = $rowid[$i];
+                $data['qty'] = $qty[$i];
+                $this->cart->update($data);
+            }
         }
+//        if ($drowid) {
+//            $data = array(
+//                'rowid' => $drowid,
+//                'qty' => 0
+//            );
+//
+//            $this->cart->update($data);
+//        } else {
+//            $data = array(
+//                'rowid' => $rowid,
+//                'qty' => $qty
+//            );
+//
+//            
+//        }
         redirect('cart/show_cart');
     }
 
@@ -88,8 +98,9 @@ class Cart extends CI_Controller {
 //        echo '<pre>';
 //        print_r($data);
 //        exit();
+        $data['main_category_id']=$this->session->userdata('main_category_id');
         $data['nav_menu'] = $this->load->view('nav_menu', '', true);
-        $data['user_main'] = $this->load->view('cart_view', '', TRUE);
+        $data['user_main'] = $this->load->view('cart_view', $data, TRUE);
         $this->load->view('main', $data);
     }
 

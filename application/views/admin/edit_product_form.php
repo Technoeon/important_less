@@ -86,6 +86,6 @@
     te.controller('addDiscount', function ($scope) {
          $scope.hideMe = function(){
     $scope.hide();
-  }
+  };
     });
 </script>

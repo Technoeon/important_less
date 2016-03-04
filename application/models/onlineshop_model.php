@@ -430,15 +430,6 @@ class onlineshop_model extends CI_Model{
         $result=$query->row();
         return $result;
     }
-    public function save_sing_up_customer_info($data)
-    {
-        $this->db->insert('tbl_customer',$data);
-    }
-    public function customer_login_check_info($customer_email,$customer_passowrd)
-    {
-        $sql="SELECT * FROM tbl_customer WHERE customer_email='$customer_email' AND customer_passowrd='$customer_passowrd'";
-        $query_result=$this->db->query($sql);
-        $result=$query_result->row();
-        return $result;
-    }
+    
+    
 }

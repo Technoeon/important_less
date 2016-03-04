@@ -102,10 +102,15 @@ class onlineshop extends CI_Controller {
     }
 
     public function user_checkout() {
-        $data = array();
-        $data['nav_menu'] = $this->load->view('nav_menu', '', true);
-        $data['user_main'] = $this->load->view('user_checkout', '', true);
-        $this->load->view('main', $data);
+        if($this->cart->total_items() != 0) {
+            $data = array();
+            $data['cart_del_disable']= 1;
+            $data['nav_menu'] = $this->load->view('nav_menu', '', true);
+            $data['user_main'] = $this->load->view('user_checkout', '', true);
+            $this->load->view('main', $data);
+        }  else {
+            redirect('onlineshop');
+        }
     }
 
     public function user_wishlist() {
@@ -139,12 +144,16 @@ class onlineshop extends CI_Controller {
         $data['customer_mobile']=  $this->input->post('customer_mobile',true);
         $data['customer_email']=  $this->input->post('customer_email',true);
         $data['customer_location']=  $this->input->post('customer_location',true);
-        $data['customer_passowrd']=  $this->input->post('customer_passowrd',true);
-        $this->onlineshop_model->save_sing_up_customer_info($data);
+        $data['customer_passowrd']= md5($this->input->post('customer_passowrd',true));
+        $customer_id=$this->customer_model->save_sing_up_customer_info($data);
         $sdata = array();
         $sdata['message'] = 'Save Registration Information Successfully !';
+        $sdata['customer_id']=$customer_id;
+        $sdata['customer_name']=$data['customer_name'];
+//        echo '<pre>';
+//        print_r($sdata);
+//        exit();
         $this->session->set_userdata($sdata);
-      
         
            /*
          * ------------- Start Send Customer Registration Confirmation Email-------
@@ -161,15 +170,20 @@ class onlineshop extends CI_Controller {
         /*
          * ------------- End Send Customer Registration Confirmation Email-------
          */
-        redirect('onlineshop/user_login');
+        if($this->cart->total_items()== 0){
+            redirect('onlineshop'); 
+        }  else {
+            redirect('onlineshop/user_checkout');
+        }
+        
     }
     public function customer_login_check()
     {
        
         $customer_email= $this->input->post('customer_email');
-        $customer_passowrd=$this->input->post('customer_passowrd');
+        $customer_passowrd= $this->input->post('customer_passowrd');
        
-        $result=$this->onlineshop_model->customer_login_check_info($customer_email,$customer_passowrd);
+        $result=$this->customer_model->customer_login_check_info($customer_email,$customer_passowrd);
         
         $sdata=array();
         
@@ -178,7 +192,11 @@ class onlineshop extends CI_Controller {
             $sdata['customer_id']=$result->customer_id;
             $sdata['customer_name']=$result->customer_name;
             $this->session->set_userdata($sdata);
-            redirect('onlineshop');
+            if($this->cart->total_items()== 0){
+                redirect('onlineshop');
+            } else {
+                redirect('onlineshop/user_checkout');
+            }
         }
         else {
             $sdata['ecception']='Your User ID And Password Invalide';

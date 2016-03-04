@@ -121,28 +121,21 @@
                     <div class="block-title ">My Cart</div>
                     <div class="block-content">
                         <div class="summary">
-                            <p class="amount">There are <a href="#">2 items</a> in your cart.</p>
-                            <p class="subtotal"> <span class="label">Cart Subtotal:</span> <span class="price">$27.99</span> </p>
+                            <p class="amount">There are <a href="#">{{totalItems}} items</a> in your cart.</p>
+                            <p class="subtotal"> <span class="label">Cart Total:</span> <span class="price">Tk. {{totalAmount}}</span> </p>
                         </div>
                         <div class="ajax-checkout">
                             <button type="submit" title="Submit" class="button button-checkout"><span>Checkout</span></button>
                         </div>
                         <p class="block-subtitle">Recently added item(s) </p>
                         <ul>
-                            <li class="item"> <a class="product-image" title="Fisher-Price Bubble Mower" href="#"><img width="80" alt="Fisher-Price Bubble Mower" src="products-images/p1.jpg"></a>
+                            <li class="item" ng-repeat="content in contents"> <a class="product-image" title="{{content.name}}" href="#"><img width="80" alt="{{content.name}}" src="<?php echo base_url(); ?>{{content.image}}"></a>
                                 <div class="product-details">
-                                    <div class="access"> <a class="btn-remove1" title="Remove This Item" href="#"> <span class="icon"></span> Remove </a> </div>
-                                    <p class="product-name"> <a href="#">Skater Dress In Leaf Print Grouped Product</a> </p>
-                                    <strong>1</strong> x <span class="price">$19.99</span> </div>
+                                    <div class="access"> <a class="btn-remove1" title="Remove This Item" href="" ng-click="removeItem(content.rowid)"> <span class="icon"></span> Remove </a> </div>
+                                    <p class="product-name"> <a href="#">{{content.name}}</a> </p>
+                                    <strong>{{content.qty}}</strong> x <span class="price">Tk. {{content.price}}</span> </div>
                             </li>
-                            <li class="item last"> <a class="product-image" title="Prince Lionheart Jumbo Toy Hammock" href="#"><img width="80" alt="Prince Lionheart Jumbo Toy Hammock" src="products-images/p48.jpg"></a>
-                                <div class="product-details">
-                                    <div class="access"> <a class="btn-remove1" title="Remove This Item" href="#"> <span class="icon"></span> Remove </a> </div>
-                                    <p class="product-name"> <a href="#"> Sample Fashion Product Prince Lionheart </a> </p>
-                                    <strong>1</strong> x <span class="price">$8.00</span> 
-                                    <!--access clearfix--> 
-                                </div>
-                            </li>
+
                         </ul>
                     </div>
                 </div>
