@@ -66,7 +66,7 @@
                                             ?>    
                                             <li class="parent dropdown "> <?php foreach ($main_menu_1 as $value) { ?> <a href="<?php echo $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span><b class="round-arrow"></b></a>  <?php } ?>
 
-                                                <div class="dropdown-menu" style="width:620px; height: 460px;">
+                                                <div class="dropdown-menu" style="width:620px; min-height: 460px;">
                                                     <div class="dropdown-menu-inner">
                                                         <div class="row">
                                                             <?php foreach ($sub_menu_1 as $sub_menu_value) { ?>
@@ -136,7 +136,7 @@
                                             ?>    
                                             <li class="parent dropdown "> <?php foreach ($main_menu_3 as $value) { ?> <a href="<?php echo $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span><b class="round-arrow"></b></a>  <?php } ?>
 
-                                                <div class="dropdown-menu" style="width:620px; height: 460px;">
+                                                <div class="dropdown-menu" style="width:620px; min-height: 460px;">
                                                     <div class="dropdown-menu-inner">
                                                         <div class="row">
                                                             <?php foreach ($sub_menu_3 as $sub_menu_value) { ?>
