@@ -172,12 +172,12 @@
                                         </a></div>
                                     <div>
                                         <div style="display: none;" class="top-cart-content arrow_box">
-                                            <div class="block-subtitle">Recently added item(s)</div>
+                                            <div class="block-subtitle">Recently added item</div>
                                             <ul id="cart-sidebar" class="mini-products-list">
 
                                                 <li class="item even" ng-repeat="content in contents"> <a class="product-image" href="#" title="{{content.name}}"><img alt="{{content.name}}" src="<?php echo base_url()?>{{content.image}}" width="80"></a>
                                                     <div class="detail-item">
-                                                        <div class="product-details"> <a href="" title="Remove This Item" ng-click="removeItem(content.rowid)" class="glyphicon glyphicon-remove">&nbsp;</a> <a class="" title="Edit item" href="#">&nbsp;</a>
+                                                        <div class="product-details"><?php if (empty($cart_del_disable)){ ?> <a href="" title="Remove This Item" ng-click="removeItem(content.rowid)" class="glyphicon glyphicon-remove">&nbsp;</a> <a class="" title="Edit item" href="#">&nbsp;</a><?php } ?>
                                                             <p class="product-name"> <a href="#" title="{{content.name}}">{{content.name}}</a> </p>
                                                         </div>
                                                         <div class="product-details-bottom"> <span class="price">Tk. {{content.price}}</span> <span class="title-desc">Qty:</span> <strong>{{content.qty}}</strong> </div>
@@ -185,17 +185,17 @@
                                                 </li>
                                             </ul>
                                             <div class="top-subtotal">Total: <span class="price">Tk. {{totalAmount}}</span></div>
-                                            <div class="actions">
+                                            <div class="actions" ng-hide="totalItems==0">
                                                 <?php
                                             $customer_id = $this->session->userdata('customer_id');
                                             if ($customer_id != NULL) {
                                                 ?>
-                                                <button class="btn-checkout" type="button"><a href="<?php echo base_url(); ?>onlineshop/user_checkout"><span>Checkout</span></a></button>
+                                                <form action="<?php echo base_url() . 'onlineshop/user_checkout'; ?>" method="post"><button class="btn-checkout" type="submit"><a href="<?php echo base_url(); ?>onlineshop/user_checkout"><span>Checkout</span></a></button></form>
                                                
                                                 <form action="<?php echo base_url() . 'cart/show_cart'; ?>" method="post"><button class="view-cart" type="submit"><span>View Cart</span></button></form>
                                             <?php } else {
                                                  ?>
-                                                <button class="btn-checkout" type="button"><a title="Login" href="<?php echo base_url(); ?>onlineshop/user_login"><span  class="hidden-xs">Checkout</span></a></button> 
+                                                <form action="<?php echo base_url() . 'onlineshop/user_login'; ?>" method="post"><button class="btn-checkout" type="submit"><a title="Login" href="<?php echo base_url(); ?>onlineshop/user_login"><span  class="hidden-xs">Checkout</span></a></button> 
                                                 <form action="<?php echo base_url() . 'cart/show_cart'; ?>" method="post"><button class="view-cart" type="submit"><span>View Cart</span></button></form>
                                             
                                                     <?php } ?>

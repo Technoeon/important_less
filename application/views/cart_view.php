@@ -7,8 +7,7 @@
                     <h2>Shopping Cart</h2>
                 </div>
                 <div class="table-responsive">
-                    <form method="post" action="#updatePost/">
-                        <input type="hidden" value="Vwww7itR3zQFe86m" name="form_key">
+                    <form method="post" action="<?php echo base_url().'cart/update_cart'; ?>">
                         <fieldset>
                             <table class="data-table cart-table" id="shopping-cart-table">
                                 <colgroup>
@@ -33,7 +32,8 @@
                                 </thead>
                                 <tfoot>
                                     <tr class="first last">
-                                        <td class="a-right last" colspan="50"><a style="text-decoration: none;" class="button btn-continue" title="Continue Shopping" href="<?php echo base_url()?>"><span><span>Continue Shopping</span></span></a>
+                                        <td class="a-right last" colspan="50">
+                                            <?php if($main_category_id != NULL){ ?> <a style="text-decoration: none;" class="button btn-continue" title="Continue Shopping" href="<?php echo base_url()?>onlineshop/product_main_category/<?php echo $main_category_id;?>"><span><span>Continue Shopping</span></span></a><?php } ?>
                                             <button class="button btn-update" title="Update Cart" value="update_qty" name="update_cart_action" type="submit"><span><span>Update Cart</span></span></button>
                                             <a style="text-decoration: none;" class="button btn-empty" title="Clear Cart" href="<?php echo base_url().'cart/clear_cart';?>"><span><span>CLEAR CART</span></span></a></td>
                                     </tr>
@@ -45,7 +45,7 @@
                                         <td><h2 class="product-name"> <a href="#">{{content.name}}</a> </h2></td>
                                         <td class="a-center"><strong>{{content.options.Size}}</strong></td>
                                         <td class="a-right"><span class="cart-price"> <span class="price">Tk. {{content.price}}</span> </span></td>
-                                        <td class="a-center movewishlist"><input maxlength="12" class="input-text qty" title="Qty" size="4" value="{{content.qty}}" name="qty"></td>
+                                        <td class="a-center movewishlist"><input type="hidden" value="{{content.rowid}}" name="rowid[]"><input type="number" min="1" maxlength="12" class="input-text qty" title="Qty" size="4" value="{{content.qty}}" name="qty[]"></td>
                                         <td class="a-right movewishlist"><span class="cart-price"> <span class="price">Tk. {{content.subtotal}}</span> </span></td>
                                         <td class="a-center last"><a class="button remove-item" title="Remove item" href="" ng-click="removeItem(content.rowid)"><span><span>Remove item</span></span></a></td>
                                     </tr>
@@ -443,10 +443,17 @@
                             </table>
                             <ul class="checkout">
                                 <li>
-                                    <button class="button btn-proceed-checkout" title="Proceed to Checkout" type="button"><a href="<?php echo base_url(); ?>onlineshop/user_checkout"><span>Proceed to Checkout</span></a></button>
+                                    <?php
+                                    $customer_id = $this->session->userdata('customer_id');
+                                    if ($customer_id == NULL) {
+                                        ?>
+                                    <form method="post" action="<?php echo base_url().'onlineshop/user_login'; ?>"><button class="button btn-proceed-checkout" title="Proceed to Checkout" type="submit"><a href="<?php echo base_url(); ?>onlineshop/user_login"><span>Proceed to Checkout</span></a></button></form>
+                                    <?php }  else { ?>
+                                    <form method="post" action="<?php echo base_url().'onlineshop/user_checkout'; ?>"><button class="button btn-proceed-checkout" title="Proceed to Checkout" type="submit"><a href="<?php echo base_url(); ?>onlineshop/user_checkout"><span>Proceed to Checkout</span></a></button></form>
+                                   <?php } ?>
                                 </li>
                                 <br>
-                                <li><a title="Checkout with Multiple Addresses" href="http://demo.magikthemes.com/index.php/eclipseblue/checkout/multishipping/">Checkout with Multiple Addresses</a> </li>
+                                <li><a title="Checkout with Multiple Addresses" href="">Checkout with Multiple Addresses</a> </li>
                                 <br>
                             </ul>
                         </div>
