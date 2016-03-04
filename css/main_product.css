@@ -3136,3 +3136,21 @@
 .ips :checked + .lps {
     background: red;
 }
+.pcheck{
+    background: #337AB7;
+    width: 100%;
+    height: 60px;
+    text-align: center;   
+    padding-top: 7px;
+    font-size: 27px;
+    font-family:  sans-serif;
+}
+.cashdel{
+    border-radius: 5px;
+    border-color: red;
+    
+}
+.cashdel img{
+    border-radius: 5px;
+    border-color: red;
+}
