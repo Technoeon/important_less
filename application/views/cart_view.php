@@ -443,7 +443,7 @@
                             </table>
                             <ul class="checkout">
                                 <li>
-                                    <button onclick="window.location = 'http://demo.magikthemes.com/index.php/eclipseblue/checkout/onepage/';" class="button btn-proceed-checkout" title="Proceed to Checkout" type="button"><span>Proceed to Checkout</span></button>
+                                    <button class="button btn-proceed-checkout" title="Proceed to Checkout" type="button"><a href="<?php echo base_url(); ?>onlineshop/user_checkout"><span>Proceed to Checkout</span></a></button>
                                 </li>
                                 <br>
                                 <li><a title="Checkout with Multiple Addresses" href="http://demo.magikthemes.com/index.php/eclipseblue/checkout/multishipping/">Checkout with Multiple Addresses</a> </li>

@@ -6,8 +6,9 @@
         <div class="page-title">
           <h2>Login or Create an Account</h2>
         </div>
-       <form action="<?php echo base_url();?>onlineshop/user_login" method="post">
+       
         <fieldset class="col2-set">
+          <form action="<?php echo base_url();?>onlineshop/customer_info_save" method="post">
           <legend>Login or Create an Account</legend>
           <div class="col-1 new-users"><strong>New Customers</strong>
             <div class="content">
@@ -19,32 +20,32 @@
                      <li>
                        <label for="name">Name <span class="required">*</span></label>
                        <br>
-                       <input type="text" title="Name" class="input-text required-entry" id="email" value="" name="user_name">
+                       <input type="text" title="Name" class="input-text required-entry" id="email" value="" name="customer_name">
                      </li>
                      <li>
                        <label for="mobile">Mobile Number <span class="required">*</span></label>
                        <br>
-                       <input type="text" title="Mobile Number" class="input-text required-entry" id="email" value="" name="user_mobile">
+                       <input type="text" title="Mobile Number" class="input-text required-entry" id="email" value="" name="customer_mobile">
                      </li>
                      <li>
                        <label for="mobile">Location <span class="required">*</span></label>
                        <br>
-                       <input type="text" title="Location" class="input-text required-entry" id="email" value="" name="user_location">
+                       <input type="text" title="Location" class="input-text required-entry" id="email" value="" name="customer_location">
                      </li>
                      <li>
                        <label for="email">Email Address <span class="required">*</span></label>
                        <br>
-                       <input type="text" title="Email Address" class="input-text required-entry" id="email" value="" name="user_email">
+                       <input type="text" title="Email Address" class="input-text required-entry" id="email" value="" name="customer_email">
                      </li>
                      <li>
                        <label for="pass">Password <span class="required">*</span></label>
                        <br>
-                       <input type="password" title="Password" id="pass" class="input-text required-entry validate-password" name="user_password">
+                       <input type="password" title="Password" id="pass" class="input-text required-entry validate-password" name="customer_passowrd">
                      </li>
                       <li>
                        <label for="pass">Retype Password <span class="required">*</span></label>
                        <br>
-                       <input type="password" title="Password" id="pass" class="input-text required-entry validate-password" name="user_repassword">
+                       <input type="password" title="Password" id="pass" class="input-text required-entry validate-password" name="customer_passowrd">
                      </li>
                    </ul>
                     <button type="submit" class="button btn bg-danger" >Submit</button>						
@@ -53,6 +54,8 @@
               </div>
             </div>
           </div>
+          </form>
+          <form action="<?php echo base_url();?>onlineshop/customer_login_check" method="post">
           <div class="col-2 registered-users"><strong>Registered Customers</strong>
             <div class="content">
               <p>If you have an account with us, please log in.</p>
@@ -60,12 +63,12 @@
                 <li>
                   <label for="email">Email Address <span class="required">*</span></label>
                   <br>
-                  <input type="text" title="Email Address" class="input-text required-entry" id="email" value="" name="login[username]">
+                  <input type="text" title="Email Address" class="input-text required-entry" id="email" value="" name="customer_email">
                 </li>
                 <li>
                   <label for="pass">Password <span class="required">*</span></label>
                   <br>
-                  <input type="password" title="Password" id="pass" class="input-text required-entry validate-password" name="login[password]">
+                  <input type="password" title="Password" id="pass" class="input-text required-entry validate-password" name="customer_passowrd">
                 </li>
               </ul>
               <p class="required">* Required Fields</p>
@@ -74,8 +77,9 @@
                 <a class="forgot-word" href="http://demo.magentomagik.com/computerstore/customer/account/forgotpassword/">Forgot Your Password?</a> </div>
             </div>
           </div>
-        </fieldset>
           </form>
+        </fieldset>
+          
       </div>
          
       <br>

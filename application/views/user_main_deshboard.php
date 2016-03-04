@@ -85,7 +85,7 @@ if ($main_menu_1 != null) {
             <div class='first-block-category-menu-container-men-fasion'>
 
                 <div class='home-13-0-block-category-menu-header-men-fasion'>
-                    <h1><?php foreach ($main_menu_1 as $value) { ?> <a href="<?php echo $p1 = $value->id; ?>"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
+                    <h1><?php foreach ($main_menu_1 as $value) { ?> <a href="<?php echo base_url().'onlineshop/product_main_category/'.$p1 = $value->id; ?>"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
                 </div>
 
 
@@ -103,7 +103,7 @@ if ($main_menu_1 != null) {
             </div>
             <?php if (isset($main_menu_product_id_1)) { ?>
                 <div class='first-block-image-container-men-fasion' >
-                    <a href='<?php echo base_url() ?>onlineshop/' title='more women'  target='_blank'>
+                    <a href="<?php echo base_url().'onlineshop/product_details/'.$main_menu_product_id_1?>" title='more women'  target='_blank'>
                         <img style="width: 287px;height: 387px;" src='<?php echo base_url() . $main_menu_1_img; ?>'/>
                     </a>
                 </div>
@@ -122,7 +122,7 @@ if ($main_menu_1 != null) {
                                 <div class="item" ng-repeat="x in product1">
                                     <div class="col-item">
                                         <div class="sale-label sale-top-right">Sale</div>
-                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url(); ?>onlineshop/product_details"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="a" /> </a></div>
+                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url().'onlineshop/product_details/'?>{{x.product_id}}"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="a" /> </a></div>
                                         <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="quick-view.html"><span>quickview</span></a> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> <a title="Add to Compare" class="link-compare" href="#"><span>Add to Compare</span></a></span> </div>
                                         <div class="info">
                                             <div class="info-inner">
@@ -143,6 +143,7 @@ if ($main_menu_1 != null) {
                                                 <!--item-content--> 
                                             </div>
                                             <!--info-inner-->
+                                            <input type="hidden" value="<?php echo $main_menu_product_id_1;?>" name="main_menu_product_id_1">
                                             <div class="actions">
                                                 <button type="button" title="Add to Cart" class="button btn-cart"><span>Add to Cart</span></button>
                                             </div>
@@ -190,7 +191,7 @@ if ($main_menu_2 != null) {
             <div class='first-block-category-menu-container-manu2-fasion'>
 
                 <div class='home-13-0-block-category-menu-header-manu2-fasion'>
-                    <h1><?php foreach ($main_menu_2 as $value) { ?> <a href="<?php echo $p2 = $value->id; ?>"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
+                    <h1><?php foreach ($main_menu_2 as $value) { ?> <a href="<?php echo base_url().'onlineshop/product_main_category/'.$p2 = $value->id; ?>"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
                 </div>
 
 
@@ -208,7 +209,7 @@ if ($main_menu_2 != null) {
             </div>
             <?php if (isset($main_menu_product_id_2)) { ?>
                 <div class='first-block-image-container-manu2-fasion' >
-                    <a href='<?php echo base_url() ?>onlineshop/' title='more women'  target='_blank'>
+                    <a href="<?php echo base_url().'onlineshop/product_details/'.$main_menu_product_id_2?>" title='more women'  target='_blank'>
                         <img style="width: 287px;height: 387px;" src='<?php echo base_url() . $main_menu_2_img; ?>'/>
                     </a>
                 </div>
@@ -227,7 +228,7 @@ if ($main_menu_2 != null) {
                                 <div class="item" ng-repeat="x in product2">
                                     <div class="col-item">
                                         <div class="sale-label sale-top-right">Sale</div>
-                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url(); ?>onlineshop/product_details"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="a" /> </a></div>
+                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url().'onlineshop/product_details/'?>{{x.product_id}}"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="a" /> </a></div>
                                         <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="quick-view.html"><span>quickview</span></a> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> <a title="Add to Compare" class="link-compare" href="#"><span>Add to Compare</span></a></span> </div>
                                         <div class="info">
                                             <div class="info-inner">
@@ -295,7 +296,7 @@ if ($main_menu_3 != NULL) {
 
 
                 <div class='home-13-0-block-category-menu-header-menu3-fasion'>
-                    <h1><?php foreach ($main_menu_3 as $value) { ?> <a href="<?php echo $p3 = $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
+                    <h1><?php foreach ($main_menu_3 as $value) { ?> <a href="<?php echo base_url().'onlineshop/product_main_category/'.$p3 = $value->id; ?>"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
                 </div>
                 <div class='home-13-0-block-category-menu-wrapper-menu3-fasion'>
 
@@ -312,7 +313,7 @@ if ($main_menu_3 != NULL) {
             </div>
             <?php if (isset($main_menu_product_id_3)) { ?>
                 <div class='first-block-image-container-manu2-fasion' >
-                    <a href='<?php echo base_url() ?>onlineshop/' title='more women'  target='_blank'>
+                    <a href="<?php echo base_url().'onlineshop/product_details/'.$main_menu_product_id_3?>" title='more women'  target='_blank'>
                         <img style="width: 287px;height: 387px;" src='<?php echo base_url() . $main_menu_3_img; ?>'/>
                     </a>
                 </div>
@@ -330,7 +331,7 @@ if ($main_menu_3 != NULL) {
                                 <div class="item" ng-repeat="x in product3">
                                     <div class="col-item">
                                         <div class="sale-label sale-top-right">Sale</div>
-                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url(); ?>onlineshop/product_details"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="a" /> </a></div>
+                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url().'onlineshop/product_details/'?>{{x.product_id}}"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="a" /> </a></div>
                                         <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="quick-view.html"><span>quickview</span></a> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> <a title="Add to Compare" class="link-compare" href="#"><span>Add to Compare</span></a></span> </div>
                                         <div class="info">
                                             <div class="info-inner">
@@ -398,7 +399,7 @@ if ($main_menu_4 != NULL) {
 
 
                 <div class='home-13-0-block-category-menu-header-menu4-fasion'>
-                    <h1><?php foreach ($main_menu_4 as $value) { ?> <a href="<?php echo $p4 = $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
+                    <h1><?php foreach ($main_menu_4 as $value) { ?> <a href="<?php echo base_url().'onlineshop/product_main_category/'.$p4 = $value->id; ?>"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
                 </div>
                 <div class='home-13-0-block-category-menu-wrapper-menu4-fasion'>
 
@@ -414,7 +415,7 @@ if ($main_menu_4 != NULL) {
             </div>
             <?php if (isset($main_menu_product_id_4)) { ?>
                 <div class='first-block-image-container-men-fasion' >
-                    <a href='<?php echo base_url() ?>onlineshop/' title='more women'  target='_blank'>
+                    <a href="<?php echo base_url().'onlineshop/product_details/'.$main_menu_product_id_4?>" title='more women'  target='_blank'>
                         <img style="width: 287px;height: 387px;" src='<?php echo base_url() . $main_menu_4_img; ?>'/>
                     </a>
                 </div>
@@ -434,7 +435,7 @@ if ($main_menu_4 != NULL) {
                                 <div class="item" ng-repeat="x in product4">
                                     <div class="col-item">
                                         <div class="sale-label sale-top-right">Sale</div>
-                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url(); ?>onlineshop/product_details"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="a" /> </a></div>
+                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url().'onlineshop/product_details/'?>{{x.product_id}}"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="a" /> </a></div>
                                         <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="quick-view.html"><span>quickview</span></a> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> <a title="Add to Compare" class="link-compare" href="#"><span>Add to Compare</span></a></span> </div>
                                         <div class="info">
                                             <div class="info-inner">
@@ -505,7 +506,7 @@ if ($main_menu_5 != NULL) {
         <div class=''>
             <div class='first-block-category-menu-container-menu5-fasion'>
                 <div class='home-13-0-block-category-menu-header-menu5-fasion'>
-                    <h1><?php foreach ($main_menu_5 as $value) { ?> <a href="<?php echo $p5 = $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
+                    <h1><?php foreach ($main_menu_5 as $value) { ?> <a href="<?php echo base_url().'onlineshop/product_main_category/'.$p5 = $value->id; ?>"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
                 </div>
                 <div class='home-13-0-block-category-menu-wrapper-menu5-fasion'>
 
@@ -521,7 +522,7 @@ if ($main_menu_5 != NULL) {
             </div>
             <?php if (isset($main_menu_product_id_5)) { ?>
                 <div class='first-block-image-container-men-fasion' >
-                    <a href='<?php echo base_url() ?>onlineshop/' title='more women'  target='_blank'>
+                    <a href="<?php echo base_url().'onlineshop/product_details/'.$main_menu_product_id_5?>" title='more women'  target='_blank'>
                         <img style="width: 287px;height: 387px;" src='<?php echo base_url() . $main_menu_5_img; ?>'/>
                     </a>
                 </div>
@@ -541,7 +542,7 @@ if ($main_menu_5 != NULL) {
                                 <div class="item" ng-repeat="x in product5">
                                     <div class="col-item">
                                         <div class="sale-label sale-top-right">Sale</div>
-                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url(); ?>onlineshop/product_details"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="a" /> </a></div>
+                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url().'onlineshop/product_details/'?>{{x.product_id}}"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="a" /> </a></div>
                                         <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="quick-view.html"><span>quickview</span></a> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> <a title="Add to Compare" class="link-compare" href="#"><span>Add to Compare</span></a></span> </div>
                                         <div class="info">
                                             <div class="info-inner">
@@ -610,7 +611,7 @@ if ($main_menu_6 != NULL) {
 
 
                 <div class='home-13-0-block-category-menu-header-menu6-fasion'>
-                    <h1><?php foreach ($main_menu_6 as $value) { ?> <a href="<?php echo $p6 = $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
+                    <h1><?php foreach ($main_menu_6 as $value) { ?> <a href="<?php echo base_url().'onlineshop/product_main_category/'.$p6 = $value->id; ?>"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
                 </div>
                 <div class='home-13-0-block-category-menu-wrapper-menu6-fasion'>
 
@@ -626,7 +627,7 @@ if ($main_menu_6 != NULL) {
             </div>
             <?php if (isset($main_menu_product_id_6)) { ?>
                 <div class='first-block-image-container-men-fasion' >
-                    <a href='<?php echo base_url() ?>onlineshop/' title='more women'  target='_blank'>
+                    <a href="<?php echo base_url().'onlineshop/product_details/'.$main_menu_product_id_6?>" title='more women'  target='_blank'>
                         <img style="width: 287px;height: 387px;" src='<?php echo base_url() . $main_menu_6_img; ?>'/>
                     </a>
                 </div>
@@ -646,7 +647,7 @@ if ($main_menu_6 != NULL) {
                                 <div class="item" ng-repeat="x in product6">
                                     <div class="col-item">
                                         <div class="sale-label sale-top-right">Sale</div>
-                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url(); ?>onlineshop/product_details"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="a" /> </a></div>
+                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url().'onlineshop/product_details/'?>{{x.product_id}}"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="a" /> </a></div>
                                         <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="quick-view.html"><span>quickview</span></a> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> <a title="Add to Compare" class="link-compare" href="#"><span>Add to Compare</span></a></span> </div>
                                         <div class="info">
                                             <div class="info-inner">
@@ -721,7 +722,7 @@ if ($main_menu_7 != NULL) {
                 ?> 
 
                 <div class='home-13-0-block-category-menu-header-menu7-fasion'>
-                    <h1><?php foreach ($main_menu_7 as $value) { ?> <a href="<?php echo $p7 = $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
+                    <h1><?php foreach ($main_menu_7 as $value) { ?> <a href="<?php echo base_url().'onlineshop/product_main_category/'.$p7 = $value->id; ?>"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
                 </div>
                 <div class='home-13-0-block-category-menu-wrapper-menu7-fasion'>
 
@@ -737,7 +738,7 @@ if ($main_menu_7 != NULL) {
             </div>
             <?php if (isset($main_menu_product_id_7)) { ?>
                 <div class='first-block-image-container-men-fasion' >
-                    <a href='<?php echo base_url() ?>onlineshop/' title='more women'  target='_blank'>
+                    <a href="<?php echo base_url().'onlineshop/product_details/'.$main_menu_product_id_1?>" title='more women'  target='_blank'>
                         <img style="width: 287px;height: 387px;" src='<?php echo base_url() . $main_menu_7_img; ?>'/>
                     </a>
                 </div>
@@ -757,7 +758,7 @@ if ($main_menu_7 != NULL) {
                                 <div class="item" ng-repeat="x in product7">
                                     <div class="col-item">
                                         <div class="sale-label sale-top-right">Sale</div>
-                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url(); ?>onlineshop/product_details"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="a" /> </a></div>
+                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url().'onlineshop/product_details/'?>{{x.product_id}}"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="a" /> </a></div>
                                         <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="quick-view.html"><span>quickview</span></a> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> <a title="Add to Compare" class="link-compare" href="#"><span>Add to Compare</span></a></span> </div>
                                         <div class="info">
                                             <div class="info-inner">
@@ -826,7 +827,7 @@ if ($main_menu_8 != NULL) {
             <div class='first-block-category-menu-container-menu8-fasion'>
 
                 <div class='home-13-0-block-category-menu-header-menu8-fasion'>
-                    <h1><?php foreach ($main_menu_8 as $value) { ?> <a href="<?php echo $p8 = $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
+                    <h1><?php foreach ($main_menu_8 as $value) { ?> <a href="<?php echo base_url().'onlineshop/product_main_category/'.$p8 = $value->id; ?>"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
                 </div>
                 <div class='home-13-0-block-category-menu-wrapper-menu8-fasion'>
 
@@ -842,7 +843,7 @@ if ($main_menu_8 != NULL) {
             </div>
             <?php if (isset($main_menu_product_id_8)) { ?>
                 <div class='first-block-image-container-men-fasion' >
-                    <a href='<?php echo base_url() ?>onlineshop/' title='more women'  target='_blank'>
+                    <a href="<?php echo base_url().'onlineshop/product_details/'.$main_menu_product_id_1?>" title='more women'  target='_blank'>
                         <img style="width: 287px;height: 387px;" src='<?php echo base_url() . $main_menu_8_img; ?>'/>
                     </a>
                 </div>
@@ -862,7 +863,7 @@ if ($main_menu_8 != NULL) {
                                 <div class="item" ng-repeat="x in product8">
                                     <div class="col-item">
                                         <div class="sale-label sale-top-right">Sale</div>
-                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url(); ?>onlineshop/product_details"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="a" /> </a></div>
+                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url().'onlineshop/product_details/'?>{{x.product_id}}"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="a" /> </a></div>
                                         <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="quick-view.html"><span>quickview</span></a> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> <a title="Add to Compare" class="link-compare" href="#"><span>Add to Compare</span></a></span> </div>
                                         <div class="info">
                                             <div class="info-inner">
@@ -930,7 +931,7 @@ if ($main_menu_9 != NULL) {
 
 
                 <div class='home-13-0-block-category-menu-header-menu9-fasion'>
-                    <h1><?php foreach ($main_menu_9 as $value) { ?> <a href="<?php echo $p9 = $value->id; ?>" class="dropdown-toggle" data-toggle="dropdown"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
+                    <h1><?php foreach ($main_menu_9 as $value) { ?> <a href="<?php echo base_url().'onlineshop/product_main_category/'.$p9 = $value->id; ?>"><span class="menu-title"><?php echo $value->main_menu_name; ?></span></a>  <?php } ?></h1>
                 </div>
                 <div class='home-13-0-block-category-menu-wrapper-menu9-fasion'>
 
@@ -945,7 +946,7 @@ if ($main_menu_9 != NULL) {
             </div>
             <?php if (isset($main_menu_product_id_9)) { ?>
                 <div class='first-block-image-container-men-fasion' >
-                    <a href='<?php echo base_url() ?>onlineshop/' title='more women'  target='_blank'>
+                    <a href="<?php echo base_url().'onlineshop/product_details/'.$main_menu_product_id_1?>" title='more women'  target='_blank'>
                         <img style="width: 287px;height: 387px;" src='<?php echo base_url() . $main_menu_9_img; ?>'/>
                     </a>
                 </div>
@@ -965,7 +966,7 @@ if ($main_menu_9 != NULL) {
                                 <div class="item" ng-repeat="x in product9">
                                     <div class="col-item">
                                         <div class="sale-label sale-top-right">Sale</div>
-                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url(); ?>onlineshop/product_details"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="a" /> </a></div>
+                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url().'onlineshop/product_details/'?>{{x.product_id}}"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="a" /> </a></div>
                                         <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="quick-view.html"><span>quickview</span></a> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> <a title="Add to Compare" class="link-compare" href="#"><span>Add to Compare</span></a></span> </div>
                                         <div class="info">
                                             <div class="info-inner">

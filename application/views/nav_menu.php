@@ -106,7 +106,7 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                 </div>
                 <?php if (isset($main_menu_product_id_1)) { ?>
                     <div class="nav-block nav-block-right std grid12-4">
-                        <div class="static-img-block"><a href="#"><img style="width: 210px;height: 287px;" src="<?php echo base_url() . $main_menu_1_img; ?>" alt="Responsive"></a></div>
+                        <div class="static-img-block"><a href="<?php echo base_url().'onlineshop/product_details/'.$main_menu_product_id_1?>"><img style="width: 210px;height: 287px;" src="<?php echo base_url() . $main_menu_1_img; ?>" alt="Responsive"></a></div>
                         <h3 class="heading" style="text-align: center;"><?php echo $main_menu_product_name_1 ?></h3>
                     </div>
                 <?php } ?>
@@ -553,8 +553,6 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
         </div>
     </li>
     <li id="nav-home" class="level0 parent drop-menu"><a href="<?php echo base_url(); ?>onlineshop"><span>Discount</span> </a></li>
-    <li id="nav-home" class="level0 parent drop-menu"><a href="<?php echo base_url(); ?>onlineshop"><span>About Us</span> </a></li>
-
-
+  
 
 </ul>

@@ -225,7 +225,7 @@ a.block-currency:focus {
 	padding: 0px;
 	color: #bed6e2;
 	font-size: 18px;
-	padding-left: 25px;
+	padding-left: 12px;
 }
 .toplinks div.links div a:hover {
 	color: #fff;
@@ -6801,7 +6801,7 @@ input#coupon_code {
 	vertical-align: middle;
 }
 .checkout a {
-	text-decoration: underline;
+	text-decoration: none;
 	color: #33c5fb;
 }
 .checkout {

@@ -103,11 +103,26 @@
                                 <!-- Header Top Links -->
                                 <div class="toplinks">
                                     <div class="links">
-                                        <div class="myaccount"><a title="My Account" href="<?php echo base_url(); ?>onlineshop/user_account"><span class="hidden-xs">Contact Us</span></a></div>
+                                        <div class="myaccount"><a title="About Us" href="<?php echo base_url(); ?>onlineshop/user_account"><span class="hidden-xs">About Us</span></a></div>
+                                        <div class="myaccount"><a title="Contact Us" href="<?php echo base_url(); ?>onlineshop/user_account"><span class="hidden-xs">Contact Us</span></a></div>
                                         <div class="myaccount"><a title="My Account" href="<?php echo base_url(); ?>onlineshop/user_account"><span class="hidden-xs">My Account</span></a></div>
-                                        <div class="wishlist"><a title="My Wishlist"  href="<?php echo base_url(); ?>onlineshop/product_category"><span class="hidden-xs">Wishlist</span></a></div>
-                                        <div class="check"><a title="Checkout" href="<?php echo base_url(); ?>onlineshop/user_checkout"><span class="hidden-xs">Checkout</span></a></div>
-                                        <div class="login"><a title="Login" href="<?php echo base_url(); ?>onlineshop/user_login"><span  class="hidden-xs">Log In</span></a></div>
+                                        <div class="wishlist"><a title="My Wishlist"  href="<?php echo base_url(); ?>onlineshop"><span class="hidden-xs">Wishlist</span></a></div>
+                                        <div class="check">
+                                           
+                                        
+                                        </div>
+                                        <div class="login">
+                                              <?php
+                                            $customer_id = $this->session->userdata('customer_id');
+                                            if ($customer_id != NULL) {
+                                                ?>
+                                             <a title="Checkout" href="<?php echo base_url(); ?>onlineshop/user_checkout"><span class="hidden-xs">Checkout</span></a>
+                                            <a title="Login" href="<?php echo base_url(); ?>onlineshop/customer_logout"><span  class="hidden-xs">Log out</span></a>
+                                             <?php } else {
+                                                 ?>
+                                             <a title="Login" href="<?php echo base_url(); ?>onlineshop/user_login"><span  class="hidden-xs">Log in</span></a>
+                                            <?php } ?>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- End Header Top Links --> 
@@ -171,8 +186,19 @@
                                             </ul>
                                             <div class="top-subtotal">Total: <span class="price">Tk. {{totalAmount}}</span></div>
                                             <div class="actions">
-                                                <button class="btn-checkout" type="button"><span>Checkout</span></button>
+                                                <?php
+                                            $customer_id = $this->session->userdata('customer_id');
+                                            if ($customer_id != NULL) {
+                                                ?>
+                                                <button class="btn-checkout" type="button"><a href="<?php echo base_url(); ?>onlineshop/user_checkout"><span>Checkout</span></a></button>
+                                               
                                                 <form action="<?php echo base_url() . 'cart/show_cart'; ?>" method="post"><button class="view-cart" type="submit"><span>View Cart</span></button></form>
+                                            <?php } else {
+                                                 ?>
+                                                <button class="btn-checkout" type="button"><a title="Login" href="<?php echo base_url(); ?>onlineshop/user_login"><span  class="hidden-xs">Checkout</span></a></button> 
+                                                <form action="<?php echo base_url() . 'cart/show_cart'; ?>" method="post"><button class="view-cart" type="submit"><span>View Cart</span></button></form>
+                                            
+                                                    <?php } ?>
                                             </div>
                                         </div>
                                     </div>

@@ -132,7 +132,67 @@ class onlineshop extends CI_Controller {
         //$data['menu']= $main_menu;
         return $data;
     }
-
+    public function customer_info_save()
+    {
+        $data=array();
+        $data['customer_name']=  $this->input->post('customer_name',true);
+        $data['customer_mobile']=  $this->input->post('customer_mobile',true);
+        $data['customer_email']=  $this->input->post('customer_email',true);
+        $data['customer_location']=  $this->input->post('customer_location',true);
+        $data['customer_passowrd']=  $this->input->post('customer_passowrd',true);
+        $this->onlineshop_model->save_sing_up_customer_info($data);
+        $sdata = array();
+        $sdata['message'] = 'Save Registration Information Successfully !';
+        $this->session->set_userdata($sdata);
+      
+        
+           /*
+         * ------------- Start Send Customer Registration Confirmation Email-------
+         */
+        $mdata = array();
+        $mdata['from_address'] = 'info@somoyerdeal';
+        $mdata['admin_full_name'] = 'Somoyerdeal';
+        $mdata['customer_email'] = $data['customer_email'];
+        $mdata['subject'] = 'Registration Successfull- www.somoyerdeal.com';
+        $mdata['customer_name'] = $data['customer_name'];
+        $mdata['customer_passowrd'] = $this->input->post('customer_passowrd', true);
+      
+        $this->mailer_model->send_email($mdata, 'successfull_registration');
+        /*
+         * ------------- End Send Customer Registration Confirmation Email-------
+         */
+        redirect('onlineshop/user_login');
+    }
+    public function customer_login_check()
+    {
+       
+        $customer_email= $this->input->post('customer_email');
+        $customer_passowrd=$this->input->post('customer_passowrd');
+       
+        $result=$this->onlineshop_model->customer_login_check_info($customer_email,$customer_passowrd);
+        
+        $sdata=array();
+        
+        if ($result)
+        {
+            $sdata['customer_id']=$result->customer_id;
+            $sdata['customer_name']=$result->customer_name;
+            $this->session->set_userdata($sdata);
+            redirect('onlineshop');
+        }
+        else {
+            $sdata['ecception']='Your User ID And Password Invalide';
+            $this->session->set_userdata($sdata);
+            redirect('onlineshop/user_login');
+        }
+       
+    }
+     public function customer_logout()
+    {
+        $this->session->unset_userdata('customer_id');
+        $this->session->unset_userdata('customer_name');
+        redirect('onlineshop');
+    }
     public function test($main_category_id) {
         echo json_encode($this->onlineshop_model->get_price_by_main_category_id1($main_category_id));
 //        $data['products_id']=$main_category_id;

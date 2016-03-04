@@ -109,7 +109,7 @@ $autoload['language'] = array();
 |
 */
 
-$autoload['model'] = array('admin_model','onlineshop_model','te_order_model','te_product_model','cart_model');
+$autoload['model'] = array('admin_model','onlineshop_model','te_order_model','te_product_model','cart_model','mailer_model');
 
 
 /* End of file autoload.php */
