@@ -140,24 +140,15 @@
                         <div class="col-lg-8 col-sm-6 col-md-8"> 
                             <!-- Search-col -->
                             <div class="search-box">
-                                <form action="http://htmldemo.magikcommerce.com/ecommerce/eclipse-html-template/cat" method="POST" id="search_mini_form" name="Categories">
-                                    <select name="category_id" class="cate-dropdown hidden-xs">
+                                <?php $all_main_category = $this->onlineshop_model->get_all_main_category_name_and_id(); ?>
+                                <form action="<?php echo base_url().'onlineshop/search_product'?>" method="POST" id="search_mini_form" name="Categories">
+                                    <select name="main_category_id" class="cate-dropdown hidden-xs">
                                         <option value="0">All Categories</option>
-                                        <option value="36">Camera</option>
-                                        <option value="37">Electronics</option>
-                                        <option value="42">&nbsp;&nbsp;&nbsp;Cell Phones</option>
-                                        <option value="43">&nbsp;&nbsp;&nbsp;Cameras</option>
-                                        <option value="44">&nbsp;&nbsp;&nbsp;Laptops</option>
-                                        <option value="45">&nbsp;&nbsp;&nbsp;Hard Drives</option>
-                                        <option value="46">&nbsp;&nbsp;&nbsp;Monitors</option>
-                                        <option value="47">&nbsp;&nbsp;&nbsp;Mouse</option>
-                                        <option value="48">&nbsp;&nbsp;&nbsp;Digital Cameras</option>
-                                        <option value="38">Desktops</option>
-                                        <option value="39">Computer Parts</option>
-                                        <option value="40">Televisions</option>
-                                        <option value="41">Featured</option>
+                                        <?php foreach ( $all_main_category as $value) { ?>
+                                        <option value="<?php echo $value->main_category_id; ?>"><?php echo $value->main_category_name; ?></option>
+                                            <?php }?>
                                     </select>
-                                    <input type="text" placeholder="Search here..." value="" maxlength="70" class="" name="search" id="search">
+                                    <input type="text" placeholder="Search product here..." value="" maxlength="70" class="" name="product_name" id="search">
                                     <button id="submit-button" class="search-btn-bg"><span>Search</span></button>
                                 </form>
                             </div>

@@ -300,4 +300,17 @@ class onlineshop extends CI_Controller {
     public function fp_by_size_n_category($size_name, $category_id){
         echo json_encode($this->onlineshop_model->get_product_by_size_and_category_id($size_name,$category_id));
     }
+    public function search(){
+        $product_name= $this->input->post('product_name', TRUE);
+        $main_category_id = $this->input->post('main_category_id', TRUE);
+        $data=array();
+        if($main_category_id != 0){
+            echo $product_name.'------'.$main_category_id;
+            echo $data['search_product']= json_encode($this->onlineshop_model->get_product_by_name_and_main_category($main_category_id, $product_name));
+        }  else {
+            echo $product_name.'------'.$main_category_id;
+            echo $data['search_product']= json_encode($this->onlineshop_model->get_product_by_name($product_name));
+        }
+                
+    }
 }

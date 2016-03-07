@@ -430,6 +430,39 @@ class onlineshop_model extends CI_Model{
         $result=$query->row();
         return $result;
     }
+    public function get_all_main_category_name_and_id(){
+        $this->db->select('main_category_id');
+        $this->db->select('main_category_name');
+        $this->db->where('main_category_status',1);
+        $this->db->from('tbl_main_category');
+        $query = $this->db->get();
+        $result=$query->result();
+        return $result;
+    }
+    public function get_product_by_name($product_name){
+        if($product_name==NULL)
+        {
+            $sql = "SELECT * FROM vprice";
+        }
+        else{
+        $sql = "SELECT * FROM vprice WHERE product_name LIKE '%$product_name%'";
+        }
+        $query_result = $this->db->query($sql);
+        $result = $query_result->result();
+        return $result;
+    }
+    public function get_product_by_name_and_main_category($main_category_id, $product_name){
+        if($product_name==NULL)
+        {
+            $sql = "SELECT * FROM vprice";
+        }
+        else{
+        $sql = "SELECT * FROM vprice WHERE main_category_id = '$main_category_id' and product_name LIKE '%$product_name%'";
+        }
+        $query_result = $this->db->query($sql);
+        $result = $query_result->result();
+        return $result;
+    }
     
     
 }
