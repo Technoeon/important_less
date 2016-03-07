@@ -40,6 +40,7 @@ class onlineshop extends CI_Controller {
         $data['user_main'] = $this->load->view('product_details',$data, true);
         $this->load->view('main', $data);
     }
+   
 
     public function product_category($category_id){
         $data = array();
