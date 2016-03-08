@@ -32,10 +32,11 @@ class onlineshop_model extends CI_Model{
         return $result;
     }
     public function get_product_by_main_category_id($main_category_id){
-        $sql ="select `product_id`,`main_category_id`,`sub_category_id`,`category_id` ,`product_name`,`product_price`,`image_path`, ( CASE WHEN start_date <= CURDATE() AND end_date >= CURDATE() THEN `discount_price` ELSE `discount_price`=null END) as discount from vproduct where default_image=1 and product_status=1 and main_category_id='$main_category_id'";
-        $query_result = $this->db->query($sql);
-        $result=$query_result->result();
-        return $result;
+        $this->db->select('*');
+        $this->db->where('main_category_id',$main_category_id);
+        $this->db->from('vprice');
+        $query = $this->db->get();
+        return $query->result();
     }
     public function get_sub_category_by_main_category_id($main_category_id){
         $this->db->select('sub_category_id');
@@ -451,6 +452,18 @@ class onlineshop_model extends CI_Model{
         $result = $query_result->result();
         return $result;
     }
+    public function get_product_by_name_count($product_name){
+        if($product_name==NULL)
+        {
+            $sql = "SELECT count(product_id) as counter FROM vprice";
+        }
+        else{
+        $sql = "SELECT count(product_id) as counter FROM vprice WHERE product_name LIKE '%$product_name%'";
+        }
+        $query_result = $this->db->query($sql);
+        $result = $query_result->row();
+        return $result->counter;
+    }
     public function get_product_by_name_and_main_category($main_category_id, $product_name){
         if($product_name==NULL)
         {
@@ -463,6 +476,36 @@ class onlineshop_model extends CI_Model{
         $result = $query_result->result();
         return $result;
     }
-    
+    public function get_product_by_name_and_main_category_count($main_category_id, $product_name){
+        if($product_name==NULL)
+        {
+            $sql = "SELECT count(product_id) as counter FROM vprice";
+        }
+        else{
+        $sql = "SELECT count(product_id) as counter FROM vprice WHERE main_category_id = '$main_category_id' and product_name LIKE '%$product_name%'";
+        }
+        $query_result = $this->db->query($sql);
+        $result = $query_result->row();
+        return $result->counter;
+    }
+    public function check_size($product_id) {
+        $sql = "SELECT count(product_id) as check_size FROM `tbl_product_size` WHERE product_id = '$product_id'";
+        $query_result = $this->db->query($sql);
+        $result = $query_result->row();
+        return $result->check_size;
+    }
+    public function get_all_discount_product(){
+        $this->db->select('*');
+        $this->db->where('discount !=','NULL');
+        $this->db->from('vprice');
+        $query = $this->db->get();
+        return $query->result();
+    }
+    public function get_discount_product_counter(){
+        $sql = "SELECT count(product_id) as counter FROM vprice WHERE discount IS NOT NULL";
+        $query_result = $this->db->query($sql);
+        $result = $query_result->row();
+        return $result->counter;
+    }
     
 }

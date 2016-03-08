@@ -59,7 +59,7 @@ class Cart extends CI_Controller {
 
         redirect('cart/show_cart');
     }
-
+    
     public function update_cart($drowid = NULL) {
         $data = array();
         $qty = $this->input->post('qty', true);

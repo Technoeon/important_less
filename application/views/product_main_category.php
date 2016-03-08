@@ -32,7 +32,7 @@
                             <div class="col-item">
                                 <div class="sale-label sale-top-right">Sale</div>
                                 <div class="product-image-area"> <a class="product-image" title="Sample Product" ng-href="<?php echo base_url() . 'onlineshop/product_details/' ?>{{product.product_id}}"> <img src="<?php echo base_url(); ?>{{product.image_path}}" class="img-responsive" alt="{{product.product_name}}" /> </a></div>
-                                <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="<?php echo base_url(); ?>quick-view.html"><span>quickview</span></a> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> <a title="Add to Compare" class="link-compare" href="#"><span>Add to Compare</span></a></span> </div>
+                                <div class="actions-links"><span class="add-to-links"> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> </span> </div>
                                 <div class="info">
                                     <div class="info-inner">
                                         <div class="item-title"> <a title="{{product.product_name}}" ng-href="<?php echo base_url() . 'onlineshop/product_details/' ?>{{product.product_id}}">{{product.product_name}}</a></div>
@@ -53,7 +53,11 @@
                                     </div>
                                     <!--info-inner-->
                                     <div class="actions">
-                                        <button type="submit" title="Add to Cart" ng-click="productdetails(product.product_id)"  class="button btn-cart"><span>Add to Cart</span></button>
+                                        <form method="post" action="<?php echo base_url() . 'onlineshop/go_for_cart_from_main_category/'.$main_category_id; ?>">
+                                            <input type="hidden" value="{{product.product_id}}" name="product_id">
+                                            <input type="hidden" value="1" name="qty">
+                                            <button type="submit" title="Add to Cart" class="button btn-cart"><span>Add to Cart</span></button>
+                                        </form>
                                     </div>
                                     <!--actions-->
 
@@ -271,9 +275,6 @@
                         $scope.status = response.status;
                     });
             $scope.loading = false;
-        };
-        $scope.productdetails = function(product_id) {
-            window.location = "<?php echo base_url() . 'onlineshop/product_details/' ?>" + product_id;
         };        
     });
 </script>

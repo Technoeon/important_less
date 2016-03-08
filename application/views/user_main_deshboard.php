@@ -122,11 +122,11 @@ if ($main_menu_1 != null) {
                                 <div class="item" ng-repeat="x in product1">
                                     <div class="col-item">
                                         <div class="sale-label sale-top-right">Sale</div>
-                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url().'onlineshop/product_details/'?>{{x.product_id}}"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="a" /> </a></div>
-                                        <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="quick-view.html"><span>quickview</span></a> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> <a title="Add to Compare" class="link-compare" href="#"><span>Add to Compare</span></a></span> </div>
+                                        <div class="product-image-area"> <a class="product-image" title="{{x.product_name}}" href="<?php echo base_url().'onlineshop/product_details/'?>{{x.product_id}}"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="{{x.product_name}}" /> </a></div>
+                                        <div class="actions-links"><span class="add-to-links"><a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a></span> </div>
                                         <div class="info">
                                             <div class="info-inner">
-                                                <div class="item-title"> <a title=" Sample Product" href="product-detail.html">{{x.product_name}}</a> </div>
+                                                <div class="item-title"> <a title="{{x.product_name}}" href="<?php echo base_url().'onlineshop/product_details/'?>{{x.product_id}}">{{x.product_name}}</a> </div>
                                                 <!--item-title-->
                                                 <div class="item-content">
                                                     <div class="ratings">
@@ -145,7 +145,11 @@ if ($main_menu_1 != null) {
                                             <!--info-inner-->
                                             <input type="hidden" value="<?php echo $main_menu_product_id_1;?>" name="main_menu_product_id_1">
                                             <div class="actions">
-                                                <button type="button" title="Add to Cart" class="button btn-cart"><span>Add to Cart</span></button>
+                                                <form method="post" action="<?php echo base_url().'onlineshop/go_for_cart_from_home'; ?>">
+                                                    <input type="hidden" value="{{x.product_id}}" name="product_id">
+                                                    <input type="hidden" value="1" name="qty">
+                                                    <button type="submit" title="Add to Cart" class="button btn-cart"><span>Add to Cart</span></button>
+                                                </form>
                                             </div>
                                             <!--actions-->
 
@@ -228,11 +232,11 @@ if ($main_menu_2 != null) {
                                 <div class="item" ng-repeat="x in product2">
                                     <div class="col-item">
                                         <div class="sale-label sale-top-right">Sale</div>
-                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url().'onlineshop/product_details/'?>{{x.product_id}}"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="a" /> </a></div>
-                                        <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="quick-view.html"><span>quickview</span></a> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> <a title="Add to Compare" class="link-compare" href="#"><span>Add to Compare</span></a></span> </div>
+                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url().'onlineshop/product_details/'?>{{x.product_id}}"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="{{x.product_name}}" /> </a></div>
+                                        <div class="actions-links"><span class="add-to-links"> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a></span> </div>
                                         <div class="info">
                                             <div class="info-inner">
-                                                <div class="item-title"> <a title=" Sample Product" href="product-detail.html">{{x.product_name}}</a> </div>
+                                                <div class="item-title"> <a title="{{x.product_name}}" href="product-detail.html">{{x.product_name}}</a> </div>
                                                 <!--item-title-->
                                                 <div class="item-content">
                                                     <div class="ratings">
@@ -250,7 +254,11 @@ if ($main_menu_2 != null) {
                                             </div>
                                             <!--info-inner-->
                                             <div class="actions">
-                                                <button type="button" title="Add to Cart" class="button btn-cart"><span>Add to Cart</span></button>
+                                               <form method="post" action="<?php echo base_url().'onlineshop/go_for_cart_from_home'; ?>">
+                                                    <input type="hidden" value="{{x.product_id}}" name="product_id">
+                                                    <input type="hidden" value="1" name="qty">
+                                                    <button type="submit" title="Add to Cart" class="button btn-cart"><span>Add to Cart</span></button>
+                                                </form>
                                             </div>
                                             <!--actions-->
 
@@ -331,11 +339,11 @@ if ($main_menu_3 != NULL) {
                                 <div class="item" ng-repeat="x in product3">
                                     <div class="col-item">
                                         <div class="sale-label sale-top-right">Sale</div>
-                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url().'onlineshop/product_details/'?>{{x.product_id}}"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="a" /> </a></div>
-                                        <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="quick-view.html"><span>quickview</span></a> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> <a title="Add to Compare" class="link-compare" href="#"><span>Add to Compare</span></a></span> </div>
+                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url().'onlineshop/product_details/'?>{{x.product_id}}"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="{{x.product_name}}" /> </a></div>
+                                        <div class="actions-links"><span class="add-to-links"> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a></span> </div>
                                         <div class="info">
                                             <div class="info-inner">
-                                                <div class="item-title"> <a title=" Sample Product" href="product-detail.html">{{x.product_name}}</a> </div>
+                                                <div class="item-title"> <a title="{{x.product_name}}" href="product-detail.html">{{x.product_name}}</a> </div>
                                                 <!--item-title-->
                                                 <div class="item-content">
                                                     <div class="ratings">
@@ -353,7 +361,11 @@ if ($main_menu_3 != NULL) {
                                             </div>
                                             <!--info-inner-->
                                             <div class="actions">
-                                                <button type="button" title="Add to Cart" class="button btn-cart"><span>Add to Cart</span></button>
+                                                <form method="post" action="<?php echo base_url().'onlineshop/go_for_cart_from_home'; ?>">
+                                                    <input type="hidden" value="{{x.product_id}}" name="product_id">
+                                                    <input type="hidden" value="1" name="qty">
+                                                    <button type="submit" title="Add to Cart" class="button btn-cart"><span>Add to Cart</span></button>
+                                                </form>
                                             </div>
                                             <!--actions-->
 
@@ -435,11 +447,11 @@ if ($main_menu_4 != NULL) {
                                 <div class="item" ng-repeat="x in product4">
                                     <div class="col-item">
                                         <div class="sale-label sale-top-right">Sale</div>
-                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url().'onlineshop/product_details/'?>{{x.product_id}}"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="a" /> </a></div>
-                                        <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="quick-view.html"><span>quickview</span></a> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> <a title="Add to Compare" class="link-compare" href="#"><span>Add to Compare</span></a></span> </div>
+                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url().'onlineshop/product_details/'?>{{x.product_id}}"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="{{x.product_name}}" /> </a></div>
+                                        <div class="actions-links"><span class="add-to-links"> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> </span> </div>
                                         <div class="info">
                                             <div class="info-inner">
-                                                <div class="item-title"> <a title=" Sample Product" href="product-detail.html">{{x.product_name}}</a> </div>
+                                                <div class="item-title"> <a title="{{x.product_name}}" href="product-detail.html">{{x.product_name}}</a> </div>
                                                 <!--item-title-->
                                                 <div class="item-content">
                                                     <div class="ratings">
@@ -457,7 +469,11 @@ if ($main_menu_4 != NULL) {
                                             </div>
                                             <!--info-inner-->
                                             <div class="actions">
-                                                <button type="button" title="Add to Cart" class="button btn-cart"><span>Add to Cart</span></button>
+                                                <form method="post" action="<?php echo base_url().'onlineshop/go_for_cart_from_home'; ?>">
+                                                    <input type="hidden" value="{{x.product_id}}" name="product_id">
+                                                    <input type="hidden" value="1" name="qty">
+                                                    <button type="submit" title="Add to Cart" class="button btn-cart"><span>Add to Cart</span></button>
+                                                </form>
                                             </div>
                                             <!--actions-->
 
@@ -542,11 +558,11 @@ if ($main_menu_5 != NULL) {
                                 <div class="item" ng-repeat="x in product5">
                                     <div class="col-item">
                                         <div class="sale-label sale-top-right">Sale</div>
-                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url().'onlineshop/product_details/'?>{{x.product_id}}"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="a" /> </a></div>
-                                        <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="quick-view.html"><span>quickview</span></a> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> <a title="Add to Compare" class="link-compare" href="#"><span>Add to Compare</span></a></span> </div>
+                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url().'onlineshop/product_details/'?>{{x.product_id}}"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="{{x.product_name}}" /> </a></div>
+                                        <div class="actions-links"><span class="add-to-links"><a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> </span> </div>
                                         <div class="info">
                                             <div class="info-inner">
-                                                <div class="item-title"> <a title=" Sample Product" href="product-detail.html">{{x.product_name}}</a> </div>
+                                                <div class="item-title"> <a title="{{x.product_name}}" href="product-detail.html">{{x.product_name}}</a> </div>
                                                 <!--item-title-->
                                                 <div class="item-content">
                                                     <div class="ratings">
@@ -564,7 +580,11 @@ if ($main_menu_5 != NULL) {
                                             </div>
                                             <!--info-inner-->
                                             <div class="actions">
-                                                <button type="button" title="Add to Cart" class="button btn-cart"><span>Add to Cart</span></button>
+                                                <form method="post" action="<?php echo base_url().'onlineshop/go_for_cart_from_home'; ?>">
+                                                    <input type="hidden" value="{{x.product_id}}" name="product_id">
+                                                    <input type="hidden" value="1" name="qty">
+                                                    <button type="submit" title="Add to Cart" class="button btn-cart"><span>Add to Cart</span></button>
+                                                </form>
                                             </div>
                                             <!--actions-->
 
@@ -647,11 +667,11 @@ if ($main_menu_6 != NULL) {
                                 <div class="item" ng-repeat="x in product6">
                                     <div class="col-item">
                                         <div class="sale-label sale-top-right">Sale</div>
-                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url().'onlineshop/product_details/'?>{{x.product_id}}"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="a" /> </a></div>
-                                        <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="quick-view.html"><span>quickview</span></a> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> <a title="Add to Compare" class="link-compare" href="#"><span>Add to Compare</span></a></span> </div>
+                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url().'onlineshop/product_details/'?>{{x.product_id}}"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="{{x.product_name}}" /> </a></div>
+                                        <div class="actions-links"><span class="add-to-links"> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a></span> </div>
                                         <div class="info">
                                             <div class="info-inner">
-                                                <div class="item-title"> <a title=" Sample Product" href="product-detail.html">{{x.product_name}}</a> </div>
+                                                <div class="item-title"> <a title="{{x.product_name}}" href="product-detail.html">{{x.product_name}}</a> </div>
                                                 <!--item-title-->
                                                 <div class="item-content">
                                                     <div class="ratings">
@@ -669,7 +689,11 @@ if ($main_menu_6 != NULL) {
                                             </div>
                                             <!--info-inner-->
                                             <div class="actions">
-                                                <button type="button" title="Add to Cart" class="button btn-cart"><span>Add to Cart</span></button>
+                                                <form method="post" action="<?php echo base_url().'onlineshop/go_for_cart_from_home'; ?>">
+                                                    <input type="hidden" value="{{x.product_id}}" name="product_id">
+                                                    <input type="hidden" value="1" name="qty">
+                                                    <button type="submit" title="Add to Cart" class="button btn-cart"><span>Add to Cart</span></button>
+                                                </form>
                                             </div>
                                             <!--actions-->
 
@@ -758,11 +782,11 @@ if ($main_menu_7 != NULL) {
                                 <div class="item" ng-repeat="x in product7">
                                     <div class="col-item">
                                         <div class="sale-label sale-top-right">Sale</div>
-                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url().'onlineshop/product_details/'?>{{x.product_id}}"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="a" /> </a></div>
-                                        <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="quick-view.html"><span>quickview</span></a> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> <a title="Add to Compare" class="link-compare" href="#"><span>Add to Compare</span></a></span> </div>
+                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url().'onlineshop/product_details/'?>{{x.product_id}}"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="{{x.product_name}}" /> </a></div>
+                                        <div class="actions-links"><span class="add-to-links"> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> </span> </div>
                                         <div class="info">
                                             <div class="info-inner">
-                                                <div class="item-title"> <a title=" Sample Product" href="product-detail.html">{{x.product_name}}</a> </div>
+                                                <div class="item-title"> <a title="{{x.product_name}}" href="product-detail.html">{{x.product_name}}</a> </div>
                                                 <!--item-title-->
                                                 <div class="item-content">
                                                     <div class="ratings">
@@ -780,7 +804,11 @@ if ($main_menu_7 != NULL) {
                                             </div>
                                             <!--info-inner-->
                                             <div class="actions">
-                                                <button type="button" title="Add to Cart" class="button btn-cart"><span>Add to Cart</span></button>
+                                                <form method="post" action="<?php echo base_url().'onlineshop/go_for_cart_from_home'; ?>">
+                                                    <input type="hidden" value="{{x.product_id}}" name="product_id">
+                                                    <input type="hidden" value="1" name="qty">
+                                                    <button type="submit" title="Add to Cart" class="button btn-cart"><span>Add to Cart</span></button>
+                                                </form>
                                             </div>
                                             <!--actions-->
 
@@ -863,11 +891,11 @@ if ($main_menu_8 != NULL) {
                                 <div class="item" ng-repeat="x in product8">
                                     <div class="col-item">
                                         <div class="sale-label sale-top-right">Sale</div>
-                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url().'onlineshop/product_details/'?>{{x.product_id}}"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="a" /> </a></div>
-                                        <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="quick-view.html"><span>quickview</span></a> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> <a title="Add to Compare" class="link-compare" href="#"><span>Add to Compare</span></a></span> </div>
+                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url().'onlineshop/product_details/'?>{{x.product_id}}"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="{{x.product_name}}" /> </a></div>
+                                        <div class="actions-links"><span class="add-to-links"> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a></span> </div>
                                         <div class="info">
                                             <div class="info-inner">
-                                                <div class="item-title"> <a title=" Sample Product" href="product-detail.html">{{x.product_name}}</a> </div>
+                                                <div class="item-title"> <a title="{{x.product_name}}" href="product-detail.html">{{x.product_name}}</a> </div>
                                                 <!--item-title-->
                                                 <div class="item-content">
                                                     <div class="ratings">
@@ -885,7 +913,11 @@ if ($main_menu_8 != NULL) {
                                             </div>
                                             <!--info-inner-->
                                             <div class="actions">
-                                                <button type="button" title="Add to Cart" class="button btn-cart"><span>Add to Cart</span></button>
+                                                <form method="post" action="<?php echo base_url().'onlineshop/go_for_cart_from_home'; ?>">
+                                                    <input type="hidden" value="{{x.product_id}}" name="product_id">
+                                                    <input type="hidden" value="1" name="qty">
+                                                    <button type="submit" title="Add to Cart" class="button btn-cart"><span>Add to Cart</span></button>
+                                                </form>
                                             </div>
                                             <!--actions-->
 
@@ -966,11 +998,11 @@ if ($main_menu_9 != NULL) {
                                 <div class="item" ng-repeat="x in product9">
                                     <div class="col-item">
                                         <div class="sale-label sale-top-right">Sale</div>
-                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url().'onlineshop/product_details/'?>{{x.product_id}}"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="a" /> </a></div>
-                                        <div class="actions-links"><span class="add-to-links"> <a title="magik-btn-quickview" class="magik-btn-quickview" href="quick-view.html"><span>quickview</span></a> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> <a title="Add to Compare" class="link-compare" href="#"><span>Add to Compare</span></a></span> </div>
+                                        <div class="product-image-area"> <a class="product-image" title="Sample Product" href="<?php echo base_url().'onlineshop/product_details/'?>{{x.product_id}}"> <img src="<?php echo base_url(); ?>{{x.image_path}}" class="img-responsive" alt="{{x.product_name}}" /> </a></div>
+                                        <div class="actions-links"><span class="add-to-links"><a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a></span> </div>
                                         <div class="info">
                                             <div class="info-inner">
-                                                <div class="item-title"> <a title=" Sample Product" href="product-detail.html">{{x.product_name}}</a> </div>
+                                                <div class="item-title"> <a title="{{x.product_name}}" href="product-detail.html">{{x.product_name}}</a> </div>
                                                 <!--item-title-->
                                                 <div class="item-content">
                                                     <div class="ratings">
@@ -988,7 +1020,11 @@ if ($main_menu_9 != NULL) {
                                             </div>
                                             <!--info-inner-->
                                             <div class="actions">
-                                                <button type="button" title="Add to Cart" class="button btn-cart"><span>Add to Cart</span></button>
+                                                <form method="post" action="<?php echo base_url().'onlineshop/go_for_cart_from_home'; ?>">
+                                                    <input type="hidden" value="{{x.product_id}}" name="product_id">
+                                                    <input type="hidden" value="1" name="qty">
+                                                    <button type="submit" title="Add to Cart" class="button btn-cart"><span>Add to Cart</span></button>
+                                                </form>
                                             </div>
                                             <!--actions-->
 
