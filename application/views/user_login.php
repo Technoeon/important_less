@@ -42,11 +42,6 @@
                                             <br>
                                             <input type="password" title="Password" id="pass" class="input-text required-entry validate-password" name="customer_passowrd">
                                         </li>
-                                        <li>
-                                            <label for="pass">Retype Password <span class="required">*</span></label>
-                                            <br>
-                                            <input type="password" title="Password" id="pass" class="input-text required-entry validate-password" name="customer_passowrd">
-                                        </li>
                                     </ul>
                                     <button type="submit" class="button btn bg-danger" >Submit</button>						
 

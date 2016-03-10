@@ -2,13 +2,13 @@
 <div class="main-container col2-right-layout">
     <div class="main container">
         <div class="row">
-            <section class="col-main col-sm-9 wow bounceInUp animated">
+           <section class="col-main col-sm-7 wow bounceInUp animated">
                 <div class="page-title">
                     <h1>Checkout</h1>
                 </div>
                 <ol class="one-page-checkout" id="checkoutSteps">
                     <li id="opc-billing" class="section allow active">
-                        <div class="step-title"> <span class="number">1</span>
+                        <div class="step-title"> <span></span>
                             <h3>Checkout Method</h3>
                             <!--<a href="#">Edit</a> --> 
                         </div>
@@ -121,25 +121,35 @@
 
                                         
                                     </ul>
-                                    <div class="cashdel">
-                                        <img src="<?php echo base_url();?>images/products/caseondelevery.jpg"><br>
-                                        <input type="radio" name="cash" value="1"> <span style="font-size: 20px;">Cash On delivery</span>
-                                    </div>
+                                    
                                     <br>
-                                    <button type="button" class="button continue" onClick="billing.save()"><span>Continue</span></button>
-                                </fieldset>
+                                   </fieldset>
                                 <br>
-                                <div class="pcheck">
+                               
+                            </form>
+                        </div>
+                    </li>
+                 </ol>
+            </section >
+            <section class="col-main col-sm-4 wow bounceInUp animated">
+                <div class="cashdel">
+                    <img src="<?php echo base_url(); ?>images/products/caseondelevery.jpg"><br>
+                    <input type="radio" name="cash" value="1"> <span style="font-size: 20px;">Cash On delivery</span>
+                 </div>
+                <button type="button" class="button btn-proceed-checkout"><span>Complete your Order</span></button>
+            </section>
+            <section class="col-main col-sm-11 wow bounceInRight animated">
+                 <div class="pcheck">
                                     Product Details & Bill Information
                                 </div>
-                                <table class="table table-bordered">
+                                <table class="table table-bordered bcheck">
                                     
                                     <thead>
                                        
                                         <tr>
                                             
                                             <th>
-                                                <h4>Description</h4>
+                                                <h4 style="text-align: right;">Description</h4>
                                             </th>
                                             <th>
                                                 <h4 style="text-align: right;">Hrs/Qty</h4>
@@ -155,28 +165,28 @@
                                     <tbody>
                                         <tr>
 
-                                            <td><a href="#">Title of your article here</a></td>
+                                            <td class="text-right">Title of your article here</td>
                                             <td class="text-right">-</td>
                                             <td class="text-right">$200.00</td>
                                             <td class="text-right">$200.00</td>
                                         </tr>
                                         <tr>
 
-                                            <td><a href="#">Details of project here</a></td>
+                                           <td class="text-right">Title of your article here</td>
                                             <td class="text-right">10</td>
                                             <td class="text-right">75.00</td>
                                             <td class="text-right">$750.00</td>
                                         </tr>
                                         <tr>
 
-                                            <td><a href="#">WordPress Blogging theme</a></td>
+                                            <td class="text-right">Title of your article here</td>
                                             <td class="text-right">5</td>
                                             <td class="text-right">50.00</td>
                                             <td class="text-right">$250.00</td>
                                         </tr>
                                     </tbody>
                                 </table>
-                                <div class="row text-right">
+                <div class="text-right" style="font-size: 20px; margin: 0 -56px 2px;">
                                     <div class="col-xs-2 col-xs-offset-8">
                                         <p>
                                             <strong>
@@ -194,13 +204,9 @@
                                         </strong>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
-                    </li>
-                 </ol>
             </section>
             
         </div>
     </div>
 </div>
-
+<br><br>
