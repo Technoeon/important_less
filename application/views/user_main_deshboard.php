@@ -56,9 +56,11 @@ echo $leftside_manu;
 <div class="offer-banner-section">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-xs-12 col-sm-4 wow bounceInLeft animated"><a href="#"><img alt="offer banner1" src="<?php echo base_url(); ?>images/offer-banner1.png"></a></div>
-            <div class="col-lg-4 col-xs-12 col-sm-4 wow bounceInUp animated"><a href="#"><img alt="offer banner2" src="<?php echo base_url(); ?>images/offer-banner2.png"></a></div>
-            <div class="col-lg-4 col-xs-12 col-sm-4 wow bounceInRight animated"><a href="#"><img alt="offer banner3" src="<?php echo base_url(); ?>images/offer-banner3.png"></a></div>
+            <?php foreach ($new_arivel as $value) { ?>
+                
+            
+            <div class="col-lg-4 col-xs-12 col-sm-4 wow bounceInLeft animated"><a href="<?php echo base_url().'onlineshop/product_details/'.$value->product_id; ?>"><img alt="new arrivals and discount offer" src="<?php echo base_url().$value->slider_image; ?>"></a></div>
+            <?php } ?>
         </div>
     </div>
 </div>

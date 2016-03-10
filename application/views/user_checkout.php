@@ -13,7 +13,7 @@
                             <!--<a href="#">Edit</a> --> 
                         </div>
                         <div id="checkout-step-billing" class="step a-item" style="">
-                            <form action="<?php echo base_url(); ?>onlineshop/user_checkout" method="post">
+                            <form action="<?php echo base_url(); ?>onlineshop/complite_order" method="post">
                                 <fieldset class="group-select">
                                     <ul>
                                         <li>
@@ -24,23 +24,23 @@
                                                         <div class="input-box">
                                                             <label for="billing:telephone">Mobile <span class="required">*</span></label>
                                                             <br>
-                                                            <input type="text" name="billing[telephone]" value="454541" title="Telephone" class="input-text required-entry" id="billing:telephone"><br><br>
-                                                            <label for="billing:telephone">Alternative  Mobile Number<span class="required">*</span></label>
+                                                            <input type="text" name="mobile_no" value="<?php echo $this->session->userdata('customer_mobile');?>" maxlength="11" title="Mobile" class="input-text required-entry" id="billing:telephone" disabled required><br><br>
+                                                            <label for="billing:telephone">Alternative  Mobile Number<span class="required"></span></label>
                                                             <br>
-                                                            <input type="text" name="billing[fax]" value="" title="Fax" class="input-text" id="billing:fax">
+                                                            <input type="text" name="alter_mobile_no" placeholder="01XXXXXXXXX" maxlength="11" title="Fax" class="input-text" id="billing:fax">
                                                         </div>
                                                     </li>
                                                     <li>
                                                         <div class="input-box">
-                                                        <label for="address">Address<span class="required">*</span></label>
+                                                        <label for="shipping_address">Address<span class="required">*</span></label>
                                                         <br>
-                                                        <input type="text" title="Location" class="input-text required-entry" id="email" value="" name="customer_location">
+                                                        <textarea name="shipping_address" required></textarea>
                                                         </div>
                                                         </li>
                                                     <div id="" class="input-box">
                                                         <label for="billing:region">District<span class="required">*</span></label>
                                                         <br>
-                                                        <select defaultvalue="1" id="billing:region_id" name="billing[region_id]" title="State/Province" class="validate-select" style="">
+                                                        <select defaultvalue="1" id="billing:region_id" title="District" class="validate-select" name="district" required>
                                                             
                                                                 <option value="-1">Select</option>
                                                                 <option value="14">b.baria</option>
@@ -110,7 +110,7 @@
 
                                                         </select>
 
-                                                        <input type="text" id="billing:region" name="billing[region]" value="Alabama" title="State/Province" class="input-text required-entry" style="display: none;">
+                                     
                                                     </div>
 
 
@@ -134,7 +134,7 @@
             <section class="col-main col-sm-4 wow bounceInUp animated">
                 <div class="cashdel">
                     <img src="<?php echo base_url(); ?>images/products/caseondelevery.jpg"><br>
-                    <input type="radio" name="cash" value="1"> <span style="font-size: 20px;">Cash On delivery</span>
+                    <input type="radio" name="cash" value="1" checked> <span style="font-size: 20px;">Cash On delivery</span>
                  </div>
                 <button type="button" class="button btn-proceed-checkout"><span>Complete your Order</span></button>
             </section>
@@ -152,10 +152,10 @@
                                                 <h4 style="text-align: right;">Description</h4>
                                             </th>
                                             <th>
-                                                <h4 style="text-align: right;">Hrs/Qty</h4>
+                                                <h4 style="text-align: right;">Qty</h4>
                                             </th>
                                             <th>
-                                                <h4 style="text-align: right;">Rate/Price</h4>
+                                                <h4 style="text-align: right;">Rate</h4>
                                             </th>
                                             <th>
                                                 <h4 style="text-align: right;">Sub Total</h4>
@@ -163,44 +163,30 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php $content= $this->cart->contents();
+                                                   foreach ($content as $value) { ?>
                                         <tr>
-
-                                            <td class="text-right">Title of your article here</td>
-                                            <td class="text-right">-</td>
-                                            <td class="text-right">$200.00</td>
-                                            <td class="text-right">$200.00</td>
+                                            <td class="text-right"><img style="float: left" class="img-responsive" height="50" width="50" src="<?php echo base_url().$value['image'];?>"> <?php echo $value['name'] ?></td>
+                                            <td class="text-right"><?php echo $value['qty'] ?></td>
+                                            <td class="text-right">Tk. <?php echo $value['price'] ?></td>
+                                            <td class="text-right">Tk. <?php echo $value['subtotal'] ?></td>
                                         </tr>
-                                        <tr>
-
-                                           <td class="text-right">Title of your article here</td>
-                                            <td class="text-right">10</td>
-                                            <td class="text-right">75.00</td>
-                                            <td class="text-right">$750.00</td>
-                                        </tr>
-                                        <tr>
-
-                                            <td class="text-right">Title of your article here</td>
-                                            <td class="text-right">5</td>
-                                            <td class="text-right">50.00</td>
-                                            <td class="text-right">$250.00</td>
-                                        </tr>
+                                        <?php }?>
                                     </tbody>
                                 </table>
                 <div class="text-right" style="font-size: 20px; margin: 0 -56px 2px;">
                                     <div class="col-xs-2 col-xs-offset-8">
                                         <p>
                                             <strong>
-                                                Sub Total : <br>
-                                                TAX : <br>
+                               
                                                 Total : <br>
                                             </strong>
                                         </p>
                                     </div>
                                     <div class="col-xs-2">
                                         <strong>
-                                            $1200.00 <br>
-                                            N/A <br>
-                                            $1200.00 <br>
+                                           TK. <?php echo $this->cart->total();?> <br>
+                                         
                                         </strong>
                                     </div>
                                 </div>

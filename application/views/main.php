@@ -79,6 +79,12 @@
             .radiosize:checked + .rediolabel {
                 background: #6dbe14;
             }
+            [uib-typeahead-popup].dropdown-menu {
+                display: block;
+                max-height: 250px;
+                overflow: auto;
+                width: 440px;
+            }
         </style>
         
     </head>
@@ -146,23 +152,25 @@
                             <div class="search-box" >
                                 <?php $all_main_category = $this->onlineshop_model->get_all_main_category_name_and_id(); ?>
                                 <form action="<?php echo base_url() . 'onlineshop/search' ?>" method="POST" id="search_mini_form" name="Categories">
-                                    <select name="main_category_id" class="cate-dropdown hidden-xs">
-                                        <option value="0">All Categories</option>
-                                        <?php foreach ($all_main_category as $value) { ?>
-                                            <option value="<?php echo $value->main_category_id; ?>"><?php echo $value->main_category_name; ?></option>
-                                        <?php } ?>
-                                    </select>
+                                    
                                     <div ng-controller="TypeaheadCtrl">
                                         <script type="text/ng-template" id="customTemplate.html">
-                                            <a style="text-decoration : none; width:440px; height:60px;">
+                                            <a href="<?php echo base_url().'onlineshop/product_details/'; ?>{{match.model.product_id}}" style="text-decoration : none; height:60px;">
                                                 <img class="img-responsive" style="float: left; margin: 2px;" ng-src="<?php echo base_url(); ?>{{match.model.image_path}}" width="40" height="40">
                                                 <div>
                                                     <span ng-bind-html="match.label | uibTypeaheadHighlight:query"></span><br>
+                                                    Pirce : Tk. <span ng-bind-html="match.model.price"></span> 
                                                 </div>
                                             </a>
                                         </script>
-                                        <input type="text" ng-model="customSelected" placeholder="Custom template" uib-typeahead="state as state.product_name+'<br> Price : '+state.price+' Tk' for state in statesWithFlags | filter:{product_name:$viewValue}" typeahead-template-url="customTemplate.html" class="form-control" typeahead-show-hint="true" typeahead-min-length="2" maxlength="70" name="product_name">
-                                        <button id="submit-button" class="search-btn-bg"><span>Search</span></button>
+                                        <input type="text" ng-model="customSelected" placeholder="Search product..." uib-typeahead="state as state.product_name for state in statesWithFlags | filter:{product_name:$viewValue}" typeahead-template-url="customTemplate.html" class="form-control" typeahead-show-hint="true" typeahead-min-length="2" maxlength="70" name="product_name" id="search">
+                                        <select name="main_category_id" class="cate-dropdown hidden-xs">
+                                            <option value="0">All Categories</option>
+                                            <?php foreach ($all_main_category as $value) { ?>
+                                                <option value="<?php echo $value->main_category_id;  ?>"><?php echo $value->main_category_name;  ?></option>
+                                            <?php } ?>
+                                        </select>
+                                        <button type="submit" id="submit-button" class="search-btn-bg" onclick="document.getElementById('search').value='';"><span>Search</span></button>
                                     </div>
                                 </form>
                             </div>

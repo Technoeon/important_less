@@ -513,5 +513,11 @@ class onlineshop_model extends CI_Model{
         $query = $this->db->get();
         return $query->result();
     }
+    public function get_new_arivel(){
+        $sql ="SELECT product_id, slider_image FROM `tbl_others_image` where slider_image is not null order by product_id DESC LIMIT 0, 3";
+        $query_result = $this->db->query($sql);
+        $result=$query_result->result();
+        return $result;
+    }
     
 }

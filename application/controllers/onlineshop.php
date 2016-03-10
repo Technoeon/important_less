@@ -20,6 +20,7 @@ class onlineshop extends CI_Controller {
     //put your code here
     public function index() {
         $data = array();
+        $data['new_arivel']= $this->onlineshop_model->get_new_arivel();
         $data['leftside_manu'] = $this->load->view('leftside_manu', '', true);
         $data['nav_menu'] = $this->load->view('nav_menu', '', true);
         $data['user_main'] = $this->load->view('user_main_deshboard', $data, true);
@@ -151,6 +152,7 @@ class onlineshop extends CI_Controller {
         $sdata['message'] = 'Save Registration Information Successfully !';
         $sdata['customer_id'] = $customer_id;
         $sdata['customer_name'] = $data['customer_name'];
+        $sdata['customer_mobile'] = $data['customer_mobile'];
 //        echo '<pre>';
 //        print_r($sdata);
 //        exit();
@@ -190,6 +192,7 @@ class onlineshop extends CI_Controller {
         if ($result) {
             $sdata['customer_id'] = $result->customer_id;
             $sdata['customer_name'] = $result->customer_name;
+            $sdata['customer_mobile'] = $result->customer_mobile;
             $this->session->set_userdata($sdata);
             if ($this->cart->total_items() == 0) {
                 redirect('onlineshop');
@@ -406,6 +409,10 @@ class onlineshop extends CI_Controller {
         $data['nav_menu'] = $this->load->view('nav_menu', '', true);
         $data['user_main'] = $this->load->view('search', $data, true);
         $this->load->view('main', $data);
+    }
+    public function complite_order() {
+        $data = array();
+        
     }
 
 }
