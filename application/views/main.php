@@ -37,15 +37,17 @@
         <link href='<?php echo base_url(); ?>https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,700,800,400,600' rel='stylesheet' type='text/css'>
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.js"></script>
+        <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.2.4.js"></script>
         <script>
-            var client = angular.module('client', ['ngSanitize']);
-            client.directive('loading', function() {
+            var client = angular.module('client', ['ngSanitize', 'ngAnimate', 'ui.bootstrap']);
+            client.directive('loading', function () {
                 return {
                     restrict: 'E',
                     replace: true,
                     template: '<div class="loading"><img src="<?php echo base_url() ?>images/ajax-loader.gif" width="50" height="50" />LOADING...</div>',
-                    link: function(scope, element, attr) {
-                        scope.$watch('loading', function(val) {
+                    link: function (scope, element, attr) {
+                        scope.$watch('loading', function (val) {
                             if (val)
                                 $(element).show();
                             else
@@ -78,9 +80,11 @@
                 background: #6dbe14;
             }
         </style>
+        
     </head>
 
     <body ng-controller="cart">
+
         <div class="page">
             <header class="header-container">
                 <div class="header-top">
@@ -108,19 +112,19 @@
                                         <div class="myaccount"><a title="My Account" href="<?php echo base_url(); ?>onlineshop/user_account"><span class="hidden-xs">My Account</span></a></div>
                                         <div class="wishlist"><a title="My Wishlist"  href="<?php echo base_url(); ?>onlineshop"><span class="hidden-xs">Wishlist</span></a></div>
                                         <div class="check">
-                                           
-                                        
+
+
                                         </div>
                                         <div class="login">
-                                              <?php
+                                            <?php
                                             $customer_id = $this->session->userdata('customer_id');
                                             if ($customer_id != NULL) {
                                                 ?>
-                                             <a title="Checkout" href="<?php echo base_url(); ?>onlineshop/user_checkout"><span class="hidden-xs">Checkout</span></a>
-                                            <a title="Login" href="<?php echo base_url(); ?>onlineshop/customer_logout"><span  class="hidden-xs">Log out</span></a>
-                                             <?php } else {
-                                                 ?>
-                                             <a title="Login" href="<?php echo base_url(); ?>onlineshop/user_login"><span  class="hidden-xs">Log in</span></a>
+                                                <a title="Checkout" href="<?php echo base_url(); ?>onlineshop/user_checkout"><span class="hidden-xs">Checkout</span></a>
+                                                <a title="Login" href="<?php echo base_url(); ?>onlineshop/customer_logout"><span  class="hidden-xs">Log out</span></a>
+                                            <?php } else {
+                                                ?>
+                                                <a title="Login" href="<?php echo base_url(); ?>onlineshop/user_login"><span  class="hidden-xs">Log in</span></a>
                                             <?php } ?>
                                         </div>
                                     </div>
@@ -139,17 +143,27 @@
                         </div>
                         <div class="col-lg-8 col-sm-6 col-md-8"> 
                             <!-- Search-col -->
-                            <div class="search-box">
+                            <div class="search-box" >
                                 <?php $all_main_category = $this->onlineshop_model->get_all_main_category_name_and_id(); ?>
-                                <form action="<?php echo base_url().'onlineshop/search'?>" method="POST" id="search_mini_form" name="Categories">
+                                <form action="<?php echo base_url() . 'onlineshop/search' ?>" method="POST" id="search_mini_form" name="Categories">
                                     <select name="main_category_id" class="cate-dropdown hidden-xs">
                                         <option value="0">All Categories</option>
-                                        <?php foreach ( $all_main_category as $value) { ?>
-                                        <option value="<?php echo $value->main_category_id; ?>"><?php echo $value->main_category_name; ?></option>
-                                            <?php }?>
+                                        <?php foreach ($all_main_category as $value) { ?>
+                                            <option value="<?php echo $value->main_category_id; ?>"><?php echo $value->main_category_name; ?></option>
+                                        <?php } ?>
                                     </select>
-                                    <input type="text" placeholder="Search product here..." value="" maxlength="70" class="" name="product_name" id="search">
-                                    <button id="submit-button" class="search-btn-bg"><span>Search</span></button>
+                                    <div ng-controller="TypeaheadCtrl">
+                                        <script type="text/ng-template" id="customTemplate.html">
+                                            <a style="text-decoration : none; width:440px; height:60px;">
+                                                <img class="img-responsive" style="float: left; margin: 2px;" ng-src="<?php echo base_url(); ?>{{match.model.image_path}}" width="40" height="40">
+                                                <div>
+                                                    <span ng-bind-html="match.label | uibTypeaheadHighlight:query"></span><br>
+                                                </div>
+                                            </a>
+                                        </script>
+                                        <input type="text" ng-model="customSelected" placeholder="Custom template" uib-typeahead="state as state.product_name+'<br> Price : '+state.price+' Tk' for state in statesWithFlags | filter:{product_name:$viewValue}" typeahead-template-url="customTemplate.html" class="form-control" typeahead-show-hint="true" typeahead-min-length="2" maxlength="70" name="product_name">
+                                        <button id="submit-button" class="search-btn-bg"><span>Search</span></button>
+                                    </div>
                                 </form>
                             </div>
                             <!-- End Search-col --> 
@@ -166,9 +180,9 @@
                                             <div class="block-subtitle">Recently added item</div>
                                             <ul id="cart-sidebar" class="mini-products-list">
 
-                                                <li class="item even" ng-repeat="content in contents"> <a class="product-image" href="#" title="{{content.name}}"><img alt="{{content.name}}" src="<?php echo base_url()?>{{content.image}}" width="80"></a>
+                                                <li class="item even" ng-repeat="content in contents"> <a class="product-image" href="#" title="{{content.name}}"><img alt="{{content.name}}" src="<?php echo base_url() ?>{{content.image}}" width="80"></a>
                                                     <div class="detail-item">
-                                                        <div class="product-details"><?php if (empty($cart_del_disable)){ ?> <a href="" title="Remove This Item" ng-click="removeItem(content.rowid)" class="glyphicon glyphicon-remove">&nbsp;</a> <a class="" title="Edit item" href="#">&nbsp;</a><?php } ?>
+                                                        <div class="product-details"><?php if (empty($cart_del_disable)) { ?> <a href="" title="Remove This Item" ng-click="removeItem(content.rowid)" class="glyphicon glyphicon-remove">&nbsp;</a> <a class="" title="Edit item" href="#">&nbsp;</a><?php } ?>
                                                             <p class="product-name"> <a href="#" title="{{content.name}}">{{content.name}}</a> </p>
                                                         </div>
                                                         <div class="product-details-bottom"> <span class="price">Tk. {{content.price}}</span> <span class="title-desc">Qty:</span> <strong>{{content.qty}}</strong> </div>
@@ -176,19 +190,19 @@
                                                 </li>
                                             </ul>
                                             <div class="top-subtotal">Total: <span class="price">Tk. {{totalAmount}}</span></div>
-                                            <div class="actions" ng-hide="totalItems==0">
+                                            <div class="actions" ng-hide="totalItems == 0">
                                                 <?php
-                                            $customer_id = $this->session->userdata('customer_id');
-                                            if ($customer_id != NULL) {
-                                                ?>
-                                                <form action="<?php echo base_url() . 'onlineshop/user_checkout'; ?>" method="post"><button class="btn-checkout" type="submit"><a href="<?php echo base_url(); ?>onlineshop/user_checkout"><span>Checkout</span></a></button></form>
-                                               
-                                                <form action="<?php echo base_url() . 'cart/show_cart'; ?>" method="post"><button class="view-cart" type="submit"><span>View Cart</span></button></form>
-                                            <?php } else {
-                                                 ?>
-                                                <form action="<?php echo base_url() . 'onlineshop/user_login'; ?>" method="post"><button class="btn-checkout" type="submit"><a title="Login" href="<?php echo base_url(); ?>onlineshop/user_login"><span  class="hidden-xs">Checkout</span></a></button> 
-                                                <form action="<?php echo base_url() . 'cart/show_cart'; ?>" method="post"><button class="view-cart" type="submit"><span>View Cart</span></button></form>
-                                            
+                                                $customer_id = $this->session->userdata('customer_id');
+                                                if ($customer_id != NULL) {
+                                                    ?>
+                                                    <form action="<?php echo base_url() . 'onlineshop/user_checkout'; ?>" method="post"><button class="btn-checkout" type="submit"><a href="<?php echo base_url(); ?>onlineshop/user_checkout"><span>Checkout</span></a></button></form>
+
+                                                    <form action="<?php echo base_url() . 'cart/show_cart'; ?>" method="post"><button class="view-cart" type="submit"><span>View Cart</span></button></form>
+                                                <?php } else {
+                                                    ?>
+                                                    <form action="<?php echo base_url() . 'onlineshop/user_login'; ?>" method="post"><button class="btn-checkout" type="submit"><a title="Login" href="<?php echo base_url(); ?>onlineshop/user_login"><span  class="hidden-xs">Checkout</span></a></button> 
+                                                        <form action="<?php echo base_url() . 'cart/show_cart'; ?>" method="post"><button class="view-cart" type="submit"><span>View Cart</span></button></form>
+
                                                     <?php } ?>
                                             </div>
                                         </div>
@@ -319,7 +333,7 @@
                             <li class="first"><a title="Your Account" href="login.html">Your Account</a></li>
                             <li><a title="Information" href="#">Information</a></li>
                             <li><a title="Addresses" href="#">Addresses</a></li>
-                            <li><a title="Discount Products" href="<?php echo base_url().'onlineshop/discount';?>">Discount</a></li>
+                            <li><a title="Discount Products" href="<?php echo base_url() . 'onlineshop/discount'; ?>">Discount</a></li>
                             <li><a title="Orders History" href="#">Orders History</a></li>
                             <li class="last"><a title=" Additional Information" href="#">Additional Information</a></li>
                         </ul>
@@ -363,105 +377,131 @@
         <script type="text/javascript" src="<?php echo base_url(); ?>js/revslider.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>js/owl.carousel.min.js"></script>
         <script type="text/javascript">
-            jQuery(document).ready(function() {
-                jQuery('#rev_slider_4').show().revolution({
-                    dottedOverlay: 'none',
-                    delay: 5000,
-                    startwidth: 585,
-                    startheight: 460,
-                    hideThumbs: 200,
-                    thumbWidth: 200,
-                    thumbHeight: 50,
-                    thumbAmount: 2,
-                    navigationType: 'thumb',
-                    navigationArrows: 'solo',
-                    navigationStyle: 'round',
-                    touchenabled: 'on',
-                    onHoverStop: 'on',
-                    swipe_velocity: 0.7,
-                    swipe_min_touches: 1,
-                    swipe_max_touches: 1,
-                    drag_block_vertical: false,
-                    spinner: 'spinner0',
-                    keyboardNavigation: 'off',
-                    navigationHAlign: 'center',
-                    navigationVAlign: 'bottom',
-                    navigationHOffset: 0,
-                    navigationVOffset: 20,
-                    soloArrowLeftHalign: 'left',
-                    soloArrowLeftValign: 'center',
-                    soloArrowLeftHOffset: 20,
-                    soloArrowLeftVOffset: 0,
-                    soloArrowRightHalign: 'right',
-                    soloArrowRightValign: 'center',
-                    soloArrowRightHOffset: 20,
-                    soloArrowRightVOffset: 0,
-                    shadow: 0,
-                    fullWidth: 'on',
-                    fullScreen: 'off',
-                    stopLoop: 'off',
-                    stopAfterLoops: -1,
-                    stopAtSlide: -1,
-                    shuffle: 'off',
-                    autoHeight: 'off',
-                    forceFullWidth: 'on',
-                    fullScreenAlignForce: 'off',
-                    minFullScreenHeight: 0,
-                    hideNavDelayOnMobile: 1500,
-                    hideThumbsOnMobile: 'off',
-                    hideBulletsOnMobile: 'off',
-                    hideArrowsOnMobile: 'off',
-                    hideThumbsUnderResolution: 0,
-                    hideSliderAtLimit: 0,
-                    hideCaptionAtLimit: 0,
-                    hideAllCaptionAtLilmit: 0,
-                    startWithSlide: 0,
-                    fullScreenOffsetContainer: ''
-                });
-            });
+                                                                jQuery(document).ready(function () {
+                                                                    jQuery('#rev_slider_4').show().revolution({
+                                                                        dottedOverlay: 'none',
+                                                                        delay: 5000,
+                                                                        startwidth: 585,
+                                                                        startheight: 460,
+                                                                        hideThumbs: 200,
+                                                                        thumbWidth: 200,
+                                                                        thumbHeight: 50,
+                                                                        thumbAmount: 2,
+                                                                        navigationType: 'thumb',
+                                                                        navigationArrows: 'solo',
+                                                                        navigationStyle: 'round',
+                                                                        touchenabled: 'on',
+                                                                        onHoverStop: 'on',
+                                                                        swipe_velocity: 0.7,
+                                                                        swipe_min_touches: 1,
+                                                                        swipe_max_touches: 1,
+                                                                        drag_block_vertical: false,
+                                                                        spinner: 'spinner0',
+                                                                        keyboardNavigation: 'off',
+                                                                        navigationHAlign: 'center',
+                                                                        navigationVAlign: 'bottom',
+                                                                        navigationHOffset: 0,
+                                                                        navigationVOffset: 20,
+                                                                        soloArrowLeftHalign: 'left',
+                                                                        soloArrowLeftValign: 'center',
+                                                                        soloArrowLeftHOffset: 20,
+                                                                        soloArrowLeftVOffset: 0,
+                                                                        soloArrowRightHalign: 'right',
+                                                                        soloArrowRightValign: 'center',
+                                                                        soloArrowRightHOffset: 20,
+                                                                        soloArrowRightVOffset: 0,
+                                                                        shadow: 0,
+                                                                        fullWidth: 'on',
+                                                                        fullScreen: 'off',
+                                                                        stopLoop: 'off',
+                                                                        stopAfterLoops: -1,
+                                                                        stopAtSlide: -1,
+                                                                        shuffle: 'off',
+                                                                        autoHeight: 'off',
+                                                                        forceFullWidth: 'on',
+                                                                        fullScreenAlignForce: 'off',
+                                                                        minFullScreenHeight: 0,
+                                                                        hideNavDelayOnMobile: 1500,
+                                                                        hideThumbsOnMobile: 'off',
+                                                                        hideBulletsOnMobile: 'off',
+                                                                        hideArrowsOnMobile: 'off',
+                                                                        hideThumbsUnderResolution: 0,
+                                                                        hideSliderAtLimit: 0,
+                                                                        hideCaptionAtLimit: 0,
+                                                                        hideAllCaptionAtLilmit: 0,
+                                                                        startWithSlide: 0,
+                                                                        fullScreenOffsetContainer: ''
+                                                                    });
+                                                                });
         </script>
         <?php
-            $contents = json_encode($this->cart->contents());
-            $total_item= $this->cart->total_items();
-            $total_amount= $this->cart->total();
+        $all_products = json_encode($this->onlineshop_model->get_all_products());
+        $contents = json_encode($this->cart->contents());
+        $total_item = $this->cart->total_items();
+        $total_amount = $this->cart->total();
         ?>
         <script>
-            client.controller('cart', function($scope, $rootScope, $http) {
-                $rootScope.contents =<?php echo $contents;?>;
-                $rootScope.totalItems =<?php echo $total_item;?>;
-                $rootScope.totalAmount =<?php echo $total_amount;?>;
-                $rootScope.removeItem = function(rowid) {
-                $rootScope.code = null;
-                $rootScope.response = null;
-                $rootScope.url = '<?php echo base_url() ?>cart/remove_from_cart/';
-                $rootScope.urltotalItems = '<?php echo base_url() ?>cart/total_items_remain';
-                $rootScope.urltotalAmount = '<?php echo base_url() ?>cart/total_amount';
-                $http({method: $rootScope.method, url: $rootScope.url + rowid}).
-                        then(function(response) {
-                            $rootScope.status = response.status;
-                            $rootScope.contents = response.data;
-                            $http({method: $rootScope.method, url: $rootScope.urltotalItems}).
-                                then(function(response) {
-                                    $rootScope.status = response.status;
-                                    $rootScope.totalItems = response.data;
-                                }, function(response) {
-                                    $rootScope.data = response.data || "Request failed";
-                                    $rootScope.status = response.status;
-                                });
-                            $http({method: $rootScope.method, url: $rootScope.urltotalAmount}).
-                                then(function(response) {
-                                    $rootScope.status = response.status;
-                                    $rootScope.totalAmount = response.data;
-                                }, function(response) {
-                                    $rootScope.data = response.data || "Request failed";
-                                    $rootScope.status = response.status;
-                                });
-                        }, function(response) {
-                            $rootScope.data = response.data || "Request failed";
-                            $rootScope.status = response.status;
-                        });
-            };
-            });
+                            client.controller('cart', function ($scope, $rootScope, $http) {
+                                $rootScope.contents =<?php echo $contents; ?>;
+                                $rootScope.totalItems =<?php echo $total_item; ?>;
+                                $rootScope.totalAmount =<?php echo $total_amount; ?>;
+                                $rootScope.removeItem = function (rowid) {
+                                    $rootScope.code = null;
+                                    $rootScope.response = null;
+                                    $rootScope.url = '<?php echo base_url() ?>cart/remove_from_cart/';
+                                    $rootScope.urltotalItems = '<?php echo base_url() ?>cart/total_items_remain';
+                                    $rootScope.urltotalAmount = '<?php echo base_url() ?>cart/total_amount';
+                                    $http({method: $rootScope.method, url: $rootScope.url + rowid}).
+                                            then(function (response) {
+                                                $rootScope.status = response.status;
+                                                $rootScope.contents = response.data;
+                                                $http({method: $rootScope.method, url: $rootScope.urltotalItems}).
+                                                        then(function (response) {
+                                                            $rootScope.status = response.status;
+                                                            $rootScope.totalItems = response.data;
+                                                        }, function (response) {
+                                                            $rootScope.data = response.data || "Request failed";
+                                                            $rootScope.status = response.status;
+                                                        });
+                                                $http({method: $rootScope.method, url: $rootScope.urltotalAmount}).
+                                                        then(function (response) {
+                                                            $rootScope.status = response.status;
+                                                            $rootScope.totalAmount = response.data;
+                                                        }, function (response) {
+                                                            $rootScope.data = response.data || "Request failed";
+                                                            $rootScope.status = response.status;
+                                                        });
+                                            }, function (response) {
+                                                $rootScope.data = response.data || "Request failed";
+                                                $rootScope.status = response.status;
+                                            });
+                                };
+                            });
+        </script>
+        <script>
+                            client.controller('TypeaheadCtrl', function ($scope, $http) {
+
+                                var _selected;
+
+                                $scope.selected = undefined;
+                                $scope.ngModelOptionsSelected = function (value) {
+                                    if (arguments.length) {
+                                        _selected = value;
+                                    } else {
+                                        return _selected;
+                                    }
+                                };
+
+                                $scope.modelOptions = {
+                                    debounce: {
+                                        default: 500,
+                                        blur: 250
+                                    },
+                                    getterSetter: true
+                                };
+
+                                $scope.statesWithFlags = <?php echo $all_products; ?>;
+                            });
         </script>
 
     </body>

@@ -507,5 +507,11 @@ class onlineshop_model extends CI_Model{
         $result = $query_result->row();
         return $result->counter;
     }
+    public function get_all_products(){
+        $this->db->select('*');
+        $this->db->from('vprice');
+        $query = $this->db->get();
+        return $query->result();
+    }
     
 }
