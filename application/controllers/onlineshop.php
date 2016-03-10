@@ -323,6 +323,7 @@ class onlineshop extends CI_Controller {
     }
 
     public function search() {
+        //// search product when button click
         $product_name = $this->input->post('product_name', TRUE);
         $main_category_id = $this->input->post('main_category_id', TRUE);
         $data = array();
@@ -337,6 +338,7 @@ class onlineshop extends CI_Controller {
         $data['nav_menu'] = $this->load->view('nav_menu', '', true);
         $data['user_main'] = $this->load->view('search', $data, true);
         $this->load->view('main', $data);
+        
     }
 
     public function go_for_cart_from_home() {
