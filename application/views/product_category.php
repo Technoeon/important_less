@@ -53,7 +53,11 @@
                                     </div>
                                     <!--info-inner-->
                                     <div class="actions">
-                                        <button type="submit" title="Add to Cart" ng-click="productdetails(product.product_id)"  class="button btn-cart"><span>Add to Cart</span></button>
+                                        <form method="post" action="<?php echo base_url() . 'onlineshop/go_for_cart_from_category/'.$category_id; ?>">
+                                            <input type="hidden" value="{{product.product_id}}" name="product_id">
+                                            <input type="hidden" value="1" name="qty">
+                                            <button type="submit" title="Add to Cart" class="button btn-cart"><span>Add to Cart</span></button>
+                                        </form>
                                     </div>
                                     <!--actions-->
 
@@ -270,9 +274,5 @@
                     });
             $scope.loading = false;
         };
-        $scope.productdetails=function(product_id){
-           window.location = "<?php echo base_url().'onlineshop/product_details/'?>"+product_id; 
-        };
-
     });
 </script>

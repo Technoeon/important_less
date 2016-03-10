@@ -552,7 +552,7 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                 <?php } ?></div>
         </div>
     </li>
-    <li id="nav-home" class="level0 parent drop-menu"><a href="<?php echo base_url(); ?>onlineshop"><span>Discount</span> </a></li>
+    <li id="nav-home" class="level0 parent drop-menu"><a href="<?php echo base_url(); ?>onlineshop/discount"><span>Discount</span> </a></li>
   
 
 </ul>

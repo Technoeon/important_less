@@ -141,7 +141,7 @@
                             <!-- Search-col -->
                             <div class="search-box">
                                 <?php $all_main_category = $this->onlineshop_model->get_all_main_category_name_and_id(); ?>
-                                <form action="<?php echo base_url().'onlineshop/search_product'?>" method="POST" id="search_mini_form" name="Categories">
+                                <form action="<?php echo base_url().'onlineshop/search'?>" method="POST" id="search_mini_form" name="Categories">
                                     <select name="main_category_id" class="cate-dropdown hidden-xs">
                                         <option value="0">All Categories</option>
                                         <?php foreach ( $all_main_category as $value) { ?>
@@ -319,7 +319,7 @@
                             <li class="first"><a title="Your Account" href="login.html">Your Account</a></li>
                             <li><a title="Information" href="#">Information</a></li>
                             <li><a title="Addresses" href="#">Addresses</a></li>
-                            <li><a title="Addresses" href="#">Discount</a></li>
+                            <li><a title="Discount Products" href="<?php echo base_url().'onlineshop/discount';?>">Discount</a></li>
                             <li><a title="Orders History" href="#">Orders History</a></li>
                             <li class="last"><a title=" Additional Information" href="#">Additional Information</a></li>
                         </ul>

@@ -1,12 +1,10 @@
 <!-- Two columns content -->
-<form action="<?php echo base_url(); ?>onlineshop" method="post"></form>
-
-<section class="main-container col2-left-layout" ng-controller="categoryProduct">
+<section class="main-container col2-left-layout" ng-controller="searchdisplay">
     <div class="main container">
         <div class="row">
             <section class="col-main col-sm-9 col-sm-push-3 wow bounceInUp animated">
                 <div class="category-title">
-                    <h1>Tops &amp; Tees</h1>
+                    <h1>SHOWING <span class="text-warning"><?php echo $counter; ?></span> IN : <?php echo $search_name; ?></h1>
                 </div>
 
                 <div class="category-products">
@@ -91,8 +89,19 @@
                             <p class="amount">There are <a href="#">{{totalItems}} items</a> in your cart.</p>
                             <p class="subtotal"> <span class="label">Cart Total:</span> <span class="price">Tk. {{totalAmount}}</span> </p>
                         </div>
-                        <div class="ajax-checkout">
-                            <button type="submit" title="Submit" class="button button-checkout"><span>Checkout</span></button>
+                        <div class="ajax-checkout"><?php
+                                            $customer_id = $this->session->userdata('customer_id');
+                                            if ($customer_id != NULL) {
+                                                ?>
+                                                <form action="<?php echo base_url() . 'onlineshop/user_checkout'; ?>" method="post"><button type="submit" title="Submit" class="button button-checkout"><span>Checkout</span></button></form>
+                                               
+                                         
+                                            <?php } else {
+                                                 ?>
+                                                <form action="<?php echo base_url() . 'onlineshop/user_login'; ?>" method="post"><button type="submit" title="Submit" class="button button-checkout"><span>Checkout</span></button></form> 
+                                               
+                                            
+                                                    <?php } ?>
                         </div>
                         <p class="block-subtitle">Recently added item(s) </p>
                         <ul>
@@ -111,132 +120,8 @@
     </div>
 </section>
 <script>
-   client.controller('categoryProduct', function($scope, $http) {
-        $scope.products = <?php echo $product; ?>;       
-        $scope.psize = <?php echo $size; ?>;
-        $scope.pmanufacturer = <?php echo $manufacturer; ?>;
-        var category_id=<?php echo $category_id; ?>;
-        $scope.method = 'GET';
-        $scope.getPrice1 = function() {
-            $scope.loading = true;
-            $scope.code = null;
-            $scope.response = null;
-            $scope.url = '<?php echo base_url() ?>onlineshop/c_price_l500/';
-            $http({method: $scope.method, url: $scope.url+category_id}).
-                    then(function(response) {
-                        $scope.status = response.status;
-                        $scope.products = response.data;
-                    }, function(response) {
-                        $scope.data = response.data || "Request failed";
-                        $scope.status = response.status;
-                    });
-            $scope.loading = false;
-        };
-        $scope.getPrice2 = function() {
-            $scope.loading = true;
-            $scope.code = null;
-            $scope.response = null;
-            $scope.url = '<?php echo base_url() ?>onlineshop/c_price_g500_to1000/';
-            $http({method: $scope.method, url: $scope.url+category_id}).
-                    then(function(response) {
-                        $scope.status = response.status;
-                        $scope.products = response.data;
-                    }, function(response) {
-                        $scope.data = response.data || "Request failed";
-                        $scope.status = response.status;
-                    });
-            $scope.loading = false;
-        };
-        $scope.getPrice3 = function() {
-            $scope.loading = true;
-            $scope.code = null;
-            $scope.response = null;
-            $scope.url = '<?php echo base_url() ?>onlineshop/c_price_g1000_to2000/';
-            $http({method: $scope.method, url: $scope.url+category_id}).
-                    then(function(response) {
-                        $scope.status = response.status;
-                        $scope.products = response.data;
-                    }, function(response) {
-                        $scope.data = response.data || "Request failed";
-                        $scope.status = response.status;
-                    });
-            $scope.loading = false;
-        };
-        $scope.getPrice4 = function() {
-            $scope.loading = true;
-            $scope.code = null;
-            $scope.response = null;
-            $scope.url = '<?php echo base_url() ?>onlineshop/c_price_g2000_to5000/';
-            $http({method: $scope.method, url: $scope.url+category_id}).
-                    then(function(response) {
-                        $scope.status = response.status;
-                        $scope.products = response.data;
-                    }, function(response) {
-                        $scope.data = response.data || "Request failed";
-                        $scope.status = response.status;
-                    });
-            $scope.loading = false;
-        };
-        $scope.getPrice5 = function() {
-            $scope.loading = true;
-            $scope.code = null;
-            $scope.response = null;
-            $scope.url = '<?php echo base_url() ?>onlineshop/c_price_g5000_to10000/';
-            $http({method: $scope.method, url: $scope.url+category_id}).
-                    then(function(response) {
-                        $scope.status = response.status;
-                        $scope.products = response.data;
-                    }, function(response) {
-                        $scope.data = response.data || "Request failed";
-                        $scope.status = response.status;
-                    });
-            $scope.loading = false;
-        };
-        $scope.getPrice6 = function() {
-            $scope.loading = true;
-            $scope.code = null;
-            $scope.response = null;
-            $scope.url = '<?php echo base_url() ?>onlineshop/c_price_above10000/';
-            $http({method: $scope.method, url: $scope.url+category_id}).
-                    then(function(response) {
-                        $scope.status = response.status;
-                        $scope.products = response.data;
-                    }, function(response) {
-                        $scope.data = response.data || "Request failed";
-                        $scope.status = response.status;
-                    });
-            $scope.loading = false;
-        };
-        $scope.pfbymncid = function(manufacturer_id){
-            $scope.loading = true;
-            $scope.code = null;
-            $scope.response = null;
-            $scope.url = '<?php echo base_url() ?>onlineshop/fp_by_menufactuer_n_category/'+manufacturer_id+'/';
-            $http({method: $scope.method, url: $scope.url + category_id}).
-                    then(function(response) {
-                        $scope.status = response.status;
-                        $scope.products = response.data;
-                    }, function(response) {
-                        $scope.data = response.data || "Request failed";
-                        $scope.status = response.status;
-                    });
-            $scope.loading = false;
-        };
-        $scope.fpbysncid=function(size_name){
-            $scope.loading = true;
-            $scope.code = null;
-            $scope.response = null;
-            $scope.url = '<?php echo base_url() ?>onlineshop/fp_by_size_n_category/'+size_name+'/';
-            $http({method: $scope.method, url: $scope.url + category_id}).
-                    then(function(response) {
-                        $scope.status = response.status;
-                        $scope.products = response.data;
-                    }, function(response) {
-                        $scope.data = response.data || "Request failed";
-                        $scope.status = response.status;
-                    });
-            $scope.loading = false;
-        };
+   client.controller('searchdisplay', function($scope, $http) {
+        $scope.products = <?php echo $search_product; ?>; 
         $scope.productdetails=function(product_id){
            window.location = "<?php echo base_url().'onlineshop/product_details/'?>"+product_id; 
         };
