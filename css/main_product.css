@@ -3138,6 +3138,8 @@
 }
 .pcheck{
     background: #337AB7;
+    margin-left: 56px;
+    
     width: 100%;
     height: 60px;
     text-align: center;   
@@ -3145,9 +3147,20 @@
     font-size: 27px;
     font-family:  sans-serif;
 }
+.bcheck{
+    margin-left: 56px;
+    width: 100%;
+    height: 60px;
+    text-align: center;   
+    padding-top: 7px;
+    font-size: 20px;
+    font-family:  sans-serif;
+}
 .cashdel{
     border-radius: 5px;
     border-color: red;
+    margin-top: 94px;
+    margin-bottom: 10px;
     
 }
 .cashdel img{

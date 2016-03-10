@@ -6474,10 +6474,10 @@ input.radio {
 }
 .group-select li .input-box {
 	float: left;
-	width: 45%;
+	width: 85%;
 }
 .group-select li input.input-text, .group-select li textarea {
-	width: 88%;
+	width: 100%;
 	background: #f7f7f7;
 	border: 1px solid #f0f0f0;
 	padding: 10px;
@@ -6490,7 +6490,7 @@ input.radio {
 	outline: none;
 }
 .group-select li select {
-	width: 80%;
+	width: 100%;
 	padding: 3px;
 	background: #f7f7f7;
 	border: 1px solid #f0f0f0;
