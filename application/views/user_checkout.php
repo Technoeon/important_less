@@ -2,6 +2,7 @@
 <div class="main-container col2-right-layout">
     <div class="main container">
         <div class="row">
+            <form action="<?php echo base_url(); ?>onlineshop/confirm_order" method="post">
            <section class="col-main col-sm-7 wow bounceInUp animated">
                 <div class="page-title">
                     <h1>Checkout</h1>
@@ -13,7 +14,7 @@
                             <!--<a href="#">Edit</a> --> 
                         </div>
                         <div id="checkout-step-billing" class="step a-item" style="">
-                            <form action="<?php echo base_url(); ?>onlineshop/complite_order" method="post">
+                            
                                 <fieldset class="group-select">
                                     <ul>
                                         <li>
@@ -24,7 +25,7 @@
                                                         <div class="input-box">
                                                             <label for="billing:telephone">Mobile <span class="required">*</span></label>
                                                             <br>
-                                                            <input type="text" name="mobile_no" value="<?php echo $this->session->userdata('customer_mobile');?>" maxlength="11" title="Mobile" class="input-text required-entry" id="billing:telephone" disabled required><br><br>
+                                                            <input type="text" name="mobile_no" value="<?php echo $this->session->userdata('customer_mobile');?>" maxlength="11" title="Mobile" class="input-text required-entry" id="billing:telephone" disabled><br><br>
                                                             <label for="billing:telephone">Alternative  Mobile Number<span class="required"></span></label>
                                                             <br>
                                                             <input type="text" name="alter_mobile_no" placeholder="01XXXXXXXXX" maxlength="11" title="Fax" class="input-text" id="billing:fax">
@@ -32,9 +33,9 @@
                                                     </li>
                                                     <li>
                                                         <div class="input-box">
-                                                        <label for="shipping_address">Address<span class="required">*</span></label>
+                                                        <label for="address">Address<span class="required">*</span></label>
                                                         <br>
-                                                        <textarea name="shipping_address" required></textarea>
+                                                        <textarea name="address" required></textarea>
                                                         </div>
                                                         </li>
                                                     <div id="" class="input-box">
@@ -126,7 +127,7 @@
                                    </fieldset>
                                 <br>
                                
-                            </form>
+                            
                         </div>
                     </li>
                  </ol>
@@ -136,8 +137,9 @@
                     <img src="<?php echo base_url(); ?>images/products/caseondelevery.jpg"><br>
                     <input type="radio" name="cash" value="1" checked> <span style="font-size: 20px;">Cash On delivery</span>
                  </div>
-                <button type="button" class="button btn-proceed-checkout"><span>Complete your Order</span></button>
+                <button type="submit" class="button btn-proceed-checkout"><span>Complete your Order</span></button>
             </section>
+            </form>
             <section class="col-main col-sm-11 wow bounceInRight animated">
                  <div class="pcheck">
                                     Product Details & Bill Information

@@ -14,8 +14,8 @@
                         <div class="content">
                             <p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
                             <div class="buttons-set">
-                                <button ng-hide="showDiv" ng-click="showDiv = true; hideMe()" class="button create-account" type="button"><span>Create an Account</span></button>
-                                <div ng-show="showDiv">
+                                <button ng-hide="showform" ng-click="showform = true; hideform()" class="button create-account" type="button"><span>Create an Account</span></button>
+                                <div ng-show="showform">
                                     <ul class="form-list">
                                         <li>
                                             <label for="name">Name <span class="required">*</span></label>
@@ -83,7 +83,7 @@
                             <p class="required">* Required Fields</p>
                             <div class="buttons-set">
                                 <button id="send2" name="send" type="submit" class="button login"><span>Login</span></button>
-                                <a class="forgot-word" href="http://demo.magentomagik.com/computerstore/customer/account/forgotpassword/">Forgot Your Password?</a> </div>
+                                <a class="forgot-word" href="">Forgot Your Password?</a> </div>
                         </div>
                     </div>
                 </form>
@@ -99,9 +99,9 @@
     </div>      
 </section>
 <script>
-    client.controller('registration', function($scope, $rootScope, $http) {
-        $scope.hideMe = function(){
-        $scope.hide();
+    client.controller('registration', function ($scope) {
+         $scope.hideform = function(){
+            $scope.hide();
         };
     });
 </script>

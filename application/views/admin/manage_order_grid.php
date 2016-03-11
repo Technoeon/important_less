@@ -19,27 +19,26 @@
                                 <th class="center"data-hide="phone,tablet">Order ID</th>
                                 <th class="center"data-class="expand">Invoice No</th>
                                 <th class="center">Customer Name</th>
+                                <th class="center">Mobile</th>
                                 <th class="center"data-hide="phone">Order Total</th>
                                 <th class="center">Order Status</th>
                                 <th class="center">Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                           
+                           <?php foreach ($all_order as $value) { ?>
+                                
+                            
                                 <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>
-                                     
-                                    </td>
-                                    <td>
-                                       
-                                    </td>
-                                    <td>
-                                       
-                                    </td>
+                                    <td> <?php echo $value->order_id; ?></td>
+                                    <td> <?php echo $value->invoice_no; ?></td>
+                                    <td> <?php echo $value->customer_name; ?></td>
+                                    <td> <?php echo $value->mobile_no; ?></td>
+                                    <td> <?php echo $value->order_total; ?></td>
+                                    <td> <?php if($value->order_status == NULL){echo 'pendding' ;} ?></td>
+                                    <td> </td>
                                 </tr>
+                            <?php } ?>
                         
                         </tbody>
                     </table>

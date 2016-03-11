@@ -40,7 +40,7 @@
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.js"></script>
         <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.2.4.js"></script>
         <script>
-            var client = angular.module('client', ['ngSanitize', 'ngAnimate', 'ui.bootstrap']);
+            var client = angular.module('client', ['ngSanitize', 'ui.bootstrap']);
             client.directive('loading', function () {
                 return {
                     restrict: 'E',

@@ -412,9 +412,37 @@ class onlineshop extends CI_Controller {
         $data['user_main'] = $this->load->view('search', $data, true);
         $this->load->view('main', $data);
     }
-    public function complite_order() {
+    public function confirm_order() {
+        $content=$this->cart->contents();     
         $data = array();
-        
+        $shipping = array();
+        $order = array();
+        $order_details = array();
+        $shipping['customer_id']=  $this->session->userdata('customer_id');
+        $shipping['customer_name']=  $this->session->userdata('customer_name');
+        $shipping['district']=  $this->input->post('district', TRUE);
+        $shipping['address']=  $this->input->post('address', TRUE);
+        $shipping['mobile_no']=  $this->session->userdata('customer_mobile');
+        $shipping['alter_mobile_no']=  $this->input->post('alter_mobile_no', TRUE);
+        $shipping_id=  $this->customer_model->save_shipping($shipping);
+        $order['shipping_id']=$shipping_id;
+        $order['customer_id']=$this->session->userdata('customer_id');
+        $order['payment_id']=1;
+        $order['invoice_no']='000'.$shipping_id;
+        $order['order_total']=$this->cart->total();
+        $order_id= $this->customer_model->save_order($order);
+        foreach ($content as $value) {
+            $order_details['product_id'] = $value['id'];
+            $order_details['order_id'] = $order_id;
+            $order_details['product_name'] = $value['name'];
+            $order_details['qty'] = $value['qty'];
+            if ($this->cart->has_options($value['rowid']) == TRUE){
+               $order_details['size']=$value['options']['Size'];
+            }
+            $this->customer_model->save_order_details($order_details);
+        }
+        $this->cart->destroy();
+        redirect('onlineshop');
     }
 
 }

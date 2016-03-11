@@ -656,7 +656,7 @@ class Te_Admin extends CI_Controller {
     //------start manage order-----------//
     public function manage_order() {
         $data = array();
-//        $data['all_product'] = $this->te_product_model->get_all_product();
+        $data['all_order'] = $this->te_order_model->get_all_order();
         $data['main_content'] = $this->load->view('admin/manage_order_grid',$data,TRUE);
         $data['title'] = 'Manage Order';
         $this->load->view('admin/admin_master', $data);
