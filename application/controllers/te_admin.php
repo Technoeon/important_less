@@ -661,7 +661,22 @@ class Te_Admin extends CI_Controller {
         $data['title'] = 'Manage Order';
         $this->load->view('admin/admin_master', $data);
     }
-    
+    public function order_details($order_id){
+       $data=array();
+       $order_info=$this->te_order_model->select_order_by_id($order_id);
+       echo '<pre>';
+       print_r($order_info);
+       exit();
+       $data['total']=$order_info->order_total;
+       $customer_id=$order_info->customer_id;
+       $shipping_id=$order_info->shipping_id;
+       $data['customer_info']=$this->te_order_model->select_customer_by_id($customer_id);
+       $data['shipping_info']=$this->te_order_model->select_shipping_by_id($shipping_id);
+       $data['order_details_info']=$this->te_order_model->order_details_by_order_id($order_id);
+       $data['main_content'] = $this->load->view('admin/order_details',$data,TRUE);
+       $data['title'] = 'Order Details';
+       $this->load->view('admin/admin_master', $data);
+    }
     public function logout() {
         $this->session->unset_userdata('management_id');
         $this->session->unset_userdata('name');
