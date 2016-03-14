@@ -413,8 +413,7 @@ class onlineshop extends CI_Controller {
         $this->load->view('main', $data);
     }
     public function confirm_order() {
-        $content=$this->cart->contents();     
-        $data = array();
+        $content=$this->cart->contents();
         $shipping = array();
         $order = array();
         $order_details = array();
@@ -433,9 +432,12 @@ class onlineshop extends CI_Controller {
         $order_id= $this->customer_model->save_order($order);
         foreach ($content as $value) {
             $order_details['product_id'] = $value['id'];
+            $order_details['image'] = $value['image'];
             $order_details['order_id'] = $order_id;
             $order_details['product_name'] = $value['name'];
             $order_details['qty'] = $value['qty'];
+            $order_details['price'] = $value['price'];
+            $order_details['sub_total'] = $value['subtotal'];
             if ($this->cart->has_options($value['rowid']) == TRUE){
                $order_details['size']=$value['options']['Size'];
             }
