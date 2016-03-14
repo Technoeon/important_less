@@ -1,6 +1,7 @@
 
 <!-- START YOUR CONTENT HERE -->										
 <!-- //row -->
+
 <div class="col-lg-12">
     <div class="row">
         <div class="col-lg-1"></div>
@@ -36,10 +37,22 @@
                                     <td> <?php echo $value->mobile_no; ?></td>
                                     <td> <?php echo $value->order_total; ?></td>
                                     <td> <?php if($value->order_status == NULL){echo 'pendding' ;} ?></td>
-                                    <td> </td>
+                                     <td>
+                                        <div class="btn-group btn-group-xs ">
+                                            <a href="<?php echo base_url()?>te_admin/order_details/<?php echo $value->order_id; ?>" class="btn btn-inverse"><i  class="fa fa-futbol-o icon-only"title="Details"></i></a>
+                                        </div>
+                                   
+                                        <div class="btn-group btn-group-xs ">
+                                            <a href="" class="btn btn-inverse"><i class="fa fa-download icon-only"title="Download"></i></a>
+                                        </div>
+                                        <div class="btn-group btn-group-xs ">
+                                            <a href="" class="btn btn-inverse"><i class="fa fa-print icon-only"title="Print"></i></a>
+                                        </div>
+                
+                                    </td>
                                 </tr>
                             <?php } ?>
-                        
+                                   
                         </tbody>
                     </table>
                     <div class="btn-group pull-right">
