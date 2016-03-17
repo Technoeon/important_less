@@ -92,8 +92,8 @@
                                 <td class="footable-visible footable-first-column"><span class="footable-toggle"></span><img  src="<?php echo base_url().$value->image;?>" class="img-responsive pull-left" width="50" height="50"><?php echo $value->product_name;?></td>
                                 <td class="footable-visible"><?php echo $value->size;?><span class="text-danger">*</span></td>
                                 <td class="footable-visible footable-last-column"><?php echo $value->qty;?></td>
-                                <td class="footable-visible"><?php echo $value->price;?><span class="text-danger">*</span></td>
-                                <td class="footable-visible footable-last-column"><?php echo $value->sub_total;?></td>
+                                <td class="footable-visible">Tk. <?php echo $value->price;?><span class="text-danger">*</span></td>
+                                <td class="footable-visible footable-last-column">Tk. <?php echo $value->sub_total;?></td>
                             </tr>
                             <?php }?>
                             
@@ -121,7 +121,7 @@
                     <hr class="separator">
 
                     <div class="well light text-center">
-                        Thank you for choosing eKoders Company products. We believe you will be satisfied by our services.
+                        Thank you for choosing Somoyer Deal products. We believe you will be satisfied by our services.
                     </div>
                 </div>									
             </div>
