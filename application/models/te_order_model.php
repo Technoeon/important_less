@@ -32,4 +32,32 @@ class Te_Order_Model extends CI_Model {
         $query = $this->db->get();
         return $query->result();
     }
+    public function get_accepted_order(){
+        $sql = 'SELECT o.order_id, o.invoice_no, o.order_total, s.customer_name, s.mobile_no, o.order_status FROM `tbl_order` as o join tbl_shipping as s on o.shipping_id= s.shipping_id where o.order_status=1';
+        $query_result = $this->db->query($sql);
+        $result = $query_result->result();
+        return $result;
+    }
+    public function get_rejected_order(){
+        $sql = 'SELECT o.order_id, o.invoice_no, o.order_total, s.customer_name, s.mobile_no, o.order_status FROM `tbl_order` as o join tbl_shipping as s on o.shipping_id= s.shipping_id where o.order_status=0';
+        $query_result = $this->db->query($sql);
+        $result = $query_result->result();
+        return $result;
+    }
+    public function get_pending_order(){
+        $sql = 'SELECT o.order_id, o.invoice_no, o.order_total, s.customer_name, s.mobile_no, o.order_status FROM `tbl_order` as o join tbl_shipping as s on o.shipping_id= s.shipping_id where o.order_status is null';
+        $query_result = $this->db->query($sql);
+        $result = $query_result->result();
+        return $result;
+    }
+    public function updata_order_status_accept($order_id){
+        $this->db->set('order_status', 1);
+        $this->db->where('order_id', $order_id);
+        $this->db->update('tbl_order');
+    }
+    public function updata_order_status_reject($order_id){
+        $this->db->set('order_status', 0);
+        $this->db->where('order_id', $order_id);
+        $this->db->update('tbl_order');
+    }
 }

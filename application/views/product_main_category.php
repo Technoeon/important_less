@@ -32,12 +32,17 @@
                             <div class="col-item">
                                 <div class="sale-label sale-top-right">Sale</div>
                                 <div class="product-image-area"> <a class="product-image" title="Sample Product" ng-href="<?php echo base_url() . 'onlineshop/product_details/' ?>{{product.product_id}}"> <img src="<?php echo base_url(); ?>{{product.image_path}}" class="img-responsive" alt="{{product.product_name}}" /> </a></div>
-                                <div class="actions-links"><span class="add-to-links"> <a title="Add to Wishlist" class="link-wishlist" href="#"><span>Add to Wishlist</span></a> </span> </div>
+                                <div class="actions-links"><span class="add-to-links"> <a title="Add to Wishlist" class="link-wishlist" href="" ng-click="add_to_wishlist(product.product_id)"><span>Add to Wishlist</span></a> </span> </div>
                                 <div class="info">
                                     <div class="info-inner">
                                         <div class="item-title"> <a title="{{product.product_name}}" ng-href="<?php echo base_url() . 'onlineshop/product_details/' ?>{{product.product_id}}">{{product.product_name}}</a></div>
                                         <!--item-title-->
                                         <div class="item-content">
+                                            <div class="ratings">
+                                                <div class="rating-box">
+                                                    <div style="width:60%" class="rating"></div>
+                                                </div>
+                                            </div>
                                             <div class="price-box">
                                                 <p class="special-price" ng-if="product.discount == NULL"> <span class="price"> Tk. {{product.product_price}}</span> </p>
                                                 <p class="special-price" ng-if="product.discount != NULL"> <span class="price"> Tk. {{product.discount}}</span> </p>

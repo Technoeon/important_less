@@ -36,17 +36,24 @@
                                     <td> <?php echo $value->customer_name; ?></td>
                                     <td> <?php echo $value->mobile_no; ?></td>
                                     <td> <?php echo $value->order_total; ?></td>
-                                    <td> <?php if($value->order_status == NULL){echo 'pendding' ;} ?></td>
+                                    <td> <?php if($value->order_status == NULL){ ?>
+                                        <span class="label label-pending">Pending</span>
+                                        <?php }elseif ($value->order_status == 1) { ?>
+                                                <span class="label label-success">Accepted</span>
+                                           <?php }  else { ?>
+                                                      <span class="label label-danger">Rejected</span> 
+                                                   <?php } ?>
+                                    </td>
                                      <td>
                                         <div class="btn-group btn-group-xs ">
-                                            <a href="<?php echo base_url()?>te_admin/order_details/<?php echo $value->order_id; ?>" class="btn btn-inverse"><i  class="fa fa-futbol-o icon-only"title="Details"></i></a>
+                                            <a href="<?php echo base_url()?>te_admin/order_details/<?php echo $value->order_id ?>" class="btn btn-inverse"><i  class="fa fa-futbol-o icon-only"title="Details"></i></a>
                                         </div>
                                    
                                         <div class="btn-group btn-group-xs ">
                                             <a href="" class="btn btn-inverse"><i class="fa fa-download icon-only"title="Download"></i></a>
                                         </div>
                                         <div class="btn-group btn-group-xs ">
-                                            <a href="" class="btn btn-inverse"><i class="fa fa-print icon-only"title="Print"></i></a>
+                                            <a href="" class="btn btn-inverse"><i class="fa fa-print icon-only" title="Print"></i></a>
                                         </div>
                 
                                     </td>

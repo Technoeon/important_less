@@ -519,5 +519,14 @@ class onlineshop_model extends CI_Model{
         $result=$query_result->result();
         return $result;
     }
+    public function previous_shipping($customer_id){
+        $sql = "SELECT address FROM `tbl_shipping` WHERE customer_id = '$customer_id' group by address order by shipping_id desc LIMIT 0, 1";
+        $query_result = $this->db->query($sql);
+        $result = $query_result->row();
+        return $result->address;
+    }
+    public function add_product_in_wishlist($data){
+        $this->db->insert('tbl_wishlist', $data);
+    }
     
 }

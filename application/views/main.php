@@ -31,7 +31,6 @@
         <link rel="stylesheet" href="<?php echo base_url(); ?>css/owl.theme.css" type="text/css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>css/font-awesome.css" type="text/css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>css/main_product.css" type="text/css">
-        <link rel="stylesheet" href="<?php echo base_url(); ?>css/home-category-block.css" type="text/css">
 
         <!-- Google Fonts -->
         <link href='<?php echo base_url(); ?>https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,700,800,400,600' rel='stylesheet' type='text/css'>
@@ -41,13 +40,13 @@
         <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.2.4.js"></script>
         <script>
             var client = angular.module('client', ['ngSanitize', 'ui.bootstrap']);
-            client.directive('loading', function () {
+            client.directive('loading', function() {
                 return {
                     restrict: 'E',
                     replace: true,
                     template: '<div class="loading"><img src="<?php echo base_url() ?>images/ajax-loader.gif" width="50" height="50" />LOADING...</div>',
-                    link: function (scope, element, attr) {
-                        scope.$watch('loading', function (val) {
+                    link: function(scope, element, attr) {
+                        scope.$watch('loading', function(val) {
                             if (val)
                                 $(element).show();
                             else
@@ -86,60 +85,9 @@
                 width: 440px;
             }
         </style>
-        
+
     </head>
-<?php
-//position 1 start
-$main_menu_1 = $this->onlineshop_model->get_main_menu_by_position(1);
-//echo '<pre>';
-//print_r($main_menu_1);
-//exit();
-$sub_menu_1 = $this->onlineshop_model->get_sub_menu_by_position(1);
-$menu_1 = $this->onlineshop_model->get_menu_by_position(1);
-//position 1 end
-//position 2 start
-$main_menu_2 = $this->onlineshop_model->get_main_menu_by_position(2);
-$sub_menu_2 = $this->onlineshop_model->get_sub_menu_by_position(2);
-$menu_2 = $this->onlineshop_model->get_menu_by_position(2);
-//position 2 end
-//position 3 start
-$main_menu_3 = $this->onlineshop_model->get_main_menu_by_position(3);
-$sub_menu_3 = $this->onlineshop_model->get_sub_menu_by_position(3);
-$menu_3 = $this->onlineshop_model->get_menu_by_position(3);
-//position 3 end
-//position 4 start
-$main_menu_4 = $this->onlineshop_model->get_main_menu_by_position(4);
-$sub_menu_4 = $this->onlineshop_model->get_sub_menu_by_position(4);
-$menu_4 = $this->onlineshop_model->get_menu_by_position(4);
-//position 4 end
-//position 5 start
-$main_menu_5 = $this->onlineshop_model->get_main_menu_by_position(5);
-$sub_menu_5 = $this->onlineshop_model->get_sub_menu_by_position(5);
-$menu_5 = $this->onlineshop_model->get_menu_by_position(5);
-//position 5 end
-//position 6 start
-$main_menu_6 = $this->onlineshop_model->get_main_menu_by_position(6);
-$sub_menu_6 = $this->onlineshop_model->get_sub_menu_by_position(6);
-$menu_6 = $this->onlineshop_model->get_menu_by_position(6);
 
-//position 6 end
-//position 7 start
-$main_menu_7 = $this->onlineshop_model->get_main_menu_by_position(7);
-$sub_menu_7 = $this->onlineshop_model->get_sub_menu_by_position(7);
-$menu_7 = $this->onlineshop_model->get_menu_by_position(7);
-//position 7 end
-//position 8 start
-$main_menu_8 = $this->onlineshop_model->get_main_menu_by_position(8);
-$sub_menu_8 = $this->onlineshop_model->get_sub_menu_by_position(8);
-$menu_8 = $this->onlineshop_model->get_menu_by_position(8);
-
-//position 8 end
-//position 9 start
-$main_menu_9 = $this->onlineshop_model->get_main_menu_by_position(9);
-$sub_menu_9 = $this->onlineshop_model->get_sub_menu_by_position(9);
-$menu_9 = $this->onlineshop_model->get_menu_by_position(9);
-//position 9 end
-?>
     <body ng-controller="cart">
 
         <div class="page">
@@ -166,8 +114,8 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                                     <div class="links">
                                         <div class="myaccount"><a title="About Us" href="<?php echo base_url(); ?>onlineshop/user_account"><span class="hidden-xs">About Us</span></a></div>
                                         <div class="myaccount"><a title="Contact Us" href="<?php echo base_url(); ?>onlineshop/user_account"><span class="hidden-xs">Contact Us</span></a></div>
-                                        <div class="myaccount"><a title="My Account" href="<?php echo base_url(); ?>onlineshop/user_account"><span class="hidden-xs">My Account</span></a></div>
-                                        <div class="wishlist"><a title="My Wishlist"  href="<?php echo base_url(); ?>onlineshop"><span class="hidden-xs">Wishlist</span></a></div>
+                                        <div class="myaccount"><a title="My Account" href="<?php echo base_url(); ?>somoyer_user"><span class="hidden-xs">My Account</span></a></div>
+                                        <div class="wishlist"><a title="My Wishlist"  href="<?php echo base_url(); ?>somoyer_user/wishlist"><span class="hidden-xs">Wishlist</span></a></div>
                                         <div class="check">
 
 
@@ -203,25 +151,25 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                             <div class="search-box" >
                                 <?php $all_main_category = $this->onlineshop_model->get_all_main_category_name_and_id(); ?>
                                 <form action="<?php echo base_url() . 'onlineshop/search' ?>" method="POST" id="search_mini_form" name="Categories">
-                                    
+
                                     <div ng-controller="TypeaheadCtrl">
                                         <script type="text/ng-template" id="customTemplate.html">
-                                            <a href="<?php echo base_url().'onlineshop/product_details/'; ?>{{match.model.product_id}}" style="text-decoration : none; height:60px;">
-                                                <img class="img-responsive" style="float: left; margin: 2px;" ng-src="<?php echo base_url(); ?>{{match.model.image_path}}" width="40" height="40">
-                                                <div>
-                                                    <span ng-bind-html="match.label | uibTypeaheadHighlight:query"></span><br>
-                                                    Pirce : Tk. <span ng-bind-html="match.model.price"></span> 
-                                                </div>
+                                            <a href="<?php echo base_url() . 'onlineshop/product_details/'; ?>{{match.model.product_id}}" style="text-decoration : none; height:60px;">
+                                            <img class="img-responsive" style="float: left; margin: 2px;" ng-src="<?php echo base_url(); ?>{{match.model.image_path}}" width="40" height="40">
+                                            <div>
+                                            <span ng-bind-html="match.label | uibTypeaheadHighlight:query"></span><br>
+                                            Pirce : Tk. <span ng-bind-html="match.model.price"></span> 
+                                            </div>
                                             </a>
                                         </script>
                                         <input type="text" ng-model="customSelected" placeholder="Search product..." uib-typeahead="state as state.product_name for state in statesWithFlags | filter:{product_name:$viewValue}" typeahead-template-url="customTemplate.html" class="form-control" typeahead-show-hint="true" typeahead-min-length="2" maxlength="70" name="product_name" id="search">
                                         <select name="main_category_id" class="cate-dropdown hidden-xs">
                                             <option value="0">All Categories</option>
                                             <?php foreach ($all_main_category as $value) { ?>
-                                                <option value="<?php echo $value->main_category_id;  ?>"><?php echo $value->main_category_name;  ?></option>
+                                                <option value="<?php echo $value->main_category_id; ?>"><?php echo $value->main_category_name; ?></option>
                                             <?php } ?>
                                         </select>
-                                        <button type="submit" id="submit-button" class="search-btn-bg" onclick="document.getElementById('search').value='';"><span>Search</span></button>
+                                        <button type="submit" id="submit-button" class="search-btn-bg" onclick="document.getElementById('search').value = '';"><span>Search</span></button>
                                     </div>
                                 </form>
                             </div>
@@ -284,553 +232,11 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
                 <div class="container">
                     <div class="nav-inner"> 
                         <!-- mobile-menu -->
-                        <div class="hidden-desktop" id="mobile-menu">
-                            <ul class="navmenu">
-                                <li>
-                                    <div class="menutop">
-                                        <div class="toggle"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></div>
-                                        <h2>Menu</h2>
-                                    </div>
-                                    <ul style="display:none;" class="submenu">
-                                        <li>
-                                            <ul class="topnav">
-                                                <li class="level0 nav-6 level-top first parent"> <a class="level-top" href="#"> <span>Pages</span> </a>
-                                                    <ul class="level0">
-                                                        <li class="level1 first"><a href="grid.html"><span>Grid</span></a></li>
-                                                        <li class="level1 nav-10-2"> <a href="list.html"> <span>List</span> </a> </li>
-                                                        <li class="level1 nav-10-3"> <a href="product-detail.html"> <span>Product Detail</span> </a> </li>
-                                                        <li class="level1 nav-10-4"> <a href="shopping-cart.html"> <span>Shopping Cart</span> </a> </li>
-                                                        <li class="level1 first"><a href="checkout.html"><span>Checkout</span></a> </li>
-                                                        <li class="level1 nav-10-4"> <a href="wishlist.html"> <span>Wishlist</span> </a> </li>
-                                                        <li class="level1"> <a href="dashboard.html"> <span>Dashboard</span> </a> </li>
-                                                        <li class="level1"> <a href="multiple-addresses.html"> <span>Multiple Addresses</span> </a> </li>
-                                                        <li class="level1"> <a href="about.html"> <span>About us</span> </a> </li>
-                                                        <li class="level1"><a href="blog.html"><span>Blog</span></a> </li>
-                                                        <li class="level1"><a href="contact.html"><span>Contact us</span></a> </li>
 
-                                                        <li class="level1"><a href="404error.html"><span>404 Error Page</span></a> </li>
-                                                    </ul>
-                                                </li>
-                                                <li class="level0 nav-7 level-top parent"> <a class="level-top" href="grid.html"> <span>Fashion</span> </a> </li>
-                                                <li class="level0 nav-8 level-top parent"> <a class="level-top" href="grid.html"> <span>Women</span> </a> </li>
-                                                <li class="level0 nav-10 level-top "> <a class="level-top" href="blog.html"> <span>Blog</span> </a> </li>
-                                                <li class="level0 nav-9 level-top last parent "> <a class="level-top" href="contact.html"> <span>Contact</span> </a> </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <!--navmenu--> 
-                        </div>
 
 
                         <!--End mobile-menu -->
-                        <ul id="nav" class="hidden-xs">
-
-    <li id="nav-home" class="level0 parent drop-menu"><a href="<?php echo base_url(); ?>onlineshop"><span>Home</span> </a></li>
-
-
-
-    <?php
-    $sub_menu_id = NULL;
-    $main_menu_1_img;
-    $main_menu_product_id_1;
-    $main_menu_product_name_1;
-    
-    ?>    
-    <?php
-    foreach ($main_menu_1 as $value) {
-        if (isset($value->product_id)) {
-            $main_menu_1_img = $value->menu_image;
-            $main_menu_product_id_1 = $value->product_id;
-            $main_menu_product_name_1 = $value->product_name;
-        }
-        ?>
-       <li class="level0 nav-6 level-top parent"> <a href="<?php echo base_url().'onlineshop/product_main_category/'.$value->id; ?>" class="level-top"> <span><?php echo $value->main_menu_name; ?></span> </a>
-        <?php } ?>
-        <div class="level0-wrapper dropdown-6col" style="left: 0pt; display: none;">
-            <div class="level0-wrapper2">
-                <div class="nav-block nav-block-center grid12-8 itemgrid itemgrid-4col">
-                    <ul class="level0">
-                        <?php foreach ($sub_menu_1 as $sub_menu_value) { ?>
-                            <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
-                                <li class="level1 nav-5">
-
-                                    <a href="<?php echo base_url().'onlineshop/product_sub_category/'.$sub_menu_value->sub_menu_id ?>"> 
-                                        <span><?php
-                                            echo $sub_menu_value->sub_menu_name;
-                                            $sub_menu_id = $sub_menu_value->sub_menu_id;
-                                            ?></span> 
-                                    </a>
-                                    <ul class="level1">
-                                        <?php foreach ($menu_1 as $menu_value) { ?>
-                                            <?php if ($menu_value->sub_menu_id == $sub_menu_value->sub_menu_id) { ?>
-                                                <li><a href="<?php echo base_url().'onlineshop/product_category/'. $menu_value->menu_id ?>"><?php echo $menu_value->menu_name; ?></a></li>
-                                            <?php }
-                                            ?>
-                                        <?php } ?>
-                                    </ul>
-
-                                </li>
-                            <?php } ?>
-                        <?php } ?>
-                    </ul>
-                    <div class="fur-des">
-
-                    </div>
-                </div>
-                <?php if (isset($main_menu_product_id_1)) { ?>
-                    <div class="nav-block nav-block-right std grid12-4">
-                        <div class="static-img-block"><a href="<?php echo base_url().'onlineshop/product_details/'.$main_menu_product_id_1?>"><img style="width: 210px;height: 287px;" src="<?php echo base_url() . $main_menu_1_img; ?>" alt="Responsive"></a></div>
-                        <h3 class="heading" style="text-align: center;"><?php echo $main_menu_product_name_1 ?></h3>
-                    </div>
-                <?php } ?>
-            </div>
-        </div>
-    </li>
-
-    <?php
-    $sub_menu_id = NULL;
-    $main_menu_2_img;
-    $main_menu_product_id_2;
-    $main_menu_product_name_2;
-    ?>    
-    <?php
-    foreach ($main_menu_2 as $value) {
-        if (isset($value->product_id)) {
-            $main_menu_2_img = $value->menu_image;
-            $main_menu_product_id_2 = $value->product_id;
-            $main_menu_product_name_2 = $value->product_name;
-        }
-        ?>
-        <li class="level0 nav-6 level-top parent"> <a href="<?php echo base_url().'onlineshop/product_main_category/'.$value->id;?>" class="level-top"> <span><?php echo $value->main_menu_name; ?></span> </a>
-        <?php } ?>
-        <div class="level0-wrapper dropdown-6col" style="left: 0pt; display: none;">
-            <div class="level0-wrapper2">
-                <div class="nav-block nav-block-center grid12-8 itemgrid itemgrid-4col">
-                    <ul class="level0">
-                        <?php foreach ($sub_menu_2 as $sub_menu_value) { ?>
-                            <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
-                                <li class="level1 nav-5">
-
-                                    <a href="<?php echo base_url().'onlineshop/product_sub_category/'.$sub_menu_value->sub_menu_id ?>"> 
-                                        <span><?php
-                                            echo $sub_menu_value->sub_menu_name;
-                                            $sub_menu_id = $sub_menu_value->sub_menu_id;
-                                            ?></span> 
-                                    </a>
-                                    <ul class="level1">
-                                        <?php foreach ($menu_2 as $menu_value) { ?>
-                                            <?php if ($menu_value->sub_menu_id == $sub_menu_value->sub_menu_id) { ?>
-                                                <li><a href="<?php echo base_url().'onlineshop/product_category/'. $menu_value->menu_id ?>"><?php echo $menu_value->menu_name; ?></a></li>
-                                            <?php }
-                                            ?>
-                                        <?php } ?>
-                                    </ul>
-
-                                </li>
-                            <?php } ?>
-                        <?php } ?>
-                    </ul>
-                    <div class="fur-des">
-
-                    </div>
-                </div>
-                <?php if (isset($main_menu_product_id_2)) { ?>
-                    <div class="nav-block nav-block-right std grid12-4">
-                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_2 ?>"><img style="width: 210px;height: 287px;" src="<?php echo base_url() . $main_menu_2_img; ?>" alt="Responsive"></a></div>
-                        <h3 class="heading" style="text-align: center;"><?php echo $main_menu_product_name_2 ?></h3>
-                    </div>
-                <?php } ?>
-            </div>
-        </div>
-    </li>
-    <?php
-    $sub_menu_id = NULL;
-    $main_menu_3_img;
-    $main_menu_product_id_3;
-    $main_menu_product_name_3;
-    ?>    
-    <?php
-    foreach ($main_menu_3 as $value) {
-        if (isset($value->product_id)) {
-            $main_menu_3_img = $value->menu_image;
-            $main_menu_product_id_3 = $value->product_id;
-            $main_menu_product_name_3 = $value->product_name;
-        }
-        ?>
-        <li class="level0 nav-6 level-top parent"> <a href="<?php echo base_url().'onlineshop/product_main_category/'.$value->id;?>" class="level-top"> <span><?php echo $value->main_menu_name; ?></span> </a>
-        <?php } ?>
-        <div class="level0-wrapper dropdown-6col" style="left: 0pt; display: none;">
-            <div class="level0-wrapper2">
-                <div class="nav-block nav-block-center grid12-8 itemgrid itemgrid-4col">
-                    <ul class="level0">
-                        <?php foreach ($sub_menu_3 as $sub_menu_value) { ?>
-                            <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
-                                <li class="level1 nav-5">
-
-                                    <a href="<?php echo base_url().'onlineshop/product_sub_category/'.$sub_menu_value->sub_menu_id ?>"> 
-                                        <span><?php
-                                            echo $sub_menu_value->sub_menu_name;
-                                            $sub_menu_id = $sub_menu_value->sub_menu_id;
-                                            ?></span> 
-                                    </a>
-                                    <ul class="level1">
-                                        <?php foreach ($menu_3 as $menu_value) { ?>
-                                            <?php if ($menu_value->sub_menu_id == $sub_menu_value->sub_menu_id) { ?>
-                                                <li><a href="<?php echo base_url().'onlineshop/product_category/'. $menu_value->menu_id ?>"><?php echo $menu_value->menu_name; ?></a></li>
-                                            <?php }
-                                            ?>
-                                        <?php } ?>
-                                    </ul>
-
-                                </li>
-                            <?php } ?>
-                        <?php } ?>
-                    </ul>
-                    <div class="fur-des">
-                    </div>
-                </div>
-                <?php if (isset($main_menu_product_id_3)) { ?>
-                    <div class="nav-block nav-block-right std grid12-4">
-                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_3 ?>"><img style="width: 210px;height: 287px;" src="<?php echo base_url() . $main_menu_3_img; ?>" alt="Responsive"></a></div>
-                        <h3 class="heading" style="text-align: center;"><?php echo $main_menu_product_name_3 ?></h3>
-                    </div>
-                <?php } ?>
-            </div>
-        </div>
-    </li>
-    <?php
-    $sub_menu_id = NULL;
-    $main_menu_4_img;
-    $main_menu_product_id_4;
-    $main_menu_product_name_4;
-    ?>    
-    <?php
-    foreach ($main_menu_4 as $value) {
-        if (isset($value->product_id)) {
-            $main_menu_4_img = $value->menu_image;
-            $main_menu_product_id_4 = $value->product_id;
-            $main_menu_product_name_4 = $value->product_name;
-        }
-        ?>
-        <li class="level0 nav-6 level-top parent"> <a href="<?php echo base_url().'onlineshop/product_main_category/'.$value->id;?>" class="level-top"> <span><?php echo $value->main_menu_name; ?></span> </a>
-        <?php } ?>
-        <div class="level0-wrapper dropdown-6col" style="left: 0pt; display: none;">
-            <div class="level0-wrapper2">
-                <div class="nav-block nav-block-center grid12-8 itemgrid itemgrid-4col">
-                    <ul class="level0">
-                        <?php foreach ($sub_menu_4 as $sub_menu_value) { ?>
-                            <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
-                                <li class="level1 nav-5">
-
-                                    <a href="<?php echo base_url().'onlineshop/product_sub_category/'.$sub_menu_value->sub_menu_id ?>"> 
-                                        <span><?php
-                                            echo $sub_menu_value->sub_menu_name;
-                                            $sub_menu_id = $sub_menu_value->sub_menu_id;
-                                            ?></span> 
-                                    </a>
-                                    <ul class="level1">
-                                        <?php foreach ($menu_4 as $menu_value) { ?>
-                                            <?php if ($menu_value->sub_menu_id == $sub_menu_value->sub_menu_id) { ?>
-                                                <li><a href=" <?php echo base_url().'onlineshop/product_category/'. $menu_value->menu_id ?>"><?php echo $menu_value->menu_name; ?></a></li>
-                                            <?php }
-                                            ?>
-                                        <?php } ?>
-                                    </ul>
-
-                                </li>
-                            <?php } ?>
-                        <?php } ?>
-                    </ul>
-                    <div class="fur-des">
-                    </div>
-                </div>
-                <?php if (isset($main_menu_product_id_4)) { ?>
-                    <div class="nav-block nav-block-right std grid12-4">
-                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_4 ?>"><img style="width: 210px;height: 287px;" src="<?php echo base_url() . $main_menu_4_img; ?>" alt="Responsive"></a></div>
-                        <h3 class="heading" style="text-align: center;"><?php echo $main_menu_product_name_4 ?></h3>
-                    </div>
-                <?php } ?>
-            </div>
-        </div>
-    </li>
-    <?php
-    $sub_menu_id = NULL;
-    $main_menu_5_img;
-    $main_menu_product_id_5;
-    $main_menu_product_name_5;
-    ?>    
-    <?php
-    foreach ($main_menu_5 as $value) {
-        if (isset($value->product_id)) {
-            $main_menu_5_img = $value->menu_image;
-            $main_menu_product_id_5 = $value->product_id;
-            $main_menu_product_name_5 = $value->product_name;
-        }
-        ?>
-        <li class="level0 nav-6 level-top parent"> <a href="<?php echo base_url().'onlineshop/product_main_category/'.$value->id;?>" class="level-top"> <span><?php echo $value->main_menu_name; ?></span> </a>
-        <?php } ?>
-        <div class="level0-wrapper dropdown-6col" style="left: 0pt; display: none;">
-            <div class="level0-wrapper2">
-                <div class="nav-block nav-block-center grid12-8 itemgrid itemgrid-4col">
-                    <ul class="level0">
-                        <?php foreach ($sub_menu_5 as $sub_menu_value) { ?>
-                            <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
-                                <li class="level1 nav-5">
-
-                                    <a href="<?php echo base_url().'onlineshop/product_sub_category/'.$sub_menu_value->sub_menu_id ?>"> 
-                                        <span><?php
-                                            echo $sub_menu_value->sub_menu_name;
-                                            $sub_menu_id = $sub_menu_value->sub_menu_id;
-                                            ?></span> 
-                                    </a>
-                                    <ul class="level1">
-                                        <?php foreach ($menu_5 as $menu_value) { ?>
-                                            <?php if ($menu_value->sub_menu_id == $sub_menu_value->sub_menu_id) { ?>
-                                                <li><a href=" <?php echo base_url().'onlineshop/product_category/'. $menu_value->menu_id ?>"><?php echo $menu_value->menu_name; ?></a></li>
-                                            <?php }
-                                            ?>
-                                        <?php } ?>
-                                    </ul>
-
-                                </li>
-                            <?php } ?>
-                        <?php } ?>
-                    </ul>
-                    <div class="fur-des">
-                    </div>
-                </div>
-                <?php if (isset($main_menu_product_id_5)) { ?>
-                    <div class="nav-block nav-block-right std grid12-4">
-                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_5 ?>"><img style="width: 210px;height: 287px;" src="<?php echo base_url() . $main_menu_5_img; ?>" alt="Responsive"></a></div>
-                        <h3 class="heading" style="text-align: center;"><?php echo $main_menu_product_name_5 ?></h3>
-                    </div>
-                <?php } ?>
-            </div>
-        </div>
-    </li>
-    <?php
-    $sub_menu_id = NULL;
-    $main_menu_6_img;
-    $main_menu_product_id_6;
-    $main_menu_product_name_6;
-    ?>    
-    <?php
-    foreach ($main_menu_6 as $value) {
-        if (isset($value->product_id)) {
-            $main_menu_6_img = $value->menu_image;
-            $main_menu_product_id_6 = $value->product_id;
-            $main_menu_product_name_6 = $value->product_name;
-        }
-        ?>
-        <li class="level0 nav-6 level-top parent"> <a href="<?php echo base_url().'onlineshop/product_main_category/'.$value->id;?>" class="level-top"> <span><?php echo $value->main_menu_name; ?></span> </a>
-        <?php } ?>
-        <div class="level0-wrapper dropdown-6col" style="left: 0pt; display: none;">
-            <div class="level0-wrapper2">
-                <div class="nav-block nav-block-center grid12-8 itemgrid itemgrid-4col">
-                    <ul class="level0">
-                        <?php foreach ($sub_menu_6 as $sub_menu_value) { ?>
-                            <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
-                                <li class="level1 nav-5">
-
-                                    <a href="<?php echo base_url().'onlineshop/product_sub_category/'.$sub_menu_value->sub_menu_id ?>"> 
-                                        <span><?php
-                                            echo $sub_menu_value->sub_menu_name;
-                                            $sub_menu_id = $sub_menu_value->sub_menu_id;
-                                            ?></span> 
-                                    </a>
-                                    <ul class="level1">
-                                        <?php foreach ($menu_6 as $menu_value) { ?>
-                                            <?php if ($menu_value->sub_menu_id == $sub_menu_value->sub_menu_id) { ?>
-                                                <li><a href="<?php echo base_url().'onlineshop/product_category/'. $menu_value->menu_id ?>"><?php echo $menu_value->menu_name; ?></a></li>
-                                            <?php }
-                                            ?>
-                                        <?php } ?>
-                                    </ul>
-
-                                </li>
-                            <?php } ?>
-                        <?php } ?>
-                    </ul>
-                    <div class="fur-des">
-                    </div>
-                </div>
-                <?php if (isset($main_menu_product_id_6)) { ?>
-                    <div class="nav-block nav-block-right std grid12-4">
-                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_6 ?>"><img style="width: 210px;height: 287px;" src="<?php echo base_url() . $main_menu_6_img; ?>" alt="Responsive"></a></div>
-                        <h3 class="heading" style="text-align: center;"><?php echo $main_menu_product_name_6 ?></h3>
-                    </div>
-                <?php } ?></div>
-        </div>
-    </li>
-    <?php
-    $sub_menu_id = NULL;
-    $main_menu_7_img;
-    $main_menu_product_id_7;
-    $main_menu_product_name_7;
-    ?>    
-    <?php
-    foreach ($main_menu_7 as $value) {
-        if (isset($value->product_id)) {
-            $main_menu_7_img = $value->menu_image;
-            $main_menu_product_id_7 = $value->product_id;
-            $main_menu_product_name_7 = $value->product_name;
-        }
-        ?>
-        <li class="level0 nav-6 level-top parent"> <a href="<?php echo base_url().'onlineshop/product_main_category/'.$value->id;?>" class="level-top"> <span><?php echo $value->main_menu_name; ?></span> </a>
-        <?php } ?>
-        <div class="level0-wrapper dropdown-6col" style="left: 0pt; display: none;">
-            <div class="level0-wrapper2">
-                <div class="nav-block nav-block-center grid12-8 itemgrid itemgrid-4col">
-                    <ul class="level0">
-                        <?php foreach ($sub_menu_7 as $sub_menu_value) { ?>
-                            <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
-                                <li class="level1 nav-5">
-
-                                    <a href="<?php echo base_url().'onlineshop/product_sub_category/'.$sub_menu_value->sub_menu_id ?>"> 
-                                        <span><?php
-                                            echo $sub_menu_value->sub_menu_name;
-                                            $sub_menu_id = $sub_menu_value->sub_menu_id;
-                                            ?></span> 
-                                    </a>
-                                    <ul class="level1">
-                                        <?php foreach ($menu_7 as $menu_value) { ?>
-                                            <?php if ($menu_value->sub_menu_id == $sub_menu_value->sub_menu_id) { ?>
-                                                <li><a href=" <?php echo base_url().'onlineshop/product_category/'. $menu_value->menu_id ?>"><?php echo $menu_value->menu_name; ?></a></li>
-                                            <?php }
-                                            ?>
-                                        <?php } ?>
-                                    </ul>
-
-                                </li>
-                            <?php } ?>
-                        <?php } ?>
-                    </ul>
-                    <div class="fur-des">
-                    </div>
-                </div>
-                <?php if (isset($main_menu_product_id_7)) { ?>
-                    <div class="nav-block nav-block-right std grid12-4">
-                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_7 ?>"><img style="width: 210px;height: 287px;" src="<?php echo base_url() . $main_menu_7_img; ?>" alt="Responsive"></a></div>
-                        <h3 class="heading" style="text-align: center;"><?php echo $main_menu_product_name_7 ?></h3>
-                    </div>
-                <?php } ?></div>
-        </div>
-    </li>
-    <?php
-    $sub_menu_id = NULL;
-    $main_menu_8_img;
-    $main_menu_product_id_8;
-    $main_menu_product_name_8;
-    ?>    
-    <?php
-    foreach ($main_menu_8 as $value) {
-        if (isset($value->product_id)) {
-            $main_menu_8_img = $value->menu_image;
-            $main_menu_product_id_8 = $value->product_id;
-            $main_menu_product_name_8 = $value->product_name;
-        }
-        ?>
-        <li class="level0 nav-6 level-top parent"> <a href="<?php echo base_url().'onlineshop/product_main_category/'.$value->id;?>" class="level-top"> <span><?php echo $value->main_menu_name; ?></span> </a>
-        <?php } ?>
-        <div class="level0-wrapper dropdown-6col" style="left: 0pt; display: none;">
-            <div class="level0-wrapper2">
-                <div class="nav-block nav-block-center grid12-8 itemgrid itemgrid-4col">
-                    <ul class="level0">
-                        <?php foreach ($sub_menu_8 as $sub_menu_value) { ?>
-                            <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
-                                <li class="level1 nav-5">
-
-                                    <a href="<?php echo base_url().'onlineshop/product_sub_category/'.$sub_menu_value->sub_menu_id ?>"> 
-                                        <span><?php
-                                            echo $sub_menu_value->sub_menu_name;
-                                            $sub_menu_id = $sub_menu_value->sub_menu_id;
-                                            ?></span> 
-                                    </a>
-                                    <ul class="level1">
-                                        <?php foreach ($menu_8 as $menu_value) { ?>
-                                            <?php if ($menu_value->sub_menu_id == $sub_menu_value->sub_menu_id) { ?>
-                                                <li><a href="<?php echo base_url().'onlineshop/product_category/'. $menu_value->menu_id ?>"><?php echo $menu_value->menu_name; ?></a></li>
-                                            <?php }
-                                            ?>
-                                        <?php } ?>
-                                    </ul>
-
-                                </li>
-                            <?php } ?>
-                        <?php } ?>
-                    </ul>
-                    <div class="fur-des">
-
-                    </div>
-                </div>
-                <?php if (isset($main_menu_product_id_8)) { ?>
-                    <div class="nav-block nav-block-right std grid12-4">
-                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_8 ?>"><img style="width: 210px;height: 287px;" src="<?php echo base_url() . $main_menu_8_img; ?>" alt="Responsive"></a></div>
-                        <h3 class="heading" style="text-align: center;"><?php echo $main_menu_product_name_8 ?></h3>
-                    </div>
-                <?php } ?></div>
-        </div>
-    </li>
-    <?php
-    $sub_menu_id = NULL;
-    $main_menu_9_img;
-    $main_menu_product_id_9;
-    $main_menu_product_name_9;
-    ?>    
-    <?php
-    foreach ($main_menu_9 as $value) {
-        if (isset($value->product_id)) {
-            $main_menu_9_img = $value->menu_image;
-            $main_menu_product_id_9 = $value->product_id;
-            $main_menu_product_name_9 = $value->product_name;
-        }
-        ?>
-        <li class="level0 nav-6 level-top parent"> <a href="<?php echo base_url().'onlineshop/product_main_category/'.$value->id;?>" class="level-top"> <span><?php echo $value->main_menu_name; ?></span> </a>
-        <?php } ?>
-        <div class="level0-wrapper dropdown-6col" style="left: 0pt; display: none;">
-            <div class="level0-wrapper2">
-                <div class="nav-block nav-block-center grid12-8 itemgrid itemgrid-4col">
-                    <ul class="level0">
-                        <?php foreach ($sub_menu_9 as $sub_menu_value) { ?>
-                            <?php if ($sub_menu_id != $sub_menu_value->sub_menu_id) { ?>
-                                <li class="level1 nav-5">
-
-                                    <a href="<?php echo base_url().'onlineshop/product_sub_category/'.$sub_menu_value->sub_menu_id ?>"> 
-                                        <span><?php
-                                            echo $sub_menu_value->sub_menu_name;
-                                            $sub_menu_id = $sub_menu_value->sub_menu_id;
-                                            ?></span> 
-                                    </a>
-                                    <ul class="level1">
-                                        <?php foreach ($menu_9 as $menu_value) { ?>
-                                            <?php if ($menu_value->sub_menu_id == $sub_menu_value->sub_menu_id) { ?>
-                                                <li><a href="<?php echo base_url().'onlineshop/product_category/'. $menu_value->menu_id ?>"><?php echo $menu_value->menu_name; ?></a></li>
-                                            <?php }
-                                            ?>
-                                        <?php } ?>
-                                    </ul>
-
-                                </li>
-                            <?php } ?>
-                        <?php } ?>
-                    </ul>
-                    <div class="fur-des">
-                    </div>
-                </div>
-                <?php if (isset($main_menu_product_id_9)) { ?>
-                    <div class="nav-block nav-block-right std grid12-4">
-                        <div class="static-img-block"><a href="<?php echo $main_menu_product_id_9 ?>"><img style="width: 210px;height: 287px;" src="<?php echo base_url() . $main_menu_9_img; ?>" alt="Responsive"></a></div>
-                        <h3 class="heading" style="text-align: center;"><?php echo $main_menu_product_name_9 ?></h3>
-                    </div>
-                <?php } ?></div>
-        </div>
-    </li>
-    <li id="nav-home" class="level0 parent drop-menu"><a href="<?php echo base_url(); ?>onlineshop/discount"><span>Discount</span> </a></li>
-  
-
-</ul>
+                        <?php echo $nav_menu; ?>
                     </div>
                 </div>
 
@@ -839,8 +245,6 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
             <?php
             echo $user_main;
             ?>
-
-
             <footer class="footer bounceInUp animated">
                 <div class="footer-top">
                     <div class="container">
@@ -930,7 +334,7 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
 
                 </div>
             </footer>
-            <!-- End Footer --> 
+            <!-- End Footer -->  
         </div>
 
         <!-- JavaScript -->
@@ -941,7 +345,7 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
         <script type="text/javascript" src="<?php echo base_url(); ?>js/revslider.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>js/owl.carousel.min.js"></script>
         <script type="text/javascript">
-                                                                jQuery(document).ready(function () {
+                                                                jQuery(document).ready(function() {
                                                                     jQuery('#rev_slider_4').show().revolution({
                                                                         dottedOverlay: 'none',
                                                                         delay: 5000,
@@ -1005,50 +409,66 @@ $menu_9 = $this->onlineshop_model->get_menu_by_position(9);
         $total_amount = $this->cart->total();
         ?>
         <script>
-                            client.controller('cart', function ($scope, $rootScope, $http) {
+                            client.controller('cart', function($scope, $rootScope, $http) {
                                 $rootScope.contents =<?php echo $contents; ?>;
                                 $rootScope.totalItems =<?php echo $total_item; ?>;
                                 $rootScope.totalAmount =<?php echo $total_amount; ?>;
-                                $rootScope.removeItem = function (rowid) {
+                                $rootScope.removeItem = function(rowid) {
                                     $rootScope.code = null;
                                     $rootScope.response = null;
                                     $rootScope.url = '<?php echo base_url() ?>cart/remove_from_cart/';
                                     $rootScope.urltotalItems = '<?php echo base_url() ?>cart/total_items_remain';
                                     $rootScope.urltotalAmount = '<?php echo base_url() ?>cart/total_amount';
                                     $http({method: $rootScope.method, url: $rootScope.url + rowid}).
-                                            then(function (response) {
+                                            then(function(response) {
                                                 $rootScope.status = response.status;
                                                 $rootScope.contents = response.data;
                                                 $http({method: $rootScope.method, url: $rootScope.urltotalItems}).
-                                                        then(function (response) {
+                                                        then(function(response) {
                                                             $rootScope.status = response.status;
                                                             $rootScope.totalItems = response.data;
-                                                        }, function (response) {
+                                                        }, function(response) {
                                                             $rootScope.data = response.data || "Request failed";
                                                             $rootScope.status = response.status;
                                                         });
                                                 $http({method: $rootScope.method, url: $rootScope.urltotalAmount}).
-                                                        then(function (response) {
+                                                        then(function(response) {
                                                             $rootScope.status = response.status;
                                                             $rootScope.totalAmount = response.data;
-                                                        }, function (response) {
+                                                        }, function(response) {
                                                             $rootScope.data = response.data || "Request failed";
                                                             $rootScope.status = response.status;
                                                         });
-                                            }, function (response) {
+                                            }, function(response) {
                                                 $rootScope.data = response.data || "Request failed";
                                                 $rootScope.status = response.status;
                                             });
                                 };
+                                $rootScope.add_to_wishlist = function(product_id) {
+                                    $scope.loading = true;
+                                    $rootScope.code = null;
+                                    $rootScope.response = null;
+                                    $rootScope.url = '<?php echo base_url() ?>onlineshop/add_to_wishlist/';
+                                    $http({method: $rootScope.method, url: $rootScope.url + product_id}).
+                                            then(function(response) {
+                                                $rootScope.status = response.status;
+                                                $rootScope.msg = response.data;
+                                                alert($rootScope.msg);
+                                            }, function(response) {
+                                                $rootScope.data = response.data || "Request failed";
+                                                $rootScope.status = response.status;
+                                            });
+                                    $scope.loading = false;
+                                };
                             });
         </script>
         <script>
-                            client.controller('TypeaheadCtrl', function ($scope, $http) {
+                            client.controller('TypeaheadCtrl', function($scope, $http) {
 
                                 var _selected;
 
                                 $scope.selected = undefined;
-                                $scope.ngModelOptionsSelected = function (value) {
+                                $scope.ngModelOptionsSelected = function(value) {
                                     if (arguments.length) {
                                         _selected = value;
                                     } else {

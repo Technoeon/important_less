@@ -20,8 +20,8 @@
                     <div class="row">
                         <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                             <p class="bigger-110">
-                                <a href=""><i class="fa fa-print"></i></a> Invoice ID: <span class="text-red"><?php echo $invoice->invoice_no;?></span><br>
-                                Date: <?php echo $invoice->order_date_time;?>
+                                <a href=""><i class="fa fa-print"></i></a> Invoice ID: <span class="text-red"><?php echo $invoice->invoice_no; ?></span><br>
+                                Date: <?php echo $invoice->order_date_time; ?>
                             </p>
                         </div>																						
                         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
@@ -41,23 +41,23 @@
                                 <div class="col-lg-6">
                                     <address>
                                         <strong>Post Address</strong><br>
-                                        <?php echo $invoice->customer_name;?><br>
-                                        <?php echo $invoice->address;?>,<br>
-                                        <?php echo $invoice->district;?><br>
+                                        <?php echo $invoice->customer_name; ?><br>
+                                        <?php echo $invoice->address; ?>,<br>
+                                        <?php echo $invoice->district; ?><br>
 
-<!--                                        <div class="space-4"></div>-->
+                                        <!--                                        <div class="space-4"></div>-->
 
-                                        <i class="fa fa-phone-square"></i> <?php echo $invoice->alter_mobile_no;?>
+                                        <i class="fa fa-phone-square"></i> <?php echo $invoice->alter_mobile_no; ?>
                                     </address>
                                 </div>
                                 <div class="col-lg-6">
                                     <p>
-                                        <strong>Banker:</strong> DBBL Bank, BD<br>
+
                                         <strong>Beneficiary Name:</strong> Somoyer Deal Ltd<br>
-                                        <strong>Account No.:</strong> 113606350249
+
                                     </p>
                                     <p>
-                                        <strong>VAT ID:</strong> #238757567438093
+
                                     </p>
                                 </div>
                             </div>
@@ -66,10 +66,10 @@
                             <h4 class="text-primary">Invoice to</h4>
                             <div class="hr hr-4 hr-dotted"></div>
                             <address >
-                                <strong><?php echo $invoice->customer_name;?></strong><br>
-                                <?php echo $invoice->customer_location;?><br>
-                                <i class="fa fa-phone-square"></i> <?php echo $invoice->mobile_no;?><br>
-                                <i class="fa fa-envelope-square"></i> <?php echo $invoice->customer_email;?>
+                                <strong><?php echo $invoice->customer_name; ?></strong><br>
+                                <?php echo $invoice->customer_location; ?><br>
+                                <i class="fa fa-phone-square"></i> <?php echo $invoice->mobile_no; ?><br>
+                                <i class="fa fa-envelope-square"></i> <?php echo $invoice->customer_email; ?>
                             </address>												
                         </div>
                     </div>
@@ -86,17 +86,17 @@
                         </thead>
                         <tbody>
                             <?php foreach ($order_details as $value) { ?>
-                                
-                             
-                            <tr style="display: table-row;">
-                                <td class="footable-visible footable-first-column"><span class="footable-toggle"></span><img  src="<?php echo base_url().$value->image;?>" class="img-responsive pull-left" width="50" height="50"><?php echo $value->product_name;?></td>
-                                <td class="footable-visible"><?php echo $value->size;?><span class="text-danger">*</span></td>
-                                <td class="footable-visible footable-last-column"><?php echo $value->qty;?></td>
-                                <td class="footable-visible">Tk. <?php echo $value->price;?><span class="text-danger">*</span></td>
-                                <td class="footable-visible footable-last-column">Tk. <?php echo $value->sub_total;?></td>
-                            </tr>
-                            <?php }?>
-                            
+
+
+                                <tr style="display: table-row;">
+                                    <td class="footable-visible footable-first-column"><span class="footable-toggle"></span><img  src="<?php echo base_url() . $value->image; ?>" width="50" height="50"><?php echo $value->product_name; ?></td>
+                                    <td class="footable-visible"><?php echo $value->size; ?><span class="text-danger"></span></td>
+                                    <td class="footable-visible footable-last-column"><?php echo $value->qty; ?></td>
+                                    <td class="footable-visible">Tk. <?php echo $value->price; ?><span class="text-danger"></span></td>
+                                    <td class="footable-visible footable-last-column">Tk. <?php echo $value->sub_total; ?></td>
+                                </tr>
+                            <?php } ?>
+
                         </tbody></table>
 
                     <div class="row">
@@ -113,7 +113,7 @@
                                 <li><span class="text-right"></span></li>
 
                             </ul>
-                            <p class="text-right bigger-150">Grand Total:<span class="text-danger"> Tk. <?php echo $invoice->order_total;?></span></p>
+                            <p class="text-right bigger-150">Grand Total:<span class="text-danger"> Tk. <?php echo $invoice->order_total; ?></span></p>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -127,6 +127,7 @@
             </div>
         </div>
         <!-- END YOUR CONTENT HERE -->
+        <?php if(isset($orde_status)){echo $orde_status; } ?>
 
     </div>							
 </div>

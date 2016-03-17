@@ -200,27 +200,22 @@
                                 <ul class="collapse nav" id="forms">
                                     <li>
                                         <a href="<?php echo base_url()?>te_admin/manage_order">
-                                            <i class="fa fa-angle-double-right"></i>Manage Order 
+                                            <i class="fa fa-angle-double-right"></i>All Order 
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="<?php echo base_url().'te_admin/pendding_order'?>">
                                             <i class="fa fa-angle-double-right"></i>Pending Order 
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="<?php echo base_url().'te_admin/accept_order'?>">
                                             <i class="fa fa-angle-double-right"></i> Accepted Order
                                         </a>
                                     </li>										
                                     <li>
-                                        <a href="#">
+                                        <a href="<?php echo base_url().'te_admin/reject_order'?>">
                                             <i class="fa fa-angle-double-right"></i>Rejected Order 
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-angle-double-right"></i>All Order 
                                         </a>
                                     </li>
                                 </ul>

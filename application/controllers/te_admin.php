@@ -116,16 +116,18 @@ class Te_Admin extends CI_Controller {
         $data['main_content'] = $this->load->view('admin/manage_main_menu_grid', $data, TRUE);
         $this->load->view('admin/admin_master', $data);
     }
-    public function set_main_menu_image($main_category_id){
-        $data['title'] = 'Menu Menu ID: '. $main_category_id;
-        $data['image']=  $this->admin_model->select_main_category_image($main_category_id);
+
+    public function set_main_menu_image($main_category_id) {
+        $data['title'] = 'Menu Menu ID: ' . $main_category_id;
+        $data['image'] = $this->admin_model->select_main_category_image($main_category_id);
         $data['main_content'] = $this->load->view('admin/main_menu_image_grid', $data, TRUE);
         $this->load->view('admin/admin_master', $data);
     }
-    public function update_menu_image(){
-        $main_category_id=  $this->input->post('main_category_id', TRUE);
-        $other_image_id=  $this->input->post('other_image_id', TRUE);
-        $this->admin_model->update_main_menu_image($main_category_id,$other_image_id);
+
+    public function update_menu_image() {
+        $main_category_id = $this->input->post('main_category_id', TRUE);
+        $other_image_id = $this->input->post('other_image_id', TRUE);
+        $this->admin_model->update_main_menu_image($main_category_id, $other_image_id);
         redirect('te_admin/manage_main_menu');
     }
 
@@ -351,7 +353,7 @@ class Te_Admin extends CI_Controller {
         $product_image = array();
         $default_image = $this->input->post('default_image', TRUE);
         $config['upload_path'] = 'images/product_image/';
-        $config['allowed_types'] = 'gif|jpg|png';
+        $config['allowed_types'] = 'gif|jpg|jpeg|png';
         $config['max_size'] = '5000';
         $config['max_width'] = '700';
         $config['max_height'] = '700';
@@ -521,45 +523,48 @@ class Te_Admin extends CI_Controller {
         $this->session->set_userdata($sdata);
         redirect('te_admin/manage_product');
     }
+
 //-------start add discount-------//
-    public function add_discount(){
+    public function add_discount() {
         $discount = array();
-        $product_id=$this->input->post('product_id',TRUE);
-        $discount['product_id']=$product_id;
+        $product_id = $this->input->post('product_id', TRUE);
+        $discount['product_id'] = $product_id;
         $discount['discount_price'] = $this->input->post('discount_price', TRUE);
         $discount['start_date'] = $this->input->post('start_date', TRUE);
         $discount['end_date'] = $this->input->post('end_date', TRUE);
         $this->te_product_model->set_discount($discount);
-        redirect('te_admin/edit_product/'.$product_id);
+        redirect('te_admin/edit_product/' . $product_id);
     }
+
     //-----start add_size-------//
-  public function add_size($product_id) {
+    public function add_size($product_id) {
         $data = array();
         $data['title'] = 'Add Size';
         $data['product_id'] = $product_id;
-        $data['main_content'] = $this->load->view('admin/add_size',$data, true);
+        $data['main_content'] = $this->load->view('admin/add_size', $data, true);
         $this->load->view('admin/admin_master', $data);
     }
 
     public function save_size() {
         $data = array();
-        $product_id=$this->input->post('product_id', TRUE);
-        $data['product_id']=$product_id;
-        $data['size_name'] =$this->input->post('size_name', TRUE); 
+        $product_id = $this->input->post('product_id', TRUE);
+        $data['product_id'] = $product_id;
+        $data['size_name'] = $this->input->post('size_name', TRUE);
         $this->te_product_model->save_size_by_product_id($data);
-        
+
         $sdata = array();
         $sdata['message'] = 'Update Product Size Successfully !';
         $this->session->set_userdata($sdata);
-        redirect('te_admin/manage_size/'.$product_id);
-   }
+        redirect('te_admin/manage_size/' . $product_id);
+    }
+
     //-------end add_size--------//
     //-----start manage size----//
     public function manage_size($product_id) {
         $data = array();
         $data['title'] = 'Manage Product Size';
         //$data['product_name'] = $product_name;
-        $data['product_id']=$product_id;
+        $data['product_id'] = $product_id;
         $data['product_size'] = $this->te_product_model->get_size_by_product_id($product_id);
         $data['main_content'] = $this->load->view('admin/manage_size_grid', $data, TRUE);
         $this->load->view('admin/admin_master', $data);
@@ -585,11 +590,11 @@ class Te_Admin extends CI_Controller {
         redirect('te_admin/manage_product');
     }
 
-    public function delete_size($size_id,$product_id) {
+    public function delete_size($size_id, $product_id) {
         $this->te_product_model->delete_product_size($size_id);
         $sdata['message'] = 'Delete Product Size Successfully !';
         $this->session->set_userdata($sdata);
-        redirect('te_admin/manage_size/'.$product_id);
+        redirect('te_admin/manage_size/' . $product_id);
     }
 
     // End manage size///
@@ -607,8 +612,8 @@ class Te_Admin extends CI_Controller {
 
     public function save_description() {
         $data = array();
-        $product_id=$this->input->post('product_id', TRUE);
-        $data['product_id']=$product_id;
+        $product_id = $this->input->post('product_id', TRUE);
+        $data['product_id'] = $product_id;
         $data['description'] = $this->input->post('description', TRUE);
         $this->te_product_model->save_description_by_product_id($data);
         $sdata = array();
@@ -638,40 +643,97 @@ class Te_Admin extends CI_Controller {
         $data['main_content'] = $this->load->view('admin/edit_description_form', $data, TRUE);
         $this->load->view('admin/admin_master', $data);
     }
+
     public function update_description() {
         $data = array();
         $description_id = $this->input->post('description_id', true);
         $data['description'] = $this->input->post('description', true);
-        $this->te_product_model->update_description($description_id,$data);
+        $this->te_product_model->update_description($description_id, $data);
         $sdata = array();
         $sdata['message'] = 'Update Product Description Successfully !';
         $this->session->set_userdata($sdata);
         redirect('te_admin/manage_product');
     }
+
     public function delete_description($description_id) {
         $this->te_product_model->delete_description($description_id);
         redirect('te_admin/manage_product');
     }
+
     //--------end manage description---------//
     //------start manage order-----------//
     public function manage_order() {
+        $sdata = array();
+        $sdata['show_btn'] = 0;
+        $this->session->set_userdata($sdata);
         $data = array();
         $data['all_order'] = $this->te_order_model->get_all_order();
-        $data['main_content'] = $this->load->view('admin/manage_order_grid',$data,TRUE);
+        $data['main_content'] = $this->load->view('admin/manage_order_grid', $data, TRUE);
         $data['title'] = 'Manage Order';
         $this->load->view('admin/admin_master', $data);
     }
-    public function order_details($order_id){
-       $data=array();
-       $data['invoice']=  $this->te_order_model->get_info_for_invoice_by_order_id($order_id);
-       $data['order_details']=  $this->te_order_model->get_order_details_by_order_id($order_id);
-//       echo '<pre>';
-//       print_r($data);
-//       exit();
-       $data['main_content'] = $this->load->view('admin/order_details',$data,TRUE);
-       $data['title'] = 'Order Details';
-       $this->load->view('admin/admin_master', $data);
+
+    public function order_details($order_id) {
+        $data = array();
+        $data['invoice'] = $this->te_order_model->get_info_for_invoice_by_order_id($order_id);
+        $data['order_details'] = $this->te_order_model->get_order_details_by_order_id($order_id);
+        $show_btn=  $this->session->userdata('show_btn');
+        if ($show_btn == 1) {
+            $data['orde_status'] = $this->load->view('admin/order_status', $data, TRUE);
+        }  else {
+            $data['orde_status'] = NULL;
+        }
+        $data['main_content'] = $this->load->view('admin/order_details', $data, TRUE);
+        $data['title'] = 'Order Details';
+        $this->load->view('admin/admin_master', $data);
     }
+    public function do_accept($order_id) {
+        $this->te_order_model->updata_order_status_accept($order_id);
+        redirect('te_admin/manage_order');
+    }public function do_reject($order_id) {
+        $this->te_order_model->updata_order_status_reject($order_id);
+        redirect('te_admin/manage_order');
+    }
+    public function generate_bill($order_id) {
+        $data = array();
+        $data['invoice'] = $this->te_order_model->get_info_for_invoice_by_order_id($order_id);
+        $data['order_details'] = $this->te_order_model->get_order_details_by_order_id($order_id);
+        $view_file = $this->load->view('admin/order_report', $data, true);
+        $this->load->helper('dompdf');
+        $file_name = pdf_create($view_file, 'Invoice');
+        echo $file_name;
+    }
+    public function accept_order(){
+        $sdata = array();
+        $sdata['show_btn'] = 0;
+        $this->session->set_userdata($sdata);
+        $data = array();
+        $data['all_order'] = $this->te_order_model->get_accepted_order();
+        $data['main_content'] = $this->load->view('admin/manage_order_grid', $data, TRUE);
+        $data['title'] = 'Manage Order';
+        $this->load->view('admin/admin_master', $data);       
+    }
+    public function reject_order(){
+        $sdata = array();
+        $sdata['show_btn'] = 0;
+        $this->session->set_userdata($sdata);
+        $data = array();
+        $data['all_order'] = $this->te_order_model->get_rejected_order();
+        $data['main_content'] = $this->load->view('admin/manage_order_grid', $data, TRUE);
+        $data['title'] = 'Manage Order';
+        $this->load->view('admin/admin_master', $data);
+    }
+    public function pendding_order(){
+        $sdata = array();
+        $sdata['show_btn'] = 1;
+        $this->session->set_userdata($sdata);
+        $data = array();
+        $data['all_order'] = $this->te_order_model->get_pending_order();
+        $data['main_content'] = $this->load->view('admin/manage_order_grid', $data, TRUE);
+        $data['title'] = 'Manage Order';
+        $this->load->view('admin/admin_master', $data);
+    }
+
     public function logout() {
         $this->session->unset_userdata('management_id');
         $this->session->unset_userdata('name');

@@ -30,7 +30,7 @@
                                         <li>
                                             <label for="mobile">Location <span class="required">*</span></label>
                                             <br>
-                                            <input type="text" title="Location" class="input-text required-entry" id="email" value="" name="customer_location">
+                                            <textarea title="Location" class="required-entry" name="customer_location" placeholder="Please give your full address" cols="54" required></textarea>
                                         </li>
                                         <li>
                                             <label for="email">Email Address <span class="required">*</span></label>
@@ -43,7 +43,7 @@
                                             <input type="password" title="Password" id="pass" class="input-text required-entry validate-password" name="customer_passowrd">
                                         </li>
                                     </ul>
-                                    <button type="submit" class="button btn bg-danger" >Submit</button>						
+                                    <button type="submit" class="button btn bg-danger" >Sign Up</button>						
 
                                 </div>
                             </div>
@@ -82,7 +82,7 @@
                             </ul>
                             <p class="required">* Required Fields</p>
                             <div class="buttons-set">
-                                <button id="send2" name="send" type="submit" class="button login"><span>Login</span></button>
+                                <button id="send2" name="send" type="submit" class="button login"><span>Sign In</span></button>
                                 <a class="forgot-word" href="">Forgot Your Password?</a> </div>
                         </div>
                     </div>

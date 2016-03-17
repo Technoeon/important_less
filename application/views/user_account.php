@@ -9,11 +9,18 @@
                             <h2>My Dashboard</h2>
                         </div>
                         <div class="dashboard">
-                            <div class="welcome-msg"> <strong>Hello, pranali deshmukh!</strong>
+                            <div class="welcome-msg"> <strong>Hello, <?php echo $this->session->userdata('customer_name'); ?>!</strong>
+                                <?php
+                                $message = $this->session->userdata('message');
+                                if ($message) {
+                                    echo $message;
+                                    $this->session->unset_userdata('message');
+                                }
+                                ?>
                                 <p>From your My Account Dashboard you have the ability to view a snapshot of your recent account activity and update your account information. Select a link below to view or edit information.</p>
                             </div>
                             <div class="recent-orders">
-                                <div class="title-buttons"><strong>Recent Orders</strong> <a href="#">View All </a> </div>
+                                <div class="title-buttons"><strong>Recent Orders</strong> <a href="<?php echo base_url();?>somoyer_user/my_orders">View All </a> </div>
                                 <div class="table-responsive">
                                     <table class="data-table" id="my-orders-table">
                                         <col>
@@ -33,22 +40,24 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            <?php foreach ($my_order as $value) { ?>
+                                                
+                                            
                                             <tr class="first odd">
-                                                <td>500000002</td>
-                                                <td>9/9/10 </td>
-                                                <td>pranali d</td>
-                                                <td><span class="price">$5.00</span></td>
+                                                <td><?php echo $value->invoice_no; ?></td>
+                                                <td><?php echo $value->order_date_time; ?></td>
+                                                <td><?php echo $value->address; ?></td>
+                                                <td><span class="price"><?php echo $value->order_total; ?></span></td>
+                                                <?php if($value->order_status==NULL){ ?>
                                                 <td><em>Pending</em></td>
-                                                <td class="a-center last"><span class="nobr"> <a href="#">View Order</a> <span class="separator">|</span> <a href="#">Reorder</a> </span></td>
+                                                <?php }elseif ($value->order_status==1) { ?>
+                                                        <td><em>Accept</em></td>
+                                                   <?php }  else { ?>
+                                                        <td><em>Reject</em></td>       
+                                                          <?php } ?>
+                                                <td class="a-center last"><span class="nobr"> <a href="#">View Order</a> <span class="separator">|</span> <a href="#"></a> </span></td>
                                             </tr>
-                                            <tr class="last even">
-                                                <td>500000001</td>
-                                                <td>9/9/10 </td>
-                                                <td>pranali d</td>
-                                                <td><span class="price">$1,397.99</span></td>
-                                                <td><em>Pending</em></td>
-                                                <td class="a-center last"><span class="nobr"> <a href="#">View Order</a> <span class="separator">|</span> <a href="#">Reorder</a> </span></td>
-                                            </tr>
+                                            <?php }?>
                                         </tbody>
                                     </table>
                                 </div>
@@ -60,42 +69,43 @@
                                 <div class="col2-set">
                                     <div class="col-1">
                                         <h5>Contact Information</h5>
-                                        <a href="#">Edit</a>
-                                        <p> pranali deshmukh<br>
-                                            pranalid15@gmail.com<br>
-                                            <a href="#">Change Password</a> </p>
-                                    </div>
-                                    <div class="col-2">
-                                        <h5>Newsletters</h5>
-                                        <a href="#">Edit</a>
-                                        <p> You are currently not subscribed to any newsletter. </p>
+                                        <a href="<?php echo base_url().'somoyer_user/change_info/'.$customer_info->customer_id;?>">Edit</a>
+                                        <p> <?php echo $customer_info->customer_name; ?><br>
+                                            <?php echo $customer_info->customer_mobile; ?><br>
+                                            <?php echo $customer_info->customer_email; ?><br>
+                                            <?php echo $customer_info->customer_location; ?><br>
+                                            <a href="<?php echo base_url().'somoyer_user/change_password/'.$customer_info->customer_id;?>">Change Password</a> </p>
                                     </div>
                                 </div>
                                 <div class="col2-set">
                                     <h4>Address Book</h4>
-                                    <div class="manage_add"><a href="#">Manage Addresses</a> </div>
+                                    <div class="manage_add"></div>
                                     <div class="col-1">
                                         <h5>Primary Billing Address</h5>
                                         <address>
-                                            pranali d<br>
-                                            aundh<br>
-                                            tyyrt,  Alabama, 46532<br>
-                                            United States<br>
-                                            T: 454541 <br>
-                                            <a href="#">Edit Address</a>
+                                            <?php echo $customer_info->customer_name; ?><br>
+                                            <?php echo $customer_info->customer_email; ?><br>
+                                            <?php echo $customer_info->customer_location; ?><br>
+                                            Mobile #: <?php echo $customer_info->customer_mobile; ?> <br>
+                                            
                                         </address>
                                     </div>
-                                    <div class="col-2">
-                                        <h5>Primary Shipping Address</h5>
+                                    <?php foreach ($shiping as $value) { ?>
+                                                                        
+                                                                    
+                                    <div class="col-1">
+                                        <h5>My Shipping Address</h5>
                                         <address>
-                                            pranali d<br>
-                                            aundh<br>
-                                            tyyrt,  Alabama, 46532<br>
-                                            United States<br>
-                                            T: 454541 <br>
-                                            <a href="#">Edit Address</a>
+                  
+                                            <?php echo $value->address; ?><br>
+                                            <?php echo $value->district; ?><br>
+                                           Mobile #: <?php echo $value->alter_mobile_no; ?> <br>
+                                            
                                         </address>
+                                        <a href="<?php echo base_url().'somoyer_user/address_book/'.$customer_info->customer_id;?>">More Address Book</a>
                                     </div>
+                                    <?php }?>
+                                   
                                 </div>
                             </div>
                         </div>
@@ -106,37 +116,14 @@
                         <div class="block-title">My Account</div>
                         <div class="block-content">
                             <ul>
-                                <li class="current"><a>Account Dashboard</a></li>
-                                <li><a href="http://demo.magentomagik.com/computerstore/customer/account/edit/">Account Information</a></li>
-                                <li><a href="http://demo.magentomagik.com/computerstore/customer/address/">Address Book</a></li>
-                                <li><a href="http://demo.magentomagik.com/computerstore/sales/order/history/">My Orders</a></li>
-                                <li><a href="http://demo.magentomagik.com/computerstore/sales/billing_agreement/">Billing Agreements</a></li>
-                                <li><a href="http://demo.magentomagik.com/computerstore/sales/recurring_profile/">Recurring Profiles</a></li>
-                                <li><a href="http://demo.magentomagik.com/computerstore/review/customer/">My Product Reviews</a></li>
-                                <li><a href="http://demo.magentomagik.com/computerstore/tag/customer/">My Tags</a></li>
-                                <li><a href="http://demo.magentomagik.com/computerstore/wishlist/">My Wishlist</a></li>
-                                <li><a href="http://demo.magentomagik.com/computerstore/downloadable/customer/products/">My Downloadable</a></li>
-                                <li class="last"><a href="http://demo.magentomagik.com/computerstore/newsletter/manage/">Newsletter Subscriptions</a></li>
+                                <li class="current"><a href="<?php echo base_url(); ?>somoyer_user">Account Dashboard</a></li>
+                                <li><a href="<?php echo base_url().'somoyer_user/address_book/'.$customer_info->customer_id;?>">Address Book</a></li>
+                                <li><a href="<?php echo base_url(); ?>somoyer_user/my_orders">My Orders</a></li>
+                                <li><a href="<?php echo base_url(); ?>somoyer_user/wishlist">My Wishlist</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="block block-compare">
-                        <div class="block-title ">Compare Products (2)</div>
-                        <div class="block-content">
-                            <ol id="compare-items">
-                                <li class="item odd">
-                                    <input type="hidden" value="2173" class="compare-item-id">
-                                    <a class="btn-remove1" title="Remove This Item" href="#"></a> <a href="#" class="product-name"> Sofa with Box-Edge Polyester Wrapped Cushions</a> </li>
-                                <li class="item last even">
-                                    <input type="hidden" value="2174" class="compare-item-id">
-                                    <a class="btn-remove1" title="Remove This Item" href="#"></a> <a href="#" class="product-name"> Sofa with Box-Edge Down-Blend Wrapped Cushions</a> </li>
-                            </ol>
-                            <div class="ajax-checkout">
-                                <button type="submit" title="Submit" class="button button-compare"><span>Compare</span></button>
-                                <button type="submit" title="Submit" class="button button-clear"><span>Clear</span></button>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </aside>
             </div>
         </form>
