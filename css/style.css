@@ -7501,6 +7501,8 @@ button.subscribe:before {
 .footer-middle {
 	margin: 0px 0px 20px 0px;
 	display: inline-block;
+        width: 93%;
+        margin-left: 31px;
 }
 .footer-middle .col-md-3, .footer-middle .col-md-2 {
 	margin: 5px auto;

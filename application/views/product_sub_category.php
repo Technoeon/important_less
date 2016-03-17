@@ -38,11 +38,6 @@
                                         <div class="item-title"> <a title="{{product.product_name}}" ng-href="<?php echo base_url().'onlineshop/product_details/'?>{{product.product_id}}">{{product.product_name}}</a></div>
                                         <!--item-title-->
                                         <div class="item-content">
-                                            <div class="ratings">
-                                                <div class="rating-box">
-                                                    <div style="width:60%" class="rating"></div>
-                                                </div>
-                                            </div>
                                             <div class="price-box">
                                                 <p class="special-price" ng-if="product.discount == NULL"> <span class="price"> Tk. {{product.product_price}}</span> </p>
                                                 <p class="special-price" ng-if="product.discount != NULL"> <span class="price"> Tk. {{product.discount}}</span> </p>

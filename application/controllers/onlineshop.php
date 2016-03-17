@@ -21,8 +21,6 @@ class onlineshop extends CI_Controller {
     public function index() {
         $data = array();
         $data['new_arivel']= $this->onlineshop_model->get_new_arivel();
-        $data['leftside_manu'] = $this->load->view('leftside_manu', '', true);
-        $data['nav_menu'] = $this->load->view('nav_menu', '', true);
         $data['user_main'] = $this->load->view('user_main_deshboard', $data, true);
         $this->load->view('main', $data);
     }
@@ -37,7 +35,7 @@ class onlineshop extends CI_Controller {
 //        echo '<pre>';
 //        print_r($data);
 //        exit();
-        $data['nav_menu'] = $this->load->view('nav_menu', '', true);
+        
         $data['user_main'] = $this->load->view('product_details', $data, true);
         $this->load->view('main', $data);
     }
@@ -57,7 +55,7 @@ class onlineshop extends CI_Controller {
 //        echo '<pre>';
 //        print_r($data);
 //        exit();
-        $data['nav_menu'] = $this->load->view('nav_menu', '', true);
+        
         $data['user_main'] = $this->load->view('product_category', $data, true);
         $this->load->view('main', $data);
     }
@@ -74,7 +72,7 @@ class onlineshop extends CI_Controller {
         $data['manufacturer'] = json_encode($this->onlineshop_model->get_manufacturer_by_main_category_id($main_category_id));
         $data['size'] = json_encode($this->onlineshop_model->get_size_by_main_category_id($main_category_id));
         $data['product'] = json_encode($this->onlineshop_model->get_product_by_main_category_id($main_category_id));
-        $data['nav_menu'] = $this->load->view('nav_menu', '', true);
+        
         $data['user_main'] = $this->load->view('product_main_category', $data, true);
         $this->load->view('main', $data);
     }
@@ -91,14 +89,14 @@ class onlineshop extends CI_Controller {
         $data['manufacturer'] = json_encode($this->onlineshop_model->get_manufacturer_by_sub_category_id($sub_category_id));
         $data['size'] = json_encode($this->onlineshop_model->get_size_by_sub_category_id($sub_category_id));
         $data['product'] = json_encode($this->onlineshop_model->get_product_by_sub_category_id($sub_category_id));
-        $data['nav_menu'] = $this->load->view('nav_menu', '', true);
+       
         $data['user_main'] = $this->load->view('product_sub_category', $data, true);
         $this->load->view('main', $data);
     }
 
     public function user_login() {
         $data = array();
-        $data['nav_menu'] = $this->load->view('nav_menu', '', true);
+        
         $data['user_main'] = $this->load->view('user_login', '', true);
         $this->load->view('main', $data);
     }
@@ -117,14 +115,14 @@ class onlineshop extends CI_Controller {
 
     public function user_wishlist() {
         $data = array();
-        $data['nav_menu'] = $this->load->view('nav_menu', '', true);
+        
         $data['user_main'] = $this->load->view('user_wishlist', '', true);
         $this->load->view('main', $data);
     }
 
     public function user_account() {
         $data = array();
-        $data['nav_menu'] = $this->load->view('nav_menu', '', true);
+       
         $data['user_main'] = $this->load->view('user_account', '', true);
         $this->load->view('main', $data);
     }
@@ -335,7 +333,7 @@ class onlineshop extends CI_Controller {
             $data['counter'] = $this->onlineshop_model->get_product_by_name_count($product_name);
             $data['search_product'] = json_encode($this->onlineshop_model->get_product_by_name($product_name));
         }
-        $data['nav_menu'] = $this->load->view('nav_menu', '', true);
+        
         $data['user_main'] = $this->load->view('search', $data, true);
         $this->load->view('main', $data);
         
